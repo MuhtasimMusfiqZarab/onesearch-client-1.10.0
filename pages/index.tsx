@@ -2,15 +2,15 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 import BaseLayout from '../components/layouts/BaseLayout';
+import Home from './home';
 
 import { Button, Container } from 'reactstrap';
 
-export default function Home() {
+export default function Index() {
   return (
     <BaseLayout>
       <Container>
-        <h1>I am Home page</h1>
-        <Button color="danger">Danger!</Button>
+        <Home />
       </Container>
     </BaseLayout>
   );
