@@ -1,10 +1,11 @@
 import { Button } from 'reactstrap';
 
+import Pricing from '../components/widgets/pricing';
+
 export default function Home() {
   return (
     <>
-      <h1>I am home page</h1>
-      <Button color="danger">Danger!</Button>
+      <Pricing />
     </>
   );
 }
