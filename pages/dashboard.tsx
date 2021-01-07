@@ -2,14 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 import BaseLayout from '../components/layouts/BaseLayout';
 import Table from '../components/widgets/table';
+import SideBar from '../components/shared/SideBar';
 import axios from 'axios';
 
 const Dashboard = ({ posts }) => {
   return (
     <BaseLayout>
-      <h1>I am dashboard page</h1>
-      <ul>{renderPosts(posts)}</ul>
-      <Table posts={posts} />
+      <div className="container-fluid">
+        <div className="row">
+          <SideBar />
+          <h1>I am dashboard page</h1>
+          <ul>{renderPosts(posts)}</ul>
+          <Table posts={posts} />
+        </div>
+      </div>
     </BaseLayout>
   );
 };

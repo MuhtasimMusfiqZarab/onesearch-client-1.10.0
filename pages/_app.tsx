@@ -5,15 +5,21 @@ import '../styles/globals.css';
 import '../styles/main.scss';
 
 import { Provider } from 'react-redux';
-import { useStore } from '../store';
+import store from '../store/store';
+
+//this is react wrapper
+import { ApolloProvider } from '@apollo/client';
+
+//import the gql client
+import { client } from '../lib/apollo';
 
 function MyApp({ Component, pageProps }) {
-  const store = useStore(pageProps.initialReduxState);
-
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </ApolloProvider>
   );
 }
 
