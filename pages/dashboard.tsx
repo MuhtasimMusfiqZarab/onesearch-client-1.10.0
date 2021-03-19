@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import BaseLayout from '../components/layouts/BaseLayout';
 import Table from '../components/widgets/table';
-import SideBar from '../components/shared/SideBar';
 import axios from 'axios';
 
 import Table1 from '../components/general/table';
@@ -12,7 +11,6 @@ const Dashboard = ({ posts }) => {
     <BaseLayout>
       <div className="container-fluid">
         <div className="row">
-          <SideBar />
           <h1>I am dashboard page</h1>
           <ul>{renderPosts(posts)}</ul>
           <Table posts={posts} />

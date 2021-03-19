@@ -6,7 +6,6 @@ export interface TableProps {}
 const Table: FC<TableProps> = (): JSX.Element => {
   return (
     <table className={styles.table}>
-      <caption className={styles.caption}>Statement Summary</caption>
       <thead className={styles.thead}>
         <tr className={styles.tr}>
           <th className={styles.th} scope="col">
