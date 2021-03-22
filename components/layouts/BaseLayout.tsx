@@ -5,7 +5,7 @@ import Footer from '../shared/Footer';
 const BaseLayout = (props) => {
   return (
     <React.Fragment>
-      <Header />
+      {/* <Header /> */}
       {props.children}
     </React.Fragment>
   );

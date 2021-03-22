@@ -1,12 +1,10 @@
-import { Button } from 'reactstrap';
-
 import { useDispatch } from 'react-redux';
-
-import Pricing from '../components/widgets/pricing';
 import { useEffect } from 'react';
 import { fetchPosts } from '../store/actions/postAction';
 
-import Table from '../components/widgets/table';
+import { Youtube } from '../components/icons/youtube';
+
+import Table from '../components/general/table';
 import { useSelector } from 'react-redux';
 
 export default function Home() {
@@ -21,7 +19,11 @@ export default function Home() {
   return (
     <>
       <div>
-        {channels.channels.length > 0 && <Table posts={channels.channels} />}
+        <button className="btn">
+          <Youtube width={50} height={50} color="#e53935" />
+        </button>
+
+        {channels.channels.length > 0 && <Table items={channels.channels} />}
       </div>
     </>
   );

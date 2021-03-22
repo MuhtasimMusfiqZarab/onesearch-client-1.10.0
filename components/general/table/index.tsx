@@ -1,84 +1,50 @@
 import React, { FC } from 'react';
 import styles from './style.module.scss';
 
-export interface TableProps {}
+export interface Youtube {
+  id: number;
+  channel_name: string;
+  channel_url: string;
+  description: string;
+  socialblade_category: string;
+  subscribers: string;
+  bio_email: string;
+  location: string;
+}
 
-const Table: FC<TableProps> = (): JSX.Element => {
+const Table: FC<any> = ({ items }): JSX.Element => {
+  console.log('These are items', items);
   return (
     <table className={styles.table}>
       <thead className={styles.thead}>
         <tr className={styles.tr}>
           <th className={styles.th} scope="col">
-            Account
+            Channel Name
+          </th>
+
+          <th className={styles.th} scope="col">
+            Email
           </th>
           <th className={styles.th} scope="col">
-            Due Date
-          </th>
-          <th className={styles.th} scope="col">
-            Amount
-          </th>
-          <th className={styles.th} scope="col">
-            Period
+            Subscribers
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr className={styles.tr}>
-          <td className={styles.td} data-label="Account">
-            Visa - 3412
-          </td>
-          <td className={styles.td} data-label="Due Date">
-            04/01/2016
-          </td>
-          <td className={styles.td} data-label="Amount">
-            $1,190
-          </td>
-          <td className={styles.td} data-label="Period">
-            03/01/2016 - 03/31/2016
-          </td>
-        </tr>
-        <tr className={styles.tr}>
-          <td className={styles.td} scope="row" data-label="Account">
-            Visa - 6076
-          </td>
-          <td className={styles.td} data-label="Due Date">
-            03/01/2016
-          </td>
-          <td className={styles.td} data-label="Amount">
-            $2,443
-          </td>
-          <td className={styles.td} data-label="Period">
-            02/01/2016 - 02/29/2016
-          </td>
-        </tr>
-        <tr className={styles.tr}>
-          <td className={styles.td} scope="row" data-label="Account">
-            Corporate AMEX
-          </td>
-          <td className={styles.td} data-label="Due Date">
-            03/01/2016
-          </td>
-          <td className={styles.td} data-label="Amount">
-            $1,181
-          </td>
-          <td className={styles.td} data-label="Period">
-            02/01/2016 - 02/29/2016
-          </td>
-        </tr>
-        <tr className={styles.tr}>
-          <td className={styles.td} scope="row" data-label="Acount">
-            Visa - 3412
-          </td>
-          <td className={styles.td} data-label="Due Date">
-            02/01/2016
-          </td>
-          <td className={styles.td} data-label="Amount">
-            $842
-          </td>
-          <td className={styles.td} data-label="Period">
-            01/01/2016 - 01/31/2016
-          </td>
-        </tr>
+        {items.map((item, index) => (
+          <tr key={index} className={styles.tr}>
+            <td className={styles.td} data-label="Channel Name">
+              {item.channel_name}
+            </td>
+
+            <td className={styles.td} data-label="Email">
+              {item.bio_email}
+            </td>
+            <td className={styles.td} data-label="Subscribers">
+              {item.subscribers}
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
