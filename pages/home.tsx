@@ -5,6 +5,7 @@ import { fetchPosts } from '../store/actions/postAction';
 import { Youtube } from '../components/icons/youtube';
 
 import Table from '../components/general/table';
+import ArgonTable from '../components/argon/table';
 import { useSelector } from 'react-redux';
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
         <button className="btn">
           <Youtube width={50} height={50} color="#e53935" />
         </button>
-
+        <ArgonTable />
         {channels.channels.length > 0 && <Table items={channels.channels} />}
       </div>
     </>
