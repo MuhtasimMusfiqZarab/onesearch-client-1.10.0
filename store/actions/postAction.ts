@@ -1,6 +1,4 @@
-import { GET_POSTS } from './types';
-
-// gql for parse the query string into a query document
+import { GET_CHANNELS } from './types';
 import { gql } from '@apollo/client';
 
 import { client } from '../../lib/apollo';
@@ -8,13 +6,20 @@ import { client } from '../../lib/apollo';
 export const fetchPosts = () => async (dispatch) => {
   const response = await client.query({
     query: gql`
-      query GetRates {
-        rates(currency: "USD") {
-          currency
+      query channels {
+        channels {
+          id
+          channel_name
+          channel_url
+          description
+          socialblade_category
+          subscribers
+          bio_email
+          location
         }
       }
     `,
   });
   console.log(response);
-  dispatch({ type: GET_POSTS, payload: response.data.rates });
+  dispatch({ type: GET_CHANNELS, payload: response.data.channels });
 };

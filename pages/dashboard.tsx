@@ -4,16 +4,22 @@ import BaseLayout from '../components/layouts/BaseLayout';
 import Table from '../components/widgets/table';
 import axios from 'axios';
 
+import { useSelector } from 'react-redux';
+
 import Table1 from '../components/general/table';
 
+// @ts-ignore
+import GET_CHANNELS from './api/youtube.query.graphql';
+
+import { useQuery } from '@apollo/client';
+
 const Dashboard = ({ posts }) => {
+  const channels = useSelector((state) => state.channels);
   return (
     <BaseLayout>
       <div className="container-fluid">
         <div className="row">
-          <h1>I am dashboard page</h1>
-          <ul>{renderPosts(posts)}</ul>
-          <Table posts={posts} />
+          <Table posts={channels} />
           <Table1 />
         </div>
       </div>
@@ -21,20 +27,6 @@ const Dashboard = ({ posts }) => {
   );
 };
 
-//this renders the posts
-const renderPosts = (posts) => {
-  return posts.map((post) => (
-    <li key={post.id}>
-      <Link href={`/leads/${post.id}`}>
-        <a>{post.title}</a>
-      </Link>
-    </li>
-  ));
-};
-
-//this gets called at build time on server-side
-//it wont be called on the client side
-//can do direct database quiries
 export async function getStaticProps() {
   let posts = [];
   try {

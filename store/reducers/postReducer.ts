@@ -1,18 +1,18 @@
-import { GET_POSTS } from '../actions/types';
+import { GET_CHANNELS } from '../actions/types';
 
 const INITIAL_STATE = {
-  posts: [],
-  post: {},
+  channels: [],
+  channel: {},
   loading: false,
   error: null,
 };
 
 export const postReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case GET_POSTS:
+    case GET_CHANNELS:
       return {
         ...state,
-        posts: action.payload,
+        channels: action.payload,
         loading: false,
         error: null,
       };

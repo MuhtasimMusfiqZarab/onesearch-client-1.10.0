@@ -6,6 +6,9 @@ import Pricing from '../components/widgets/pricing';
 import { useEffect } from 'react';
 import { fetchPosts } from '../store/actions/postAction';
 
+import Table from '../components/widgets/table';
+import { useSelector } from 'react-redux';
+
 export default function Home() {
   const dispatch = useDispatch();
 
@@ -13,9 +16,13 @@ export default function Home() {
     dispatch(fetchPosts());
   }, []);
 
+  const channels = useSelector((state: any) => state.channels);
+
   return (
     <>
-      <Pricing />
+      <div>
+        {channels.channels.length > 0 && <Table posts={channels.channels} />}
+      </div>
     </>
   );
 }
