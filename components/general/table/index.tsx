@@ -13,7 +13,6 @@ export interface Youtube {
 }
 
 const Table: FC<any> = ({ items }): JSX.Element => {
-  console.log('These are items', items);
   return (
     <table className={styles.table}>
       <thead className={styles.thead}>
@@ -38,7 +37,7 @@ const Table: FC<any> = ({ items }): JSX.Element => {
             </td>
 
             <td className={styles.td} data-label="Email">
-              {item.bio_email}
+              {item.bio_email.toString()}
             </td>
             <td className={styles.td} data-label="Subscribers">
               {item.subscribers}
