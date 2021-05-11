@@ -20,6 +20,9 @@ const Table: FC<any> = ({ items }): JSX.Element => {
           <th className={styles.th} scope="col">
             Channel Name
           </th>
+          <th className={styles.th} scope="col">
+            Channel URL
+          </th>
 
           <th className={styles.th} scope="col">
             Email
@@ -34,6 +37,9 @@ const Table: FC<any> = ({ items }): JSX.Element => {
           <tr key={index} className={styles.tr}>
             <td className={styles.td} data-label="Channel Name">
               {item.channel_name}
+            </td>
+            <td className={styles.td} data-label="Channel URL">
+              {item.channel_url}
             </td>
 
             <td className={styles.td} data-label="Email">
