@@ -1,29 +1,31 @@
 import React, { FC } from 'react';
 import { Logo } from '../../icons/logo';
 
+import style from './styles.module.scss';
+
 const TopNav: FC<any> = ({ items }): JSX.Element => {
   return (
-    <nav className="nav">
-      <ul className="nav__list">
-        <li className="nav__listlogo">
+    <nav className={style.nav}>
+      <ul className={style.nav__list}>
+        <li className={style.nav__listlogo}>
           <Logo width={50} height={50} />
         </li>
-        <li className="nav__listitem">
+        <li className={style.nav__listitem}>
           About
-          <ul className="nav__listitemdrop">
+          <ul className={style.nav__listitemdrop}>
             <li>Our Team</li>
             <li>Our Process</li>
             <li>History</li>
           </ul>
         </li>
-        <li className="nav__listitem">
+        <li className={style.nav__listitem}>
           Work
-          <ul className="nav__listitemdrop">
+          <ul className={style.nav__listitemdrop}>
             <li>Portfolio</li>
             <li>Showcase</li>
           </ul>
         </li>
-        <li className="nav__listitem">Contact</li>
+        <li className={style.nav__listitem}>Contact</li>
       </ul>
     </nav>
   );
