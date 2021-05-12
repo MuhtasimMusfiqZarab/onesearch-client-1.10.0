@@ -9,9 +9,7 @@ import { Button, Container } from 'reactstrap';
 export default function Index() {
   return (
     <BaseLayout>
-      <Container>
-        <Home />
-      </Container>
+      <Container>{/* <Home /> */}</Container>
     </BaseLayout>
   );
 }

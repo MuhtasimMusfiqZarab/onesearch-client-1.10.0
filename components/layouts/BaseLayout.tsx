@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from '../shared/Header';
-import Footer from '../shared/Footer';
+import TopNav from '../shared/topnav';
 
 const BaseLayout = (props) => {
   return (
     <React.Fragment>
-      {/* <Header /> */}
+      <TopNav />
       {props.children}
     </React.Fragment>
   );
