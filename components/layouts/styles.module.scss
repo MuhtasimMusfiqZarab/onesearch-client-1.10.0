@@ -1,5 +1,10 @@
+.container {
+  display: flex;
+}
+
 .main {
-  margin-left: 15rem;
-  margin-top: 2rem;
-  flex: 1;
+  margin: 2rem;
+  max-width: 720px;
+  max-height: 720px;
+  overflow: hidden;
 }

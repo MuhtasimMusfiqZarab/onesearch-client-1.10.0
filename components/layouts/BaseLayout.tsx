@@ -7,10 +7,12 @@ import styles from './styles.module.scss';
 const BaseLayout = (props) => {
   return (
     <React.Fragment>
-      <SideNav />
-
       <TopNav />
-      <div className={styles.main}>{props.children}</div>
+
+      <div className={styles.container}>
+        <SideNav />
+        <div className={styles.main}>{props.children}</div>
+      </div>
     </React.Fragment>
   );
 };
