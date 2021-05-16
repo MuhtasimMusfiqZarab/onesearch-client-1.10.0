@@ -20,6 +20,5 @@ export const getChannels = () => async (dispatch) => {
       }
     `,
   });
-  console.log(response);
   dispatch({ type: GET_CHANNELS, payload: response.data.channels });
 };
