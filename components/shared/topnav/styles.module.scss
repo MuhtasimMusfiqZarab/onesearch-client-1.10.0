@@ -2,9 +2,16 @@
 @import '/styles/shared/colors';
 @import '/styles/shared/variables';
 
+@mixin fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
 // top navigation bar
 .nav {
-  // position: fixed;
+  // @include fixed();
   width: 100vw;
   box-shadow: 0 0 10px $clr-gray300;
 

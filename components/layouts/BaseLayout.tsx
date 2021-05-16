@@ -11,7 +11,7 @@ const BaseLayout = (props) => {
 
       <div className={styles.container}>
         <SideNav />
-        <div className={styles.main}>{props.children}</div>
+        <div className={styles.container__element}>{props.children}</div>
       </div>
     </React.Fragment>
   );

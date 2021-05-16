@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 
 import { client } from '../../lib/apollo';
 
-export const fetchPosts = () => async (dispatch) => {
+export const getChannels = () => async (dispatch) => {
   const response = await client.query({
     query: gql`
       query channels {

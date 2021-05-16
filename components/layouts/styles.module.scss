@@ -1,10 +1,10 @@
 .container {
   display: flex;
-}
 
-.main {
-  margin: 2rem;
-  max-width: 720px;
-  max-height: 720px;
-  overflow: hidden;
+  &__element {
+    margin: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
 }

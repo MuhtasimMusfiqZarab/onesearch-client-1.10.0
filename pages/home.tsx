@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchPosts } from '../store/actions/postAction';
+import { getChannels } from '../store/actions/get-channels';
 
 import Table from '../components/general/table';
 import { useSelector } from 'react-redux';
@@ -9,7 +9,7 @@ export default function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(getChannels());
   }, []);
 
   const channels = useSelector((state: any) => state.channels);
