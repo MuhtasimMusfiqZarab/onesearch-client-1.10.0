@@ -3,7 +3,7 @@
   border-collapse: collapse;
   border-radius: 10px;
   border: 0 5px 10px black;
-  margin: 2rem;
+  // margin: 2rem;
 
   .thead {
     box-shadow: 0 5px 10px #e1e5ee;
@@ -18,7 +18,7 @@
     padding: 0.35em;
   }
   .th {
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     text-align: center;
 
     font-size: 0.7rem;
@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 300px) {
   .table {
     border: 0;
     .caption {

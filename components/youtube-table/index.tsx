@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getChannels } from '../store/actions/get-channels';
+import { getChannels } from '../../store/actions/get-channels';
 
-import Table from '../components/general/table';
+import Table from '../general/table';
 import { useSelector } from 'react-redux';
 
-export default function Home() {
+export default function YoutubeTable() {
   const dispatch = useDispatch();
 
   useEffect(() => {
