@@ -1,0 +1,59 @@
+.pagination {
+  margin-top: 0.7rem;
+  & ul {
+    display: flex;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 3rem;
+
+    border: 1px solid #ededed;
+
+    & li {
+      color: #20b2aa;
+      list-style: none;
+      line-height: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    padding: 0 1rem;
+
+    &:hover {
+      color: #fff;
+
+      background: #20b2aa;
+    }
+  }
+  &__prev {
+    border-radius: 1rem 0.5rem 0.5rem 1rem;
+  }
+  &__next {
+    border-radius: 0.5rem 1rem 1rem 0.5rem;
+  }
+
+  &__number {
+    height: 2rem;
+    width: 2rem;
+
+    border-radius: 50%;
+    margin: 0 0.3rem;
+
+    &:hover {
+      color: #fff;
+
+      background: #20b2aa;
+    }
+  }
+  &__numberActive {
+    color: #fff !important;
+    background: #20b2aa;
+  }
+  &__dots {
+    font-size: 2rem;
+    cursor: default;
+  }
+}

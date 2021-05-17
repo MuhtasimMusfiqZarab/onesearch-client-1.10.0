@@ -1,15 +1,10 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-
 import BaseLayout from '../components/layouts/BaseLayout';
-import Home from './home';
-
-import { Button, Container } from 'reactstrap';
+import YoutubeTable from '../components/youtube-table';
 
 export default function Index() {
   return (
     <BaseLayout>
-      <Home />
+      <YoutubeTable />
     </BaseLayout>
   );
 }
