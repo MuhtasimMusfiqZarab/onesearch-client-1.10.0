@@ -72,15 +72,18 @@ body {
         width: 2rem;
       }
 
-      &-active {
-        background-color: $clr-gray200;
-        border-left: 6px solid $clr-primary;
-
+      //define colors for the side navs
+      &:nth-child(2) {
         svg,
         div {
-          color: $clr-primary;
-          fill: $clr-primary;
+          color: $clr-youtube;
+          fill: $clr-youtube;
         }
+      }
+
+      &-active {
+        background-color: $clr-gray200;
+        border-left: 6px solid $clr-youtube;
       }
     }
   }
