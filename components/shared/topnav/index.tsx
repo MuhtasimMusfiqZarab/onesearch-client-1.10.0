@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Logo } from '../../icons/logo';
+import { Logo } from '../../_icons';
 
 import style from './styles.module.scss';
 
