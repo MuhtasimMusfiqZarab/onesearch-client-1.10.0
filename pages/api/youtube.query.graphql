@@ -1,7 +1,0 @@
-query channels {
-  channels {
-    description
-    subscribers
-    channel_url
-  }
-}

@@ -1,3 +1,4 @@
+//this document was added for tracking google analytics
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {

@@ -53,5 +53,4 @@ const Sidenav: FC<any> = ({ items }): JSX.Element => {
     </nav>
   );
 };
-
 export default Sidenav;
