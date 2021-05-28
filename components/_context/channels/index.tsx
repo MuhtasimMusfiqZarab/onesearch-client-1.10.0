@@ -21,7 +21,7 @@ function ChannelsProvider({ children }) {
   });
 
   return (
-    <ChannelsContext.Provider value={{ channels: data.getAllChannels }}>
+    <ChannelsContext.Provider value={{ channels: data?.getAllChannels }}>
       {children}
     </ChannelsContext.Provider>
   );
