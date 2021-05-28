@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
 
@@ -6,22 +6,38 @@ import GET_ALL_CHANNELS from '../../../pages/api/query/get-channels.query.gql';
 
 const ChannelsContext = createContext({
   channels: null,
+  setOffset: (value: number) => {},
+  offset: null,
+  refetch: null,
 });
 
 function ChannelsProvider({ children }) {
+  const [category, setCategory] = useState<string>('Music');
+  const [location, setLocation] = useState<string>(null);
+
+  const [limit, setLimit] = useState<number>(10);
+  const [offset, setOffset] = useState<number>(0);
+
   const { data, error, loading, refetch } = useQuery(GET_ALL_CHANNELS, {
     variables: {
       data: {
-        socialblade_category: 'Music',
-        location: 'Bangladesh',
-        limit: 5,
-        offset: 0,
+        socialblade_category: category,
+        location: location,
+        limit,
+        offset: offset,
       },
     },
   });
 
   return (
-    <ChannelsContext.Provider value={{ channels: data?.getAllChannels }}>
+    <ChannelsContext.Provider
+      value={{
+        channels: data?.getAllChannels?.channels,
+        setOffset,
+        offset,
+        refetch,
+      }}
+    >
       {children}
     </ChannelsContext.Provider>
   );
