@@ -12,8 +12,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
-    // "baseUrl": "."
+    "jsx": "preserve",
+    "baseUrl": "./"
   },
   //this file lets us not to use ts-ignore for each graphql import
   "files": ["graphql.d.ts"],
