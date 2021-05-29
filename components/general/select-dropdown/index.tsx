@@ -37,6 +37,13 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
     setOffset(0);
   };
 
+  const resetFilter = () => {
+    setOpened(false);
+    setSelectedItem('All');
+    setCategory(null);
+    setOffset(0);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>Category</div>
@@ -47,6 +54,11 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
             opened ? styles.active : ''
           }`}
         >
+          <div className={styles.option} onClick={() => resetFilter()}>
+            <input type="radio" id="film" name="category" />
+            <label htmlFor="film">All</label>
+          </div>
+
           {categories.map((element, index) => {
             return (
               <div
@@ -61,7 +73,7 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
           })}
         </div>
         <div className={styles.selected} onClick={() => setOpened(!opened)}>
-          {selectedItem ?? '- - -'}
+          {selectedItem ?? 'All'}
         </div>
       </div>
     </div>
