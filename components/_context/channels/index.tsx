@@ -14,7 +14,7 @@ const ChannelsContext = createContext({
 });
 
 function ChannelsProvider({ children }) {
-  const [category, setCategory] = useState<string>('Music');
+  const [category, setCategory] = useState<string>(null);
   const [location, setLocation] = useState<string>(null);
 
   const [limit, setLimit] = useState<number>(10);
@@ -30,6 +30,8 @@ function ChannelsProvider({ children }) {
       },
     },
   });
+
+  console.log('THis is the category', category);
 
   return (
     <ChannelsContext.Provider
