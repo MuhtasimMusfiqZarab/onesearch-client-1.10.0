@@ -3,13 +3,16 @@ import Pagination from 'components/general/pagination';
 
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
+import Dropdown from 'components/general/select-dropdown';
 
 export default function YoutubeTable() {
   const { channels, offset, setOffset } = useChannels();
 
   return (
     <div className={styles.container}>
-      <div className={styles.container__filters}>Filters</div>
+      <div className={styles.container__filters}>
+        <Dropdown />
+      </div>
       <div>{channels?.length > 0 && <Table items={channels} />}</div>
       <div className={styles.container__pagination}>
         <Pagination channels={channels} setOffset={setOffset} offset={offset} />
