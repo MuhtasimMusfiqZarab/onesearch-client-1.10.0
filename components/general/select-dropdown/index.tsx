@@ -1,10 +1,13 @@
 import React, { FC, useState, useEffect } from 'react';
 
 import styles from './styles.module.scss';
+import { useChannels } from 'components/_context/channels';
 
 interface Props {}
 
 const Dropdown: FC<Props> = ({}): JSX.Element => {
+  const { setCategory, setOffset } = useChannels();
+
   const [opened, setOpened] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<any>(null);
 
@@ -30,6 +33,8 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
   const handleChange = (item) => {
     setOpened(false);
     setSelectedItem(item);
+    setCategory(item);
+    setOffset(0);
   };
 
   return (

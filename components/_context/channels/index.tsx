@@ -9,6 +9,8 @@ const ChannelsContext = createContext({
   setOffset: (value: number) => {},
   offset: null,
   refetch: null,
+  setCategory: null,
+  setLocation: null,
 });
 
 function ChannelsProvider({ children }) {
@@ -36,6 +38,8 @@ function ChannelsProvider({ children }) {
         setOffset,
         offset,
         refetch,
+        setCategory,
+        setLocation,
       }}
     >
       {children}
