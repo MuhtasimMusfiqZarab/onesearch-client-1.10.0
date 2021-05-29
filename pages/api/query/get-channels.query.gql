@@ -2,8 +2,10 @@ query GET_ALL_CHANNELS($data: GetChannelsInput!) {
   getAllChannels(data: $data) {
     channels {
       id
-      channel_url
       channel_name
+      joined
+      views
+      subscribers
     }
     totalCount
   }

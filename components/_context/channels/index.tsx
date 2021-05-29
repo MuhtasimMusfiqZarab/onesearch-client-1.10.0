@@ -31,6 +31,8 @@ function ChannelsProvider({ children }) {
     },
   });
 
+  console.log('THis is category', category);
+
   return (
     <ChannelsContext.Provider
       value={{

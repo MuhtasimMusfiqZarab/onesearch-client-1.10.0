@@ -9,7 +9,7 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
   const { setCategory, setOffset } = useChannels();
 
   const [opened, setOpened] = useState<boolean>(false);
-  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [selectedItem, setSelectedItem] = useState<string>('All');
 
   const categories = [
     'howto',
@@ -55,8 +55,8 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
           }`}
         >
           <div className={styles.option} onClick={() => resetFilter()}>
-            <input type="radio" id="film" name="category" />
-            <label htmlFor="film">All</label>
+            <input type="radio" name="category" />
+            <label>All</label>
           </div>
 
           {categories.map((element, index) => {
@@ -66,14 +66,14 @@ const Dropdown: FC<Props> = ({}): JSX.Element => {
                 key={index}
                 onClick={() => handleChange(element)}
               >
-                <input type="radio" id="film" name="category" />
-                <label htmlFor="film">{element}</label>
+                <input type="radio" name="category" />
+                <label>{element}</label>
               </div>
             );
           })}
         </div>
         <div className={styles.selected} onClick={() => setOpened(!opened)}>
-          {selectedItem ?? 'All'}
+          {selectedItem}
         </div>
       </div>
     </div>

@@ -4,12 +4,9 @@ import styles from './style.module.scss';
 export interface Youtube {
   id: number;
   channel_name: string;
-  channel_url: string;
-  description: string;
-  socialblade_category: string;
+  joined: string;
+  views: string;
   subscribers: string;
-  bio_email: string;
-  location: string;
 }
 
 const Table: FC<any> = ({ items }): JSX.Element => {
@@ -21,7 +18,13 @@ const Table: FC<any> = ({ items }): JSX.Element => {
             Channel Name
           </th>
           <th className={styles.th} scope="col">
-            Channel URL
+            Joined
+          </th>
+          <th className={styles.th} scope="col">
+            Views
+          </th>
+          <th className={styles.th} scope="col">
+            Subscribers
           </th>
         </tr>
       </thead>
@@ -31,8 +34,14 @@ const Table: FC<any> = ({ items }): JSX.Element => {
             <td className={styles.td} data-label="Channel Name">
               {item.channel_name}
             </td>
-            <td className={styles.td} data-label="Channel URL">
-              <a href={item.channel_url}>{item.channel_url}</a>
+            <td className={styles.td} data-label="Joined">
+              <a href={item.channel_url}>{item.joined}</a>
+            </td>
+            <td className={styles.td} data-label="Views">
+              <a href={item.channel_url}>{item.views}</a>
+            </td>
+            <td className={styles.td} data-label="Subscribers">
+              <a href={item.channel_url}>{item.subscribers}</a>
             </td>
           </tr>
         ))}
