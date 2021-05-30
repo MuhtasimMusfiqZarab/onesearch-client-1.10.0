@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
 
 import GET_ALL_CHANNELS from '../../../pages/api/query/get-channels.query.gql';
@@ -30,8 +29,6 @@ function ChannelsProvider({ children }) {
       },
     },
   });
-
-  console.log('THis is category', category);
 
   return (
     <ChannelsContext.Provider

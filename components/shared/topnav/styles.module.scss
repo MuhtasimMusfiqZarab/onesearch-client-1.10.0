@@ -1,7 +1,3 @@
-@import '/styles/shared/fonts'; //added for custom fonts
-@import '/styles/shared/colors';
-@import '/styles/shared/variables';
-
 @mixin fixed {
   position: fixed;
   top: 0;

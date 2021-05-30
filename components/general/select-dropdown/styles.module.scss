@@ -16,8 +16,8 @@
   }
 
   .options_container {
-    background: #2f3640;
-    color: #f5f6fa;
+    background: $clr-gray100;
+    color: $clr-gray600;
     max-height: 0;
     width: 100%;
     opacity: 0;
@@ -44,7 +44,7 @@
 
     //hover effect
     .option:hover {
-      background: #414b57;
+      background: $clr-gray300;
     }
 
     //style the active ones
@@ -57,12 +57,12 @@
     //style the scroll bar
     &::-webkit-scrollbar {
       width: 8px;
-      background: #0d141f;
+      background: $clr-gray300;
       border-radius: 0 0.5rem 0.5rem 0;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #525861;
+      background: $clr-gray400;
       border-radius: 0 0.5rem 0.5rem 0;
     }
   }
@@ -75,10 +75,12 @@
 .selected {
   padding: 12px 24px;
   cursor: pointer;
-  background: #2f3640;
-  border-radius: 8px;
+
+  color: $clr-gray600;
+  border-radius: $radius;
   margin-bottom: 8px;
-  color: #f5f6fa;
+  border: 1px solid $clr-gray300;
+
   //position relative for positioning the icon
   position: relative;
   order: 0;
@@ -88,7 +90,7 @@
     background: url('./arrow-down.svg');
     background-size: contain;
     background-repeat: no-repeat;
-
+    fill: red;
     position: absolute;
     height: 100%;
     width: 32px;

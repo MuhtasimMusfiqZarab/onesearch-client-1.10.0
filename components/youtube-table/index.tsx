@@ -11,9 +11,11 @@ export default function YoutubeTable() {
   return (
     <div className={styles.container}>
       <div className={styles.container__filters}>
-        <Dropdown />
+        {channels?.length > 0 && <Dropdown />}
       </div>
-      <div>{channels?.length > 0 && <Table items={channels} />}</div>
+      <div className={styles.container__table}>
+        {channels?.length > 0 && <Table items={channels} />}
+      </div>
       <div className={styles.container__pagination}>
         <Pagination channels={channels} setOffset={setOffset} offset={offset} />
       </div>
