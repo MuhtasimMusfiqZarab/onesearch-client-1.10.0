@@ -1,20 +1,16 @@
 import React, { FC } from 'react';
-import Image from 'next/image';
-// reactstrap components
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  FormGroup,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Row,
-  Col,
-} from 'reactstrap';
+  YoutubeIcon,
+  FacebookIcon,
+  GoogleMapIcon,
+  SettingsIcon,
+  ExpandIcon,
+} from 'components/_icons';
+
+import Image from 'next/image';
 import styles from './style.module.scss';
 
 export interface Props {}
@@ -22,122 +18,44 @@ export interface Props {}
 const Login: FC<Props> = (): JSX.Element => {
   return (
     <>
-      <Col lg="5" md="7">
-        <Card className="bg-secondary shadow border-0">
-          <CardHeader className="bg-transparent pb-5">
-            <div className="text-muted text-center mt-2 mb-3">
-              <small>Sign in with</small>
-            </div>
-            <div className="btn-wrapper text-center">
-              <Button
-                className="btn-neutral btn-icon"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <Image
-                    src="/assets/img/icons/common/github.svg"
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                  />
-                </span>
-                <span className="btn-inner--text">Github</span>
-              </Button>
-              <Button
-                className="btn-neutral btn-icon"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <Image
-                    src="/assets/img/icons/common/google.svg"
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                  />
-                </span>
-                <span className="btn-inner--text">Google</span>
-              </Button>
-            </div>
-          </CardHeader>
-          <CardBody className="px-lg-5 py-lg-5">
-            <div className="text-center text-muted mb-4">
-              <small>Or sign in with credentials</small>
-            </div>
-            <Form role="form">
-              <FormGroup className="mb-3">
-                <InputGroup className="input-group-alternative">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-email-83" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Email"
-                    type="email"
-                    autoComplete="new-email"
-                  />
-                </InputGroup>
-              </FormGroup>
-              <FormGroup>
-                <InputGroup className="input-group-alternative">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-lock-circle-open" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Password"
-                    type="password"
-                    autoComplete="new-password"
-                  />
-                </InputGroup>
-              </FormGroup>
-              <div className="custom-control custom-control-alternative custom-checkbox">
-                <input
-                  className="custom-control-input"
-                  id=" customCheckLogin"
-                  type="checkbox"
-                />
-                <label
-                  className="custom-control-label"
-                  htmlFor=" customCheckLogin"
-                >
-                  <span className="text-muted">Remember me</span>
-                </label>
+      <div className="login-container">
+        <div className="forms-container">
+          <div className="signin-signup">
+            <form action="" className="signin-form">
+              <h2 className="title">sign in</h2>
+              <div className="input-field">
+                <div className="icon">
+                  <FontAwesomeIcon icon={faUser} />
+                </div>
+                <input type="text" placeholder="Username" />
               </div>
-              <div className="text-center">
-                <Button className="my-4" color="primary" type="button">
-                  Sign in
-                </Button>
+              <div className="input-field">
+                <div className="icon">
+                  <FontAwesomeIcon icon={faLock} />
+                </div>
+
+                <input type="password" placeholder="Password" />
               </div>
-            </Form>
-          </CardBody>
-        </Card>
-        <Row className="mt-3">
-          <Col xs="6">
-            <a
-              className="text-light"
-              href="#pablo"
-              onClick={(e) => e.preventDefault()}
-            >
-              <small>Forgot password?</small>
-            </a>
-          </Col>
-          <Col className="text-right" xs="6">
-            <a
-              className="text-light"
-              href="#pablo"
-              onClick={(e) => e.preventDefault()}
-            >
-              <small>Create new account</small>
-            </a>
-          </Col>
-        </Row>
-      </Col>
+              <input type="text" value="Login" className="btn btn-solid" />
+              <p className="social-text">Or sign in with social platforms</p>
+              <div className="social-media">
+                <a href="#" className="social-icon">
+                  <FacebookIcon />
+                </a>
+                <a href="#" className="social-icon">
+                  <YoutubeIcon />
+                </a>
+                <a href="#" className="social-icon">
+                  <GoogleMapIcon />
+                </a>
+                <a href="#" className="social-icon">
+                  <GoogleMapIcon />
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
