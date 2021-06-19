@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import styles from './style.module.scss';
 
 import {
   YoutubeIcon,
