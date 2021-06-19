@@ -4,3 +4,5 @@ export { GoogleMapIcon } from './gmap';
 export { SettingsIcon } from './settings';
 export { ExpandIcon } from './expand';
 export { Logo } from './logo';
+export { SigninIcon } from './signin';
+export { SignupIcon } from './signup';

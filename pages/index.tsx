@@ -1,13 +1,9 @@
-import BaseLayout from 'components/layouts/BaseLayout';
-import YoutubeTable from 'components/youtube-table';
-import { ChannelsProvider } from 'components/_context/channels';
+import LandingPage from 'components/landing-page';
 
 export default function Index() {
   return (
-    <BaseLayout>
-      <ChannelsProvider>
-        <YoutubeTable />
-      </ChannelsProvider>
-    </BaseLayout>
+    <div>
+      <LandingPage />
+    </div>
   );
 }
