@@ -1,9 +1,12 @@
+import TopNav from '../top-nav';
 import styles from './styles.module.scss';
 
 export default function LandingPage() {
   return (
     <div className={styles.container}>
-      <nav className={styles.navBar}>NavBar</nav>
+      <nav className={styles.navBar}>
+        <TopNav />
+      </nav>
       <main className={styles.main}>Main</main>
       <div className={styles.sideBar}>Sidebar</div>
       <div className={styles.content1}>Pricing1</div>
