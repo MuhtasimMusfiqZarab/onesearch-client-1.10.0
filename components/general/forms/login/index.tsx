@@ -98,10 +98,7 @@ const Login: FC<Props> = (): JSX.Element => {
               <h3>New Here?</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti accusamus libero exercitationem neque, impedit
-                consequatur, quidem consectetur numquam molestiae ratione veniam
-                fugit? Dolore perspiciatis officia deserunt quibusdam
-                repudiandae, iusto voluptate!
+                Deleniti accusamus libero exercitationem neque,
               </p>
               <button
                 className="btn transparent"
@@ -118,10 +115,7 @@ const Login: FC<Props> = (): JSX.Element => {
               <h3>Have an account?</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti accusamus libero exercitationem neque, impedit
-                consequatur, quidem consectetur numquam molestiae ratione veniam
-                fugit? Dolore perspiciatis officia deserunt quibusdam
-                repudiandae, iusto voluptate!
+                Deleniti accusamus libero exercitationem neque,
               </p>
               <button
                 className="btn transparent"
