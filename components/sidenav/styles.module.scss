@@ -1,0 +1,56 @@
+.nav {
+  &__list {
+    background: white;
+    box-shadow: 0px 0px 10px $clr-gray200;
+    padding: 1rem 0;
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__item {
+    list-style: none;
+    font-size: 0.7rem;
+    color: $clr-gray400;
+    text-align: center;
+    transition: all 200ms ease-in;
+
+    svg {
+      fill: $clr-gray400;
+      width: 2rem;
+      transition: all 200ms ease-in;
+
+      &:hover {
+        fill: $clr-gray600;
+      }
+    }
+
+    a {
+      color: $clr-gray400;
+      text-decoration: none;
+      &:hover {
+        color: $clr-gray600;
+      }
+    }
+  }
+}
+
+//mobile view
+@media screen and (max-width: 550px) {
+  .nav {
+    &__list {
+      flex-direction: row;
+      width: 100vw;
+      height: 5rem;
+      bottom: -30px;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 1rem;
+    }
+  }
+}
