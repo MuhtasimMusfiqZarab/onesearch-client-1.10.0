@@ -2,7 +2,7 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-rows: auto 1.5fr 1.2fr 0.8fr;
   //for every row defining the contents
   grid-template-areas:
     'nav nav nav nav'
@@ -17,8 +17,8 @@
   color: '#004d40';
 }
 
+//add background to all of the following the see their grid area.
 .navBar {
-  // background: #a7ffeb;
   grid-area: nav;
   border-radius: 5px;
 }
