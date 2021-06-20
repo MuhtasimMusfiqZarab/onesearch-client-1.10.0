@@ -1,5 +1,6 @@
-import Table from 'components/general/table';
+// import Table from 'components/general/table';
 import Pagination from 'components/general/pagination';
+import Table from 'components/table';
 
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';

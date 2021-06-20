@@ -1,6 +1,10 @@
 import styles from './styles.module.scss';
 
-export default function Table() {
+export interface Props {
+  items: any[];
+}
+
+export default function Table({ items }: Props) {
   return (
     <div>
       <table>
@@ -9,44 +13,20 @@ export default function Table() {
             <th>Channel Name</th>
             <th>Joined</th>
             <th>Subscribers</th>
-            <th>Status</th>
-            <th>Last Updated</th>
+            <th>Views</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <a href="#">Lonely army</a>
-            </td>
-            <td>18th Dec</td>
-            <td>123</td>
-            <td>
-              <p className="status status-pending">unpaid</p>
-            </td>
-            <td className="amount">18th Dec</td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Lonely army</a>
-            </td>
-            <td>18th Dec</td>
-            <td>123</td>
-            <td>
-              <p className="status status-unpaid">unpaid</p>
-            </td>
-            <td className="amount">18th Dec</td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Lonely army</a>
-            </td>
-            <td>18th Dec</td>
-            <td>123</td>
-            <td>
-              <p className="status status-paid">unpaid</p>
-            </td>
-            <td className="amount">18th Dec</td>
-          </tr>
+          {items.map((item, index) => (
+            <tr key={index}>
+              <td>
+                <a href="#">{item.channel_name}</a>
+              </td>
+              <td>{item.joined}</td>
+              <td>{item.subscribers}</td>
+              <td>{item.views}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

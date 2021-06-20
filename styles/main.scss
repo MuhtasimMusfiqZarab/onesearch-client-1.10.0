@@ -476,13 +476,13 @@ table {
 
   a {
     text-decoration: none;
-    color: $clr-link;
+    color: inherit;
   }
 
   tbody {
     tr:hover {
       cursor: pointer;
-      background: $clr-gray400 !important;
+      background: $clr-primary-hover !important;
       color: white;
     }
   }
