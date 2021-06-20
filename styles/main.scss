@@ -8,7 +8,10 @@
 
 html,
 body {
+  // font-family: 'Benne', serif;
   font-family: 'Montserrat', 'Helvetica'; //added for custom font from public
+  color: $clr-gray500;
+  // background-color: $clr-gray100;
 }
 
 .nav {
@@ -446,4 +449,63 @@ body {
   }
 }
 
-//landing page design
+//table desing
+
+table {
+  border-collapse: collapse;
+  box-shadow: 10px 5px 10px $clr-gray300 !important;
+  border: 1px solid $clr-gray300;
+  // border-radius: 0.2rem;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+
+  thead {
+    box-shadow: 0 5px 10px $clr-gray300;
+  }
+  th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+
+  td {
+    padding: 1rem 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $clr-link;
+  }
+
+  .status {
+    border-radius: 0.2rem;
+    background-color: red;
+    padding: 0.2rem 1rem;
+    text-align: center;
+
+    &-pending {
+      background-color: $clr-pending;
+      color: $clr-pending-font;
+    }
+    &-paid {
+      background-color: $clr-paid;
+      color: $clr-paid-font;
+    }
+    &-unpaid {
+      background-color: $clr-unpaid;
+      color: $clr-unpaid-font;
+    }
+  }
+
+  // .amount {
+  //   text-align: right;
+  // }
+
+  //color alternating rows
+  tr:nth-child(even) {
+    background-color: $clr-gray150;
+  }
+}

@@ -6,6 +6,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
+            rel="stylesheet"
+          />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-4J4WYW0YZ5"
