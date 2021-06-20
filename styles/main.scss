@@ -455,7 +455,6 @@ table {
   border-collapse: collapse;
   box-shadow: 10px 5px 10px $clr-gray300 !important;
   border: 1px solid $clr-gray300;
-  // border-radius: 0.2rem;
   background-color: white;
   text-align: left;
   overflow: hidden;
@@ -478,6 +477,14 @@ table {
   a {
     text-decoration: none;
     color: $clr-link;
+  }
+
+  tbody {
+    tr:hover {
+      cursor: pointer;
+      background: $clr-gray400 !important;
+      color: white;
+    }
   }
 
   .status {
