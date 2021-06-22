@@ -5,12 +5,14 @@ import Table from 'components/table';
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
 import Dropdown from 'components/general/select-dropdown';
+import Tab from 'components/general/tab';
 
 export default function YoutubeTable() {
   const { channels, offset, setOffset } = useChannels();
 
   return (
     <div className={styles.container}>
+      <Tab />
       <div className={styles.container__filters}>
         {channels?.length > 0 && <Dropdown />}
       </div>

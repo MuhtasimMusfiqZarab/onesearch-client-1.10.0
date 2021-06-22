@@ -1,0 +1,56 @@
+.nav {
+  background-color: white;
+  box-shadow: 0 0 10px 5px $clr-gray300;
+  // border-radius: 0 0 $radius $radius;
+  overflow: hidden;
+  padding: 1rem;
+  width: 24rem;
+
+  .list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .listitem {
+      list-style: none;
+      padding: 1rem;
+      cursor: pointer;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 4rem;
+        height: 4rem;
+        background-color: $clr-secondary-hover;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 400ms $animation;
+        transform: scale(0);
+        z-index: 1;
+      }
+
+      svg {
+        fill: $clr-gray400;
+        width: 2rem;
+        z-index: 1;
+        position: relative;
+      }
+
+      &:hover svg {
+        fill: $clr-secondary;
+      }
+
+      &.active {
+        svg {
+          fill: $clr-secondary;
+        }
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
