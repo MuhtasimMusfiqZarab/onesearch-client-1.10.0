@@ -4,19 +4,17 @@
 
   &__element {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 5rem;
     width: 100%;
-    overflow: hidden;
   }
 }
 
-//for desktop
-@media screen and (max-width: 1480px) {
+//mobile view
+@media screen and (max-width: 550px) {
   .container {
     &__element {
-      margin: 0 auto;
-      overflow: hidden;
+      margin: 5rem 1rem;
     }
   }
 }
