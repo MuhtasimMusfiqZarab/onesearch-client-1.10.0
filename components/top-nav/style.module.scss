@@ -1,5 +1,9 @@
 .nav {
   border-bottom: 1px solid $clr-gray200;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: white;
 
   &__toggle {
     position: absolute;
@@ -30,7 +34,7 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    margin: 1rem;
+    margin: 0.6rem 1rem;
 
     li {
       list-style: none;

@@ -1,14 +1,17 @@
 .container {
   display: flex;
+  height: 100vh;
 
   &__element {
-    margin: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     overflow: hidden;
   }
 }
 
+//for desktop
 @media screen and (max-width: 1480px) {
   .container {
     &__element {

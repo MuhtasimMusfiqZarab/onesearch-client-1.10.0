@@ -10,9 +10,8 @@ const BaseLayout = (props) => {
   return (
     <React.Fragment>
       <TopNav />
-
+      <SideNav />
       <div className={styles.container}>
-        <SideNav />
         <div className={styles.container__element}>{props.children}</div>
       </div>
     </React.Fragment>
