@@ -4,7 +4,7 @@
   // border-radius: 0 0 $radius $radius;
   overflow: hidden;
   padding: 1rem;
-  width: 24rem;
+  // width: inherit;
 
   .list {
     display: flex;
@@ -39,9 +39,9 @@
         position: relative;
       }
 
-      &:hover svg {
-        fill: $clr-secondary;
-      }
+      // &:hover svg {
+      //   fill: $clr-secondary;
+      // }
 
       &.active {
         svg {
