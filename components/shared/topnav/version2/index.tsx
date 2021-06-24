@@ -2,9 +2,15 @@ import { Logo } from '../../../_icons';
 import Link from 'next/link';
 import styles from './style.module.scss';
 
-export default function TopNav() {
+interface Props {
+  isTransperant?: any;
+}
+
+export default function TopNav({ isTransperant }: Props) {
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={`${styles.nav} ${isTransperant ? styles.transparent : ''} `}
+    >
       <input
         type="checkbox"
         id="nav__checkbox"

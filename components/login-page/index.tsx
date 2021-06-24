@@ -1,4 +1,6 @@
 import React, { FC, useState } from 'react';
+import TopNav from '../shared/topnav/version2';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './style.module.scss';
@@ -18,6 +20,7 @@ const index: FC<Props> = (): JSX.Element => {
 
   return (
     <>
+      <TopNav isTransperant />
       <div
         className={`${styles.loginContainer}  ${
           isSignUpMode ? styles.signupMode : ''
