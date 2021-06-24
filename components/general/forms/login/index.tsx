@@ -18,108 +18,124 @@ const Login: FC<Props> = (): JSX.Element => {
 
   return (
     <>
-      <div className={`login-container  ${isSignUpMode ? 'signup-mode' : ''} `}>
-        <div className="forms-container">
-          <div className="signin-signup">
-            <form action="" className="sign-in-form">
-              <h2 className="title">Sign In</h2>
-              <div className="input-field">
-                <div className="icon">
+      <div
+        className={`${styles.loginContainer}  ${
+          isSignUpMode ? styles.signupMode : ''
+        } `}
+      >
+        <div className={styles.formsContainer}>
+          <div className={styles.signinSignup}>
+            <form action="" className={styles.signinForm}>
+              <h2 className={styles.title}>Sign In</h2>
+              <div className={styles.inputField}>
+                <div className={styles.icon}>
                   <FontAwesomeIcon icon={faUser} />
                 </div>
                 <input type="text" placeholder="Username" />
               </div>
-              <div className="input-field">
-                <div className="icon">
+              <div className={styles.inputField}>
+                <div className={styles.icon}>
                   <FontAwesomeIcon icon={faLock} />
                 </div>
 
                 <input type="password" placeholder="Password" />
               </div>
-              <input type="text" value="Login" className="btn btn-solid" />
-              <p className="social-text">Or sign in with social platforms</p>
-              <div className="social-media">
-                <a href="#" className="social-icon">
+              <input
+                type="text"
+                value="Login"
+                className={`${styles.btn} ${styles.btnSolid} `}
+              />
+              <p className={styles.socialText}>
+                Or sign in with social platforms
+              </p>
+              <div className={styles.socialMedia}>
+                <a href="#" className={styles.socialIcon}>
                   <FacebookIcon />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className={styles.socialIcon}>
                   <YoutubeIcon />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className={styles.socialIcon}>
                   <GoogleMapIcon />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className={styles.socialIcon}>
                   <GoogleMapIcon />
                 </a>
               </div>
             </form>
-            <form action="" className="sign-up-form">
+            <form action="" className={styles.signupForm}>
               <h2 className="title">Sign Up</h2>
-              <div className="input-field">
-                <div className="icon">
+              <div className={styles.inputField}>
+                <div className={styles.icon}>
                   <FontAwesomeIcon icon={faUser} />
                 </div>
                 <input type="text" placeholder="Username" />
               </div>
-              <div className="input-field">
-                <div className="icon">
+              <div className={styles.inputField}>
+                <div className={styles.icon}>
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
                 <input type="text" placeholder="Email" />
               </div>
-              <div className="input-field">
-                <div className="icon">
+              <div className={styles.inputField}>
+                <div className={styles.icon}>
                   <FontAwesomeIcon icon={faLock} />
                 </div>
 
                 <input type="password" placeholder="Password" />
               </div>
-              <input type="text" value="Sign up" className="btn btn-solid" />
-              <p className="social-text">Or sign up with social platforms</p>
-              <div className="social-media">
-                <a href="#" className="social-icon">
+              <input
+                type="text"
+                value="Sign up"
+                className={`${styles.btn} ${styles.btnSolid} `}
+              />
+              <p className={styles.socialText}>
+                Or sign up with social platforms
+              </p>
+              <div className={styles.socialMedia}>
+                <a href="#" className={styles.socialIcon}>
                   <FacebookIcon />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className={styles.socialIcon}>
                   <YoutubeIcon />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className={styles.socialIcon}>
                   <GoogleMapIcon />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className={styles.socialIcon}>
                   <GoogleMapIcon />
                 </a>
               </div>
             </form>
           </div>
         </div>
-        <div className="panels-container">
-          <div className="panel left-panel">
-            <div className="content">
+        <div className={styles.panelsContainer}>
+          <div className={`${styles.panel} ${styles.leftPanel} `}>
+            <div className={styles.content}>
               <h3>New Here?</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti accusamus libero exercitationem neque,
               </p>
               <button
-                className="btn transparent"
+                className={`${styles.btn} ${styles.transparent} `}
                 id="sign-up-button"
                 onClick={() => setIsSignupMode(true)}
               >
                 Sign Up
               </button>
             </div>
-            <img src="/sign.svg" alt="" className="image" />
+            <img src="/sign.svg" alt="" className={styles.image} />
           </div>
-          <div className="panel right-panel">
-            <div className="content">
+          <div className={`${styles.panel} ${styles.rightPanel} `}>
+            <div className={styles.content}>
               <h3>Have an account?</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti accusamus libero exercitationem neque,
               </p>
               <button
-                className="btn transparent"
+                className={`${styles.btn} ${styles.transparent} `}
                 id="sign-in-button"
                 onClick={() => setIsSignupMode(false)}
               >
@@ -127,7 +143,7 @@ const Login: FC<Props> = (): JSX.Element => {
               </button>
             </div>
 
-            <img src="/sign.svg" alt="" className="image" />
+            <img src="/sign.svg" alt="" className={styles.image} />
           </div>
         </div>
       </div>
