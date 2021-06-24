@@ -1,14 +1,12 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-
-import BaseLayout from '../components/layouts/BaseLayout';
-
-import { Button, Container } from 'reactstrap';
-import Login from '../components/general/forms/login';
+import Login from '../components/login-page';
 
 export default function Index() {
   return (
     <>
+      <Head>
+        <title>Login</title>
+      </Head>
       <Login />
     </>
   );

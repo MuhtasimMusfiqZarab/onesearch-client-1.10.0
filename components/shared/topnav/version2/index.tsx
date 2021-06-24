@@ -1,4 +1,4 @@
-import { Logo } from '../_icons';
+import { Logo } from '../../../_icons';
 import Link from 'next/link';
 import styles from './style.module.scss';
 

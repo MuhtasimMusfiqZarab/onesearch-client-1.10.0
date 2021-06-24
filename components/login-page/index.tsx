@@ -13,7 +13,7 @@ import {
 
 export interface Props {}
 
-const Login: FC<Props> = (): JSX.Element => {
+const index: FC<Props> = (): JSX.Element => {
   const [isSignUpMode, setIsSignupMode] = useState<boolean>(false);
 
   return (
@@ -151,4 +151,4 @@ const Login: FC<Props> = (): JSX.Element => {
   );
 };
 
-export default Login;
+export default index;

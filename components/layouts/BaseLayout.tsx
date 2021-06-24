@@ -1,9 +1,6 @@
 import React from 'react';
-// import TopNav from '../shared/topnav';
-import TopNav from '../top-nav';
-// import SideNav from '../shared/sidenav';
-import SideNav from '../sidenav';
-
+import TopNav from '../shared/topnav/version2';
+import SideNav from '../shared/sidenav/version2';
 import styles from './styles.module.scss';
 
 const BaseLayout = (props) => {

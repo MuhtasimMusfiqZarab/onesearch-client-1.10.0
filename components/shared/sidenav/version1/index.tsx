@@ -6,7 +6,7 @@ import {
   GoogleMapIcon,
   SettingsIcon,
   ExpandIcon,
-} from '../../_icons';
+} from '../../../_icons';
 
 const Sidenav: FC<any> = ({ items }): JSX.Element => {
   const [currentTab, setCurrentTab] = useState<string>('');
