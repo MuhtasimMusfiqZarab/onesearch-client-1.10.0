@@ -1,10 +1,10 @@
 .nav {
   background-color: white;
-  box-shadow: 0 0 10px 5px $clr-gray300;
-  // border-radius: 0 0 $radius $radius;
+  border: 1px solid $clr-gray300;
   overflow: hidden;
-  padding: 1rem;
-  // width: inherit;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
 
   .list {
     display: flex;
@@ -13,14 +13,14 @@
 
     .listitem {
       list-style: none;
-      padding: 1rem;
+      padding: 0.5rem;
       cursor: pointer;
       position: relative;
 
       &::before {
         content: '';
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         background-color: $clr-secondary-hover;
         display: block;
         border-radius: 50%;
