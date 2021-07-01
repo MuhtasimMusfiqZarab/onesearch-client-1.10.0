@@ -19,12 +19,18 @@ export default function Table({ items }: Props) {
         <tbody className={styles.tbody}>
           {items.map((item, index) => (
             <tr key={index} className={styles.tr}>
-              <td className={styles.td}>
+              <td className={styles.td} data-label="Channel Name">
                 <a href="#">{item.channel_name}</a>
               </td>
-              <td className={styles.td}>{item.joined}</td>
-              <td className={styles.td}>{item.subscribers}</td>
-              <td className={styles.td}>{item.views}</td>
+              <td className={styles.td} data-label="Joined">
+                {item.joined}
+              </td>
+              <td className={styles.td} data-label="Subscribers">
+                {item.subscribers}
+              </td>
+              <td className={styles.td} data-label="Views">
+                {item.views}
+              </td>
             </tr>
           ))}
         </tbody>

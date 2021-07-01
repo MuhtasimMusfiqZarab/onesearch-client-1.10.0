@@ -1,5 +1,5 @@
 import Pagination from 'components/general/pagination';
-import Table from 'components/general/table/version1';
+import Table from 'components/general/table/version2';
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
 import { useCountires } from 'components/_context/countries';
@@ -56,7 +56,7 @@ export default function YoutubeTable() {
       <div className={styles.container}>
         <div className={styles.container__table}>
           {channels?.length > 0 && <Table items={channels} />}
-          {channels?.length === 0 && <div>Loading</div>}
+          {channels?.length === 0 && <div>No Data Found</div>}
         </div>
         <div className={styles.container__pagination}>
           <Pagination
