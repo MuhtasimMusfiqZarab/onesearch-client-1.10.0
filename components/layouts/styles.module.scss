@@ -1,10 +1,11 @@
 .container {
   display: flex;
   margin-bottom: 5rem;
+  height: calc(100vh - 5rem);
 
   &__element {
     display: flex;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 5rem;
     width: 100%;
   }

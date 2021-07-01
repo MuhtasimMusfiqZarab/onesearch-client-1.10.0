@@ -9,17 +9,25 @@ export default function YoutubeTable() {
   const { channels, offset, setOffset } = useChannels();
 
   return (
-    <div className={styles.container}>
-      <Tab />
-      <div className={styles.container__filters}>
-        {channels?.length > 0 && <Dropdown />}
+    <>
+      <div className={styles.filterContainer}>
+        <Tab />
+        <div className={styles.filterItems}>
+          <Dropdown />
+        </div>
       </div>
-      <div className={styles.container__table}>
-        {channels?.length > 0 && <Table items={channels} />}
+      <div className={styles.container}>
+        <div className={styles.container__table}>
+          {channels?.length > 0 && <Table items={channels} />}
+        </div>
+        <div className={styles.container__pagination}>
+          <Pagination
+            channels={channels}
+            setOffset={setOffset}
+            offset={offset}
+          />
+        </div>
       </div>
-      <div className={styles.container__pagination}>
-        <Pagination channels={channels} setOffset={setOffset} offset={offset} />
-      </div>
-    </div>
+    </>
   );
 }
