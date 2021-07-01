@@ -1,5 +1,5 @@
 import Pagination from 'components/general/pagination';
-import Table from 'components/general/table/version2';
+import Table from 'components/general/table/version1';
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
 import Dropdown from 'components/general/select-dropdown';
