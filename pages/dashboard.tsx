@@ -2,6 +2,7 @@ import Head from 'next/head';
 import BaseLayout from 'components/layouts/BaseLayout';
 import YoutubeTable from 'components/youtube-table';
 import { ChannelsProvider } from 'components/_context/channels';
+import { CountriesProvider } from 'components/_context/countries';
 
 export default function Index() {
   return (
@@ -11,7 +12,9 @@ export default function Index() {
       </Head>
       <BaseLayout>
         <ChannelsProvider>
-          <YoutubeTable />
+          <CountriesProvider>
+            <YoutubeTable />
+          </CountriesProvider>
         </ChannelsProvider>
       </BaseLayout>
     </>

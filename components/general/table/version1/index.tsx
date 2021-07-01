@@ -29,7 +29,7 @@ const Table: FC<any> = ({ items }): JSX.Element => {
         </tr>
       </thead>
       <tbody>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <tr key={index} className={styles.tr}>
             <td className={styles.td} data-label="Channel Name">
               {item.channel_name}
