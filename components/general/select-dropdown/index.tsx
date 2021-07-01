@@ -48,7 +48,7 @@ const Dropdown: FC<Props> = ({
             <label>All</label>
           </div>
 
-          {items.map((element, index) => {
+          {items?.map((element, index) => {
             return (
               <div
                 className={styles.option}

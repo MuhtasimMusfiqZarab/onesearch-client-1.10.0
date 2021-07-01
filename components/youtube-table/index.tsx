@@ -55,7 +55,8 @@ export default function YoutubeTable() {
       </div>
       <div className={styles.container}>
         <div className={styles.container__table}>
-          <Table items={channels} />
+          {channels?.length > 0 && <Table items={channels} />}
+          {channels?.length === 0 && <div>Loading</div>}
         </div>
         <div className={styles.container__pagination}>
           <Pagination
