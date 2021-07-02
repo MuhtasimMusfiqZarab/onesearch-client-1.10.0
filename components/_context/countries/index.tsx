@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext } from 'react';
 import { useQuery } from '@apollo/client';
 
 import GET_CHANNEL_COUNTRIES from '../../../pages/api/query/get-countries.query.gql';

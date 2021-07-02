@@ -1,7 +1,5 @@
-import React, { FC, useState, useEffect } from 'react';
-
+import React, { FC, useState } from 'react';
 import styles from './styles.module.scss';
-import { useChannels } from 'components/_context/channels';
 
 interface Props {
   title: string;

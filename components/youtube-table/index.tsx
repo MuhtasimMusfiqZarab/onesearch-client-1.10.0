@@ -15,6 +15,8 @@ export default function YoutubeTable() {
     setCategory,
     offset,
     setLocation,
+    loading,
+    total,
   } = useChannels();
   const { countries } = useCountires();
   const categories = [
@@ -57,19 +59,13 @@ export default function YoutubeTable() {
         </div>
       </div>
       <div className={styles.container}>
-        <div>
-          <Loading />
-        </div>
         <div className={styles.container__table}>
           {channels?.length > 0 && <Table items={channels} />}
           {channels?.length === 0 && <div>No Data Found</div>}
+          {loading && <Loading />}
         </div>
         <div className={styles.container__pagination}>
-          <Pagination
-            channels={channels}
-            setOffset={setOffset}
-            offset={offset}
-          />
+          <Pagination total={total} setOffset={setOffset} offset={offset} />
         </div>
       </div>
     </>

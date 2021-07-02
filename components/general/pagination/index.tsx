@@ -6,16 +6,25 @@ import styles from './style.module.scss';
 interface Props {
   offset: number;
   setOffset: (value: number) => void;
-  channels: any;
+  total: any;
 }
 
-const Pagination: FC<Props> = ({
-  offset,
-  setOffset,
-  channels,
-}): JSX.Element => {
-  let count: number = 0;
-  const [currentIndex, setCurrentIndex] = useState<number>();
+const Pagination: FC<Props> = ({ offset, setOffset, total }): JSX.Element => {
+  const [totalPages, setTotalPages] = useState<number>(null);
+
+  useEffect(() => {
+    if (total > 0) {
+      let count = Math.floor(total / 10);
+      if (total % 10) {
+        count++;
+      }
+      setTotalPages(count);
+    }
+  }, [total]);
+
+  const goToFirst = () => {};
+
+  const goToLast = () => {};
 
   const reduceOffset = () => {
     if (offset > 0) {
@@ -29,7 +38,7 @@ const Pagination: FC<Props> = ({
 
   return (
     <div className={styles.pagination}>
-      {channels && (
+      {total && (
         <ul>
           <li
             className={`${styles.pagination__btn} ${styles.pagination__prev}`}

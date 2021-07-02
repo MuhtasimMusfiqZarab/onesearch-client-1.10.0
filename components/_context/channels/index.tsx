@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { useQuery } from '@apollo/client';
 
 import GET_ALL_CHANNELS from '../../../pages/api/query/get-channels.query.gql';
@@ -10,6 +10,8 @@ const ChannelsContext = createContext({
   refetch: null,
   setCategory: null,
   setLocation: null,
+  loading: null,
+  total: null,
 });
 
 function ChannelsProvider({ children }) {
@@ -39,6 +41,8 @@ function ChannelsProvider({ children }) {
         refetch,
         setCategory,
         setLocation,
+        loading,
+        total: data?.getAllChannels?.totalCount,
       }}
     >
       {children}
