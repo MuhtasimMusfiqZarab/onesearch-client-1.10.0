@@ -17,6 +17,8 @@ export default function YoutubeTable() {
     setLocation,
     loading,
     total,
+    searchText,
+    setSearchText,
   } = useChannels();
   const { countries } = useCountires();
   const categories = [
@@ -55,7 +57,7 @@ export default function YoutubeTable() {
             setOffset={setOffset}
             items={countries}
           />
-          <SearchBox />
+          <SearchBox searchText={searchText} setSearchText={setSearchText} />
         </div>
       </div>
       <div className={styles.container}>

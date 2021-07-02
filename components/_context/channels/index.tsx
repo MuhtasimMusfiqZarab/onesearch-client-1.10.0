@@ -12,20 +12,26 @@ const ChannelsContext = createContext({
   setLocation: null,
   loading: null,
   total: null,
+  searchText: null,
+  setSearchText: null,
 });
 
 function ChannelsProvider({ children }) {
   const [category, setCategory] = useState<string>(null);
   const [location, setLocation] = useState<string>(null);
+  const [searchText, setSearchText] = useState<string>(null);
 
   const [limit, setLimit] = useState<number>(10);
   const [offset, setOffset] = useState<number>(0);
+
+  console.log('This is text', searchText);
 
   const { data, error, loading, refetch } = useQuery(GET_ALL_CHANNELS, {
     variables: {
       data: {
         socialblade_category: category,
         location: location,
+        searchText,
         limit,
         offset: offset,
       },
@@ -43,6 +49,8 @@ function ChannelsProvider({ children }) {
         setLocation,
         loading,
         total: data?.getAllChannels?.totalCount,
+        searchText,
+        setSearchText,
       }}
     >
       {children}
