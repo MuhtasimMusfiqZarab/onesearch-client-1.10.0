@@ -6,6 +6,7 @@ import { useCountires } from 'components/_context/countries';
 import Dropdown from 'components/general/select-dropdown';
 import Tab from 'components/general/tab';
 import SearchBox from 'components/general/searchbox';
+import Loading from 'components/general/loading/version1';
 
 export default function YoutubeTable() {
   const {
@@ -56,6 +57,9 @@ export default function YoutubeTable() {
         </div>
       </div>
       <div className={styles.container}>
+        <div>
+          <Loading />
+        </div>
         <div className={styles.container__table}>
           {channels?.length > 0 && <Table items={channels} />}
           {channels?.length === 0 && <div>No Data Found</div>}

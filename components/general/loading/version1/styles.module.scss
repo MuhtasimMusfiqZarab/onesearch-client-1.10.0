@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $clr-gray600;
+}
+
+.loading {
+  .dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0.3rem;
+    background-color: white;
+    animation: loading 2s $animationOne infinite;
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    transform: translateY(-1.5rem);
+    background-color: $clr-light;
+  }
+
+  50% {
+    transform: translateY(1.5rem);
+    background-color: $clr-dark;
+  }
+}
+
+@for $i from 1 through 3 {
+  .loading div:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.3s};
+  }
+}
