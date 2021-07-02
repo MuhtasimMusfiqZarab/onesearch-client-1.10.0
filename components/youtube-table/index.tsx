@@ -5,6 +5,7 @@ import { useChannels } from 'components/_context/channels';
 import { useCountires } from 'components/_context/countries';
 import Dropdown from 'components/general/select-dropdown';
 import Tab from 'components/general/tab';
+import SearchBox from 'components/general/searchbox';
 
 export default function YoutubeTable() {
   const {
@@ -51,6 +52,7 @@ export default function YoutubeTable() {
             setOffset={setOffset}
             items={countries}
           />
+          <SearchBox />
         </div>
       </div>
       <div className={styles.container}>

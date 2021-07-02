@@ -1,0 +1,41 @@
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &Icon {
+    fill: $clr-gray400;
+    left: 0;
+  }
+
+  &Close {
+    right: 0;
+    fill: $clr-gray400;
+    transition: 500ms fill ease-in;
+  }
+
+  &Delete {
+    fill: $clr-gray400;
+    right: 3rem;
+  }
+
+  //initial state of the input
+  input {
+    // box-shadow: 0 0 10px 5px $clr-gray300;
+    border: 1px solid $clr-gray300;
+    font-family: inherit;
+    font-size: 1rem;
+    color: $clr-gray400;
+    outline: none;
+    width: 22rem;
+    padding: 1rem 7.5rem 1rem 4rem;
+    border-radius: 0.2rem;
+  }
+}
