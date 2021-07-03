@@ -40,6 +40,10 @@
       display: none;
       margin-bottom: 2rem;
 
+      &:first-child {
+        margin-bottom: 0;
+      }
+
       a {
         text-decoration: none;
         color: inherit;
