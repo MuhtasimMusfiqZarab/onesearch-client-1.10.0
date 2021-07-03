@@ -1,4 +1,4 @@
-import TopNav from '../shared/topnav/version2';
+import TopNav from '../../shared/topnav/version2';
 import styles from './styles.module.scss';
 
 export default function LandingPage() {
