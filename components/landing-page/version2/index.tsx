@@ -33,13 +33,13 @@ export default function index() {
         <div className={styles.content}>
           <div className={styles.text}>
             <p>
-              We brings you all the contact information you need from anywhere
-              in the web. Get all the email data you need with
-              <span> one search</span>
+              We bring you all the contact information you need from anywhere in
+              the web. Get all the email data you need with
+              <span> One Search</span>
             </p>
-            <a href="#" className={styles.btn}>
-              Get Started!
-            </a>
+            <Link href="/dashboard">
+              <a className={styles.btn}>Get Started!</a>
+            </Link>
           </div>
           <div className={styles.img}>
             <div className={styles.socialIcons}>
