@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 export default function index() {
@@ -11,21 +12,19 @@ export default function index() {
           <nav>
             <ul>
               <li>
-                <a href="#">Integrate</a>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
               </li>
               <li>
-                <a href="#">API</a>
+                <Link href="/dashboard">
+                  <a>Dashboard</a>
+                </Link>
               </li>
               <li>
-                <a href="#">Product</a>
-              </li>
-              <li>
-                <a href="#">Support</a>
-              </li>
-              <li>
-                <a className={styles.btn} href="#">
-                  Sign Up
-                </a>
+                <Link href="/login">
+                  <a className={styles.btn}>Sign Up</a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -54,7 +53,7 @@ export default function index() {
           </div>
         </div>
         <div className={styles.wave}>
-          <img src="/wave.svg" alt="" />
+          <img src="/wave.svg" alt="" className={styles.mainWave} />
         </div>
       </div>
     </div>
