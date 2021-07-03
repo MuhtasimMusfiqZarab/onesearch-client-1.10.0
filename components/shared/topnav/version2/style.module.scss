@@ -32,24 +32,47 @@
   &__menu {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
     margin: 0.6rem 1rem;
 
     li {
       list-style: none;
       display: none;
+      margin-bottom: 2rem;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        padding-right: 3rem;
+        transition: all ease-in-out 250ms;
+
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          height: 0.4rem;
+          width: 0;
+          background-color: $clr-pink;
+          bottom: -1em;
+          transition: all ease-in-out 250ms;
+        }
+
+        &:hover::after {
+          width: 60%;
+        }
+
+        &:hover {
+          color: $clr-pink;
+        }
+      }
 
       &:first-child {
         margin-right: auto;
         display: block;
       }
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-      font-size: 1rem;
-      font-weight: 600;
     }
 
     img {
@@ -72,7 +95,6 @@
 }
 
 //Desktop view
-
 @media only screen and (min-width: 560px) {
   .nav {
     &__toggle {
@@ -83,6 +105,7 @@
 
       li {
         display: block;
+        margin-bottom: 0rem;
       }
     }
   }

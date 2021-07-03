@@ -26,9 +26,7 @@ export default function TopNav({ isTransperant }: Props) {
       </label>
       <ul className={styles.nav__menu}>
         <li>
-          <a href="#">
-            <img src="/planet.svg" alt="" className="image" />
-          </a>
+          <img src="/planet.svg" alt="" className="image" />
         </li>
         <li>
           <Link href="/">
