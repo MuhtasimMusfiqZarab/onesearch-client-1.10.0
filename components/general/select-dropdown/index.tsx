@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useRef, useEffect } from 'react';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -14,6 +14,7 @@ const Dropdown: FC<Props> = ({
   setItem,
   setOffset,
 }: Props): JSX.Element => {
+  const dropEle = useRef();
   const [opened, setOpened] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<string>('All');
 
@@ -31,11 +32,26 @@ const Dropdown: FC<Props> = ({
     setOffset(0);
   };
 
+
+  useEffect(() => {
+    // Hide dropdown menu after clicking outside element
+    const checkIfClickedOutside = e => {
+      if (opened && dropEle.current && !dropEle.current.contains(e.target)) {
+        setOpened(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [opened])
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>{title}</div>
       {/* Division to show the selected items */}
-      <div className={styles.select_box}>
+      <div className={styles.select_box} ref={dropEle}>
         <div
           className={`${styles.options_container} ${
             opened ? styles.active : ''
