@@ -1,5 +1,5 @@
 import Pagination from 'components/general/pagination';
-import Table from 'components/general/table/version2';
+import Table from 'components/general/table';
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
 import { useCountires } from 'components/_context/countries';
@@ -41,7 +41,7 @@ export default function YoutubeTable() {
   ];
 
   return (
-    <>
+    <div>
       <div className={styles.filterContainer}>
         <Tab />
         <div className={styles.filterItems}>
@@ -70,6 +70,6 @@ export default function YoutubeTable() {
           <Pagination total={total} setOffset={setOffset} offset={offset} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
