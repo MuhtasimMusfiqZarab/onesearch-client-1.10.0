@@ -41,7 +41,7 @@ export default function YoutubeTable() {
   ];
 
   return (
-    <>
+    <div>
       <div className={styles.filterContainer}>
         <Tab />
         <div className={styles.filterItems}>
@@ -70,6 +70,6 @@ export default function YoutubeTable() {
           <Pagination total={total} setOffset={setOffset} offset={offset} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
