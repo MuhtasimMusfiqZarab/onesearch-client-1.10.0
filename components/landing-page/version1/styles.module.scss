@@ -5,16 +5,16 @@
   grid-template-rows: auto 1.5fr 1.2fr 0.8fr;
   //for every row defining the contents
   grid-template-areas:
-    'nav nav nav nav'
-    'sidebar main main main'
-    'sidebar content1 content2 content3'
-    'sidebar footer footer footer';
+    "nav nav nav nav"
+    "main main main main"
+    "content1 content1 content2 content3"
+    "sidebar footer footer footer";
 
   grid-gap: 0.4rem;
   // padding: 15px;
   border-radius: 5px;
   text-align: center;
-  color: '#004d40';
+  color: "#004d40";
 }
 
 //add background to all of the following the see their grid area.
@@ -24,7 +24,6 @@
 }
 
 .main {
-  background: #84ffff;
   grid-area: main;
   border-radius: 5px;
 }
@@ -62,12 +61,12 @@
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
     grid-template-areas:
-      'nav'
-      'sidebar'
-      'main'
-      'content1'
-      'content2'
-      'content3'
-      'footer';
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
   }
 }

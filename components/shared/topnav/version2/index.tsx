@@ -1,6 +1,6 @@
-import { Logo } from '../../../_icons';
-import Link from 'next/link';
-import styles from './style.module.scss';
+import { Logo } from "../../../_icons";
+import Link from "next/link";
+import styles from "./style.module.scss";
 
 interface Props {
   isTransperant?: any;
@@ -9,7 +9,7 @@ interface Props {
 export default function TopNav({ isTransperant }: Props) {
   return (
     <nav
-      className={`${styles.nav} ${isTransperant ? styles.transparent : ''} `}
+      className={`${styles.nav} ${isTransperant ? styles.transparent : ""} `}
     >
       <input
         type="checkbox"
@@ -27,6 +27,7 @@ export default function TopNav({ isTransperant }: Props) {
       <ul className={styles.nav__menu}>
         <li>
           <img src="/planet.svg" alt="" className="image" />
+          {/* <Logo /> */}
         </li>
         <li>
           <Link href="/">

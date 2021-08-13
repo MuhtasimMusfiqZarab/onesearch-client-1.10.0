@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import LandingPage from 'components/landing-page/version2';
+import Head from "next/head";
+import LandingPage from "components/landing-page/version1";
 
 export default function Index() {
   return (
