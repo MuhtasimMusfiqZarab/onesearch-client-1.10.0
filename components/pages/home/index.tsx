@@ -1,5 +1,5 @@
 import TopNav from "../../shared/topnav/version2";
-import Main from "../home";
+import Main from "./intro";
 import styles from "./styles.module.scss";
 
 export default function LandingPage() {

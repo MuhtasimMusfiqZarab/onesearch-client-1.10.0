@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WebIcon } from "../../_icons";
+import { WebIcon } from "../../../_icons";
 import styles from "./styles.module.scss";
 
 export default function index() {

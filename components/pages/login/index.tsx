@@ -1,9 +1,9 @@
-import React, { FC, useState } from 'react';
-import TopNav from '../shared/topnav/version2';
+import React, { FC, useState } from "react";
+import TopNav from "../../shared/topnav/version2";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import styles from './style.module.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import styles from "./style.module.scss";
 
 import {
   YoutubeIcon,
@@ -11,7 +11,7 @@ import {
   GoogleMapIcon,
   SigninIcon,
   SignupIcon,
-} from 'components/_icons';
+} from "components/_icons";
 
 export interface Props {}
 
@@ -23,7 +23,7 @@ const index: FC<Props> = (): JSX.Element => {
       <TopNav isTransperant />
       <div
         className={`${styles.loginContainer}  ${
-          isSignUpMode ? styles.signupMode : ''
+          isSignUpMode ? styles.signupMode : ""
         } `}
       >
         <div className={styles.formsContainer}>
