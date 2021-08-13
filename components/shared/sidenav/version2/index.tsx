@@ -31,12 +31,7 @@ export default function SideNav() {
               <p className={styles.nav__itemlabel}>Subscription</p>
             </a>
           </li>
-          {/* <li className={styles.nav__item}>
-            <a href="#">
-              <CreditIcon />
-              <p className={styles.nav__itemlabel}>Credit</p>
-            </a>
-          </li> */}
+
           <li className={styles.nav__item}>
             <a href="#">
               <DownloadsIcon />
