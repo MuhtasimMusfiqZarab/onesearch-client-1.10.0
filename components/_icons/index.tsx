@@ -7,3 +7,8 @@ export { Logo } from "./logo";
 export { SigninIcon } from "./signin";
 export { SignupIcon } from "./signup";
 export { WebIcon } from "./webIcon";
+export { BinocularIcon } from "./binocular";
+export { RequestIcon } from "./request";
+export { SubscriptionIcon } from "./subscription";
+export { CreditIcon } from "./credit";
+export { DownloadsIcon } from "./downloads";

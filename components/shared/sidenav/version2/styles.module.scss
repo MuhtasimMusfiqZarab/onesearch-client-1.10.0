@@ -27,7 +27,7 @@
       transition: all 200ms ease-in;
 
       &:hover {
-        fill: $clr-primary-hover;
+        fill: red;
       }
     }
 
@@ -35,7 +35,7 @@
       color: $clr-gray400;
       text-decoration: none;
       &:hover {
-        color: $clr-primary-hover;
+        color: red;
       }
     }
 
