@@ -1,8 +1,9 @@
-export { YoutubeIcon } from './youtube';
-export { FacebookIcon } from './facebook';
-export { GoogleMapIcon } from './gmap';
-export { SettingsIcon } from './settings';
-export { ExpandIcon } from './expand';
-export { Logo } from './logo';
-export { SigninIcon } from './signin';
-export { SignupIcon } from './signup';
+export { YoutubeIcon } from "./youtube";
+export { FacebookIcon } from "./facebook";
+export { GoogleMapIcon } from "./gmap";
+export { SettingsIcon } from "./settings";
+export { ExpandIcon } from "./expand";
+export { Logo } from "./logo";
+export { SigninIcon } from "./signin";
+export { SignupIcon } from "./signup";
+export { WebIcon } from "./webIcon";
