@@ -6,3 +6,4 @@ export { ExpandIcon } from './expand';
 export { Logo } from './logo';
 export { SigninIcon } from './signin';
 export { SignupIcon } from './signup';
+export { Lock } from './lock';

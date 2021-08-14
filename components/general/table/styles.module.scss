@@ -8,45 +8,35 @@
 	text-align: left;
 	border-collapse: collapse;
 	background-color: #fff;
-	border: 2px solid #3ea9ef;
+	border: 1px solid $clr-theme-dark;
 
 	.thead {
 		color: #fff;
-		background: #0ca9ef;
-		border-bottom: 1px solid $clr-gray300;
+		background: $clr-theme-dark;
 	}
 
 	.th {
 		padding: 0.8rem 2rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-		font-size: 0.7rem;
-		font-weight: 900;
+		font-weight: 500;
+	}
+
+	tr {
+		border-bottom: 1px solid #c4c4c4;
+
+		&:last-child {
+			border-bottom: 0;
+		}
 	}
 
 	.td {
+		color: #282828;
 		padding: 0.8rem 2rem;
 	}
 
 	a {
 		text-decoration: none;
-		color: inherit;
+		color: #282828;
 	}
-
-	.tbody {
-		tr {
-			&:hover {
-				color: #fff;
-				cursor: pointer;
-				background: $clr-primary-hover !important;
-			}
-		}
-	}
-
-	//color alternating rows
-	// .tr:nth-child(even) {
-	// 	background-color: $clr-gray150;
-	// }
 }
 
 //mobile view

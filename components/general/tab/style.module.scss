@@ -2,7 +2,7 @@
 	// background-color: white;
 	// border: 1px solid $clr-gray300;
 	overflow: hidden;
-	padding: 0.5rem;
+	// padding: 0.5rem;
 	border-radius: 5px;
 	width: 100%;
 
@@ -15,10 +15,9 @@
 			position: relative;
 			display: flex;
 			align-items: center;
-			color: #858585;
+			color: #8f8f8f;
 			list-style: none;
-			padding: 0.5rem;
-			padding-left: 26px;
+			padding: 11px 25px;
 			border-top: 5px solid transparent;
 			border-radius: 4px 4px 0 0;
 			cursor: pointer;
@@ -53,7 +52,7 @@
 
 			&.active {
 				background: #fff;
-				border-color: #0ca9ef;
+				border-color: $clr-theme-dark;
 
 				svg {
 					fill: $clr-secondary;

@@ -41,9 +41,9 @@ export default function YoutubeTable() {
   ];
 
   return (
-    <div>
+    <div className={styles.container__element_inner}>
+      <Tab />
       <div className={styles.filterContainer}>
-        <Tab />
         <div className={styles.filterItems}>
           <Dropdown
             title="Category"
@@ -51,23 +51,24 @@ export default function YoutubeTable() {
             setOffset={setOffset}
             items={categories}
           />
+
           <Dropdown
             title="Countries"
             setItem={setLocation}
             setOffset={setOffset}
             items={countries}
           />
-          <SearchBox searchText={searchText} setSearchText={setSearchText} />
         </div>
-      </div>
-      <div className={styles.container}>
-        <div className={styles.container__table}>
-          {channels?.length > 0 && <Table items={channels} />}
-          {channels?.length === 0 && <div>No Data Found</div>}
-          {loading && <Loading />}
-        </div>
-        <div className={styles.container__pagination}>
-          <Pagination total={total} setOffset={setOffset} offset={offset} />
+
+        <div className={styles.container}>
+          <div className={styles.container__table}>
+            {channels?.length > 0 && <Table items={channels} />}
+            {channels?.length === 0 && <div>No Data Found</div>}
+            {loading && <Loading />}
+          </div>
+          <div className={styles.container__pagination}>
+            <Pagination total={total} setOffset={setOffset} offset={offset} />
+          </div>
         </div>
       </div>
     </div>
