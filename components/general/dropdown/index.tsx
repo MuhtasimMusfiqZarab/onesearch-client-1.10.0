@@ -6,6 +6,7 @@ interface Props {
   items: string[];
   setItem: any;
   setOffset?: any;
+  isSearch: boolean
 }
 
 const Dropdown: FC<Props> = ({
@@ -13,8 +14,9 @@ const Dropdown: FC<Props> = ({
   items,
   setItem,
   setOffset,
+  isSearch
 }: Props): JSX.Element => {
-  const dropWrap = useRef();
+  const dropWrap = useRef(null);
   const [opened, setOpened] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<string>('All');
   const [options, setOptions] = useState([]);
@@ -35,7 +37,7 @@ const Dropdown: FC<Props> = ({
 
   const handleDropdownEleSearch = (event) => {
     const searchQuery = event.target.value.trim();
-    const optionsArr = items.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase()) )
+    const optionsArr = items.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase()))
     setOptions(optionsArr)
   }
 
@@ -59,14 +61,12 @@ const Dropdown: FC<Props> = ({
       {/* Division to show the selected items */}
       <div className={styles.select_box} ref={dropWrap}>
         <div
-          className={`${styles.options_container} ${
-            opened ? styles.active : ''
-          }`}
+          className={`${styles.options_container} ${opened ? styles.active : ''
+            }`}
         >
-          
-          <div className={styles.item_search}>
+          {isSearch && <div className={styles.item_search}>
             <input type="search" name="search" onChange={handleDropdownEleSearch} />
-          </div>
+          </div>}
 
           <div className={styles.option} onClick={() => resetFilter()}>
             <input type="radio" name="category" />

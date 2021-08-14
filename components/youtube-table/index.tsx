@@ -3,7 +3,7 @@ import Table from 'components/general/table/version2';
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
 import { useCountires } from 'components/_context/countries';
-import Dropdown from 'components/general/select-search-dropdown';
+import Dropdown from 'components/general/dropdown';
 import Tab from 'components/general/tab';
 import SearchBox from 'components/general/searchbox';
 import Loading from 'components/general/loading/version1';
@@ -50,12 +50,14 @@ export default function YoutubeTable() {
             setItem={setCategory}
             setOffset={setOffset}
             items={categories}
+            isSearch={true}
           />
           <Dropdown
             title="Countries"
             setItem={setLocation}
             setOffset={setOffset}
             items={countries}
+            isSearch={true}
           />
           <SearchBox searchText={searchText} setSearchText={setSearchText} />
         </div>
