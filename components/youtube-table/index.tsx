@@ -1,5 +1,5 @@
 import Pagination from 'components/general/pagination';
-import Table from 'components/general/table/version2';
+import Table from 'components/general/table';
 import styles from './styles.module.scss';
 import { useChannels } from 'components/_context/channels';
 import { useCountires } from 'components/_context/countries';
@@ -41,9 +41,9 @@ export default function YoutubeTable() {
   ];
 
   return (
-    <>
+    <div className={styles.container__element_inner}>
+      <Tab />
       <div className={styles.filterContainer}>
-        <Tab />
         <div className={styles.filterItems}>
           <Dropdown
             title="Category"
@@ -52,6 +52,7 @@ export default function YoutubeTable() {
             items={categories}
             isSearch={true}
           />
+
           <Dropdown
             title="Countries"
             setItem={setLocation}
@@ -59,19 +60,19 @@ export default function YoutubeTable() {
             items={countries}
             isSearch={true}
           />
-          <SearchBox searchText={searchText} setSearchText={setSearchText} />
+        </div>
+
+        <div className={styles.container}>
+          <div className={styles.container__table}>
+            {channels?.length > 0 && <Table items={channels} />}
+            {channels?.length === 0 && <div>No Data Found</div>}
+            {loading && <Loading />}
+          </div>
+          <div className={styles.container__pagination}>
+            <Pagination total={total} setOffset={setOffset} offset={offset} />
+          </div>
         </div>
       </div>
-      <div className={styles.container}>
-        <div className={styles.container__table}>
-          {channels?.length > 0 && <Table items={channels} />}
-          {channels?.length === 0 && <div>No Data Found</div>}
-          {loading && <Loading />}
-        </div>
-        <div className={styles.container__pagination}>
-          <Pagination total={total} setOffset={setOffset} offset={offset} />
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
