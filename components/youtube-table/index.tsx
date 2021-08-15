@@ -1,12 +1,12 @@
-import Pagination from 'components/general/pagination';
-import Table from 'components/general/table';
-import styles from './styles.module.scss';
-import { useChannels } from 'components/_context/channels';
-import { useCountires } from 'components/_context/countries';
-import Dropdown from 'components/general/dropdown';
-import Tab from 'components/general/tab';
-import SearchBox from 'components/general/searchbox';
-import Loading from 'components/general/loading/version1';
+import Pagination from "components/general/pagination";
+import Table from "components/general/table";
+import styles from "./styles.module.scss";
+import { useChannels } from "components/_context/channels";
+import { useCountires } from "components/_context/countries";
+import Dropdown from "components/general/dropdown";
+import Tab from "components/general/tab";
+import SearchBox from "components/general/searchbox";
+import Loading from "components/general/loading/version1";
 
 export default function YoutubeTable() {
   const {
@@ -22,22 +22,22 @@ export default function YoutubeTable() {
   } = useChannels();
   const { countries } = useCountires();
   const categories = [
-    'howto',
-    'Music',
-    'Entertainment',
-    'People',
-    'Games',
-    'Travel',
-    'Sports',
-    'Autos',
-    'Film',
-    'Tech',
-    'Comedy',
-    'News',
-    'Education',
-    'Nonprofit',
-    'Animals',
-    'Shows',
+    "howto",
+    "Music",
+    "Entertainment",
+    "People",
+    "Games",
+    "Travel",
+    "Sports",
+    "Autos",
+    "Film",
+    "Tech",
+    "Comedy",
+    "News",
+    "Education",
+    "Nonprofit",
+    "Animals",
+    "Shows",
   ];
 
   return (
