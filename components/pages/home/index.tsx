@@ -1,5 +1,6 @@
-import TopNav from '../../shared/topnav/version2';
-import styles from './styles.module.scss';
+import TopNav from "../../shared/topnav/version2";
+import Main from "./intro";
+import styles from "./styles.module.scss";
 
 export default function LandingPage() {
   return (
@@ -7,7 +8,9 @@ export default function LandingPage() {
       <nav className={styles.navBar}>
         <TopNav />
       </nav>
-      <main className={styles.main}>Main</main>
+      <main className={styles.main}>
+        <Main />
+      </main>
       <div className={styles.sideBar}>Sidebar</div>
       <div className={styles.content1}>Pricing1</div>
       <div className={styles.content2}>Pricing2</div>

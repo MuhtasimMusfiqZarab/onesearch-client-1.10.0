@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState } from 'react';
-import { useQuery } from '@apollo/client';
+import React, { createContext, useContext, useState } from "react";
+import { useQuery } from "@apollo/client";
 
-import GET_ALL_CHANNELS from '../../../pages/api/query/get-channels.query.gql';
+import GET_ALL_CHANNELS from "../../../pages/api/query/get-channels.query.gql";
 
 const ChannelsContext = createContext({
   channels: null,
@@ -23,8 +23,6 @@ function ChannelsProvider({ children }) {
 
   const [limit, setLimit] = useState<number>(10);
   const [offset, setOffset] = useState<number>(0);
-
-  console.log('This is text', searchText);
 
   const { data, error, loading, refetch } = useQuery(GET_ALL_CHANNELS, {
     variables: {

@@ -54,12 +54,12 @@
 
         position: relative;
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           display: block;
           height: 0.4rem;
           width: 0;
-          background-color: $clr-pink;
+          background-color: $os-primary;
           bottom: -1em;
           transition: all ease-in-out 250ms;
         }
@@ -69,7 +69,7 @@
         }
 
         &:hover {
-          color: $clr-pink;
+          color: $os-primary;
         }
       }
 
