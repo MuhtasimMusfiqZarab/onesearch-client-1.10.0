@@ -7,6 +7,7 @@ import Dropdown from "components/general/dropdown";
 import Tab from "components/general/tab";
 import SearchBox from "components/general/searchbox";
 import Loading from "components/general/loading/version1";
+import Skeleton from "react-loading-skeleton";
 
 export default function YoutubeTable() {
   const {
@@ -44,6 +45,7 @@ export default function YoutubeTable() {
     <div className={styles.container__element_inner}>
       <Tab />
       <div className={styles.filterContainer}>
+        <SearchBox searchText={searchText} setSearchText={setSearchText} />
         <div className={styles.filterItems}>
           <Dropdown
             title="Category"
@@ -66,7 +68,7 @@ export default function YoutubeTable() {
           <div className={styles.container__table}>
             {channels?.length > 0 && <Table items={channels} />}
             {channels?.length === 0 && <div>No Data Found</div>}
-            {loading && <Loading />}
+            {loading && <Skeleton count={5} />}
           </div>
           <div className={styles.container__pagination}>
             <Pagination total={total} setOffset={setOffset} offset={offset} />

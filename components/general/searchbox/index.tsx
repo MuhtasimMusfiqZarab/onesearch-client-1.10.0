@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface Props {
   searchText: string;
@@ -21,7 +21,7 @@ const index: FC<Props> = ({
           type="text"
           className={styles.searchInput}
           autoFocus
-          placeholder="Channel Name/Email"
+          placeholder="Channel Name / Email"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
