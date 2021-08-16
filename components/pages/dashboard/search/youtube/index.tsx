@@ -6,7 +6,7 @@ import { useCountires } from "components/_context/countries";
 import Dropdown from "components/general/dropdown";
 import Tab from "components/general/tab";
 import SearchBox from "components/general/searchbox";
-import Loading from "components/general/loading/version1";
+import Loader from "components/general/loader";
 import Skeleton from "react-loading-skeleton";
 
 export default function YoutubeTable() {
@@ -68,7 +68,7 @@ export default function YoutubeTable() {
           <div className={styles.container__table}>
             {channels?.length > 0 && <Table items={channels} />}
             {channels?.length === 0 && <div>No Data Found</div>}
-            {loading && <Skeleton count={5} />}
+            {loading && <Loader width="100%" height="100%" />}
           </div>
           <div className={styles.container__pagination}>
             <Pagination total={total} setOffset={setOffset} offset={offset} />
