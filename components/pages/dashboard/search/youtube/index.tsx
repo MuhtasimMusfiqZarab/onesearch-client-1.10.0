@@ -1,15 +1,17 @@
-import Pagination from "components/general/pagination";
-import Table from "components/general/table";
+import {
+  Pagination,
+  Table,
+  Dropdown,
+  Tab,
+  SearchBox,
+  Loader,
+} from "components/general";
 import styles from "./styles.module.scss";
 import {
   useChannels,
   useCountries,
   useCategories,
 } from "components/_context/youtube";
-import Dropdown from "components/general/dropdown";
-import Tab from "components/general/tab";
-import SearchBox from "components/general/searchbox";
-import Loader from "components/general/loader";
 
 export default function YoutubeTable() {
   const {

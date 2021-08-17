@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
-import styles from './styles.module.scss';
+import React, { FC } from "react";
+import styles from "./styles.module.scss";
 
 interface Props {}
 
-const index: FC<Props> = ({}: Props): JSX.Element => {
+export const Loading: FC<Props> = ({}: Props): JSX.Element => {
   return (
     <div className={styles.container}>
       <div className={styles.loading}>
@@ -14,5 +14,3 @@ const index: FC<Props> = ({}: Props): JSX.Element => {
     </div>
   );
 };
-
-export default index;

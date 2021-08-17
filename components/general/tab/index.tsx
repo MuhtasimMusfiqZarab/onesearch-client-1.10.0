@@ -1,20 +1,22 @@
-import React, { FC, useState } from 'react';
-import styles from './style.module.scss';
+import React, { FC, useState } from "react";
+import styles from "./style.module.scss";
 
-interface Props { }
+interface Props {}
 
-const index: FC<Props> = ({ }: Props): JSX.Element => {
+export const Tab: FC<Props> = ({}: Props): JSX.Element => {
   const [isActive, setActive] = useState<number>(1);
 
   const handleActive = (i) => {
     setActive(i);
-  }
+  };
 
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
         <li
-          className={`${styles.listitem} ${isActive === 1 ? styles.active : ''}`}
+          className={`${styles.listitem} ${
+            isActive === 1 ? styles.active : ""
+          }`}
           onClick={() => handleActive(1)}
         >
           <svg
@@ -27,7 +29,12 @@ const index: FC<Props> = ({ }: Props): JSX.Element => {
           </svg>
           Youtube
         </li>
-        <li className={`${styles.listitem} ${isActive === 2 ? styles.active : ''}`} onClick={() => handleActive(2)}>
+        <li
+          className={`${styles.listitem} ${
+            isActive === 2 ? styles.active : ""
+          }`}
+          onClick={() => handleActive(2)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -38,7 +45,12 @@ const index: FC<Props> = ({ }: Props): JSX.Element => {
           </svg>
           Facebook
         </li>
-        <li className={`${styles.listitem} ${isActive === 3 ? styles.active : ''}`} onClick={() => handleActive(3)}>
+        <li
+          className={`${styles.listitem} ${
+            isActive === 3 ? styles.active : ""
+          }`}
+          onClick={() => handleActive(3)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -49,7 +61,12 @@ const index: FC<Props> = ({ }: Props): JSX.Element => {
           </svg>
           Location
         </li>
-        <li className={`${styles.listitem} ${isActive === 4 ? styles.active : ''}`} onClick={() => handleActive(4)}>
+        <li
+          className={`${styles.listitem} ${
+            isActive === 4 ? styles.active : ""
+          }`}
+          onClick={() => handleActive(4)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -64,5 +81,3 @@ const index: FC<Props> = ({ }: Props): JSX.Element => {
     </nav>
   );
 };
-
-export default index;

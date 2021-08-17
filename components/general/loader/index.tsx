@@ -1,3 +1,4 @@
+import React, { FC } from "react";
 import Skeleton from "react-loading-skeleton";
 
 interface Props {
@@ -8,13 +9,13 @@ interface Props {
   style?: any;
 }
 
-export default function Loader({
+export const Loader: FC<Props> = ({
   width = "100%",
   height = 16,
   circle = false,
   count,
   style,
-}: Props) {
+}: Props): JSX.Element => {
   return (
     <Skeleton
       width={width}
@@ -24,4 +25,4 @@ export default function Loader({
       style={{ ...style }}
     />
   );
-}
+};

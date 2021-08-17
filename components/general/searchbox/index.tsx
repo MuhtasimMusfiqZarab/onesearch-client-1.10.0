@@ -7,7 +7,7 @@ interface Props {
   setSearchText: any;
 }
 
-const index: FC<Props> = ({
+export const SearchBox: FC<Props> = ({
   searchText,
   setSearchText,
 }: Props): JSX.Element => {
@@ -35,5 +35,3 @@ const index: FC<Props> = ({
     </div>
   );
 };
-
-export default index;
