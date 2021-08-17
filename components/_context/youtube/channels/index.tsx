@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { useQuery } from "@apollo/client";
 
-import GET_ALL_CHANNELS from "../../../pages/api/query/get-channels.query.gql";
+import GET_ALL_CHANNELS from "pages/api/query/get-channels.query.gql";
 
 const ChannelsContext = createContext({
   channels: null,

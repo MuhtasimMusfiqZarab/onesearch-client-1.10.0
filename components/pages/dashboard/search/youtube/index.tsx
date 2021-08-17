@@ -1,13 +1,15 @@
 import Pagination from "components/general/pagination";
 import Table from "components/general/table";
 import styles from "./styles.module.scss";
-import { useChannels } from "components/_context/channels";
-import { useCountires } from "components/_context/countries";
+import {
+  useChannels,
+  useCountries,
+  useCategories,
+} from "components/_context/youtube";
 import Dropdown from "components/general/dropdown";
 import Tab from "components/general/tab";
 import SearchBox from "components/general/searchbox";
 import Loader from "components/general/loader";
-import Skeleton from "react-loading-skeleton";
 
 export default function YoutubeTable() {
   const {
@@ -21,25 +23,8 @@ export default function YoutubeTable() {
     searchText,
     setSearchText,
   } = useChannels();
-  const { countries } = useCountires();
-  const categories = [
-    "howto",
-    "Music",
-    "Entertainment",
-    "People",
-    "Games",
-    "Travel",
-    "Sports",
-    "Autos",
-    "Film",
-    "Tech",
-    "Comedy",
-    "News",
-    "Education",
-    "Nonprofit",
-    "Animals",
-    "Shows",
-  ];
+  const { countries } = useCountries();
+  const { categories } = useCategories();
 
   return (
     <div className={styles.container__element_inner}>
