@@ -3,6 +3,7 @@ import BaseLayout from "components/layouts/BaseLayout";
 import YoutubeTable from "components/pages/dashboard/search/youtube";
 import { ChannelsProvider } from "components/_context/youtube/channels";
 import { CountriesProvider } from "components/_context/youtube/countries";
+import { CategoriesProvider } from "components/_context/youtube/categories";
 
 export default function Index() {
   return (
@@ -13,7 +14,9 @@ export default function Index() {
       <BaseLayout>
         <ChannelsProvider>
           <CountriesProvider>
-            <YoutubeTable />
+            <CategoriesProvider>
+              <YoutubeTable />
+            </CategoriesProvider>
           </CountriesProvider>
         </ChannelsProvider>
       </BaseLayout>

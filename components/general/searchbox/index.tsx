@@ -21,7 +21,7 @@ const index: FC<Props> = ({
           type="text"
           className={styles.searchInput}
           autoFocus
-          placeholder="Channel Name / Email"
+          placeholder="Channel Name"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
