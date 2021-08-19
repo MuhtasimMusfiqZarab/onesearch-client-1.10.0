@@ -1,7 +1,7 @@
-import React, { createContext, useContext } from 'react';
-import { useQuery } from '@apollo/client';
+import React, { createContext, useContext } from "react";
+import { useQuery } from "@apollo/client";
 
-import GET_CHANNEL_COUNTRIES from '../../../pages/api/query/get-countries.query.gql';
+import GET_CHANNEL_COUNTRIES from "../../../../pages/api/query/youtube/get-channel-countries.query.gql";
 
 const CountriesContext = createContext({
   countries: null,
@@ -21,6 +21,6 @@ function CountriesProvider({ children }) {
   );
 }
 
-const useCountires = () => useContext(CountriesContext);
+const useCountries = () => useContext(CountriesContext);
 
-export { CountriesProvider, useCountires };
+export { CountriesProvider, useCountries };

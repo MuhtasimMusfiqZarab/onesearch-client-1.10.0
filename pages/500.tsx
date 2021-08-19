@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Home from "components/pages/home";
+import ServerErrorPage from "components/pages/500";
 
 export default function Index() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>500</title>
       </Head>
-      <Home />
+      <ServerErrorPage />
     </>
   );
 }

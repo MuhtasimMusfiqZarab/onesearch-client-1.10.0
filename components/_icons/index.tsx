@@ -13,3 +13,7 @@ export { SubscriptionIcon } from "./subscription";
 export { CreditIcon } from "./credit";
 export { DownloadsIcon } from "./downloads";
 export { Lock } from "./lock";
+export { NotFoundIcon } from "./notFound";
+export { ServerErrorIcon } from "./serverError";
+export { BreadIcon } from "./bread";
+export { CloseIcon } from "./close";

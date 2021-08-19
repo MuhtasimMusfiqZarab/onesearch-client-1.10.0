@@ -1,12 +1,17 @@
-import Pagination from "components/general/pagination";
-import Table from "components/general/table";
+import {
+  Pagination,
+  Table,
+  Dropdown,
+  Tab,
+  SearchBox,
+  Loader,
+} from "components/general";
 import styles from "./styles.module.scss";
-import { useChannels } from "components/_context/channels";
-import { useCountires } from "components/_context/countries";
-import Dropdown from "components/general/dropdown";
-import Tab from "components/general/tab";
-import SearchBox from "components/general/searchbox";
-import Loading from "components/general/loading/version1";
+import {
+  useChannels,
+  useCountries,
+  useCategories,
+} from "components/_context/youtube";
 
 export default function YoutubeTable() {
   const {
@@ -20,30 +25,14 @@ export default function YoutubeTable() {
     searchText,
     setSearchText,
   } = useChannels();
-  const { countries } = useCountires();
-  const categories = [
-    "howto",
-    "Music",
-    "Entertainment",
-    "People",
-    "Games",
-    "Travel",
-    "Sports",
-    "Autos",
-    "Film",
-    "Tech",
-    "Comedy",
-    "News",
-    "Education",
-    "Nonprofit",
-    "Animals",
-    "Shows",
-  ];
+  const { countries } = useCountries();
+  const { categories } = useCategories();
 
   return (
     <div className={styles.container__element_inner}>
       <Tab />
       <div className={styles.filterContainer}>
+        <SearchBox searchText={searchText} setSearchText={setSearchText} />
         <div className={styles.filterItems}>
           <Dropdown
             title="Category"
@@ -66,7 +55,7 @@ export default function YoutubeTable() {
           <div className={styles.container__table}>
             {channels?.length > 0 && <Table items={channels} />}
             {channels?.length === 0 && <div>No Data Found</div>}
-            {loading && <Loading />}
+            {loading && <Loader width="100%" height="100%" />}
           </div>
           <div className={styles.container__pagination}>
             <Pagination total={total} setOffset={setOffset} offset={offset} />
