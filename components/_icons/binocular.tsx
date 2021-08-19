@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../utils/interface/interfaces";
+import { IconProps } from "../utils/interfaces";
 
 export const BinocularIcon = ({
   width,
