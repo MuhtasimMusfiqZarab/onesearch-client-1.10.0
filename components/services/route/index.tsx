@@ -8,10 +8,4 @@ const isCurrentRoute = (element: any) => {
   if (element.route) {
     return router.pathname.startsWith(element.route);
   }
-  if (element.subNavItems) {
-    return element.subNavItems.some(
-      (ele: any) =>
-        currentRoute.includes(ele.route) || currentRoute.includes(ele.proxy)
-    );
-  }
 };
