@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../utils/interfaces";
+import { IconProps } from "../utils/interface";
 
 export const CreditIcon = ({
   width,

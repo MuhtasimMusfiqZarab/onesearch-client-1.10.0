@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Dashboard</title>
+        <title>Search</title>
       </Head>
       <BaseLayout>
         <ChannelsProvider>
