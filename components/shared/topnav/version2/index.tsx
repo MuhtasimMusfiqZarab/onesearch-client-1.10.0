@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { BreadIcon, CloseIcon } from "components/_icons";
+import { BreadIcon, CloseIcon, Logo } from "components/_icons";
 import styles from "./style.module.scss";
 
 interface Props {
@@ -27,7 +27,9 @@ export default function TopNav({ isTransperant }: Props) {
       </label>
       <ul className={styles.nav__menu}>
         <li>
-          <img src="/logo.png" alt="" className="image" />
+          <Link href="/">
+            <Logo />
+          </Link>
         </li>
         <li>
           <Link href="/">
