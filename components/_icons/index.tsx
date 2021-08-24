@@ -10,6 +10,7 @@ export { WebIcon } from "./webIcon";
 export { BinocularIcon } from "./binocular";
 export { RequestIcon } from "./request";
 export { SubscriptionIcon } from "./subscription";
+export { SavedIcon } from "./saved";
 export { CreditIcon } from "./credit";
 export { DownloadsIcon } from "./downloads";
 export { Lock } from "./lock";

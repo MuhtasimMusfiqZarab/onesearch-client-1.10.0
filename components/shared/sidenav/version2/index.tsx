@@ -2,6 +2,7 @@ import {
   BinocularIcon,
   RequestIcon,
   SubscriptionIcon,
+  SavedIcon,
   CreditIcon,
   DownloadsIcon,
   SettingsIcon,
@@ -29,6 +30,12 @@ export default function SideNav() {
             <a href="#">
               <SubscriptionIcon />
               <p className={styles.nav__itemlabel}>Subscribe</p>
+            </a>
+          </li>
+          <li className={styles.nav__item}>
+            <a href="#">
+              <CreditIcon />
+              <p className={styles.nav__itemlabel}>Credit</p>
             </a>
           </li>
 

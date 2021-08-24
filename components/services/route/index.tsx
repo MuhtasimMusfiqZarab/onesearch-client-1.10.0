@@ -6,6 +6,9 @@ export const isCurrentRoute = (element: any) => {
   const [currentRoute, setCurrentRoute] = useState<string>(router.pathname);
 
   if (element.route) {
-    return router.pathname.startsWith(element.route);
+    //check for home
+    if (element.route == router.pathname) {
+      return element.route;
+    }
   }
 };
