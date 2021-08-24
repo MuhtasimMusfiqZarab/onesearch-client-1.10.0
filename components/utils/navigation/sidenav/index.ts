@@ -2,12 +2,11 @@ import * as icons from "components/_icons";
 
 interface navElement {
   title: string;
-  icon?: JSX.Element;
-  route?: string;
-  subNavItems?: object[];
+  icon: JSX.Element;
+  route: string;
 }
 
-const dimensions = {
+const iconProps = {
   width: "25px",
   height: "25px",
   color: "8F8F8F",
@@ -15,24 +14,34 @@ const dimensions = {
 
 const sideNavElements: navElement[] = [
   {
-    title: "Home",
+    title: "Search",
     icon: icons.BinocularIcon({}),
-    route: "/",
+    route: "/dashboard/search",
   },
-
   {
-    title: "Dashboard",
-    route: "/dashboard",
+    title: "Request",
+    icon: icons.RequestIcon({}),
+    route: "/dashboard/request",
   },
-
   {
-    title: "Login",
-    route: "/login",
+    title: "Subscribe",
+    icon: icons.SubscriptionIcon({}),
+    route: "/dashboard/subscribe",
   },
-
   {
-    title: "Profile",
-    route: "/profile",
+    title: "Credit",
+    icon: icons.CreditIcon({}),
+    route: "/dashboard/credit",
+  },
+  {
+    title: "Download",
+    icon: icons.DownloadsIcon({}),
+    route: "/dashboard/download",
+  },
+  {
+    title: "Settings",
+    icon: icons.SettingsIcon({}),
+    route: "/dashboard/settings",
   },
 ];
 

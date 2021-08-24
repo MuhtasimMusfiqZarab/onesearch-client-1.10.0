@@ -20,7 +20,7 @@ const index: FC<Props> = (): JSX.Element => {
 
   return (
     <>
-      <TopNav isTransperant />
+      <TopNav />
       <div
         className={`${styles.loginContainer}  ${
           isSignUpMode ? styles.signupMode : ""

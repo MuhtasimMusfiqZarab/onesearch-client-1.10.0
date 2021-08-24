@@ -35,17 +35,17 @@
       color: $clr-gray400;
       text-decoration: none;
       &:hover {
-        color: red;
+        color: $os-primary;
+        font-weight: bold;
       }
     }
 
-    //selected nav item
     &Selected {
       svg {
-        fill: $clr-primary;
+        fill: $os-primary;
       }
       a {
-        color: $clr-primary;
+        color: $os-primary;
       }
     }
   }
