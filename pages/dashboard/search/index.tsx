@@ -10,6 +10,8 @@ export default function Index() {
     <>
       <Head>
         <title>Search</title>
+        <meta property="og:search" content="Search" key="search" />
+        <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <BaseLayout>
         <ChannelsProvider>

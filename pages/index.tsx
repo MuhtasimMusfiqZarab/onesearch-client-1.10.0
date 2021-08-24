@@ -6,6 +6,8 @@ export default function Index() {
     <>
       <Head>
         <title>Home</title>
+        <meta property="og:home" content="Home" key="home" />
+        <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <Home />
     </>

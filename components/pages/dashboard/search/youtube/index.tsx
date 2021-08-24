@@ -13,7 +13,7 @@ import {
   useCategories,
 } from "components/_context/youtube";
 
-export default function YoutubeTable() {
+export default function index() {
   const {
     channels,
     setOffset,
