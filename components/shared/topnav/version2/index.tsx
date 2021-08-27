@@ -32,7 +32,9 @@ export default function TopNav({ isTransperant }: Props) {
       <ul className={styles.nav__menu}>
         <li>
           <Link href="/">
+            {/* <a> */}
             <Logo />
+            {/* </a> */}
           </Link>
         </li>
         {topNavElements.map(
