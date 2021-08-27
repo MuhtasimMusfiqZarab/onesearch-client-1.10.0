@@ -25,19 +25,12 @@
       fill: $clr-gray400;
       width: 2rem;
       transition: all 200ms ease-in;
-
-      &:hover {
-        fill: red;
-      }
     }
 
     a {
       color: $clr-gray400;
       text-decoration: none;
-      &:hover {
-        color: $os-primary;
-        font-weight: bold;
-      }
+      transition: all 200ms ease-in;
     }
 
     &Selected {
@@ -46,6 +39,17 @@
       }
       a {
         color: $os-primary;
+      }
+    }
+    &:hover {
+      svg {
+        width: 2.4rem;
+        color: red !important;
+      }
+
+      a {
+        color: $os-primary;
+        font-weight: bold;
       }
     }
   }
