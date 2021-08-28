@@ -19,3 +19,7 @@ export { NotFoundIcon } from "./notFound";
 export { ServerErrorIcon } from "./serverError";
 export { BreadIcon } from "./bread";
 export { CloseIcon } from "./close";
+export { Save } from "./save";
+export { DownArrow } from "./downArrow";
+export { Filter } from "./filter";
+export { CloseLite } from "./closeLite";
