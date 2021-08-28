@@ -1,6 +1,7 @@
 export { YoutubeIcon } from "./youtube";
 export { FacebookIcon } from "./facebook";
-export { GoogleMapIcon } from "./gmap";
+export { LinkedinIcon } from "./ linkedin";
+export { GoogleIcon } from "./google";
 export { SettingsIcon } from "./settings";
 export { ExpandIcon } from "./expand";
 export { Logo } from "./logo";
@@ -10,6 +11,7 @@ export { WebIcon } from "./webIcon";
 export { BinocularIcon } from "./binocular";
 export { RequestIcon } from "./request";
 export { SubscriptionIcon } from "./subscription";
+export { SavedIcon } from "./saved";
 export { CreditIcon } from "./credit";
 export { DownloadsIcon } from "./downloads";
 export { Lock } from "./lock";

@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-const isCurrentRoute = (element: any) => {
+export const IsCurrentRoute = (element: any) => {
   const router = useRouter();
   const [currentRoute, setCurrentRoute] = useState<string>(router.pathname);
 
   if (element.route) {
-    return router.pathname.startsWith(element.route);
+    //check for home
+    if (element.route == router.pathname) {
+      return element.route;
+    }
   }
 };

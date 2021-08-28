@@ -1,6 +1,8 @@
+import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { BreadIcon, CloseIcon } from "components/_icons";
+import topNavElements from "components/utils/navigation/topnav";
+import { IsCurrentRoute } from "components/services/route";
+import { BreadIcon, CloseIcon, Logo } from "components/_icons";
 import styles from "./style.module.scss";
 
 interface Props {
@@ -8,6 +10,8 @@ interface Props {
 }
 
 export default function TopNav({ isTransperant }: Props) {
+  const [currentActive, setCurrentActive] = useState<number>(0);
+
   return (
     <nav
       className={`${styles.nav} ${isTransperant ? styles.transparent : ""} `}
@@ -27,23 +31,32 @@ export default function TopNav({ isTransperant }: Props) {
       </label>
       <ul className={styles.nav__menu}>
         <li>
-          <img src="/logo.png" alt="" className="image" />
-        </li>
-        <li>
           <Link href="/">
-            <a>Home</a>
+            {/* <a> */}
+            <Logo />
+            {/* </a> */}
           </Link>
         </li>
-        <li>
-          <Link href="/dashboard/search">
-            <a>Dashboard</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/login">
-            <a>Login</a>
-          </Link>
-        </li>
+        {topNavElements.map(
+          (element, index): JSX.Element => {
+            return (
+              <li key={index}>
+                <Link href={`${element.route}`} key={index}>
+                  <a
+                    className={`${
+                      IsCurrentRoute(element) && styles.activeNavElement
+                    }`}
+                    onClick={() => {
+                      setCurrentActive(index);
+                    }}
+                  >
+                    {element.title}
+                  </a>
+                </Link>
+              </li>
+            );
+          }
+        )}
       </ul>
     </nav>
   );

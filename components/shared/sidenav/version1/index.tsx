@@ -1,15 +1,15 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState } from "react";
 
 import {
   YoutubeIcon,
   FacebookIcon,
-  GoogleMapIcon,
+  GoogleIcon,
   SettingsIcon,
   ExpandIcon,
-} from '../../../_icons';
+} from "../../../_icons";
 
 const Sidenav: FC<any> = ({ items }): JSX.Element => {
-  const [currentTab, setCurrentTab] = useState<string>('');
+  const [currentTab, setCurrentTab] = useState<string>("");
 
   const [expanded, setExpanded] = useState<boolean>(false);
 
@@ -18,7 +18,7 @@ const Sidenav: FC<any> = ({ items }): JSX.Element => {
   };
 
   return (
-    <nav className={expanded ? 'nav' : 'nav nav-closed'}>
+    <nav className={expanded ? "nav" : "nav nav-closed"}>
       <div onClick={handleClick}>
         <ExpandIcon />
       </div>
@@ -39,7 +39,7 @@ const Sidenav: FC<any> = ({ items }): JSX.Element => {
         </li>
         <li className="nav__listitem">
           <a href="#">
-            <GoogleMapIcon />
+            <GoogleIcon />
             <div>Google</div>
           </a>
         </li>

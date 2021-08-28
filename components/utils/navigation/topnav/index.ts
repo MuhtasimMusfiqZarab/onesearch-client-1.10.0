@@ -1,9 +1,15 @@
+import * as icons from "components/_icons";
+
 interface navElement {
   title: string;
-  icon?: JSX.Element;
   route?: string;
-  subNavItems?: object[];
 }
+
+const dimensions = {
+  width: "25px",
+  height: "25px",
+  color: "000000",
+};
 
 const topNavElements: navElement[] = [
   {
@@ -13,17 +19,12 @@ const topNavElements: navElement[] = [
 
   {
     title: "Dashboard",
-    route: "/dashboard",
+    route: "/dashboard/search",
   },
 
   {
     title: "Login",
     route: "/login",
-  },
-
-  {
-    title: "Profile",
-    route: "/profile",
   },
 ];
 

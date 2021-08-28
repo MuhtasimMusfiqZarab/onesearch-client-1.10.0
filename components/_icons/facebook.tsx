@@ -1,5 +1,5 @@
-import React from 'react';
-import { IconProps } from '../utils/interfaces';
+import React from "react";
+import { IconProps } from "../utils/interfaces";
 
 export const FacebookIcon = ({
   width,
@@ -8,12 +8,20 @@ export const FacebookIcon = ({
 }: IconProps): JSX.Element => {
   return (
     <svg
+      width="29"
+      height="29"
+      viewBox="0 0 29 29"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
     >
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z" />
+      <path
+        d="M14.4999 0C22.5085 0 29 6.49237 29 14.5C29 22.5086 22.5085 29 14.4999 29C6.49138 29 0 22.5085 0 14.5C0 6.49237 6.49147 0 14.4999 0Z"
+        fill="#3B5998"
+      />
+      <path
+        d="M16.2654 9.98231H18.1341V7.22186H15.9374V7.23182C13.2757 7.32609 12.7302 8.82228 12.6821 10.3937H12.6767V11.7722H10.8642V14.4755H12.6767V21.7218H15.4081V14.4755H17.6457L18.0779 11.7722H15.409V10.9394C15.409 10.4083 15.7624 9.98231 16.2654 9.98231Z"
+        fill="white"
+      />
     </svg>
   );
 };

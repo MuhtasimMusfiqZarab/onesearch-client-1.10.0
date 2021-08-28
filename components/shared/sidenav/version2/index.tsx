@@ -1,49 +1,36 @@
-import {
-  BinocularIcon,
-  RequestIcon,
-  SubscriptionIcon,
-  CreditIcon,
-  DownloadsIcon,
-  SettingsIcon,
-} from "../../../_icons";
+import React, { useState } from "react";
+import Link from "next/link";
+import sideNavElements from "components/utils/navigation/sidenav";
+import { IsCurrentRoute } from "components/services/route";
 import styles from "./styles.module.scss";
 
 export default function SideNav() {
+  const [currentActive, setCurrentActive] = useState<number>(0);
   return (
     <div>
       <nav className={styles.nav}>
         <ul className={styles.nav__list}>
-          <li className={`${styles.nav__item} ${styles.nav__itemSelected}`}>
-            <a href="#">
-              <BinocularIcon />
-              <p className={styles.nav__itemlabel}>Search</p>
-            </a>
-          </li>
-          <li className={styles.nav__item}>
-            <a href="#">
-              <RequestIcon />
-              <p className={styles.nav__itemlabel}>Request</p>
-            </a>
-          </li>
-          <li className={styles.nav__item}>
-            <a href="#">
-              <SubscriptionIcon />
-              <p className={styles.nav__itemlabel}>Subscription</p>
-            </a>
-          </li>
-
-          <li className={styles.nav__item}>
-            <a href="#">
-              <DownloadsIcon />
-              <p className={styles.nav__itemlabel}>Download</p>
-            </a>
-          </li>
-          <li className={styles.nav__item}>
-            <a href="#">
-              <SettingsIcon />
-              <p className={styles.nav__itemlabel}>Settings</p>
-            </a>
-          </li>
+          {sideNavElements.map(
+            (element, index): JSX.Element => {
+              return (
+                <li className={`${styles.nav__item} `} key={index}>
+                  <Link href={`${element.route}`} key={index}>
+                    <a
+                      className={`${
+                        IsCurrentRoute(element) && styles.nav__itemSelected
+                      }`}
+                      onClick={() => {
+                        setCurrentActive(index);
+                      }}
+                    >
+                      {element.icon}
+                      <p className={styles.nav__itemlabel}>{element.title}</p>
+                    </a>
+                  </Link>
+                </li>
+              );
+            }
+          )}
         </ul>
       </nav>
     </div>
