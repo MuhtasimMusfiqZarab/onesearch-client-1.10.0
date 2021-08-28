@@ -13,7 +13,7 @@ export const SavedIcon = ({ width, height, color }: IconProps): JSX.Element => {
       <path
         d="M29.5882 1H1V46L15.2941 37.5294L29.5882 46V1Z"
         stroke="#8F8F8F"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );

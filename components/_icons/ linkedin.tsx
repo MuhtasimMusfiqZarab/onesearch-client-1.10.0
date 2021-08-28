@@ -14,7 +14,7 @@ export const LinkedinIcon = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path
           d="M14.5 28.999C22.5081 28.999 29 22.5072 29 14.499C29 6.4909 22.5081 -0.000976562 14.5 -0.000976562C6.49187 -0.000976562 0 6.4909 0 14.499C0 22.5072 6.49187 28.999 14.5 28.999Z"
           fill="#007AB9"

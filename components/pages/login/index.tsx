@@ -5,7 +5,7 @@ import { GoogleIcon, Logo } from "components/_icons";
 
 export interface Props {}
 
-const index: FC<Props> = (): JSX.Element => {
+const Index: FC<Props> = (): JSX.Element => {
   const [isSignUpMode, setIsSignupMode] = useState<boolean>(false);
 
   return (
@@ -78,4 +78,4 @@ const index: FC<Props> = (): JSX.Element => {
   );
 };
 
-export default index;
+export default Index;

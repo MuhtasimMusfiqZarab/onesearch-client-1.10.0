@@ -3,7 +3,7 @@ import { NotFoundIcon } from "components/_icons";
 
 interface Props {}
 
-const index: FC<Props> = ({}: Props): JSX.Element => {
+const Index: FC<Props> = ({}: Props): JSX.Element => {
   return (
     <div>
       <NotFoundIcon />
@@ -12,4 +12,4 @@ const index: FC<Props> = ({}: Props): JSX.Element => {
   );
 };
 
-export default index;
+export default Index;

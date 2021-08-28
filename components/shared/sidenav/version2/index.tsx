@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import sideNavElements from "components/utils/navigation/sidenav";
-import { isCurrentRoute } from "components/services/route";
+import { IsCurrentRoute } from "components/services/route";
 import styles from "./styles.module.scss";
 
 export default function SideNav() {
@@ -13,11 +13,11 @@ export default function SideNav() {
           {sideNavElements.map(
             (element, index): JSX.Element => {
               return (
-                <li className={`${styles.nav__item} `}>
+                <li className={`${styles.nav__item} `} key={index}>
                   <Link href={`${element.route}`} key={index}>
                     <a
                       className={`${
-                        isCurrentRoute(element) && styles.nav__itemSelected
+                        IsCurrentRoute(element) && styles.nav__itemSelected
                       }`}
                       onClick={() => {
                         setCurrentActive(index);

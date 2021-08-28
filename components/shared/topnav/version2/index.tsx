@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import topNavElements from "components/utils/navigation/topnav";
-import { isCurrentRoute } from "components/services/route";
+import { IsCurrentRoute } from "components/services/route";
 import { BreadIcon, CloseIcon, Logo } from "components/_icons";
 import styles from "./style.module.scss";
 
@@ -40,11 +40,11 @@ export default function TopNav({ isTransperant }: Props) {
         {topNavElements.map(
           (element, index): JSX.Element => {
             return (
-              <li>
+              <li key={index}>
                 <Link href={`${element.route}`} key={index}>
                   <a
                     className={`${
-                      isCurrentRoute(element) && styles.activeNavElement
+                      IsCurrentRoute(element) && styles.activeNavElement
                     }`}
                     onClick={() => {
                       setCurrentActive(index);
