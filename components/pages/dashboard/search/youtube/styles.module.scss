@@ -1,0 +1,67 @@
+.container {
+  // display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  &__table {
+    align-self: center;
+  }
+
+  &__pagination {
+    width: fit-content;
+    margin-left: auto;
+  }
+}
+
+.container__element_inner {
+  width: 100%;
+  padding: 25px;
+  background: $clr-gray100;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.filterContainer {
+  width: 100%;
+  padding: 25px;
+  background: #fff;
+
+  .filterItems {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+
+  .search_wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.filtersToggle[class] {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  padding: 0;
+  background: $os-secondary;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s;
+
+  &:hover {
+    background: $os-primary;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}

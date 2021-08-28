@@ -1,0 +1,5 @@
+query GET_CHANNEL_CATEGORIES {
+  getAllCategories {
+    categories
+  }
+}

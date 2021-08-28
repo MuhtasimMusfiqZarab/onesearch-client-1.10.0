@@ -1,0 +1,262 @@
+.table_wrap {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid $clr-gray300;
+
+  .thead {
+    color: #fff;
+    background: $os-secondary;
+  }
+
+  .th {
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+  }
+
+  tr {
+    border-bottom: 1px solid $clr-gray300;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .td {
+    color: #282828;
+    padding: 0.8rem 2rem;
+
+    .save_btn,
+    .download_btn,
+    .toggle_btn {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #282828;
+  }
+}
+
+//mobile view
+@media screen and (max-width: 860px) {
+  .table {
+    border: none;
+
+    .thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .tr {
+      position: relative;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid $os-secondary;
+      background: white !important ;
+      margin-bottom: 2rem;
+      padding-bottom: 35px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+
+      &.expand {
+        td {
+          display: flex !important;
+
+          .toggle_btn {
+            svg {
+              transform-origin: center;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+
+    .td {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-bottom: 0;
+      gap: 3px;
+
+      .save_btn,
+      .download_btn,
+      .toggle_btn {
+        display: inline-block;
+      }
+
+      .lock_btn,
+      .save_btn,
+      .download_btn,
+      .toggle_btn {
+        position: absolute;
+        cursor: pointer;
+      }
+
+      .lock_btn {
+        left: 11px;
+        top: 37px;
+
+        svg {
+          width: 11px;
+        }
+      }
+
+      .save_btn {
+        right: 11px;
+        top: 14px;
+
+        svg {
+          width: 11px;
+          height: 100%;
+        }
+      }
+
+      .download_btn {
+        right: 10px;
+        top: 39px;
+
+        svg {
+          width: 14px;
+          height: 100%;
+        }
+      }
+
+      .toggle_btn {
+        width: calc(100% + 2px);
+        height: 25px;
+        left: -1px;
+        bottom: -1px;
+        background: #5d8aa8;
+        color: #fff;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+
+        svg {
+          pointer-events: none;
+        }
+      }
+
+      &:nth-child(n + 3):not(:last-child) {
+        display: none;
+      }
+
+      &:first-child {
+        position: absolute;
+        left: 11px;
+        top: 15px;
+        padding: 0;
+      }
+
+      &:last-child {
+        padding: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// controller styles
+.table_controllers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 21px;
+  font-size: 14px;
+  padding: 0 33px;
+
+  @media (max-width: 767px) {
+    padding: 0 11px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+}
+
+.select_all {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.controller_list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
+
+  .wishlist,
+  .unlock,
+  .download {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8f8f8f;
+    text-decoration: none;
+    transition: all 0.25s;
+
+    &:hover {
+      color: #1a1a1a;
+
+      svg {
+        path,
+        rect {
+          stroke: #1a1a1a;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      svg {
+        width: 11px;
+        height: auto;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .download {
+    svg {
+      width: 25px;
+      height: auto;
+
+      @media (max-width: 767px) {
+        width: 15px;
+      }
+    }
+  }
+}
