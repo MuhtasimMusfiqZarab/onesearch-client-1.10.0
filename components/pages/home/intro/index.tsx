@@ -2,7 +2,7 @@ import Link from "next/link";
 import { WebIcon } from "../../../_icons";
 import styles from "./styles.module.scss";
 
-export default function index() {
+export default function Index() {
   return (
     <div className={styles.body}>
       <div className={styles.wrapper}>

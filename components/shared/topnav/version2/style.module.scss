@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.6rem 1rem;
+    margin: 1rem 1rem;
 
     li {
       list-style: none;
@@ -48,8 +48,8 @@
         text-decoration: none;
         color: inherit;
         font-size: 1rem;
-        font-weight: 600;
-        padding-right: 3rem;
+        // font-weight: 600;
+        margin-right: 3rem;
         transition: all ease-in-out 250ms;
 
         position: relative;
@@ -57,15 +57,16 @@
           content: "";
           position: absolute;
           display: block;
+          border-radius: 1rem;
           height: 0.4rem;
           width: 0;
           background-color: $os-primary;
-          bottom: -1em;
+          bottom: -0.8rem;
           transition: all ease-in-out 250ms;
         }
 
         &:hover::after {
-          width: 60%;
+          width: 100%;
         }
 
         &:hover {
@@ -76,6 +77,22 @@
       &:first-child {
         margin-right: auto;
         display: block;
+      }
+
+      .activeNavElement {
+        color: $os-primary;
+        font-weight: 600;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          border-radius: 1rem;
+          height: 0.4rem;
+          width: 100%;
+          background-color: $os-primary;
+          bottom: -0.8rem;
+          transition: all ease-in-out 250ms;
+        }
       }
     }
 

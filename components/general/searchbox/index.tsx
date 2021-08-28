@@ -1,13 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface Props {
   searchText: string;
   setSearchText: any;
 }
 
-const index: FC<Props> = ({
+export const SearchBox: FC<Props> = ({
   searchText,
   setSearchText,
 }: Props): JSX.Element => {
@@ -21,7 +21,7 @@ const index: FC<Props> = ({
           type="text"
           className={styles.searchInput}
           autoFocus
-          placeholder="Channel Name/Email"
+          placeholder="Channel Name"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
@@ -35,5 +35,3 @@ const index: FC<Props> = ({
     </div>
   );
 };
-
-export default index;

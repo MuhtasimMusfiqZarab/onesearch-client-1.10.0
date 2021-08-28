@@ -1,7 +1,7 @@
-import React, { FC, useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import styles from './style.module.scss';
+import React, { FC, useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import styles from "./style.module.scss";
 
 interface Props {
   offset: number;
@@ -9,7 +9,11 @@ interface Props {
   total: any;
 }
 
-const Pagination: FC<Props> = ({ offset, setOffset, total }): JSX.Element => {
+export const Pagination: FC<Props> = ({
+  offset,
+  setOffset,
+  total,
+}): JSX.Element => {
   const [totalPages, setTotalPages] = useState<number>(null);
 
   useEffect(() => {
@@ -64,5 +68,3 @@ const Pagination: FC<Props> = ({ offset, setOffset, total }): JSX.Element => {
     </div>
   );
 };
-
-export default Pagination;

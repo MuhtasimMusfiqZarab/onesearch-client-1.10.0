@@ -25,27 +25,31 @@
       fill: $clr-gray400;
       width: 2rem;
       transition: all 200ms ease-in;
-
-      &:hover {
-        fill: red;
-      }
     }
 
     a {
       color: $clr-gray400;
       text-decoration: none;
-      &:hover {
-        color: red;
-      }
+      transition: all 200ms ease-in;
     }
 
-    //selected nav item
     &Selected {
       svg {
-        fill: $clr-primary;
+        fill: $os-primary;
       }
       a {
-        color: $clr-primary;
+        color: $os-primary;
+      }
+    }
+    &:hover {
+      svg {
+        width: 2.4rem;
+        color: red !important;
+      }
+
+      a {
+        color: $os-primary;
+        font-weight: bold;
       }
     }
   }
