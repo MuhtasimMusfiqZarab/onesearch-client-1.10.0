@@ -23,3 +23,4 @@ export { Save } from "./save";
 export { DownArrow } from "./downArrow";
 export { Filter } from "./filter";
 export { CloseLite } from "./closeLite";
+export { Reset } from "./reset";

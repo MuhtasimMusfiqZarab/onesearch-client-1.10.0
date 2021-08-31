@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from 'react-modal';
-import { Filter, CloseLite } from "components/_icons";
+import { Filter, CloseLite, Reset } from "components/_icons";
 import {
   Pagination,
   Table,
@@ -48,6 +48,12 @@ export default function Index() {
         <div className={styles.filterContainer}>
           <div className={styles.search_wrap}>
             <SearchBox searchText={searchText} setSearchText={setSearchText} />
+
+            <button onClick={openModal} className={styles.reset_form}>
+              <Reset />
+              Reset
+            </button>
+
             <button onClick={openModal} className={styles.filtersToggle}>
               <Filter />
             </button>
