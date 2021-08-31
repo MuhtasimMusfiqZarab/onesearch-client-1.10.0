@@ -1,4 +1,6 @@
 .container {
+  width: 100%;
+
   .title {
     margin: 0.5rem;
   }
@@ -75,12 +77,10 @@
 .selected {
   padding: 12px 24px;
   cursor: pointer;
-
   color: $clr-gray600;
   border-radius: $radius;
   margin-bottom: 8px;
   border: 1px solid $clr-gray300;
-
   //position relative for positioning the icon
   position: relative;
   order: 0;
