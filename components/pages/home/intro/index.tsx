@@ -7,9 +7,9 @@ export default function Index() {
     <div className={styles.body}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          <div className={styles.text}>
-            <p>First Part</p>
-          </div>
+          {/* <div className={styles.text}>
+            <p>More Information</p>
+          </div> */}
           <div className={styles.img}>
             <div className={styles.socialIcons}>
               <WebIcon />

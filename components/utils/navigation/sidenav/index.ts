@@ -28,16 +28,16 @@ const sideNavElements: navElement[] = [
     icon: icons.SubscriptionIcon({}),
     route: "/dashboard/subscribe",
   },
-  {
-    title: "Credit",
-    icon: icons.CreditIcon({}),
-    route: "/dashboard/credit",
-  },
-  {
-    title: "Download",
-    icon: icons.DownloadsIcon({}),
-    route: "/dashboard/download",
-  },
+  // {
+  //   title: "Credit",
+  //   icon: icons.CreditIcon({}),
+  //   route: "/dashboard/credit",
+  // },
+  // {
+  //   title: "Download",
+  //   icon: icons.DownloadsIcon({}),
+  //   route: "/dashboard/download",
+  // },
   {
     title: "Settings",
     icon: icons.SettingsIcon({}),
