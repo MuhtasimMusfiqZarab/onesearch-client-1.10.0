@@ -50,6 +50,12 @@
   .table {
     border: none;
 
+    tbody {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
     .thead {
       border: none;
       clip: rect(0 0 0 0);
@@ -63,19 +69,24 @@
 
     .tr {
       position: relative;
-      display: block;
       border-radius: 10px;
       border: 1px solid $os-secondary;
       background: white !important ;
-      margin-bottom: 2rem;
-      padding-bottom: 35px;
+      padding-bottom: 24px;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       overflow: hidden;
+      max-height: 100px;
+      -webkit-transition: max-height 0.35s cubic-bezier(0, 1.05, 0, 1);
+      -moz-transition: max-height 0.35s cubic-bezier(0, 1.05, 0, 1);
+      transition: max-height 0.35s ease cubic-bezier(0, 1.05, 0, 1);
 
       &.expand {
-        td {
-          display: flex !important;
+        -webkit-transition: max-height 0.5s ease;
+        -moz-transition: max-height 0.5s ease;
+        transition: max-height 0.5s ease;
+        max-height: 300px;
 
+        td {
           .toggle_btn {
             svg {
               transform-origin: center;
@@ -152,10 +163,6 @@
         svg {
           pointer-events: none;
         }
-      }
-
-      &:nth-child(n + 3):not(:last-child) {
-        display: none;
       }
 
       &:first-child {

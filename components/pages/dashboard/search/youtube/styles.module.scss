@@ -30,6 +30,10 @@
   padding: 25px;
   background: #fff;
 
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
   .filterItems {
     display: flex;
     width: 100%;
