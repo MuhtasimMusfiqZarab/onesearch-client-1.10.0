@@ -15,8 +15,9 @@
 @media screen and (max-width: 550px) {
   .container {
     &__element {
-      margin: 5rem 1rem;
+      margin: 5rem 0;
       flex-direction: column;
+      padding: 0 15px;
     }
   }
 }

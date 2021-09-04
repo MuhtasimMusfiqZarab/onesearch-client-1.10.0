@@ -20,10 +20,10 @@ export const Controller: FC<Props> = ({ }: Props): JSX.Element => {
       </div>
 
       <div className={styles.controller_list}>
-        <a href="#" className={styles.wishlist}>
+        {/* <a href="#" className={styles.wishlist}>
           <Save color={iconColor} />
           <span>Save in Wishlist</span>
-        </a>
+        </a> */}
         <a href="#" className={styles.unlock}>
           <Lock color={iconColor} />
           <span>Unlock</span>

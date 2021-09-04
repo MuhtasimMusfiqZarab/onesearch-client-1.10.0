@@ -1,0 +1,48 @@
+/* Space Utility Classes */
+$space: 0;
+@while $space <= 100 {
+  .mt-#{$space} {
+    margin-top: #{$space}px !important;
+  }
+  .mr-#{$space} {
+    margin-right: #{$space}px !important;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{$space}px !important;
+  }
+  .ml-#{$space} {
+    margin-left: #{$space}px !important;
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space}px !important;
+  }
+  .pr-#{$space} {
+    padding-right: #{$space}px !important;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$space}px !important;
+  }
+  .pl-#{$space} {
+    padding-left: #{$space}px !important;
+  }
+
+  $space: $space + 5;
+}
+
+/* Font-size Utility Classes */
+$font_size: 10;
+@while $font_size < 50 {
+  .font-size-#{$font_size} {
+    font-size: #{$font_size}px !important;
+  }
+  $font_size: $font_size + 1;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}

@@ -1,0 +1,19 @@
+.ReactModal__Overlay {
+  z-index: 999999;
+
+  .modal_close_btn {
+    all: initial;
+    position: absolute;
+    right: 11px;
+    top: 14px;
+    cursor: pointer;
+  }
+
+  .ReactModal__Content {
+    inset: 0 !important;
+    width: 100%;
+    height: 100%;
+    padding: 50px 25px 25px !important;
+    border-radius: 0 !important;
+  }
+}

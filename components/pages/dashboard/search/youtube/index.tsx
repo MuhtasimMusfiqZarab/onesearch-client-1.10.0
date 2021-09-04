@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from 'react-modal';
-import { Filter, CloseLite } from "components/_icons";
+import { Filter, CloseLite, Reset } from "components/_icons";
 import {
   Pagination,
   Table,
@@ -48,6 +48,12 @@ export default function Index() {
         <div className={styles.filterContainer}>
           <div className={styles.search_wrap}>
             <SearchBox searchText={searchText} setSearchText={setSearchText} />
+
+            <button onClick={openModal} className={styles.reset_form}>
+              <Reset />
+              Reset
+            </button>
+
             <button onClick={openModal} className={styles.filtersToggle}>
               <Filter />
             </button>
@@ -92,7 +98,14 @@ export default function Index() {
         contentLabel="Filters Modal"
       >
         <button onClick={closeModal} className="modal_close_btn"><CloseLite /></button>
-        <div className="edit_filters">
+        <div className={styles.edit_filters}>
+          <div className={styles.search_wrap}>
+            <SearchBox searchText={searchText} setSearchText={setSearchText} />
+            <button onClick={openModal} className={`${styles.reset_form} ${styles.reset_form_modal}`}>
+              <Reset />
+            </button>
+          </div>
+          <h3>Edit Filters</h3>
           <div className={styles.filterItems}>
             <Dropdown
               title="Category"
@@ -100,6 +113,7 @@ export default function Index() {
               setOffset={setOffset}
               items={categories}
               isSearch={true}
+              isInline={true}
             />
 
             <Dropdown
@@ -108,9 +122,30 @@ export default function Index() {
               setOffset={setOffset}
               items={countries}
               isSearch={true}
+              isInline={true}
+            />
+
+            <Dropdown
+              title="Year"
+              setItem={setLocation}
+              setOffset={setOffset}
+              items={countries}
+              isSearch={true}
+              isInline={true}
+            />
+
+            <Dropdown
+              title="Subscriber"
+              setItem={setLocation}
+              setOffset={setOffset}
+              items={countries}
+              isSearch={true}
+              isInline={true}
             />
           </div>
-          <button className="btn_fill_primary">Apply Filter</button>
+          <div className="text-center">
+            <button type="submit" className="btn_fill_secondary">Apply Filter</button>
+          </div>
         </div>
       </Modal>
     </>

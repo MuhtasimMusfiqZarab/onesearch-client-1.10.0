@@ -30,6 +30,10 @@
   padding: 25px;
   background: #fff;
 
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
   .filterItems {
     display: flex;
     width: 100%;
@@ -38,13 +42,18 @@
 
     @media (max-width: 767px) {
       flex-direction: column;
+      display: none;
     }
   }
 
   .search_wrap {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -67,5 +76,56 @@
 
   @media (max-width: 767px) {
     display: flex;
+  }
+}
+
+.reset_form[class] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $os-secondary;
+  border: 0;
+  padding: 0;
+  font-weight: 500;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  &:hover {
+    background: transparent;
+    color: $os-primary;
+
+    svg {
+      path {
+        fill: $os-primary;
+      }
+    }
+  }
+}
+
+.edit_filters {
+  .search_wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .reset_form_modal[class] {
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  h3 {
+    color: #505050;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 22px;
   }
 }
