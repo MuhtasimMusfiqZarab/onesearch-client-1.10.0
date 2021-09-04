@@ -1,6 +1,22 @@
 .container {
   width: 100%;
 
+  &_inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .title {
+      margin: 0;
+      min-width: 80px;
+    }
+
+    .selected {
+      margin-bottom: 0;
+    }
+  }
+
   .title {
     margin: 0.5rem;
   }

@@ -7,6 +7,7 @@ interface Props {
   setItem: any;
   setOffset?: any;
   isSearch: boolean;
+  isInline?: any;
 }
 
 export const Dropdown: FC<Props> = ({
@@ -15,6 +16,7 @@ export const Dropdown: FC<Props> = ({
   setItem,
   setOffset,
   isSearch,
+  isInline,
 }: Props): JSX.Element => {
   const dropWrap = useRef(null);
   const [opened, setOpened] = useState<boolean>(false);
@@ -58,14 +60,13 @@ export const Dropdown: FC<Props> = ({
   }, [opened]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${isInline && styles.container_inline}`}>
       <div className={styles.title}>{title}</div>
       {/* Division to show the selected items */}
       <div className={styles.select_box} ref={dropWrap}>
         <div
-          className={`${styles.options_container} ${
-            opened ? styles.active : ""
-          }`}
+          className={`${styles.options_container} ${opened ? styles.active : ""
+            }`}
         >
           {isSearch && (
             <div className={styles.item_search}>
@@ -84,29 +85,29 @@ export const Dropdown: FC<Props> = ({
 
           {options.length > 0
             ? options?.map((element, index) => {
-                return (
-                  <div
-                    className={styles.option}
-                    key={index}
-                    onClick={() => handleChange(element)}
-                  >
-                    <input type="radio" name="category" />
-                    <label>{element}</label>
-                  </div>
-                );
-              })
+              return (
+                <div
+                  className={styles.option}
+                  key={index}
+                  onClick={() => handleChange(element)}
+                >
+                  <input type="radio" name="category" />
+                  <label>{element}</label>
+                </div>
+              );
+            })
             : items?.map((element, index) => {
-                return (
-                  <div
-                    className={styles.option}
-                    key={index}
-                    onClick={() => handleChange(element)}
-                  >
-                    <input type="radio" name="category" />
-                    <label>{element}</label>
-                  </div>
-                );
-              })}
+              return (
+                <div
+                  className={styles.option}
+                  key={index}
+                  onClick={() => handleChange(element)}
+                >
+                  <input type="radio" name="category" />
+                  <label>{element}</label>
+                </div>
+              );
+            })}
         </div>
         <div className={styles.selected} onClick={() => setOpened(!opened)}>
           {selectedItem}

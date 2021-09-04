@@ -42,6 +42,7 @@
 
     @media (max-width: 767px) {
       flex-direction: column;
+      display: none;
     }
   }
 
@@ -49,6 +50,10 @@
     display: flex;
     align-items: center;
     gap: 25px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -96,5 +101,31 @@
         fill: $os-primary;
       }
     }
+  }
+}
+
+.edit_filters {
+  .search_wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .reset_form_modal[class] {
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  h3 {
+    color: #505050;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 22px;
   }
 }
