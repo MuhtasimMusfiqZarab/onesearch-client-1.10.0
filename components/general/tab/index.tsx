@@ -26,10 +26,10 @@ export const Tab: FC<Props> = ({}: Props): JSX.Element => {
                 onClick={() => handleActive(`${element.index}`)}
               >
                 <Link href={`${element.route}`}>
-                  <>
+                  <a>
                     {element.icon}
                     {element.title}
-                  </>
+                  </a>
                 </Link>
               </li>
             );
