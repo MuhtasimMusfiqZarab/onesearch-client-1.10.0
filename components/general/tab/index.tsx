@@ -18,20 +18,20 @@ export const Tab: FC<Props> = ({}: Props): JSX.Element => {
         {filterNavElements.map(
           (element, index): JSX.Element => {
             return (
-              <li
-                key={index}
-                className={`${styles.listitem} ${
-                  isActive == element.index ? styles.active : ""
-                }`}
-                onClick={() => handleActive(`${element.index}`)}
-              >
-                <Link href={`${element.route}`}>
-                  <a>
+              <Link href={`${element.route}`}>
+                <a>
+                  <li
+                    key={index}
+                    className={`${styles.listitem} ${
+                      isActive == element.index ? styles.active : ""
+                    }`}
+                    onClick={() => handleActive(`${element.index}`)}
+                  >
                     {element.icon}
                     {element.title}
-                  </a>
-                </Link>
-              </li>
+                  </li>
+                </a>
+              </Link>
             );
           }
         )}
