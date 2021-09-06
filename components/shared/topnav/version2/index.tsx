@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import topNavElements from "components/utils/navigation/topnav";
+import topNavElements from "components/utils/resolver/navigation/topnav";
 import { IsCurrentRoute } from "components/services/route";
 import { BreadIcon, CloseIcon, Logo } from "components/_icons";
 import styles from "./style.module.scss";

@@ -5,6 +5,7 @@ interface Props {
   icon: JSX.Element;
   route: string;
   hasChild: boolean;
+  children?: string[];
 }
 
 const sideNavElements: Props[] = [
@@ -13,6 +14,7 @@ const sideNavElements: Props[] = [
     icon: icons.BinocularIcon({}),
     route: "/dashboard/search/youtube",
     hasChild: true,
+    children: ["youtube", "facebook", "linkedin", "google"],
   },
   {
     title: "Request",
