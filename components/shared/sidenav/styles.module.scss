@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    // overflow-x: scroll;
   }
 
   &__item {
@@ -22,32 +23,43 @@
     transition: all 200ms ease-in;
 
     svg {
-      fill: $clr-gray400;
+      path {
+        fill: $clr-gray400;
+      }
       width: 2rem;
       transition: all 200ms ease-in;
     }
 
     a {
-      color: $clr-gray400;
       text-decoration: none;
+    }
+
+    p {
+      color: $clr-gray400;
       transition: all 200ms ease-in;
     }
 
     &Selected {
       svg {
-        fill: $os-primary;
+        path {
+          fill: $os-primary;
+        }
+        width: 2.4rem;
       }
-      a {
+      p {
         color: $os-primary;
+        font-weight: bold;
       }
     }
     &:hover {
       svg {
+        path {
+          fill: $os-primary;
+        }
         width: 2.4rem;
-        color: red !important;
       }
 
-      a {
+      p {
         color: $os-primary;
         font-weight: bold;
       }

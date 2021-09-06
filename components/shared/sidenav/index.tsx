@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import sideNavElements from "components/utils/navigation/sidenav";
+import sideNavElements from "components/utils/resolver/navigation/sidenav";
 import { IsCurrentRoute } from "components/services/route";
 import styles from "./styles.module.scss";
 

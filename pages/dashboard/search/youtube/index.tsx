@@ -9,8 +9,8 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Search</title>
-        <meta property="og:search" content="Search" key="search" />
+        <title>Youtube</title>
+        <meta property="og:youtube" content="Youtube" key="youtube" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <BaseLayout>
