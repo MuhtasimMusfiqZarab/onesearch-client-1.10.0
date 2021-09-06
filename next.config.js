@@ -32,6 +32,11 @@ module.exports = {
         destination: "/dashboard/search",
         permanent: true,
       },
+      {
+        source: "/dashboard/search",
+        destination: "/dashboard/search/youtube",
+        permanent: true,
+      },
     ];
   },
 };
