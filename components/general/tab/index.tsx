@@ -1,16 +1,14 @@
 import React, { FC, useState } from "react";
 import Link from "next/link";
 import filterNavElements from "components/utils/navigation/tab";
+import { useRouter } from "next/router";
 import styles from "./style.module.scss";
 
 interface Props {}
 
 export const Tab: FC<Props> = ({}: Props): JSX.Element => {
-  const [isActive, setActive] = useState<number>(1);
-
-  const handleActive = (i: any) => {
-    setActive(i);
-  };
+  const router = useRouter();
+  const [currentRoute, setCurrentRoute] = useState<string>(router.pathname);
 
   return (
     <nav className={styles.nav}>
@@ -23,9 +21,8 @@ export const Tab: FC<Props> = ({}: Props): JSX.Element => {
                   <li
                     key={index}
                     className={`${styles.listitem} ${
-                      isActive == element.index ? styles.active : ""
+                      currentRoute === element.route ? styles.active : ""
                     }`}
-                    onClick={() => handleActive(`${element.index}`)}
                   >
                     {element.icon}
                     {element.title}
