@@ -20,13 +20,13 @@ const sideNavElements: Props[] = [
     title: "Request",
     icon: icons.RequestIcon({}),
     route: "/dashboard/request",
-    hasChild: true,
+    hasChild: false,
   },
   {
     title: "Subscribe",
     icon: icons.SubscriptionIcon({}),
     route: "/dashboard/subscribe",
-    hasChild: true,
+    hasChild: false,
   },
   // {
   //   title: "Credit",
@@ -44,7 +44,7 @@ const sideNavElements: Props[] = [
     title: "Settings",
     icon: icons.SettingsIcon({}),
     route: "/dashboard/settings",
-    hasChild: true,
+    hasChild: false,
   },
 ];
 
