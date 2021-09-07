@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import { Filter, CloseLite, Reset } from "components/_icons";
 import {
   Pagination,
@@ -34,12 +34,11 @@ export default function Index() {
 
   const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setIsOpen(false);
-  }
-
+  };
 
   return (
     <>
@@ -97,11 +96,16 @@ export default function Index() {
         onRequestClose={closeModal}
         contentLabel="Filters Modal"
       >
-        <button onClick={closeModal} className="modal_close_btn"><CloseLite /></button>
+        <button onClick={closeModal} className="modal_close_btn">
+          <CloseLite />
+        </button>
         <div className={styles.edit_filters}>
           <div className={styles.search_wrap}>
             <SearchBox searchText={searchText} setSearchText={setSearchText} />
-            <button onClick={openModal} className={`${styles.reset_form} ${styles.reset_form_modal}`}>
+            <button
+              onClick={openModal}
+              className={`${styles.reset_form} ${styles.reset_form_modal}`}
+            >
               <Reset />
             </button>
           </div>
@@ -144,7 +148,9 @@ export default function Index() {
             />
           </div>
           <div className="text-center">
-            <button type="submit" className="btn_fill_secondary">Apply Filter</button>
+            <button type="submit" className="btn_fill_secondary">
+              Apply Filter
+            </button>
           </div>
         </div>
       </Modal>

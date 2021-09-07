@@ -1,5 +1,5 @@
 import Head from "next/head";
-import BaseLayout from "components/layouts/dashboard";
+import DashboardLayout from "components/layouts/dashboard";
 import YoutubeTable from "components/pages/dashboard/search/youtube";
 import { ChannelsProvider } from "components/_context/youtube/channels";
 import { CountriesProvider } from "components/_context/youtube/countries";
@@ -9,11 +9,11 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Youtube</title>
-        <meta property="og:youtube" content="Youtube" key="youtube" />
+        <title>Search</title>
+        <meta property="og:search" content="Search" key="search" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
-      <BaseLayout>
+      <DashboardLayout>
         <ChannelsProvider>
           <CountriesProvider>
             <CategoriesProvider>
@@ -21,7 +21,7 @@ export default function Index() {
             </CategoriesProvider>
           </CountriesProvider>
         </ChannelsProvider>
-      </BaseLayout>
+      </DashboardLayout>
     </>
   );
 }

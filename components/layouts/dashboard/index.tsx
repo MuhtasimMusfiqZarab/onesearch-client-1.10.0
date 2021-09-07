@@ -3,7 +3,7 @@ import TopNav from "../../shared/topnav/version2";
 import SideNav from "../../shared/sidenav";
 import styles from "./styles.module.scss";
 
-const BaseLayout = (props) => {
+const DashboardLayout = (props) => {
   return (
     <React.Fragment>
       <TopNav />
@@ -15,4 +15,4 @@ const BaseLayout = (props) => {
   );
 };
 
-export default BaseLayout;
+export default DashboardLayout;
