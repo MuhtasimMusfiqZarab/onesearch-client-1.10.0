@@ -1,13 +1,13 @@
 .container {
   display: flex;
-  margin-bottom: 5rem;
-  height: calc(100vh - 5rem);
-
   &__element {
     display: flex;
     margin-top: 4rem;
     margin-left: 5rem;
     width: 100%;
+    @media screen and (max-width: 550px) {
+      margin-left: 0;
+    }
   }
 }
 
