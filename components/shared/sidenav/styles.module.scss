@@ -40,6 +40,25 @@
     }
 
     &Selected {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-radius: 0.6rem;
+        height: 4rem;
+        width: 100%;
+        background-color: $os-primary;
+        bottom: -0.8rem;
+        right: 3.2rem;
+        transition: all ease-in-out 250ms;
+        @media screen and (max-width: 550px) {
+          height: 0.5rem;
+          width: 4rem;
+          bottom: 3.1rem;
+          left: -0.85rem;
+        }
+      }
       svg {
         path {
           fill: $os-primary;
