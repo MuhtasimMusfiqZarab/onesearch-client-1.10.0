@@ -1,7 +1,7 @@
 .nav {
   &__list {
     background: white;
-    border-right: 1px solid $clr-gray200;
+    box-shadow: 0px 0px 10px $clr-graymed;
 
     padding: 5rem 0;
     width: 5rem;
@@ -40,6 +40,25 @@
     }
 
     &Selected {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-radius: 0.6rem;
+        height: 4rem;
+        width: 100%;
+        background-color: $os-primary;
+        bottom: -0.8rem;
+        right: 3.2rem;
+        transition: all ease-in-out 250ms;
+        @media screen and (max-width: 550px) {
+          height: 0.5rem;
+          width: 4rem;
+          bottom: 3.1rem;
+          left: -0.85rem;
+        }
+      }
       svg {
         path {
           fill: $os-primary;
@@ -79,6 +98,7 @@
       align-items: center;
       padding: 0 1rem;
       z-index: 999;
+      box-shadow: 0px 0px 20px $clr-graymed;
     }
   }
 }

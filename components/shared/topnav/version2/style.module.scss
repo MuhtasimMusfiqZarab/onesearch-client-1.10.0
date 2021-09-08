@@ -1,9 +1,9 @@
 .nav {
-  border-bottom: 1px solid $clr-gray200;
   position: fixed;
   width: 100%;
   z-index: 999;
   background: white;
+  box-shadow: 0px 0px 10px $clr-graymed;
 
   &__toggle {
     position: absolute;
