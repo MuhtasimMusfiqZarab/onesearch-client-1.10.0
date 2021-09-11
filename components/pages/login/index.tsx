@@ -70,7 +70,7 @@ const Index: FC<Props> = (): JSX.Element => {
               </button>
             </div>
 
-            <img src="/sign.svg" alt="" className={styles.image} />
+            {/* <img src="/sign.svg" alt="" className={styles.image} /> */}
           </div>
         </div>
       </div>
