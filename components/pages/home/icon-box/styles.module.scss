@@ -1,0 +1,25 @@
+.icon_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 10px;
+  border: 1px solid $os-secondary;
+  color: #fff;
+  padding: 41px 25px 25px;
+
+  &__media {
+    display: inline-block;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__dark {
+    border: 1px solid #fff;
+  }
+}
