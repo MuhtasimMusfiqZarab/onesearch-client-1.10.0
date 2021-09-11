@@ -1,6 +1,6 @@
 import { Text } from "../text";
-import Image from 'next/image';
-import FeatureImage from '../../../../public/search-for-your-lead.png'
+import Image from "next/image";
+import FeatureImage from "../../../../public/search-for-your-lead.png";
 import styles from "./styles.module.scss";
 
 export default function Features() {
@@ -12,11 +12,14 @@ export default function Features() {
           content="Our simple and easy-to-use dashboard lets you <br/>search for the contact information with filters <br/> for fast searching."
           isButton={true}
           buttonText="Go to Dashboard"
-          buttonUrl="#"
+          buttonUrl="/dashboard/search/youtube"
         />
       </div>
 
-      <div id="features" className={`${styles.features_wrap__thumbnail} text-right`}>
+      <div
+        id="features"
+        className={`${styles.features_wrap__thumbnail} text-right`}
+      >
         <Image
           src={FeatureImage}
           alt="Search for your lead"

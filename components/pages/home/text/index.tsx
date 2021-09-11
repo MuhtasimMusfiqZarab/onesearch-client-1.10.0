@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 interface Props {
@@ -22,8 +23,15 @@ export const Text: FC<Props> = ({
     <div className={styles.text_box}>
       <h2 className={styles.text_box__title}>{title}</h2>
       {subtitle && <h3 className={styles.text_box__subtitle}>{subtitle}</h3>}
-      <p className={styles.text_box__desc} dangerouslySetInnerHTML={{ __html: content }}></p>
-      {isButton && <a href={buttonUrl && '#'} className="btn btn_fill_primary">{buttonText}</a>}
+      <p
+        className={styles.text_box__desc}
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></p>
+      {isButton && (
+        <Link href={buttonUrl ? buttonUrl : "/"}>
+          <a className="btn btn_fill_primary">{buttonText}</a>
+        </Link>
+      )}
     </div>
   );
-}
+};

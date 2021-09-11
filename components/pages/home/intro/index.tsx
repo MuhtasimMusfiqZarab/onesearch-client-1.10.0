@@ -11,7 +11,7 @@ export default function Index() {
           <div className={styles.text}>
             <Text
               title="Get your lead now."
-              subtitle="Find business emails"
+              // subtitle="Find business emails"
               content="85% of B2B marketers say lead generation is their most <br/>important content marketing goal."
               isButton={true}
               buttonText="Get Started"
