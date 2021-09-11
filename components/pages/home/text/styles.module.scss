@@ -1,0 +1,33 @@
+.text_box {
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.229em;
+    margin-bottom: 20px;
+    color: #505050;
+
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.219em;
+    color: #03396c;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      br {
+        display: none;
+      }
+    }
+  }
+}
