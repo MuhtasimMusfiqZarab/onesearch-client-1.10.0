@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { WebIcon } from "../../../_icons";
+import { Text } from "../text";
 import styles from "./styles.module.scss";
 
 export default function Index() {
@@ -7,9 +8,15 @@ export default function Index() {
     <div className={styles.body}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          {/* <div className={styles.text}>
-            <p>More Information</p>
-          </div> */}
+          <div className={styles.text}>
+            <Text
+              title="Get your lead now."
+              // subtitle="Find business emails"
+              content="85% of B2B marketers say lead generation is their most <br/>important content marketing goal."
+              isButton={true}
+              buttonText="Get Started"
+            />
+          </div>
           <div className={styles.img}>
             <div className={styles.socialIcons}>
               <WebIcon />
