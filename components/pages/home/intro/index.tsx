@@ -17,10 +17,8 @@ export default function Index() {
               buttonText="Get Started"
             />
           </div>
-          <div className={styles.img}>
-            <div className={styles.socialIcons}>
-              <WebIcon />
-            </div>
+          <div className={styles.webIcon}>
+            <WebIcon height={468} width={467} />
           </div>
         </div>
         <div className={styles.wave}>

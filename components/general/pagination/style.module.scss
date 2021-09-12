@@ -6,11 +6,10 @@
     background: #fff;
     padding: 0.5rem;
     border-radius: 3rem;
-
     border: 1px solid #ededed;
 
     & li {
-      color: #20b2aa;
+      color: $os-secondary;
       list-style: none;
       line-height: 2rem;
       text-align: center;
@@ -25,8 +24,7 @@
 
     &:hover {
       color: #fff;
-
-      background: #20b2aa;
+      background: $os-secondary;
     }
   }
   &__prev {
@@ -45,13 +43,12 @@
 
     &:hover {
       color: #fff;
-
-      background: #20b2aa;
+      // background: $os-primary;
     }
   }
   &__numberActive {
     color: #fff !important;
-    background: #20b2aa;
+    background: $os-secondary;
   }
   &__dots {
     font-size: 2rem;
