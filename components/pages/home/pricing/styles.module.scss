@@ -22,6 +22,11 @@
     background: white;
     text-align: center;
     position: relative;
+
+    li {
+      list-style: none;
+      padding: 0.5rem;
+    }
   }
 
   .container::before {
@@ -29,14 +34,15 @@
     content: counter(number);
     width: 4rem;
     height: 4rem;
-    background: $clr-primary-pricing;
+    background: $os-secondary;
     position: absolute;
     display: block;
     border-radius: 50%;
     top: -2rem;
     left: 7.4rem;
     font-size: 3rem;
-    font-weight: bold;
+    color: white;
+    // font-weight: bold;
     line-height: 3rem;
   }
 

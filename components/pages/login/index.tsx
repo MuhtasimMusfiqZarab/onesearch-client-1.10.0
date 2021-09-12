@@ -26,7 +26,7 @@ const Index: FC<Props> = (): JSX.Element => {
               <div className={styles.divider} />
               <div className={`${styles.button}`}>
                 <GoogleIcon />
-                <div>Login with google</div>
+                <div>Login with google(Upcoming)</div>
               </div>
             </form>
             <form action="" className={styles.signupForm}>
@@ -50,7 +50,7 @@ const Index: FC<Props> = (): JSX.Element => {
               <button
                 className={`${styles.btn} ${styles.transparent} `}
                 id="sign-up-button"
-                onClick={() => setIsSignupMode(true)}
+                onClick={() => setIsSignupMode(false)}
               >
                 Sign Up
               </button>
