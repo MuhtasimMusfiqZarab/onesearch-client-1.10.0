@@ -32,9 +32,9 @@ export default function TopNav({ isTransperant }: Props) {
       <ul className={styles.nav__menu}>
         <li>
           <Link href="/">
-            {/* <a> */}
-            <Logo />
-            {/* </a> */}
+            <a>
+              <Logo />
+            </a>
           </Link>
         </li>
         {topNavElements.map(
@@ -43,9 +43,8 @@ export default function TopNav({ isTransperant }: Props) {
               <li key={index}>
                 <Link href={`${element.route}`} key={index}>
                   <a
-                    className={`${
-                      IsCurrentRoute(element) && styles.activeNavElement
-                    }`}
+                    className={`${IsCurrentRoute(element) && styles.activeNavElement
+                      }`}
                     onClick={() => {
                       setCurrentActive(index);
                     }}

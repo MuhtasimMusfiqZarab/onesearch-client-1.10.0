@@ -1,0 +1,14 @@
+.review__wrap {
+  width: 100%;
+  padding: 90px 0;
+
+  &_inner {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+  }
+}

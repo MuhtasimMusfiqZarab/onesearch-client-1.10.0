@@ -1,0 +1,64 @@
+// :root {
+// 	--color-gold: #ED8A19;
+// 	--color-gold-light: #d48327;
+// }
+
+.rating__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .rating_stars {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .rating_stars_input {
+      display: none;
+    }
+
+    .rating_stars_input:checked ~ .rating_stars_view svg {
+      fill: #ed8a19;
+    }
+
+    .rating_stars_input:checked ~ .rating_stars_view:hover svg,
+    .rating_stars_input:checked
+      ~ .rating_stars_view:hover
+      ~ .rating_stars_view
+      svg {
+      fill: #d48327;
+    }
+  }
+
+  .rating_stars_view {
+    cursor: pointer;
+    line-height: 1;
+
+    .icon,
+    .icon_star,
+    .icon_star_half {
+      position: relative;
+    }
+
+    &.is_half {
+      transform: translateX(100%);
+      margin-left: -0.69580078125em;
+
+      svg {
+        width: 0.69580078125em;
+      }
+    }
+
+    svg {
+      fill: #bbbdce;
+      width: 20px;
+      height: 18px;
+    }
+
+    &:hover {
+      svg,
+      ~ .rating_stars_view svg {
+        fill: #d48327;
+      }
+    }
+  }
+}
