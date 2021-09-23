@@ -9,7 +9,7 @@ export interface Props {
 
 export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
-  const arrowColor = '#5D8AA8'
+  const arrowColor = "#5D8AA8";
 
   const handleChange = () => {
     console.log("testing...");
@@ -18,7 +18,6 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
   const handleToggleBtn = () => {
     setToggleBtn((toggleBtn = !toggleBtn));
   };
-
 
   return (
     <>
@@ -48,7 +47,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
             {items.map((item, index) => (
               <tr
                 key={index}
-                className={`${styles.tr} ${toggleBtn ? styles.expand : ''}`}
+                className={`${styles.tr} ${toggleBtn ? styles.expand : ""}`}
               >
                 <td className={styles.td}>
                   <input
@@ -83,7 +82,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                   </span>
 
                   <span onClick={handleToggleBtn} className={styles.toggle_btn}>
-                    {toggleBtn ? 'Show less' : 'Expand'}
+                    {toggleBtn ? "Show less" : "Expand"}
                     <DownArrow />
                   </span>
                 </td>
