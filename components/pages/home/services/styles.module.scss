@@ -1,6 +1,5 @@
 .services_wrap {
-  background: $os-primary;
-  padding: 10rem 0 6.0625rem;
+  padding: 38px 6.0625rem;
 
   @media (max-width: 767px) {
     padding: 3.75rem 0;
@@ -14,19 +13,6 @@
     @media (max-width: 767px) {
       padding: 0 15px;
     }
-
-    h2 {
-      color: #fff;
-      font-weight: 700;
-      font-size: 3rem;
-      line-height: 1.229em;
-      margin-bottom: 6.375rem;
-
-      @media (max-width: 767px) {
-        font-size: 1.875rem;
-        margin-bottom: 3.125rem;
-      }
-    }
   }
 
   .services_items {
@@ -34,7 +20,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.25rem;
-    margin-bottom: 12.375rem;
 
     @media (max-width: 767px) {
       gap: 3.125rem;

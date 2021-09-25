@@ -1,23 +1,23 @@
-.main {
-  margin: 2rem;
+.pricing_wrap {
+  position: relative;
 
-  h1 {
-    text-align: center;
+  &__inner {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
   }
 
   .wrapper {
     counter-reset: number;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin: 4rem 0;
   }
 
   .container {
-    box-shadow: 0px 0px 20px $clr-graymed;
+    box-shadow: 0 0 20px $clr-graymed;
     border-radius: $border-radius-card;
     padding: 2rem;
-    width: 300px;
+    width: 100%;
     margin: 0 0.5rem 4rem;
     background: white;
     text-align: center;

@@ -43,4 +43,16 @@ button,
       border-color: $os-primary;
     }
   }
+
+  &_fill_white {
+    background: #fff;
+    border-color: #fff;
+    color: $os-primary;
+
+    &:hover {
+      background: $os-secondary;
+      border-color: $os-secondary;
+      color: #fff;
+    }
+  }
 }

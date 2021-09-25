@@ -1,10 +1,9 @@
-.text_box {
+.text {
   &__title {
     font-weight: 700;
     font-size: 48px;
     line-height: 1.229em;
     margin-bottom: 20px;
-    color: #505050;
 
     @media (max-width: 767px) {
       font-size: 30px;
@@ -15,7 +14,6 @@
     font-weight: 600;
     font-size: 32px;
     line-height: 1.219em;
-    color: #03396c;
     margin-bottom: 20px;
   }
 
@@ -29,5 +27,9 @@
         display: none;
       }
     }
+  }
+
+  &__dark {
+    color: #fff;
   }
 }
