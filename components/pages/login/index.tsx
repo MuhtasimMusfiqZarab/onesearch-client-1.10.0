@@ -21,7 +21,6 @@ const Index: FC<Props> = (): JSX.Element => {
             <form className={styles.signinForm}>
               <h2 className={styles.title}>
                 <Logo />
-                <div>OneSearch</div>
               </h2>
               <div className={styles.divider} />
               <div className={`${styles.button}`}>
