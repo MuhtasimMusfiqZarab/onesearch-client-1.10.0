@@ -32,12 +32,12 @@ export const Pagination: FC<Props> = ({
 
   const reduceOffset = () => {
     if (offset > 0) {
-      setOffset(offset - 1);
+      setOffset(offset - 10);
     }
   };
 
   const increaseoffset = () => {
-    setOffset(offset + 1);
+    setOffset(offset + 10);
   };
 
   return (
@@ -54,9 +54,8 @@ export const Pagination: FC<Props> = ({
           <li
             className={`${styles.pagination__number} ${styles.pagination__numberActive}`}
           >
-            {offset + 1}
+            {Math.floor(offset / 10 + 1)}
           </li>
-
           <li
             className={`${styles.pagination__btn} ${styles.pagination__next}`}
             onClick={increaseoffset}

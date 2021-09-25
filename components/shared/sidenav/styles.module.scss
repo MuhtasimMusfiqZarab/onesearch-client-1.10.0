@@ -44,10 +44,10 @@
         display: block;
         border-radius: 0.6rem;
         height: 4rem;
-        width: 100%;
+        width: 0.5rem;
         background-color: $os-primary;
         bottom: -0.8rem;
-        right: 3.2rem;
+        right: 3.3rem;
         transition: all ease-in-out 250ms;
         @media screen and (max-width: 550px) {
           height: 0.5rem;
