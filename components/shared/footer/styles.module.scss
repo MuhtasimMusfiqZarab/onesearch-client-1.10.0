@@ -9,6 +9,13 @@
     display: flex;
     align-items: flex-start;
     gap: 70px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &_copy {
@@ -26,7 +33,9 @@
   }
 
   &_subscription {
-    margin-left: auto;
+    @media (min-width: 991px) {
+      margin-left: auto;
+    }
   }
 
   h3 {
@@ -61,7 +70,7 @@
   ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 22px;
 
     li {
@@ -111,14 +120,22 @@
 .subscription_form {
   width: 587px;
 
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
   form {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 22px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
-  input[type="email"] {
+  input[type='email'] {
     height: 42px;
     width: 100%;
     max-width: 430px;
@@ -133,7 +150,7 @@
     }
   }
 
-  button[type="submit"] {
+  button[type='submit'] {
     height: 40px;
   }
 }

@@ -11,6 +11,10 @@
     counter-reset: number;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   .container {
@@ -22,6 +26,10 @@
     background: white;
     text-align: center;
     position: relative;
+
+    @media (max-width: 767px) {
+      margin: 0 0 4rem;
+    }
 
     li {
       list-style: none;

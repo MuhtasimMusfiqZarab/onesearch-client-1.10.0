@@ -42,6 +42,14 @@
 
       &:first-child {
         margin-bottom: 0;
+
+        &:hover {
+          a {
+            &::after {
+              width: 0;
+            }
+          }
+        }
       }
 
       a {
@@ -54,7 +62,7 @@
 
         position: relative;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           display: block;
           border-radius: 1rem;
@@ -83,7 +91,7 @@
         color: $os-primary;
         font-weight: 600;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           display: block;
           border-radius: 1rem;

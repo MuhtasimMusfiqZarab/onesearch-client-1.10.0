@@ -41,6 +41,10 @@
       &:hover {
         color: $os-primary;
       }
+
+      @media (max-width: 767px) {
+        padding: 8px 20px 18px;
+      }
     }
   }
 
