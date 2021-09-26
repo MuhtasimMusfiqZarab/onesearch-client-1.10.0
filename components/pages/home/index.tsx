@@ -1,9 +1,10 @@
 import TopNav from "../../shared/topnav/version2";
-import styles from "./styles.module.scss";
 import Intro from "./intro";
 import Services from "./services";
 import Pricing from "./pricing";
-import Features from "./features";
+import Reviews from "./reviews";
+import Footer from "components/shared/footer";
+import styles from "./styles.module.scss";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
       <TopNav />
       <Intro />
       <Services />
-      <Features />
+      <Reviews />
       <Pricing />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.heading {
+  margin-bottom: 60px;
+
+  &__title {
+    color: $os-primary;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.229em;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    @media (max-width: 767px) {
+      font-size: 1.875rem;
+      margin-bottom: 3.125rem;
+    }
+  }
+
+  &__subtitle {
+  }
+
+  &__dark {
+    color: #fff;
+  }
+}
