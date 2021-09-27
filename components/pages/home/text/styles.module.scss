@@ -1,4 +1,8 @@
 .text {
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 48px;
