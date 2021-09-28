@@ -18,7 +18,9 @@
   &__subtitle {
   }
 
-  &__dark {
-    color: #fff;
+  &__dark[class] {
+    .heading__title {
+      color: #fff !important;
+    }
   }
 }

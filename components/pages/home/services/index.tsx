@@ -19,7 +19,7 @@ export default function Services() {
   return (
     <div className={styles.services_wrap}>
       <div className={styles.services_wrap__inner}>
-        <Heading title="Our Services" isUnderline={true} />
+        <Heading title="Our Services" isUnderline={true} isDark={true} />
 
         <Tabs items={[]} defaultActive="jj" />
 
@@ -28,8 +28,10 @@ export default function Services() {
             <Text
               title="Search for your lead"
               content="Our simple and easy-to-use dashboard lets you search for leads with filters for fast searching."
+              isDark={true}
               isButton={true}
               buttonText="Go to Dashboard"
+              buttonClasses="btn btn_fill_white"
             />
 
             <div
@@ -49,8 +51,10 @@ export default function Services() {
             <Text
               title="Search for your lead"
               content="Our simple and easy-to-use dashboard lets you search for leads with filters for fast searching."
+              isDark={true}
               isButton={true}
               buttonText="Go to Dashboard"
+              buttonClasses="btn btn_fill_white"
             />
 
             <div
