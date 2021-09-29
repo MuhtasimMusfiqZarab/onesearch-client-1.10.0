@@ -8,11 +8,13 @@
 
 html,
 body {
-  font-family: "Montserrat", "Helvetica";
+  font-family: 'Montserrat', 'Helvetica';
   color: $clr-gray500;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-@import "./shared/utilities";
-@import "./shared/button";
-@import "./shared/react-modal";
+@import './shared/utilities';
+@import './shared/button';
+@import './shared/react-modal';
+@import './shared/slick';

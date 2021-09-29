@@ -1,0 +1,29 @@
+.slick {
+  &-arrow[class] {
+    background: #ffffff;
+    box-shadow: 0 0 10px #c4c4c4;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+
+  &-prev[class] {
+    left: -80px;
+
+    @media (max-width: 767px) {
+      left: 0;
+      bottom: -25px;
+      top: unset;
+    }
+  }
+
+  &-next[class] {
+    right: -80px;
+
+    @media (max-width: 767px) {
+      right: 0;
+      bottom: -25px;
+      top: unset;
+    }
+  }
+}

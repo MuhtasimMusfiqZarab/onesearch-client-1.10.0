@@ -1,5 +1,6 @@
 .services_wrap {
-  padding: 38px 6.0625rem;
+  background: $os-primary;
+  padding: 90px 6.0625rem 99px;
 
   @media (max-width: 767px) {
     padding: 3.75rem 0;
@@ -16,7 +17,7 @@
   }
 
   .services_items {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
     gap: 1.25rem;
@@ -31,7 +32,7 @@
       flex: 1;
 
       @media (max-width: 767px) {
-        width: 80%;
+        width: 100%;
       }
     }
   }
