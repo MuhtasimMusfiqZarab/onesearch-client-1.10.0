@@ -1,5 +1,5 @@
 .footer {
-  background: #b3cde0;
+  background: #49789b;
   padding: 35px 0 18px;
 
   &_container {
@@ -20,7 +20,7 @@
   }
 
   &_copy {
-    color: #7b7777;
+    color: #fff;
     text-align: center;
   }
 }
@@ -40,6 +40,7 @@
   }
 
   h3 {
+    color: #fff;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -53,14 +54,14 @@
       margin-bottom: 10px;
 
       a {
-        color: #505050;
+        color: #fff;
         font-size: 14px;
         line-height: 17px;
         display: block;
         text-decoration: none;
 
         &:hover {
-          color: $os-primary;
+          color: $os-secondary-theme;
         }
       }
     }
@@ -157,5 +158,12 @@
 
   button[type='submit'] {
     height: 40px;
+    border: 2px solid #fff;
+    color: #fff;
+
+    &:hover {
+      color: $os-secondary-theme;
+      border-color: $os-secondary-theme;
+    }
   }
 }

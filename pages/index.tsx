@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Home from "components/pages/home";
+import BackToTop from "components/general/back-to-top";
 
 export default function Index() {
   return (
@@ -10,6 +11,7 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <Home />
+      <BackToTop />
     </>
   );
 }
