@@ -40,6 +40,7 @@
   }
 
   h3 {
+    color: #fff;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -129,5 +130,12 @@
 
   button[type='submit'] {
     height: 40px;
+    border: 2px solid #fff;
+    color: #fff;
+
+    &:hover {
+      color: $os-secondary-theme;
+      border-color: $os-secondary-theme;
+    }
   }
 }

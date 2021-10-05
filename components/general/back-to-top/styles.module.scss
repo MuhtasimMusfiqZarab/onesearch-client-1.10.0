@@ -1,0 +1,35 @@
+.page_meta {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  width: 60px;
+  height: 155px;
+  position: fixed;
+  right: 20px;
+  bottom: 65px;
+  z-index: 999;
+}
+
+.backToTop,
+.chatBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #c4c4c4;
+}
+
+.backToTop {
+  width: 48px;
+  height: 73px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.chatBtn {
+  width: 55px;
+  height: 55px;
+  margin-top: 26px;
+}

@@ -1,5 +1,6 @@
 .pricing_wrap {
   position: relative;
+  padding-bottom: 85px;
 
   &__inner {
     width: 100%;
@@ -13,12 +14,12 @@
 
   .wrapper {
     counter-reset: number;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
 
-    @media (max-width: 767px) {
-      flex-direction: column;
-    }
+    // @media (max-width: 767px) {
+    //   flex-direction: column;
+    // }
   }
 
   .container {
@@ -26,7 +27,7 @@
     border-radius: $border-radius-card;
     padding: 2rem;
     width: 100%;
-    margin: 0 0.5rem 4rem;
+    // margin: 0 0.5rem 4rem;
     background: white;
     text-align: center;
     position: relative;
