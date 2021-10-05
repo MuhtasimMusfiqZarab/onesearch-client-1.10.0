@@ -1,5 +1,5 @@
 .footer {
-  background: #49789b;
+  background: $os-primary;
   padding: 35px 0 18px;
 
   &_container {
@@ -20,7 +20,7 @@
   }
 
   &_copy {
-    color: #fff;
+    // color: #7b7777;
     text-align: center;
   }
 }
@@ -54,7 +54,7 @@
       margin-bottom: 10px;
 
       a {
-        color: #fff;
+        color: white;
         font-size: 14px;
         line-height: 17px;
         display: block;
@@ -87,37 +87,9 @@
         color: #fff;
         width: 100%;
         height: 100%;
-        background: red;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-      }
-
-      &.link {
-        &__facebook {
-          a {
-            background: #1877f2;
-          }
-        }
-
-        &__twitter {
-          a {
-            background: #1da1f2;
-          }
-        }
-
-        &__linkedin {
-          a {
-            background: #0077b5;
-          }
-        }
-
-        &__youtube {
-          a {
-            background: #ff0000;
-          }
-        }
       }
     }
   }

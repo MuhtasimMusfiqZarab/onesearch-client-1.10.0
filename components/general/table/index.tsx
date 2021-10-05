@@ -1,7 +1,7 @@
-import React, { FC, useState } from "react";
-import { Lock, Save, DownloadsIcon, DownArrow } from "components/_icons";
-import { Controller } from "./table-controller";
-import styles from "./styles.module.scss";
+import React, { FC, useState } from 'react';
+import { Lock, Save, DownloadsIcon, DownArrow } from 'components/_icons';
+import { Controller } from './table-controller';
+import styles from './styles.module.scss';
 
 export interface Props {
   items: any[];
@@ -9,10 +9,10 @@ export interface Props {
 
 export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
-  const arrowColor = "#5D8AA8";
+  const arrowColor = '#5D8AA8';
 
   const handleChange = () => {
-    console.log("testing...");
+    console.log('testing...');
   };
 
   const handleToggleBtn = () => {
@@ -27,11 +27,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
           <thead className={styles.thead}>
             <tr className={styles.tr}>
               <th className={styles.th}>
-                <input
-                  type="checkbox"
-                  onChange={handleChange}
-                  name="select-all"
-                />
+                <input type="checkbox" onChange={handleChange} name="select-all" />
               </th>
               <th className={styles.th}>Channel Name</th>
               <th className={styles.th}>Joined</th>
@@ -45,16 +41,9 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
           </thead>
           <tbody className={styles.tbody}>
             {items.map((item, index) => (
-              <tr
-                key={index}
-                className={`${styles.tr} ${toggleBtn ? styles.expand : ""}`}
-              >
+              <tr key={index} className={`${styles.tr} ${toggleBtn ? styles.expand : ''}`}>
                 <td className={styles.td}>
-                  <input
-                    type="checkbox"
-                    onChange={handleChange}
-                    name="select-all"
-                  />
+                  <input type="checkbox" onChange={handleChange} name="select-all" />
                 </td>
                 <td className={styles.td} data-label="Channel Name">
                   <a href="#">{item.channel_name}</a>
@@ -70,7 +59,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                 </td>
                 <td className={styles.td} data-label="Views">
                   <span className={styles.lock_btn}>
-                    <Lock color="#005B96" />
+                    <Lock color="#49789b" />
                   </span>
 
                   <span className={styles.save_btn}>
@@ -82,7 +71,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                   </span>
 
                   <span onClick={handleToggleBtn} className={styles.toggle_btn}>
-                    {toggleBtn ? "Show less" : "Expand"}
+                    {toggleBtn ? 'Show less' : 'Expand'}
                     <DownArrow />
                   </span>
                 </td>

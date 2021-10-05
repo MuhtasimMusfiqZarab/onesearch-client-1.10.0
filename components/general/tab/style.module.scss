@@ -33,7 +33,7 @@
 
       &.active {
         background: #fff;
-        border-color: #03396c;
+        border-color: $os-primary;
 
         &::before {
           transform: scale(1);
