@@ -16,11 +16,11 @@ export const Tab: FC<Props> = ({ }: Props): JSX.Element => {
         {filterNavElements.map(
           (element, index): JSX.Element => {
             return (
-              <li
+              <li key={index}
                 className={`${styles.listitem} ${currentRoute === element.route ? styles.active : ""
                   }`}
               >
-                <Link href={`${element.route}`} key={index}>
+                <Link href={`${element.route}`}>
                   <a>
 
                     {element.icon}
