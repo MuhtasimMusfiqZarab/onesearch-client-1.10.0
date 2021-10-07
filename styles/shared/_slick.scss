@@ -1,10 +1,27 @@
 .slick {
   &-arrow[class] {
-    background: #ffffff;
+    background: #ced1d8;
     box-shadow: 0 0 10px #c4c4c4;
     width: 46px;
     height: 46px;
     border-radius: 50%;
+  }
+
+  &-prev[class],
+  &-next[class] {
+    &::before {
+      width: 16px;
+      height: 28px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      font-family: initial;
+      color: transparent;
+
+      @media (max-width: 767px) {
+        background-size: 36%;
+      }
+    }
   }
 
   &-prev[class] {
@@ -15,6 +32,10 @@
       bottom: -25px;
       top: unset;
     }
+
+    &:before {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.108 1.567 1.676 14l12.432 12.432' stroke='%2303396C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
   }
 
   &-next[class] {
@@ -24,6 +45,10 @@
       right: 0;
       bottom: -25px;
       top: unset;
+    }
+
+    &:before {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.892 26.433 14.324 14 1.892 1.568' stroke='%2303396C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
     }
   }
 }
