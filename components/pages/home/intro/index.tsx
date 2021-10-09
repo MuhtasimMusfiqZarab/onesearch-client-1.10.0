@@ -1,5 +1,5 @@
 import { BrowserView, MobileView } from "react-device-detect";
-import { WebIcon, WebIconMobile } from "../../../_icons";
+import { WebIcon, ParticleCircle } from "../../../_icons";
 import { Text } from "../text";
 import styles from "./styles.module.scss";
 
@@ -19,13 +19,12 @@ export default function Index() {
             />
           </div>
           <div className={styles.webIcon}>
-            <BrowserView>
-              <WebIcon />
-            </BrowserView>
-
             <MobileView>
-              <WebIconMobile />
+              <ParticleCircle width={313} height={312} />
             </MobileView>
+            <BrowserView>
+              <WebIcon width={448} height={447} />
+            </BrowserView>
           </div>
           <div className={styles.wave}>
             <img src="/wave.svg" alt="" className={styles.mainWave} />

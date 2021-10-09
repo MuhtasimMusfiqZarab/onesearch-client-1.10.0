@@ -23,6 +23,7 @@
 
     @media (max-width: 767px) {
       padding: 0 15px;
+      justify-content: center;
     }
 
     .text {
@@ -39,6 +40,8 @@
 
       @media (max-width: 767px) {
         margin-bottom: 50px;
+        width: 313px;
+        height: 312px;
       }
 
       @keyframes rotation {
