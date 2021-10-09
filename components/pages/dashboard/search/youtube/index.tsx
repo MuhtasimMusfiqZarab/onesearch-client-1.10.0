@@ -45,35 +45,37 @@ export default function Index() {
       <div className={styles.container__element_inner}>
         <Tab />
         <div className={styles.filterContainer}>
-          <div className={styles.search_wrap}>
-            <SearchBox searchText={searchText} setSearchText={setSearchText} />
+          <div className={styles.filterContainer_inner}>
+            <div className={styles.search_wrap}>
+              <SearchBox searchText={searchText} setSearchText={setSearchText} />
 
-            <button onClick={openModal} className={styles.reset_form}>
-              <Reset />
-              Reset
-            </button>
+              <button onClick={openModal} className={styles.reset_form}>
+                <Reset />
+                Reset
+              </button>
 
-            <button onClick={openModal} className={styles.filtersToggle}>
-              <Filter />
-            </button>
-          </div>
+              <button onClick={openModal} className={styles.filtersToggle}>
+                <Filter />
+              </button>
+            </div>
 
-          <div className={styles.filterItems}>
-            <Dropdown
-              title="Category"
-              setItem={setCategory}
-              setOffset={setOffset}
-              items={categories}
-              isSearch={true}
-            />
+            <div className={styles.filterItems}>
+              <Dropdown
+                title="Category"
+                setItem={setCategory}
+                setOffset={setOffset}
+                items={categories}
+                isSearch={true}
+              />
 
-            <Dropdown
-              title="Countries"
-              setItem={setLocation}
-              setOffset={setOffset}
-              items={countries}
-              isSearch={true}
-            />
+              <Dropdown
+                title="Countries"
+                setItem={setLocation}
+                setOffset={setOffset}
+                items={countries}
+                isSearch={true}
+              />
+            </div>
           </div>
 
           <div className={styles.container}>

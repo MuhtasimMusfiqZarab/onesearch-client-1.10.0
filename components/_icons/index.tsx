@@ -8,6 +8,7 @@ export { Logo } from "./logo";
 export { SigninIcon } from "./signin";
 export { SignupIcon } from "./signup";
 export { WebIcon } from "./webIcon";
+export { WebIconMobile } from "./webIconMobile";
 export { BinocularIcon } from "./binocular";
 export { RequestIcon } from "./request";
 export { SubscriptionIcon } from "./subscription";
