@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import Link from "next/link";
-import filterNavElements from "components/utils/resolver/navigation/tab";
 import { useRouter } from "next/router";
+import filterNavElements from "components/utils/resolver/navigation/tab";
 import styles from "./style.module.scss";
 
 interface Props { }
