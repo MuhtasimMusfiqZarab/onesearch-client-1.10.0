@@ -22,6 +22,12 @@
 
   tr {
     border-bottom: 1px solid $clr-gray300;
+    transition: all 0.25s;
+
+    &:hover:not(.thead tr) {
+      background: #b5cfde;
+      cursor: pointer;
+    }
 
     &:last-child {
       border-bottom: 0;
