@@ -1,20 +1,9 @@
-import React, { useState } from "react";
-import Modal from "react-modal";
-import { Filter, CloseLite, Reset } from "components/_icons";
-import {
-  Pagination,
-  Table,
-  Dropdown,
-  Tab,
-  SearchBox,
-  Loader,
-} from "components/general";
-import styles from "./styles.module.scss";
-import {
-  useChannels,
-  useCountries,
-  useCategories,
-} from "components/_context/youtube";
+import React, { useState } from 'react';
+import Modal from 'react-modal';
+import { Filter, CloseLite, Reset } from 'components/_icons';
+import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
+import styles from './styles.module.scss';
+import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
 export default function Index() {
   const {
@@ -26,7 +15,7 @@ export default function Index() {
     loading,
     total,
     searchText,
-    setSearchText,
+    setSearchText
   } = useChannels();
   const { countries } = useCountries();
   const { categories } = useCategories();
@@ -75,6 +64,24 @@ export default function Index() {
                 items={countries}
                 isSearch={true}
               />
+              <Dropdown
+                title="Countries"
+                setItem={setLocation}
+                setOffset={setOffset}
+                items={countries}
+                isSearch={true}
+              />
+            </div>
+            <div className={styles.filterItems}>
+              <Slider />
+              <Slider />
+              <Dropdown
+                title="Countries"
+                setItem={setLocation}
+                setOffset={setOffset}
+                items={countries}
+                isSearch={true}
+              />
             </div>
           </div>
 
@@ -93,11 +100,7 @@ export default function Index() {
       </div>
 
       {/* filter modal */}
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Filters Modal"
-      >
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Filters Modal">
         <button onClick={closeModal} className="modal_close_btn">
           <CloseLite />
         </button>
@@ -106,8 +109,7 @@ export default function Index() {
             <SearchBox searchText={searchText} setSearchText={setSearchText} />
             <button
               onClick={openModal}
-              className={`${styles.reset_form} ${styles.reset_form_modal}`}
-            >
+              className={`${styles.reset_form} ${styles.reset_form_modal}`}>
               <Reset />
             </button>
           </div>
