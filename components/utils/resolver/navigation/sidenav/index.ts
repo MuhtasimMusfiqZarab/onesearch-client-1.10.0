@@ -46,6 +46,18 @@ const sideNavElements: Props[] = [
     route: "/dashboard/settings",
     hasChild: false,
   },
+  {
+    title: "Settings",
+    icon: icons.SettingsIcon({}),
+    route: "/dashboard/settings",
+    hasChild: false,
+  },
+  {
+    title: "Settings",
+    icon: icons.SettingsIcon({}),
+    route: "/dashboard/settings",
+    hasChild: false,
+  },
 ];
 
 export default sideNavElements;
