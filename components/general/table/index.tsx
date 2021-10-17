@@ -58,16 +58,8 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                   {item.views}
                 </td>
                 <td className={styles.td} data-label="Views">
-                  <span className={styles.lock_btn}>
-                    <Lock color="#49789b" />
-                  </span>
-
                   <span className={styles.save_btn}>
-                    <Save color={arrowColor} />
-                  </span>
-
-                  <span className={styles.download_btn}>
-                    <DownloadsIcon color={arrowColor} />
+                    <Lock color="#49789b" />
                   </span>
 
                   <span onClick={handleToggleBtn} className={styles.toggle_btn}>
