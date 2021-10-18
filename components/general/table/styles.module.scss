@@ -24,7 +24,8 @@
     border-bottom: 1px solid $clr-gray300;
     transition: all 0.25s;
 
-    &:hover:not(.thead tr) {
+    &:hover:not(.thead tr),
+    &.active_row {
       background: #b5cfde;
       cursor: pointer;
     }
