@@ -1,22 +1,35 @@
 .user_infos {
   padding: 30px 25px;
-  background: #e5e5e5;
+  background: #fff;
 }
 
 .basic__info,
 .advanced__info {
-  &_heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0 0 10px #c4c4c4;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 30px;
 
-    h3 {
-      color: #49789b;
-      font-weight: 600;
-      font-size: 22px;
-      background: #fff;
-      padding: 10px 25px;
-      border-top: 5px solid #49789b;
+  h3 {
+    position: relative;
+    color: #49789b;
+    font-weight: 600;
+    font-size: 22px;
+    background: #fff;
+    padding: 10px 0;
+    display: inline-block;
+    margin-bottom: 15px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      width: 100%;
+      height: 7px;
+      background: #49789b;
+      border-radius: 10px;
     }
   }
 
@@ -26,10 +39,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-flow: row wrap;
-    background: #fff;
-    padding: 25px;
-    border-radius: 0 5px 5px;
-    margin-bottom: 25px;
 
     li {
       flex-basis: 50%;
