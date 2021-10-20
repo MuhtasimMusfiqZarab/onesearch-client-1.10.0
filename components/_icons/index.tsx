@@ -26,3 +26,8 @@ export { CloseLite } from "./closeLite";
 export { Reset } from "./reset";
 export { DownArrowRound } from "./downArrowRound";
 export { ParticleCircle } from "./particleCircle";
+export { Copy } from "./copy";
+export { External } from "./external";
+export { ArrowLeft } from "./arrowLeft";
+export { ArrowRight } from "./arrowRight";
+export { LoginLogo } from "./loginLogo";
