@@ -30,3 +30,4 @@ export { Copy } from "./copy";
 export { External } from "./external";
 export { ArrowLeft } from "./arrowLeft";
 export { ArrowRight } from "./arrowRight";
+export { LoginLogo } from "./loginLogo";
