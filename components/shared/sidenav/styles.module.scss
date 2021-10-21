@@ -41,23 +41,21 @@
 
     &Selected {
       position: relative;
+      //display display: inline-block; is added because flexbox and position doesnot work well sometimes.
+      display: inline-block;
       &::after {
         content: '';
         position: absolute;
-        display: block;
+        float: left;
         border-radius: 0.6rem;
         height: 4rem;
         width: 0.5rem;
         background-color: $os-primary;
-        bottom: -0.8rem;
-        right: 3.3rem;
+        bottom: -0.05rem;
+        left: -1.4rem;
         transition: all ease-in-out 250ms;
-
-        @media screen and (max-width: 550px) {
-          height: 0.5rem;
-          width: 4rem;
-          bottom: 3.1rem;
-          left: -0.85rem;
+        @media screen and (max-width: 767px) {
+          display: none;
         }
       }
       svg {

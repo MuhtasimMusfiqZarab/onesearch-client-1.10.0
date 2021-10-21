@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import sideNavElements from "components/utils/resolver/navigation/sidenav";
-import { IsCurrentRoute } from "components/services/route";
-import styles from "./styles.module.scss";
+import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
+import sideNavElements from 'components/utils/resolver/navigation/sidenav';
+import { IsCurrentRoute } from 'components/services/route';
+import styles from './styles.module.scss';
 
 export default function SideNav() {
   let prevBtn = useRef(null);
@@ -14,14 +14,14 @@ export default function SideNav() {
   useEffect(() => {
     let listScrollRight = navList.current.scrollLeft;
     nextBtn.current.addEventListener('click', (e) => {
-      e.preventDefault()
+      e.preventDefault();
       navList.current.scrollLeft = listScrollRight + 50;
       listScrollRight += 50;
     });
 
     let listScrollLeft = navList.current.scrollRight;
     prevBtn.current.addEventListener('click', (e) => {
-      e.preventDefault()
+      e.preventDefault();
       navList.current.scrollLeft = listScrollLeft + 50;
       listScrollLeft += 50;
     });
@@ -31,7 +31,12 @@ export default function SideNav() {
     <div>
       <nav className={styles.nav}>
         <a href="#" className={styles.prev__btn} ref={prevBtn}>
-          <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 25.985 3.27 14 15 2.015 13.702 0 0 14l13.702 14L15 25.985Z" fill="#49789B" /></svg>
+          <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 25.985 3.27 14 15 2.015 13.702 0 0 14l13.702 14L15 25.985Z"
+              fill="#49789B"
+            />
+          </svg>
         </a>
         <ul className={styles.nav__list} ref={navList}>
           {sideNavElements.map(
@@ -40,12 +45,10 @@ export default function SideNav() {
                 <li className={`${styles.nav__item} `} key={index}>
                   <Link href={`${element.route}`} key={index}>
                     <a
-                      className={`${IsCurrentRoute(element) && styles.nav__itemSelected
-                        }`}
+                      className={`${IsCurrentRoute(element) && styles.nav__itemSelected}`}
                       onClick={() => {
                         setCurrentActive(index);
-                      }}
-                    >
+                      }}>
                       {element.icon}
                       <p className={styles.nav__itemlabel}>{element.title}</p>
                     </a>
@@ -56,7 +59,9 @@ export default function SideNav() {
           )}
         </ul>
         <a href="#" className={styles.next__btn} ref={nextBtn}>
-          <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.015 11.73 14 0 25.985 1.298 28 15 14 1.298 0 0 2.015Z" fill="#49789B" /></svg>
+          <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.015 11.73 14 0 25.985 1.298 28 15 14 1.298 0 0 2.015Z" fill="#49789B" />
+          </svg>
         </a>
       </nav>
     </div>
