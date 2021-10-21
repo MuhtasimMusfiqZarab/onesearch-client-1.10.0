@@ -28,18 +28,18 @@ const sideNavElements: Props[] = [
     route: "/dashboard/subscribe",
     hasChild: false,
   },
-  // {
-  //   title: "Credit",
-  //   icon: icons.CreditIcon({}),
-  //   route: "/dashboard/credit",
-  //   hasChild: true,
-  // },
-  // {
-  //   title: "Download",
-  //   icon: icons.DownloadsIcon({}),
-  //   route: "/dashboard/download",
-  //   hasChild: true,
-  // },
+  {
+    title: "Credit",
+    icon: icons.CreditIcon({}),
+    route: "/dashboard/credit",
+    hasChild: true,
+  },
+  {
+    title: "Download",
+    icon: icons.DownloadsIcon({}),
+    route: "/dashboard/download",
+    hasChild: true,
+  },
   {
     title: "Settings",
     icon: icons.SettingsIcon({}),
