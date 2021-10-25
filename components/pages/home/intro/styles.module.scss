@@ -8,13 +8,16 @@
   margin-top: 4.2rem;
   overflow: hidden;
 
+  @media (max-width: 1024px) {
+    padding: 2rem 15px 6.875rem;
+  }
+
   @media (max-width: 767px) {
-    padding: 3.75rem 0;
+    padding: 1.75rem 0;
   }
 
   .content {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -23,14 +26,13 @@
 
     @media (max-width: 767px) {
       padding: 0 15px;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
     .text {
       @media (max-width: 767px) {
-        order: 1;
-        text-align: center;
-        margin-bottom: 3.125rem;
+        display: none;
       }
     }
 
@@ -40,8 +42,11 @@
 
       @media (max-width: 767px) {
         margin-bottom: 50px;
-        width: 313px;
-        height: 312px;
+
+        svg {
+          width: 313px;
+          height: 312px;
+        }
       }
 
       @keyframes rotation {

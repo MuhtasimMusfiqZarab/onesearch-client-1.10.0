@@ -3,8 +3,6 @@ import { IconProps } from "../utils/interfaces";
 
 export const BreadIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg viewBox="0 0 448 512" width="100">
-      <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
-    </svg>
+    <svg width="26" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h23.625M1 11.5h23.625M1 22h23.625" stroke="#49789B" strokeWidth="2" strokeLinecap="round" /></svg>
   );
 };

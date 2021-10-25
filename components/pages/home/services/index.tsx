@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-import SlickSlider from "components/general/slick";
 import { Text } from "../text";
 import { Heading } from "../heading";
 import { Tabs } from "../tabs";
@@ -8,68 +6,46 @@ import FeatureImage from "../../../../public/search-for-your-lead.png";
 import styles from "./styles.module.scss";
 
 export default function Services() {
-  const slickSettings = {
-    // dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-
   return (
     <div className={styles.services_wrap}>
+      <div className={styles.text__box_mobile}>
+        <Text
+          title="Growing your business <br>just got easier."
+          // subtitle="Find business emails"
+          content="85% of B2B marketers say lead generation is their most <br/>important content marketing goal."
+          isButton={true}
+          isDark={true}
+          buttonText="Get Started"
+          buttonClasses="btn btn_outline_secondary"
+        />
+      </div>
       <div className={styles.services_wrap__inner}>
         <Heading title="Our Services" isUnderline={true} isDark={true} />
 
-        <Tabs items={[]} defaultActive="jj" />
+        <Tabs items={[]} defaultActive="search" />
 
-        <SlickSlider settings={slickSettings}>
-          <div className={styles.services_items}>
-            <Text
-              title="Search for your lead"
-              content="Our simple and easy-to-use dashboard lets you search for leads with filters for fast searching."
-              isDark={true}
-              isButton={true}
-              buttonText="Go to Dashboard"
-              buttonClasses="btn btn_fill_white"
+        <div className={styles.services_items}>
+          <Text
+            title="Search for your lead"
+            content="Our simple and easy-to-use dashboard lets you search for leads with filters for fast searching."
+            isDark={true}
+            isButton={true}
+            buttonText="Go to Dashboard"
+            buttonClasses="btn btn_outline_secondary"
+          />
+
+          <div
+            id="features"
+            className={`${styles.features_wrap__thumbnail}`}
+          >
+            <Image
+              src={FeatureImage}
+              alt="Search for your lead"
+              width="441"
+              height="312"
             />
-
-            <div
-              id="features"
-              className={`${styles.features_wrap__thumbnail} text-right`}
-            >
-              <Image
-                src={FeatureImage}
-                alt="Search for your lead"
-                width="441"
-                height="312"
-              />
-            </div>
           </div>
-
-          <div className={styles.services_items}>
-            <Text
-              title="Search for your lead"
-              content="Our simple and easy-to-use dashboard lets you search for leads with filters for fast searching."
-              isDark={true}
-              isButton={true}
-              buttonText="Go to Dashboard"
-              buttonClasses="btn btn_fill_white"
-            />
-
-            <div
-              id="features"
-              className={`${styles.features_wrap__thumbnail} text-right`}
-            >
-              <Image
-                src={FeatureImage}
-                alt="Search for your lead"
-                width="441"
-                height="312"
-              />
-            </div>
-          </div>
-        </SlickSlider>
+        </div>
       </div>
     </div>
   );

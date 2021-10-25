@@ -1,22 +1,18 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from "./styles.module.scss";
 
 export default function BackToTop() {
+  let [isShowBtn, setShowBtn] = useState(false);
   const backToTop = useRef(null);
   const chatBtn = useRef(null);
-  // const
 
   useEffect(() => {
-    // console.dir(backToTop);
-
-    if (backToTop.current !== '') {
+    if (backToTop.current !== null) {
       window.addEventListener('scroll', () => {
         if (window.scrollY > 500) {
-          backToTop.current.style.opacity = '1';
-          backToTop.current.style.visibility = 'visible';
+          setShowBtn(() => isShowBtn = true);
         } else {
-          backToTop.current.style.opacity = '0';
-          backToTop.current.style.visibility = 'hidden';
+          setShowBtn(() => isShowBtn = false);
         }
       });
 
@@ -29,7 +25,11 @@ export default function BackToTop() {
 
   return (
     <div className={styles.page_meta}>
-      <a href="#" ref={backToTop} className={`${styles.backToTop} ${styles.backToTopShow}`}>
+      <a
+        href="#"
+        ref={backToTop}
+        className={`${styles.backToTop} ${isShowBtn ? styles.backToTopShow : ''}`}
+      >
         <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 11.5L10.5 2L20 11.5" stroke="#49789B" strokeWidth="2" strokeLinecap="round" />
         </svg>

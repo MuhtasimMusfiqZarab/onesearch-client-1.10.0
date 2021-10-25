@@ -4,10 +4,11 @@ button,
   align-items: center;
   justify-content: center;
   color: $os-secondary;
+  font-family: 'Montserrat', 'Helvetica';
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
-  border: 2px solid $os-secondary;
+  border: 1px solid $os-secondary;
   border-radius: 10px;
   background: transparent;
   padding: 19px 33px;
@@ -41,6 +42,16 @@ button,
     &:hover {
       background: $os-primary;
       border-color: $os-primary;
+    }
+  }
+
+  &_outline_secondary {
+    color: $os-secondary-theme;
+    border-color: $os-secondary-theme;
+
+    &:hover {
+      color: #fff;
+      background: $os-secondary-theme;
     }
   }
 

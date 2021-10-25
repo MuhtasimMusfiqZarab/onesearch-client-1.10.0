@@ -4,6 +4,7 @@ import Services from "./services";
 import Pricing from "./pricing";
 import Reviews from "./reviews";
 import Footer from "components/shared/footer";
+import BackToTop from "components/general/back-to-top";
 import styles from "./styles.module.scss";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Reviews />
       <Pricing />
       <Footer />
+      <BackToTop />
     </div>
   );
 }

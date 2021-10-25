@@ -2,8 +2,22 @@
   background: $os-primary;
   padding: 90px 6.0625rem 99px;
 
+  @media (max-width: 1024px) {
+    padding: 3.75rem 15px;
+  }
+
   @media (max-width: 767px) {
-    padding: 3.75rem 0;
+    padding: 3.75rem 0 10px;
+  }
+
+  .text__box_mobile {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+      padding: 0 15px;
+      margin-bottom: 118px;
+    }
   }
 
   &__inner {
@@ -33,6 +47,20 @@
 
       @media (max-width: 767px) {
         width: 100%;
+      }
+    }
+
+    .features_wrap__thumbnail {
+      text-align: right;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+
+      img {
+        border: 1px dashed #ffd500 !important;
+        border-radius: 5px;
+        padding: 8px !important;
       }
     }
   }
