@@ -1,6 +1,10 @@
 .heading {
   margin-bottom: 60px;
 
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
   &__title {
     color: $os-primary;
     font-weight: 700;
@@ -11,7 +15,6 @@
 
     @media (max-width: 767px) {
       font-size: 1.875rem;
-      margin-bottom: 3.125rem;
     }
   }
 

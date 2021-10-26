@@ -54,7 +54,7 @@ export default function Footer() {
           <div className={styles.subscription_form}>
             <form action="">
               <input type="email" placeholder="Email" required />
-              <button className="btn btn_fill_white" type="submit">
+              <button className="btn btn_outline_secondary" type="submit">
                 Subscribe
               </button>
             </form>

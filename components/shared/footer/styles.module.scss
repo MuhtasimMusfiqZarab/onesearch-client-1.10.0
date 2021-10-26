@@ -2,6 +2,10 @@
   background: $os-primary;
   padding: 35px 0 18px;
 
+  @media (max-width: 1024px) {
+    padding: 35px 15px;
+  }
+
   &_container {
     width: 100%;
     max-width: 1140px;
@@ -20,7 +24,7 @@
   }
 
   &_copy {
-    // color: #7b7777;
+    color: #fff;
     text-align: center;
   }
 }
@@ -98,8 +102,13 @@
 .subscription_form {
   width: 587px;
 
+  @media (max-width: 1024px) {
+    width: 490px;
+  }
+
   @media (max-width: 767px) {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   form {
@@ -130,11 +139,10 @@
 
   button[type='submit'] {
     height: 40px;
-    border: 2px solid #fff;
-    color: #fff;
 
     &:hover {
-      color: $os-secondary-theme;
+      color: #fff;
+      background: $os-secondary-theme;
       border-color: $os-secondary-theme;
     }
   }
