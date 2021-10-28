@@ -62,10 +62,7 @@
         transition: all ease-in-out 250ms;
 
         @media screen and (max-width: 991px) {
-          height: 0.5rem;
-          width: 100%;
-          top: 0;
-          left: 0;
+          display: none;
         }
       }
       svg {
