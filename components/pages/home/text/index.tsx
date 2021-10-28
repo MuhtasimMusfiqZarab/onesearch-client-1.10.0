@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 import Link from "next/link";
+import Typed from 'react-typed';
 import styles from "./styles.module.scss";
 
 interface Props {
-  title: string;
+  title?: string;
   subtitle?: string;
+  typedText?: boolean,
   content: string;
   isDark?: boolean;
   isButton: boolean;
@@ -16,6 +18,7 @@ interface Props {
 export const Text: FC<Props> = ({
   title,
   subtitle,
+  typedText,
   content,
   isDark,
   isButton,
@@ -23,9 +26,19 @@ export const Text: FC<Props> = ({
   buttonUrl,
   buttonClasses
 }: Props): JSX.Element => {
+
   return (
     <div className={`${styles.text} ${isDark ? styles.text__dark : ''}`}>
-      <h2 className={styles.text__title} dangerouslySetInnerHTML={{ __html: title }}></h2>
+      {title && <h2 className={styles.text__title} dangerouslySetInnerHTML={{ __html: title }}></h2>}
+      {
+        typedText && <h2 className={styles.text__title}>
+          <Typed
+            strings={['Search for you lead']}
+            typeSpeed={40}
+            loop
+          />
+        </h2>
+      }
       {subtitle && <h3 className={styles.text__subtitle} dangerouslySetInnerHTML={{ __html: subtitle }}></h3>}
       <p
         className={styles.text__desc}

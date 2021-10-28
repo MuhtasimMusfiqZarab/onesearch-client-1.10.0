@@ -385,7 +385,7 @@
   align-items: flex-start;
   width: 100%;
 
-  @media (min-width: 991px) {
+  @media (min-width: 767px) {
     height: 100vh;
   }
 
@@ -404,6 +404,11 @@
   flex-basis: 588px;
   background: #49789b;
   color: #fff;
+
+  @media (max-width: 991px) {
+    flex-basis: 50%;
+    min-width: 50%;
+  }
 
   @media (max-width: 767px) {
     flex-basis: 100%;
@@ -426,6 +431,10 @@
     padding: 0 98px;
     margin-top: 20px;
 
+    @media (max-width: 991px) {
+      padding: 0 20px;
+    }
+
     @media (max-width: 767px) {
       padding: 0;
       font-size: 1.1rem;
@@ -441,6 +450,12 @@
   flex-direction: column;
   height: 100vh;
   flex-basis: calc(100% - 588px);
+
+  @media (max-width: 991px) {
+    flex-basis: 50%;
+    min-width: 50%;
+    padding: 0 20px;
+  }
 
   .go_to_home {
     position: absolute;
@@ -494,6 +509,14 @@
       font-size: 1.1rem;
       line-height: 1.222em;
 
+      @media (max-width: 991px) {
+        span {
+          br {
+            display: none;
+          }
+        }
+      }
+
       input[type='checkbox'] {
         margin-top: 5px;
       }
@@ -505,6 +528,7 @@
   }
 
   .login_with_google {
+    all: unset;
     position: relative;
     background: #fff;
     display: flex;
@@ -516,6 +540,14 @@
     box-shadow: 0px 0px 10px #c4c4c4;
     padding: 13px 45px;
     border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    &:disabled {
+      background: #ddd;
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
 }
 
@@ -533,6 +565,10 @@
   box-shadow: 0 0 10px #c4c4c4;
   border-radius: 5px;
   z-index: 197 !important;
+
+  @media (max-width: 991px) {
+    width: calc(100%);
+  }
 
   @media (max-width: 767px) {
     width: 100%;

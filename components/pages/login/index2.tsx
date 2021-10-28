@@ -1,12 +1,13 @@
 import React, { FC, useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
-import { GoogleIcon, LoginLogo } from "components/_icons";
+import { GoogleIcon, Logo } from "components/_icons";
 
 export interface Props { }
 
 const Login: FC<Props> = (): JSX.Element => {
   let [switchBtn, setSwitchBtn] = useState(false);
+  let [agree, setAgree] = useState(false);
 
   const handleLoginBtn = () => {
     setSwitchBtn((switchBtn = false));
@@ -16,11 +17,15 @@ const Login: FC<Props> = (): JSX.Element => {
     setSwitchBtn((switchBtn = true));
   };
 
+  const handleAgree = (e) => {
+    setAgree(agree = e.target.checked)
+  }
+
   return (
     <>
       <div className={styles.login}>
         <div className={styles.login__intro}>
-          <LoginLogo />
+          <Logo width="336" height="60" />
           <p>Join us and grow your business like never before!</p>
         </div>
         <div className={styles.login__welcome}>
@@ -46,13 +51,18 @@ const Login: FC<Props> = (): JSX.Element => {
 
           <div className={styles.terms_conditions}>
             <form action="">
-              <label htmlFor="agree">
-                <input type="checkbox" id="agree" />
+              {switchBtn && <label htmlFor="agree">
+                <input type="checkbox" id="agree" onChange={handleAgree} />
                 <span>I have read and agree to the <Link href="/"><a>Terms of <br />Service</a></Link> and <Link href="/"><a>Privacy Policy</a></Link> of this website.</span>
-              </label>
+              </label>}
             </form>
           </div>
-          <a href="#" className={styles.login_with_google}><GoogleIcon /> Login with Google</a>
+          {switchBtn &&
+            <button className={styles.login_with_google} disabled={!agree}>
+              <GoogleIcon />
+              Login with Google
+            </button>
+          }
         </div>
       </div>
     </>
