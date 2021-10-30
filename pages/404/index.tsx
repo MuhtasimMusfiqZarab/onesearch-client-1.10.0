@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import Login from '../components/pages/login';
+import NotFoundPage from 'components/pages/404';
 
 export default function Index() {
   return (
     <>
       <Head>
-        <title>Login</title>
+        <title>404</title>
       </Head>
-      <Login />
+      <NotFoundPage />
     </>
   );
 }

@@ -1,5 +1,5 @@
-import Head from "next/head";
-import ServerErrorPage from "components/pages/500";
+import Head from 'next/head';
+import ServerErrorPage from 'components/pages/500';
 
 export default function Index() {
   return (

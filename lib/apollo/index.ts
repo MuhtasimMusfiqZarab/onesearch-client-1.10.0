@@ -7,12 +7,6 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext(() => {
-  let tokenParam = window.location.href.split('JWT=')[1];
-  if (tokenParam) {
-    localStorage.setItem('jwtToken', tokenParam);
-    window.location.href = '/';
-  }
-
   const token = localStorage.getItem('jwtToken');
 
   return {
