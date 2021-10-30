@@ -10,10 +10,6 @@ export default function Index() {
   useEffect(() => {
     if (jwt) {
       localStorage.setItem('jwtToken', jwt);
-
-      const token = localStorage.getItem('jwtToken');
-      console.log('This is the token', token);
-
       window.location.href = '/';
     }
   }, [jwt]);
