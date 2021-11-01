@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Text } from "../text";
-import { Heading } from "../heading";
-import { Tabs } from "../tabs";
-import FeatureImage from "../../../../public/search-for-your-lead.png";
-import styles from "./styles.module.scss";
+import Image from 'next/image';
+import { Text } from '../text';
+import { Heading } from '../heading';
+import { Tabs } from '../tabs';
+import FeatureImage from '../../../../public/search-for-your-lead.png';
+import styles from './styles.module.scss';
 
 export default function Services() {
   return (
@@ -35,16 +35,8 @@ export default function Services() {
             buttonClasses="btn btn_outline_secondary"
           />
 
-          <div
-            id="features"
-            className={`${styles.features_wrap__thumbnail}`}
-          >
-            <Image
-              src={FeatureImage}
-              alt="Search for your lead"
-              width="441"
-              height="312"
-            />
+          <div id="features" className={`${styles.features_wrap__thumbnail}`}>
+            <Image src={FeatureImage} alt="Search for your lead" width="441" height="312" />
           </div>
         </div>
       </div>

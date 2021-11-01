@@ -1,6 +1,6 @@
-import { WebIcon, ParticleCircle } from "../../../_icons";
-import { Text } from "../text";
-import styles from "./styles.module.scss";
+import { WebIcon, ParticleCircle } from '../../../_icons';
+import { Text } from '../text';
+import styles from './styles.module.scss';
 
 export default function Index() {
   return (
