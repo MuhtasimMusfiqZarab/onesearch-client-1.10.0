@@ -16,7 +16,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
 
   const handleSelectAll = (e) => {
     setIsCheckAll(!isCheckAll);
-    setIsCheck(items.map(item => item.id));
+    setIsCheck(items.map((item) => item.id));
 
     if (isCheckAll) {
       setIsCheck([]);
@@ -28,7 +28,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
     setIsCheck([...isCheck, parseInt(id)]);
 
     if (!checked) {
-      setIsCheck(isCheck.filter(item => item !== parseInt(id)));
+      setIsCheck(isCheck.filter((item) => item !== parseInt(id)));
     }
   };
 
@@ -64,7 +64,11 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
           </thead>
           <tbody className={styles.tbody}>
             {items.map((item, index) => (
-              <tr key={index} className={`${styles.tr} ${toggleBtn ? styles.expand : ''} ${isCheck.includes(item.id) ? styles.active_row : ''}`}>
+              <tr
+                key={index}
+                className={`${styles.tr} ${toggleBtn ? styles.expand : ''} ${
+                  isCheck.includes(item.id) ? styles.active_row : ''
+                }`}>
                 <td className={styles.td}>
                   <input
                     type="checkbox"
@@ -76,7 +80,7 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                 </td>
                 <td className={styles.td} data-label="Channel Name">
                   <Link href={`/dashboard/search/youtube/${item.id}`}>
-                    <a >{item.channel_name}</a>
+                    <a>{item.channel_name}</a>
                   </Link>
                 </td>
                 <td className={styles.td} data-label="Joined">

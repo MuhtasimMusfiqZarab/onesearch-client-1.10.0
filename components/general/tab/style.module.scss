@@ -29,6 +29,10 @@
 
     @media (max-width: 767px) {
       overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     .listitem {
@@ -58,7 +62,7 @@
       color: #8f8f8f;
       display: flex;
       align-items: center;
-      padding: 15px 30px;
+      padding: 0.5rem 1rem;
       text-decoration: none;
       background: #f8f9fc;
       border: 1px solid #ced1d8;

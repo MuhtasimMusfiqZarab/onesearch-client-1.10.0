@@ -4,13 +4,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  // margin-top: 1rem;
-  // margin-bottom: 1rem;
 
   svg {
     height: 1.5rem;
     position: absolute;
     cursor: pointer;
+
+    @media (max-width: 767px) {
+      position: relative;
+    }
   }
 
   &Icon {
@@ -31,7 +33,6 @@
 
   //initial state of the input
   input {
-    // box-shadow: 0 0 10px 5px $clr-gray300;
     border: 1px solid $clr-gray300;
     font-family: inherit;
     font-size: 1rem;
@@ -40,5 +41,9 @@
     width: 100%;
     padding: 0.85rem 2rem 0.85rem 5rem;
     border-radius: 0.2rem;
+
+    @media (max-width: 767px) {
+      padding: 0.85rem 2rem;
+    }
   }
 }
