@@ -64,24 +64,9 @@ export default function Index() {
                 items={countries}
                 isSearch={true}
               />
-              <Dropdown
-                title="Countries"
-                setItem={setLocation}
-                setOffset={setOffset}
-                items={countries}
-                isSearch={true}
-              />
             </div>
             <div className={styles.filterItems}>
               <Slider />
-              <Slider />
-              <Dropdown
-                title="Countries"
-                setItem={setLocation}
-                setOffset={setOffset}
-                items={countries}
-                isSearch={true}
-              />
             </div>
           </div>
 
