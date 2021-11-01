@@ -26,7 +26,8 @@ export default function Services() {
 
         <div className={styles.services_items}>
           <Text
-            title="Search for your lead"
+            title=""
+            typedText={true}
             content="Our simple and easy-to-use dashboard lets you search for leads with filters for fast searching."
             isDark={true}
             isButton={true}
