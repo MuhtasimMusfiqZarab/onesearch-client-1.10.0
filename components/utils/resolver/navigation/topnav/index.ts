@@ -1,4 +1,4 @@
-import * as icons from "components/_icons";
+import * as icons from 'components/_icons';
 
 interface Props {
   title: string;
@@ -9,23 +9,23 @@ interface Props {
 
 const topNavElements: Props[] = [
   {
-    title: "Home",
-    route: "/",
-    hasChild: false,
+    title: 'Home',
+    route: '/',
+    hasChild: false
   },
 
   {
-    title: "Dashboard",
-    route: "/dashboard/search/youtube",
+    title: 'Dashboard',
+    route: '/dashboard/search/youtube',
     hasChild: true,
-    children: ["search", "request", "subscribe", "settings"],
+    children: ['search', 'request', 'subscribe', 'settings', 'credit', 'download']
   },
 
   {
-    title: "Login",
-    route: "/login",
-    hasChild: false,
-  },
+    title: 'Login',
+    route: '/login',
+    hasChild: false
+  }
 ];
 
 export default topNavElements;
