@@ -46,8 +46,13 @@ module.exports = {
     return [
       {
         source: '/google',
-        destination: 'http://localhost:5000/google'
+        destination: process.env.GOOGLE_SIGNUP_URL
       }
     ];
   }
+
+  //add custom  env file if needed
+  // env: {
+  //   customKey: 'my-value'
+  // }
 };
