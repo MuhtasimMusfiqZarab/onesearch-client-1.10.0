@@ -1,0 +1,108 @@
+.primary__navigation {
+  @media (max-width: 991px) {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    transition: all 0.25s ease-in-out;
+  }
+
+  .btn {
+    max-height: 40px;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &_fill_primary {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    @media (max-width: 991px) {
+      color: #fff !important;
+    }
+  }
+
+  &.nav-open {
+    margin-top: 10px;
+    background: #000;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (max-width: 991px) {
+      flex-flow: column wrap;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  }
+
+  li {
+    margin-right: 28px;
+
+    @media (max-width: 991px) {
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a:not(.btn) {
+      color: $os-primary-dark;
+      letter-spacing: 0.15px;
+      text-decoration: none;
+      font-weight: 500;
+      background: linear-gradient(134deg, #49789b, #49789b);
+      background-size: 0 3px;
+      background-repeat: no-repeat;
+      background-position: left 87%;
+      padding-bottom: 10px;
+      transition: all 0.25s;
+
+      &:hover {
+        background-size: 100% 3px;
+        color: $os-primary;
+      }
+
+      @media (max-width: 991px) {
+        color: #fff;
+
+        &:hover {
+          color: $os-primary;
+        }
+
+        &.btn {
+          all: inherit;
+          margin-bottom: 0;
+
+          &:hover {
+            color: $os-primary;
+            background: none;
+          }
+        }
+      }
+    }
+
+    &.active {
+      a {
+        color: $os-primary;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

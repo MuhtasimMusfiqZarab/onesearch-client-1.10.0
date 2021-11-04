@@ -9,7 +9,7 @@ export default function Footer() {
         <div className={styles.footer_widget}>
           <Link href="/">
             <a className={styles.footer_widget_logo}>
-              <Logo />
+              <Logo color="#ffffff" />
             </a>
           </Link>
 
@@ -38,13 +38,19 @@ export default function Footer() {
           <h3>Support</h3>
           <ul>
             <li>
-              <a href="#">Privacy Policy</a>
+              <Link href="/privacy-policy">
+                <a>Privacy Policy</a>
+              </Link>
             </li>
             <li>
-              <a href="#">Terms of Service</a>
+              <Link href="/terms-of-service">
+                <a>Terms of Service</a>
+              </Link>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <Link href="/faq">
+                <a>FAQs</a>
+              </Link>
             </li>
           </ul>
         </div>
