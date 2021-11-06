@@ -26,7 +26,7 @@ const TermsOfService = () => {
           <p>
             i. Modify or copy the materials;<br />
             ii. Remove any copyright or other proprietary notations from the materials; or
-            transfer the materials to another person or "mirror" the materials on any other server.<br />
+            transfer the materials to another person or &ldquo;mirror&rdquo; the materials on any other server.<br />
             iii. This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time.
           </p>
 
