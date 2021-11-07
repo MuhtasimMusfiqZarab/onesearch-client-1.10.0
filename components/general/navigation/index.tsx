@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Link from "next/link";
 
 const menus = [
@@ -7,13 +8,19 @@ const menus = [
 ];
 
 const Navigation = ({ humberger }) => {
+	let [active, setActive] = useState('Home')
+
+	const handleActive = (e) => {
+		setActive(e.target.innerText)
+	}
+
 	return (
 		<nav className={`primary__navigation ${humberger ? "nav-open" : ""}`}>
 			<ul>
 				{menus.map((menu) => (
-					<li key={menu.name}>
+					<li key={menu.name} className={active === menu.name ? 'active' : ''}>
 						<Link href={menu.href}>
-							<a>{menu.name}</a>
+							<a onClick={handleActive}>{menu.name}</a>
 						</Link>
 					</li>
 				))}

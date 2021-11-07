@@ -59,6 +59,13 @@
       }
     }
 
+    &.active:not(.btn) {
+      a {
+        background-size: 100% 3px;
+        color: $os-primary;
+      }
+    }
+
     a:not(.btn) {
       color: $os-primary-dark;
       letter-spacing: 0.15px;

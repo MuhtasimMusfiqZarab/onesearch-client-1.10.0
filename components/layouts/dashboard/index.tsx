@@ -1,12 +1,12 @@
 import React from "react";
-import TopNav from "../../shared/topnav/version2";
+import Header from "../../shared/header";
 import SideNav from "../../shared/sidenav";
 import styles from "./styles.module.scss";
 
 const DashboardLayout = (props) => {
   return (
     <React.Fragment>
-      <TopNav />
+      <Header />
       <SideNav />
       <div className={styles.container}>
         <div className={styles.container__element}>{props.children}</div>
