@@ -4,6 +4,8 @@ import { Lock, DownArrow } from 'components/_icons';
 import { Controller } from './table-controller';
 import styles from './styles.module.scss';
 
+import { YoutubeTableEnum } from 'components/utils/enum';
+
 export interface Props {
   items: any[];
 }
@@ -36,6 +38,12 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
     setToggleBtn((toggleBtn = !toggleBtn));
   };
 
+  const generateHeaders = () => {
+    for (let header in YoutubeTableEnum) {
+      return <th className={styles.th}>{header}</th>;
+    }
+  };
+
   return (
     <>
       <Controller />
@@ -52,10 +60,10 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                   checked={isCheckAll}
                 />
               </th>
-              <th className={styles.th}>Channel Name</th>
-              <th className={styles.th}>Joined</th>
-              <th className={styles.th}>Subscribers</th>
-              <th className={styles.th}>Views</th>
+
+              {Object.keys(YoutubeTableEnum).map((key) => (
+                <th className={styles.th}>{YoutubeTableEnum[key]}</th>
+              ))}
               <th className={styles.th}>
                 <Lock color="#ffffff" />
                 <span></span>
