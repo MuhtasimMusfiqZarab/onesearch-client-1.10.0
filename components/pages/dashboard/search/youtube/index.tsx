@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from 'react-modal';
+import Modal from 'components/general/modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
 import styles from './styles.module.scss';
@@ -19,15 +19,7 @@ export default function Index() {
   } = useChannels();
   const { countries } = useCountries();
   const { categories } = useCategories();
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  let [modalIsOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -38,12 +30,12 @@ export default function Index() {
             <div className={styles.search_wrap}>
               <SearchBox searchText={searchText} setSearchText={setSearchText} />
 
-              <button onClick={openModal} className={styles.reset_form}>
+              <button className={styles.reset_form}>
                 <Reset />
                 Reset
               </button>
 
-              <button onClick={openModal} className={styles.filtersToggle}>
+              <button onClick={() => setIsOpen(true)} className={styles.filtersToggle}>
                 <Filter />
               </button>
             </div>
@@ -85,15 +77,11 @@ export default function Index() {
       </div>
 
       {/* filter modal */}
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Filters Modal">
-        <button onClick={closeModal} className="modal_close_btn">
-          <CloseLite />
-        </button>
+      <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
         <div className={styles.edit_filters}>
           <div className={styles.search_wrap}>
             <SearchBox searchText={searchText} setSearchText={setSearchText} />
             <button
-              onClick={openModal}
               className={`${styles.reset_form} ${styles.reset_form_modal}`}>
               <Reset />
             </button>
