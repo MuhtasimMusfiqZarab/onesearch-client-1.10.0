@@ -5,6 +5,11 @@
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
     transition: all 0.25s ease-in-out;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -10px;
+    height: 100vh;
   }
 
   .btn {
@@ -33,6 +38,12 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+
+    ul {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   ul {

@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   padding: 15px 0 11px;
-  z-index: 999;
+  z-index: 99999;
 
   @media (min-width: 991px) {
     background: #ffffff;
@@ -41,6 +41,8 @@
 
   @media (max-width: 991px) {
     flex-direction: column;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -58,11 +60,5 @@
 
   img {
     display: block;
-  }
-}
-
-.header__nav {
-  @media (max-width: 991px) {
-    width: 100%;
   }
 }

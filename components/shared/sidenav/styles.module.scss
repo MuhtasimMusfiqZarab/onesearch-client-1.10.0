@@ -1,6 +1,6 @@
 .nav {
   &__list {
-    background: white;
+    background: #fff;
     box-shadow: 0 0 10px $clr-graymed;
     padding: 6rem 0;
     width: 5rem;
@@ -157,11 +157,22 @@
   .nav {
     &__list {
       width: calc(100% - 18%);
+      overflow-x: scroll;
     }
 
     &__item {
       flex-basis: 25%;
       min-width: 25%;
+      height: 100%;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
     }
   }
 }

@@ -28,9 +28,7 @@ const Header = () => {
 					</button>
 				</div>
 
-				<div className={`${styles.header__nav}`}>
-					<Navigation humberger={humberger} />
-				</div>
+				<Navigation humberger={humberger} />
 			</div>
 		</header>
 	);
