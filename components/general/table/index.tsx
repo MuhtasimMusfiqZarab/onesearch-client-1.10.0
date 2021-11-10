@@ -65,7 +65,9 @@ export const Table: FC<Props> = ({
               )}
 
               {Object.keys(headersEnums).map((key) => (
-                <th className={styles.th}>{headersEnums[key]}</th>
+                <th key={key} className={styles.th}>
+                  {headersEnums[key]}
+                </th>
               ))}
               <th className={styles.th}>
                 <Lock color="#ffffff" />
@@ -92,7 +94,7 @@ export const Table: FC<Props> = ({
                   </td>
                 )}
                 {Object.keys(headersEnums).map((key) => (
-                  <td className={styles.td} data-label="Joined">
+                  <td key={key} className={styles.td} data-label="Joined">
                     {item[key]}
                   </td>
                 ))}

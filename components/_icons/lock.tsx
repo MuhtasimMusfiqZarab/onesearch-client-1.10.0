@@ -11,12 +11,12 @@ export const Lock = ({ width, height, color }: IconProps): JSX.Element => {
         height="12"
         rx="3"
         stroke={color ?? '#49789B'}
-        stroke-width="2"
+        strokeWidth="2"
       />
       <path
         d="M3.06357 8.14858C2.7988 5.76572 3.22242 1 7.035 1C10.8476 1 11.2712 5.76572 11.0065 8.14858"
         stroke={color ?? '#49789B'}
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle cx="6.58857" cy="15.5886" r="1.58857" fill={color ?? '#49789B'} />
     </svg>
