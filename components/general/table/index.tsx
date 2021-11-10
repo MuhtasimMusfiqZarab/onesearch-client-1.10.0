@@ -1,11 +1,12 @@
 import React, { FC, useState } from 'react';
 import Link from 'next/link';
 import { Lock, DownArrow } from 'components/_icons';
+import { IYoutubeChannel } from 'components/utils/interfaces';
 import { Controller } from './table-controller';
 import styles from './styles.module.scss';
 
 interface Props {
-  items: any[];
+  items: IYoutubeChannel[];
   headersEnums: object;
   hasController?: boolean;
   hasCheckbox?: boolean;
@@ -90,23 +91,14 @@ export const Table: FC<Props> = ({
                     />
                   </td>
                 )}
-                <td className={styles.td} data-label="Channel Name">
-                  <Link href={`/dashboard/search/youtube/${item.id}`}>
-                    <a>{item.channel_name}</a>
-                  </Link>
-                </td>
-                <td className={styles.td} data-label="Joined">
-                  {item.joined}
-                </td>
-                <td className={styles.td} data-label="Subscribers">
-                  {item.subscribers}
-                </td>
-                <td className={styles.td} data-label="Views">
-                  {item.views}
-                </td>
+                {Object.keys(headersEnums).map((key) => (
+                  <td className={styles.td} data-label="Joined">
+                    {item[key]}
+                  </td>
+                ))}
                 <td className={styles.td} data-label="Views">
                   <span className={styles.save_btn}>
-                    <Lock color="#49789b" />
+                    <Lock />
                   </span>
 
                   <span onClick={handleToggleBtn} className={styles.toggle_btn}>

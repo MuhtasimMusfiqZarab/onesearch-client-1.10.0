@@ -3,9 +3,22 @@ import { IconProps } from '../utils/interfaces';
 
 export const Lock = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0.5" y="11.5" width="16.5" height="14" rx="3.5" stroke={color} />
-      <path d="M3.99995 10C3.66662 7 4.19995 1 8.99995 1C13.8 1 14.3333 7 14 10" stroke={color} />
+    <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect
+        x="1"
+        y="10"
+        width="12"
+        height="12"
+        rx="3"
+        stroke={color ?? '#49789B'}
+        stroke-width="2"
+      />
+      <path
+        d="M3.06357 8.14858C2.7988 5.76572 3.22242 1 7.035 1C10.8476 1 11.2712 5.76572 11.0065 8.14858"
+        stroke={color ?? '#49789B'}
+        stroke-width="2"
+      />
+      <circle cx="6.58857" cy="15.5886" r="1.58857" fill={color ?? '#49789B'} />
     </svg>
   );
 };

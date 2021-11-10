@@ -1,6 +1,6 @@
 export enum YoutubeTableEnum {
-  CHANNEL_NAME = 'Channel Name',
-  JOINED = 'Joined',
-  SUBSCRIBERS = 'Subscribers',
-  VIEWS = 'Views'
+  channel_name = 'Channel Name',
+  joined = 'Joined',
+  subscribers = 'Subscribers',
+  views = 'Views'
 }
