@@ -2,13 +2,11 @@
   @media (max-width: 991px) {
     opacity: 0;
     visibility: hidden;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
     transition: all 0.25s ease-in-out;
     position: absolute;
     width: 100%;
     left: 0;
-    top: -10px;
+    top: 0;
     height: 100vh;
   }
 
@@ -33,11 +31,10 @@
   }
 
   &.nav-open {
-    margin-top: 10px;
+    // margin-top: 10px;
     background: #000;
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
 
     ul {
       height: 100%;
