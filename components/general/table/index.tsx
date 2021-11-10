@@ -4,13 +4,19 @@ import { Lock, DownArrow } from 'components/_icons';
 import { Controller } from './table-controller';
 import styles from './styles.module.scss';
 
-import { YoutubeTableEnum } from 'components/utils/enum';
-
-export interface Props {
+interface Props {
   items: any[];
+  headersEnums: object;
+  hasController?: boolean;
+  hasCheckbox?: boolean;
 }
 
-export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
+export const Table: FC<Props> = ({
+  items,
+  headersEnums,
+  hasController = true,
+  hasCheckbox = true
+}: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
 
   const [isCheckAll, setIsCheckAll] = useState(false);
@@ -38,31 +44,27 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
     setToggleBtn((toggleBtn = !toggleBtn));
   };
 
-  const generateHeaders = () => {
-    for (let header in YoutubeTableEnum) {
-      return <th className={styles.th}>{header}</th>;
-    }
-  };
-
   return (
     <>
-      <Controller />
+      {hasController && hasCheckbox && <Controller hasCheckbox={hasCheckbox} />}
       <div className={styles.table_wrap}>
         <table className={styles.table}>
           <thead className={styles.thead}>
             <tr className={styles.tr}>
-              <th className={styles.th}>
-                <input
-                  type="checkbox"
-                  name="selectAll"
-                  id="selectAll"
-                  onChange={handleSelectAll}
-                  checked={isCheckAll}
-                />
-              </th>
+              {hasCheckbox && (
+                <th className={styles.th}>
+                  <input
+                    type="checkbox"
+                    name="selectAll"
+                    id="selectAll"
+                    onChange={handleSelectAll}
+                    checked={isCheckAll}
+                  />
+                </th>
+              )}
 
-              {Object.keys(YoutubeTableEnum).map((key) => (
-                <th className={styles.th}>{YoutubeTableEnum[key]}</th>
+              {Object.keys(headersEnums).map((key) => (
+                <th className={styles.th}>{headersEnums[key]}</th>
               ))}
               <th className={styles.th}>
                 <Lock color="#ffffff" />
@@ -77,15 +79,17 @@ export const Table: FC<Props> = ({ items }: Props): JSX.Element => {
                 className={`${styles.tr} ${toggleBtn ? styles.expand : ''} ${
                   isCheck.includes(item.id) ? styles.active_row : ''
                 }`}>
-                <td className={styles.td}>
-                  <input
-                    type="checkbox"
-                    name={item.channel_name}
-                    id={item.id}
-                    onChange={handleClick}
-                    checked={isCheck.includes(item.id)}
-                  />
-                </td>
+                {hasCheckbox && (
+                  <td className={styles.td}>
+                    <input
+                      type="checkbox"
+                      name={item.channel_name}
+                      id={item.id}
+                      onChange={handleClick}
+                      checked={isCheck.includes(item.id)}
+                    />
+                  </td>
+                )}
                 <td className={styles.td} data-label="Channel Name">
                   <Link href={`/dashboard/search/youtube/${item.id}`}>
                     <a>{item.channel_name}</a>

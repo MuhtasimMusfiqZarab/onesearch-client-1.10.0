@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
+import { YoutubeTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
@@ -72,9 +73,9 @@ export default function Index() {
 
           <div className={styles.container}>
             <div className={styles.container__table}>
-              {channels?.length > 0 && <Table items={channels} />}
+              {channels?.length > 0 && <Table items={channels} headersEnums={YoutubeTableEnum} />}
               {channels?.length === 0 && <div>No Data Found</div>}
-              {loading && <Loader width="100%" height="100%" />}
+              {loading && <Loader width="100%" height="2rem" />}
             </div>
 
             <div className={styles.container__pagination}>

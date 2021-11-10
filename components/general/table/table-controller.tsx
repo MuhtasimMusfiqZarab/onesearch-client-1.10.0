@@ -1,23 +1,26 @@
-import React, { FC, useState } from "react";
-import { Save, Lock, DownloadsIcon } from "components/_icons";
-import styles from "./styles.module.scss";
+import React, { FC, useState } from 'react';
+import { Save, Lock, DownloadsIcon } from 'components/_icons';
+import styles from './styles.module.scss';
 
+interface Props {
+  hasCheckbox?: boolean;
+}
 
-interface Props { }
-
-export const Controller: FC<Props> = ({ }: Props): JSX.Element => {
-  let iconColor = "#8F8F8F";
+export const Controller: FC<Props> = ({ hasCheckbox = true }: Props): JSX.Element => {
+  let iconColor = '#8F8F8F';
 
   return (
     <div className={styles.table_controllers}>
-      <div className={styles.select_all}>
-        <input
-          type="checkbox"
-          // onChange={handleChange}
-          name="select-all"
-          id="select_all"
-        />
-      </div>
+      {hasCheckbox && (
+        <div className={styles.select_all}>
+          <input
+            type="checkbox"
+            // onChange={handleChange}
+            name="select-all"
+            id="select_all"
+          />
+        </div>
+      )}
 
       <div className={styles.controller_list}>
         <a href="#" className={styles.wishlist}>
@@ -34,5 +37,5 @@ export const Controller: FC<Props> = ({ }: Props): JSX.Element => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
