@@ -8,6 +8,10 @@
   align-items: center;
   justify-content: flex-start;
 
+  &_disabled {
+    visibility: visible;
+  }
+
   .rating_stars {
     display: flex;
     flex-direction: row-reverse;
@@ -20,11 +24,8 @@
       fill: #ed8a19;
     }
 
-    .rating_stars_input:checked ~ .rating_stars_view:hover svg,
-    .rating_stars_input:checked
-      ~ .rating_stars_view:hover
-      ~ .rating_stars_view
-      svg {
+    .rating_stars_input:checked:not(:disabled) ~ .rating_stars_view:hover svg,
+    .rating_stars_input:checked:not(:disabled) ~ .rating_stars_view:hover ~ .rating_stars_view svg {
       fill: #d48327;
     }
   }
@@ -53,7 +54,11 @@
       width: 20px;
       height: 18px;
     }
+  }
+}
 
+.rating__wrap:not(.rating__wrap_disabled) {
+  .rating_stars_view {
     &:hover {
       svg,
       ~ .rating_stars_view svg {

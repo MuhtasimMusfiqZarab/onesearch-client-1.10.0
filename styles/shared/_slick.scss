@@ -27,6 +27,11 @@
   &-prev[class] {
     left: -80px;
 
+    @media (max-width: 1024px) {
+      left: 0;
+      z-index: 9;
+    }
+
     @media (max-width: 767px) {
       left: 0;
       bottom: -25px;
@@ -40,6 +45,11 @@
 
   &-next[class] {
     right: -80px;
+
+    @media (max-width: 1024px) {
+      right: 0;
+      z-index: 9;
+    }
 
     @media (max-width: 767px) {
       right: 0;

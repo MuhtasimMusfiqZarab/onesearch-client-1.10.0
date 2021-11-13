@@ -2,6 +2,7 @@ import SlickSlider from "components/general/slick";
 import { Heading } from "../heading";
 import Review from "components/general/review";
 import styles from "./styles.module.scss";
+import ClientImage from '/public/client.png';
 
 export default function Reviews() {
   const slickSettings = {
@@ -35,13 +36,61 @@ export default function Reviews() {
 
         <div className={styles.reviews}>
           <SlickSlider settings={slickSettings}>
-            <Review />
-            <Review />
-            <Review />
-            <Review />
-            <Review />
-            <Review />
-            <Review />
+            <Review
+              name="Robert"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="5"
+              ratingId="Robert"
+            />
+
+            <Review
+              name="Jhon"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="4.5"
+              ratingId="jhon"
+            />
+
+            <Review
+              name="Doe"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="4"
+              ratingId="doe"
+            />
+
+            <Review
+              name="Deniel"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="3.5"
+              ratingId="deniel"
+            />
+
+            <Review
+              name="Dwyane"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="3"
+              ratingId="Dwyane"
+            />
+
+            <Review
+              name="Jonshon"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="2.5"
+              ratingId="Jonshon"
+            />
+
+            <Review
+              name="Albert"
+              quote="Very pleased with their service. Highly recommended!"
+              avatar={ClientImage}
+              rating="2"
+              ratingId="Albert"
+            />
           </SlickSlider>
         </div>
       </div>
