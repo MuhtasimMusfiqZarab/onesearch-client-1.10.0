@@ -187,7 +187,7 @@
   @media (max-width: 767px) {
     padding: 0 11px;
     margin-bottom: 10px;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 }
 
@@ -196,6 +196,7 @@
 
   @media (max-width: 767px) {
     display: flex;
+    margin-right: auto;
   }
 }
 
