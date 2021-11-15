@@ -5,13 +5,12 @@ button,
   justify-content: center;
   color: $os-secondary;
   font-family: 'Montserrat', 'Helvetica';
-  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1;
   border: 1px solid $os-secondary;
-  border-radius: 10px;
+  border-radius: 6px;
   background: transparent;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1rem;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.25s;
