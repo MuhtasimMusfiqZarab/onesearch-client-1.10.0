@@ -1,4 +1,5 @@
 export { Dropdown } from './dropdown';
+export { Dropbox } from './dropbox';
 export { Loader } from './loader';
 export { Loading } from './loading';
 export { Pagination } from './pagination';
