@@ -69,7 +69,7 @@ const Login: FC<Props> = (): JSX.Element => {
             </form>
           </div>
           <a href="/google" className={styles.login_with_google}>
-            <GoogleIcon /> Login with Google
+            <GoogleIcon /> Continue with Google
           </a>
         </div>
       </div>
