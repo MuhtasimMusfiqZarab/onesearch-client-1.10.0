@@ -1,7 +1,7 @@
-import React from "react";
-import Header from "../../shared/header";
-import SideNav from "../../shared/sidenav";
-import styles from "./styles.module.scss";
+import React from 'react';
+import Header from '../../shared/header';
+import SideNav from '../../shared/sidenav';
+import styles from './styles.module.scss';
 
 const DashboardLayout = (props) => {
   return (
