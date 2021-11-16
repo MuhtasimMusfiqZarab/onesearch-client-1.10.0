@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Lock, DownArrow } from 'components/_icons';
 import { IYoutubeChannel } from 'components/utils/interfaces';
 import { Controller } from './table-controller';
+import { Loader } from 'components/general';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -10,18 +11,22 @@ interface Props {
   headersEnums: object;
   hasController?: boolean;
   hasCheckbox?: boolean;
+  loading?: boolean;
 }
 
 export const Table: FC<Props> = ({
   items,
   headersEnums,
   hasController = true,
-  hasCheckbox = true
+  hasCheckbox = true,
+  loading = false
 }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
 
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [isCheck, setIsCheck] = useState([]);
+
+  const [dummyArray, setDummyArray] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
   const handleSelectAll = (e) => {
     setIsCheckAll(!isCheckAll);
@@ -43,6 +48,35 @@ export const Table: FC<Props> = ({
 
   const handleToggleBtn = () => {
     setToggleBtn((toggleBtn = !toggleBtn));
+  };
+
+  const renderLoader = (total: number) => {
+    return dummyArray.map((item, index) => {
+      return (
+        <tr key={index} className={`${styles.tr}`}>
+          {hasCheckbox && (
+            <td className={`${styles.td}`}>
+              <Loader isActionButton />
+            </td>
+          )}
+          {Object.keys(headersEnums).map((key) => (
+            <td key={key} className={styles.td} data-label="Joined">
+              <Loader isTextBox />
+            </td>
+          ))}
+          <td className={styles.td} data-label="Views">
+            <span className={styles.save_btn}>
+              <Loader isActionButton />
+            </span>
+
+            <span onClick={handleToggleBtn} className={styles.toggle_btn}>
+              {toggleBtn ? 'Show less' : 'Expand'}
+              <DownArrow />
+            </span>
+          </td>
+        </tr>
+      );
+    });
   };
 
   return (
@@ -76,40 +110,42 @@ export const Table: FC<Props> = ({
             </tr>
           </thead>
           <tbody className={styles.tbody}>
-            {items.map((item, index) => (
-              <tr
-                key={index}
-                className={`${styles.tr} ${toggleBtn ? styles.expand : ''} ${
-                  isCheck.includes(item.id) ? styles.active_row : ''
-                }`}>
-                {hasCheckbox && (
-                  <td className={styles.td}>
-                    <input
-                      type="checkbox"
-                      name={item.channel_name}
-                      id={item.id}
-                      onChange={handleClick}
-                      checked={isCheck.includes(item.id)}
-                    />
-                  </td>
-                )}
-                {Object.keys(headersEnums).map((key) => (
-                  <td key={key} className={styles.td} data-label="Joined">
-                    {item[key]}
-                  </td>
-                ))}
-                <td className={styles.td} data-label="Views">
-                  <span className={styles.save_btn}>
-                    <Lock />
-                  </span>
+            {!loading &&
+              items.map((item, index) => (
+                <tr
+                  key={index}
+                  className={`${styles.tr} ${toggleBtn ? styles.expand : ''} ${
+                    isCheck.includes(item.id) ? styles.active_row : ''
+                  }`}>
+                  {hasCheckbox && (
+                    <td className={styles.td}>
+                      <input
+                        type="checkbox"
+                        name={item.channel_name}
+                        id={item.id}
+                        onChange={handleClick}
+                        checked={isCheck.includes(item.id)}
+                      />
+                    </td>
+                  )}
+                  {Object.keys(headersEnums).map((key) => (
+                    <td key={key} className={styles.td} data-label="Joined">
+                      {item[key]}
+                    </td>
+                  ))}
+                  <td className={styles.td} data-label="Views">
+                    <span className={styles.save_btn}>
+                      <Lock />
+                    </span>
 
-                  <span onClick={handleToggleBtn} className={styles.toggle_btn}>
-                    {toggleBtn ? 'Show less' : 'Expand'}
-                    <DownArrow />
-                  </span>
-                </td>
-              </tr>
-            ))}
+                    <span onClick={handleToggleBtn} className={styles.toggle_btn}>
+                      {toggleBtn ? 'Show less' : 'Expand'}
+                      <DownArrow />
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            {loading && renderLoader(10)}
           </tbody>
         </table>
       </div>

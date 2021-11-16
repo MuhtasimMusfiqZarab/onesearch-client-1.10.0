@@ -39,17 +39,17 @@ module.exports = {
         permanent: true
       }
     ];
-  }
+  },
 
   //used for login proxy server
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/google',
-  //       destination: process.env.GOOGLE_SIGNUP_URL
-  //     }
-  //   ];
-  // }
+  async rewrites() {
+    return [
+      {
+        source: '/google',
+        destination: process.env.GOOGLE_SIGNUP_URL
+      }
+    ];
+  }
 
   //add custom  env file if needed
   // env: {
