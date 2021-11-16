@@ -1,12 +1,12 @@
 import styles from "./styles.module.scss";
 
-const Rating = ({ rating, id }) => {
+const Rating = ({ rating, id, isEditable }) => {
 	const handleChange = (event) => {
 		event.target.checked = event.target.name;
 	};
 
 	return (
-		<div className={styles.rating__wrap}>
+		<div className={`${styles.rating__wrap} ${isEditable === false ? styles.rating__wrap_disabled : ''}`}>
 			<svg
 				aria-hidden="true"
 				style={{
@@ -37,6 +37,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="5"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-5${id}`}
 					defaultChecked={rating === "5" ? true : false}
 				/>
@@ -51,6 +52,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="4.5"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-4.5${id}`}
 					defaultChecked={rating === "4.5" ? true : false}
 				/>
@@ -68,6 +70,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="4"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-4${id}`}
 					defaultChecked={rating === "4" ? true : false}
 				/>
@@ -82,6 +85,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="3.5"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-3.5${id}`}
 					defaultChecked={rating === "3.5" ? true : false}
 				/>
@@ -99,6 +103,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="3"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-3${id}`}
 					defaultChecked={rating === "3" ? true : false}
 				/>
@@ -113,6 +118,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="2.5"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-2.5${id}`}
 					defaultChecked={rating === "2.5" ? true : false}
 				/>
@@ -130,6 +136,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="2"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-2${id}`}
 					defaultChecked={rating === "2" ? true : false}
 				/>
@@ -144,6 +151,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="1.5"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-1.5${id}`}
 					defaultChecked={rating === "1.5" ? true : false}
 				/>
@@ -161,6 +169,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="1"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-1${id}`}
 					defaultChecked={rating === "1" ? true : false}
 				/>
@@ -175,6 +184,7 @@ const Rating = ({ rating, id }) => {
 					name={`rating${id}`}
 					value="0.5"
 					onChange={handleChange}
+					disabled={isEditable === false ? true : false}
 					id={`rating-0.5${id}`}
 				/>
 				<label

@@ -64,6 +64,15 @@
     width: 100%;
     line-height: 0;
 
+    > div {
+      width: 100%;
+
+      img {
+        width: 100% !important;
+        bottom: -2px !important;
+      }
+    }
+
     .mainWave {
       width: 100%;
     }
