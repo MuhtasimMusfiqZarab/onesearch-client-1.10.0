@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import SlickSlider from "components/general/slick";
 import { Heading } from "../heading";
 import Modal from "components/general/modal";
@@ -8,6 +9,7 @@ import ClientImage from '/public/client.png';
 import NoAvatar from '/public/no-avatar.png';
 
 export default function Reviews() {
+  const [modalIsOpen, setIsOpen] = useState(false);
   const slickSettings = {
     infinite: false,
     speed: 500,
@@ -38,7 +40,7 @@ export default function Reviews() {
         <div className={styles.review_wrap__inner}>
           <div className={styles.review_wrap__heading}>
             <Heading title="Our Customers" isUnderline={true} />
-            <button className="btn btn_fill_primary">Add Review</button>
+            <button className="btn btn_fill_primary" onClick={() => setIsOpen(true)}>Add Review</button>
           </div>
 
           <div className={styles.reviews}>
@@ -103,7 +105,7 @@ export default function Reviews() {
         </div>
       </div>
 
-      <Modal isOpen={false} setIsOpen="">
+      <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
         <AddReview name="Nafiz Imtiaz" avatar={NoAvatar} />
       </Modal>
     </>
