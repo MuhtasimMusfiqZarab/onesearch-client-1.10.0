@@ -68,9 +68,11 @@ const Login: FC<Props> = (): JSX.Element => {
               </label>
             </form>
           </div>
-          <a href="/google" className={styles.login_with_google}>
+          {/* <Link > */}
+          <a href="http://localhost:5000/google" className={styles.login_with_google}>
             <GoogleIcon /> Continue with Google
           </a>
+          {/* </Link> */}
         </div>
       </div>
     </>

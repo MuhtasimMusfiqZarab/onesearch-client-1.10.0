@@ -76,7 +76,7 @@ const Login: FC<Props> = (): JSX.Element => {
             </form>
           </div>
           {
-            <a href="/google" className={styles.google_button_link}>
+            <a href={process.env.GOOGLE_SIGNUP_URL} className={styles.google_button_link}>
               <button className={styles.login_with_google} disabled={!agree}>
                 <GoogleIcon /> Continue with Google
               </button>
