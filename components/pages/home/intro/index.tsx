@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { WebIcon, } from '../../../_icons';
+import { WebIcon } from '../../../_icons';
 import { Text } from '../text';
 import styles from './styles.module.scss';
 
@@ -22,7 +22,7 @@ export default function Index() {
             <WebIcon />
           </div>
           <div className={styles.wave}>
-            <Image src="/wave.svg" alt="" width="1366" height="163" className={styles.mainWave} />
+            <Image src="/wave.svg" alt="" width="1366" height="100%" />
           </div>
         </div>
       </div>
