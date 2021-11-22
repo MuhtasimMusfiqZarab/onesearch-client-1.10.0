@@ -28,7 +28,8 @@
   }
 
   @media (max-width: 991px) {
-    padding: 10px 0 6px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -37,7 +38,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  // max-width: calc(100% - 40px);
   padding: 0 1rem;
 
   @media (max-width: 991px) {
