@@ -1,0 +1,101 @@
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  //added as flex-end was not working
+  &:first-child {
+    margin-right: 1rem;
+  }
+
+  gap: 2rem;
+  margin: 0 0.5rem;
+
+  &item {
+    list-style: none;
+    font-weight: bold;
+    //as because going to use position absolute later on
+    position: relative;
+    cursor: pointer;
+
+    //while focused on the element, lower outline appeared
+    &:hover::after,
+    &:focus::after {
+      width: 80%;
+    }
+
+    //show the dropdown while clicked
+    &:hover ul,
+    &:focus ul {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &drop {
+      //as i want full control for their position in the page
+      position: absolute;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 0 10px $clr-gray300;
+      background-color: white;
+      border-radius: $radius;
+      width: 12rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      //hidden while not clicked
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 200ms ease-in-out;
+
+      li {
+        list-style: none;
+        padding: 0.5rem 1rem;
+        border-radius: $radius;
+
+        transition: background-color 200ms ease-in-out;
+
+        &:hover,
+        &:focus {
+          background-color: $clr-primary-hover;
+        }
+      }
+    }
+  }
+}
+
+.logged {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #8f8f8f;
+  padding: 15px;
+
+  &__thumb {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ddd;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user {
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  &__plan {
+    color: #49789b;
+    font-weight: 500;
+  }
+}

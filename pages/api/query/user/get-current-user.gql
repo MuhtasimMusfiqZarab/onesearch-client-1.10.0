@@ -1,0 +1,9 @@
+query GET_CURRENT_USER {
+  currentUser {
+    id
+    firstName
+    lastName
+    avatarLink
+    email
+  }
+}

@@ -66,8 +66,8 @@ export default function Index() {
           <div className={styles.container}>
             <div className={styles.container__table}>
               {channels?.length > 0 && <Table items={channels} headersEnums={YoutubeTableEnum} />}
+              {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}
               {channels?.length === 0 && <div>No Data Found</div>}
-              {loading && <Loader width="100%" height="2rem" />}
             </div>
 
             <div className={styles.container__pagination}>
@@ -82,8 +82,7 @@ export default function Index() {
         <div className={styles.edit_filters}>
           <div className={styles.search_wrap}>
             <SearchBox searchText={searchText} setSearchText={setSearchText} />
-            <button
-              className={`${styles.reset_form} ${styles.reset_form_modal}`}>
+            <button className={`${styles.reset_form} ${styles.reset_form_modal}`}>
               <Reset />
             </button>
           </div>

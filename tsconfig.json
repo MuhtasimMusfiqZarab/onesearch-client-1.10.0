@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -13,10 +17,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "incremental": true
   },
   //this file lets us not to use ts-ignore for each graphql import
-  "files": ["graphql.d.ts"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store.js"],
-  "exclude": ["node_modules"]
+  "files": [
+    "graphql.d.ts"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "store.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

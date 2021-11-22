@@ -17,7 +17,6 @@ export const SearchBox: FC<Props> = ({ searchText, setSearchText }: Props): JSX.
         <input
           type="text"
           className={styles.searchInput}
-          autoFocus
           placeholder="Channel Name"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}

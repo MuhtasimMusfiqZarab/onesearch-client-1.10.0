@@ -1,10 +1,15 @@
+import React, { useState } from "react";
 import SlickSlider from "components/general/slick";
 import { Heading } from "../heading";
+import Modal from "components/general/modal";
+import AddReview from "components/general/add-review";
 import Review from "components/general/review";
 import styles from "./styles.module.scss";
 import ClientImage from '/public/client.png';
+import NoAvatar from '/public/no-avatar.png';
 
 export default function Reviews() {
+  const [modalIsOpen, setIsOpen] = useState(false);
   const slickSettings = {
     infinite: false,
     speed: 500,
@@ -30,70 +35,79 @@ export default function Reviews() {
   };
 
   return (
-    <div className={styles.review_wrap}>
-      <div className={styles.review_wrap__inner}>
-        <Heading title="Our Customers" isUnderline={true} />
+    <>
+      <div className={styles.review_wrap}>
+        <div className={styles.review_wrap__inner}>
+          <div className={styles.review_wrap__heading}>
+            <Heading title="Our Customers" isUnderline={true} />
+            <button className="btn btn_fill_primary" onClick={() => setIsOpen(true)}>Add Review</button>
+          </div>
 
-        <div className={styles.reviews}>
-          <SlickSlider settings={slickSettings}>
-            <Review
-              name="Robert"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="5"
-              ratingId="Robert"
-            />
+          <div className={styles.reviews}>
+            <SlickSlider settings={slickSettings}>
+              <Review
+                name="Robert"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="5"
+                ratingId="Robert"
+              />
 
-            <Review
-              name="Jhon"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="4.5"
-              ratingId="jhon"
-            />
+              <Review
+                name="Jhon"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="4.5"
+                ratingId="jhon"
+              />
 
-            <Review
-              name="Doe"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="4"
-              ratingId="doe"
-            />
+              <Review
+                name="Doe"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="4"
+                ratingId="doe"
+              />
 
-            <Review
-              name="Deniel"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="3.5"
-              ratingId="deniel"
-            />
+              <Review
+                name="Deniel"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="3.5"
+                ratingId="deniel"
+              />
 
-            <Review
-              name="Dwyane"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="3"
-              ratingId="Dwyane"
-            />
+              <Review
+                name="Dwyane"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="3"
+                ratingId="Dwyane"
+              />
 
-            <Review
-              name="Jonshon"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="2.5"
-              ratingId="Jonshon"
-            />
+              <Review
+                name="Jonshon"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="2.5"
+                ratingId="Jonshon"
+              />
 
-            <Review
-              name="Albert"
-              quote="Very pleased with their service. Highly recommended!"
-              avatar={ClientImage}
-              rating="2"
-              ratingId="Albert"
-            />
-          </SlickSlider>
+              <Review
+                name="Albert"
+                quote="Very pleased with their service. Highly recommended!"
+                avatar={ClientImage}
+                rating="2"
+                ratingId="Albert"
+              />
+            </SlickSlider>
+          </div>
         </div>
       </div>
-    </div>
+
+      <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
+        <AddReview name="Nafiz Imtiaz" avatar={NoAvatar} />
+      </Modal>
+    </>
   );
 }
