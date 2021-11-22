@@ -1,7 +1,8 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import ClientImage from '/public/client.png';
 import styles from './styles.module.scss';
+
+import { useRouter } from 'next/router';
 
 interface Props {
   currentUser: any;
@@ -11,12 +12,19 @@ export const Dropbox: FC<Props> = ({ currentUser }: Props): JSX.Element => {
   let [userName, setUserName] = useState(null);
   let [userAvatar, setUserAvatar] = useState(null);
 
+  const router = useRouter();
+
   useEffect(() => {
     if (currentUser) {
       setUserName(currentUser.firstName);
       setUserAvatar(currentUser.avatarLink);
     }
   }, [currentUser]);
+
+  const logout = () => {
+    localStorage.removeItem('jwtToken');
+    router.reload();
+  };
 
   return (
     <ul className={styles.nav__list}>
@@ -32,9 +40,8 @@ export const Dropbox: FC<Props> = ({ currentUser }: Props): JSX.Element => {
         </div>
 
         <ul className={styles.nav__listitemdrop}>
-          <li>Our Team</li>
-          <li>Our Process</li>
-          <li>History</li>
+          <li onClick={logout}>Logout</li>
+          <li>View Profile</li>
         </ul>
       </li>
     </ul>

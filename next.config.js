@@ -44,17 +44,16 @@ module.exports = {
   //doamins for images
   images: {
     domains: ['lh3.googleusercontent.com']
-  }
-
+  },
   //used for login proxy server
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/google',
-  //       destination: process.env.GOOGLE_SIGNUP_URL
-  //     }
-  //   ];
-  // }
+  async rewrites() {
+    return [
+      {
+        source: '/google',
+        destination: process.env.GOOGLE_SIGNUP_URL
+      }
+    ];
+  }
 
   //add custom  env file if needed
   // env: {
