@@ -21,7 +21,8 @@ export default function Index() {
             <WebIcon />
           </div>
           <div className={styles.wave}>
-            <svg
+            <img src="wave.svg" alt="" className={styles.mainWave} />
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1366"
               height="162.706"
@@ -32,7 +33,7 @@ export default function Index() {
                 transform="translate(0 25.008)"
                 fill="#49789b"
               />
-            </svg>
+            </svg> */}
             {/* <svg
               width="1440"
               height="248"
