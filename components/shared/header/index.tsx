@@ -27,8 +27,9 @@ const Header = () => {
             <span></span>
           </button>
         </div>
+        {/* {currentUser?.id && <Dropbox />} */}
 
-        <Dropbox />
+        {/* <Dropbox /> */}
 
         <Navigation humberger={humberger} />
       </div>

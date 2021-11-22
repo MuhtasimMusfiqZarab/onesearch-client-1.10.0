@@ -39,6 +39,11 @@ module.exports = {
         permanent: true
       }
     ];
+  },
+
+  //doamins for images
+  images: {
+    domains: ['lh3.googleusercontent.com']
   }
 
   //used for login proxy server

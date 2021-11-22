@@ -4,7 +4,8 @@ import { useQuery } from '@apollo/client';
 import GET_CURRENT_USER from '../../../../pages/api/query/user/get-current-user.gql';
 
 const CurrentUserContext = createContext({
-  currentUser: null
+  currentUser: null,
+  loading: null
 });
 
 function CurrentUserProvider({ children }) {
@@ -13,7 +14,8 @@ function CurrentUserProvider({ children }) {
   return (
     <CurrentUserContext.Provider
       value={{
-        currentUser: data?.currentUser
+        currentUser: data?.currentUser,
+        loading
       }}>
       {children}
     </CurrentUserContext.Provider>

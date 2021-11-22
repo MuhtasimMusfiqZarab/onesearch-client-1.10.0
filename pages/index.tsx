@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Home from 'components/pages/home';
 
+import { CurrentUserProvider } from 'components/_context/user/current-user';
+
 export default function Index() {
   return (
     <>
@@ -9,7 +11,9 @@ export default function Index() {
         <meta property="og:home" content="Home" key="home" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
-      <Home />
+      <CurrentUserProvider>
+        <Home />
+      </CurrentUserProvider>
     </>
   );
 }
