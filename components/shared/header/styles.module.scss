@@ -3,7 +3,9 @@
   left: 0;
   top: 0;
   width: 100%;
-  padding: 15px 0 11px;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
   z-index: 99999;
 
   @media (min-width: 991px) {
@@ -18,7 +20,7 @@
       top: 0;
       content: '';
       width: 100%;
-      height: 70px;
+      height: 5rem;
       background: #ffffff;
       box-shadow: 0 0 10px #c4c4c4;
       z-index: -1;
