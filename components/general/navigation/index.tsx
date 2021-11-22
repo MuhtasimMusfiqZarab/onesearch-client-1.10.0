@@ -9,6 +9,8 @@ const menus = [
   { name: 'Dashboard', href: '/dashboard/search/youtube' }
 ];
 
+const basicMenu = [{ name: 'Home', href: '/' }];
+
 const Navigation = ({ humberger }) => {
   let [active, setActive] = useState('Home');
 
@@ -21,13 +23,21 @@ const Navigation = ({ humberger }) => {
   return (
     <nav className={`primary__navigation ${humberger ? 'nav-open' : ''}`}>
       <ul>
-        {menus.map((menu) => (
-          <li key={menu.name} className={active === menu.name ? 'active' : ''}>
-            <Link href={menu.href}>
-              <a onClick={handleActive}>{menu.name}</a>
-            </Link>
-          </li>
-        ))}
+        {currentUser
+          ? menus.map((menu) => (
+              <li key={menu.name} className={active === menu.name ? 'active' : ''}>
+                <Link href={menu.href}>
+                  <a onClick={handleActive}>{menu.name}</a>
+                </Link>
+              </li>
+            ))
+          : basicMenu.map((menu) => (
+              <li key={menu.name} className={active === menu.name ? 'active' : ''}>
+                <Link href={menu.href}>
+                  <a onClick={handleActive}>{menu.name}</a>
+                </Link>
+              </li>
+            ))}
 
         {!currentUser && !loading && (
           <li>
