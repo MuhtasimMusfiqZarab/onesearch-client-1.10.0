@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Dropbox } from 'components/general/dropbox';
+import { IsCurrentRoute } from 'components/services/route';
+import topNavElements, { topNavElementsBasic } from 'components/utils/resolver/navigation/topnav';
 import Link from 'next/link';
 
 import { useCurrentUser } from 'components/_context/user/current-user';
 
-const menus = [
-  { name: 'Home', href: '/' },
-  { name: 'Dashboard', href: '/dashboard/search/youtube' }
-];
-
-const basicMenu = [{ name: 'Home', href: '/' }];
-
 const Navigation = ({ humberger }) => {
-  let [active, setActive] = useState('Home');
+  let [active, setActive] = useState(null);
 
   const { currentUser, loading } = useCurrentUser();
 
@@ -23,21 +18,13 @@ const Navigation = ({ humberger }) => {
   return (
     <nav className={`primary__navigation ${humberger ? 'nav-open' : ''}`}>
       <ul>
-        {currentUser
-          ? menus.map((menu) => (
-              <li key={menu.name} className={active === menu.name ? 'active' : ''}>
-                <Link href={menu.href}>
-                  <a onClick={handleActive}>{menu.name}</a>
-                </Link>
-              </li>
-            ))
-          : basicMenu.map((menu) => (
-              <li key={menu.name} className={active === menu.name ? 'active' : ''}>
-                <Link href={menu.href}>
-                  <a onClick={handleActive}>{menu.name}</a>
-                </Link>
-              </li>
-            ))}
+        {topNavElements.map((menu) => (
+          <li key={menu.title} className={IsCurrentRoute(menu) && 'active'}>
+            <Link href={menu.route}>
+              <a onClick={handleActive}>{menu.title}</a>
+            </Link>
+          </li>
+        ))}
 
         {!currentUser && !loading && (
           <li>
