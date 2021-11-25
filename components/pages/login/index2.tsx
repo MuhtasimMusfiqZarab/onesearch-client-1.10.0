@@ -31,11 +31,7 @@ const Login: FC<Props> = (): JSX.Element => {
         items: [
           {
             id: 1,
-            quantity: 2
-          },
-          {
-            id: 2,
-            quantity: 2
+            quantity: 1
           }
         ]
       })
@@ -115,7 +111,7 @@ const Login: FC<Props> = (): JSX.Element => {
           </Link>
         </div>
         <button className={styles.login_with_google} onClick={processPayment}>
-          Pay with stripe
+          Support 1$
         </button>
       </div>
     </>
