@@ -22,7 +22,7 @@ const Login: FC<Props> = (): JSX.Element => {
   };
 
   const processPayment = () => {
-    fetch(`${process.env.PAYMENT_URL}`, {
+    fetch(`/payment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
