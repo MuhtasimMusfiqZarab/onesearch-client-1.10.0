@@ -21,6 +21,32 @@ const Login: FC<Props> = (): JSX.Element => {
     setAgree(!agree);
   };
 
+  const processPayment = () => {
+    fetch(`/payment`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        items: [
+          {
+            id: 1,
+            quantity: 1
+          }
+        ]
+      })
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+        console.log(url);
+      })
+      .catch((e) => console.error(e.error));
+  };
+
   return (
     <>
       <div className={styles.login}>
@@ -84,6 +110,9 @@ const Login: FC<Props> = (): JSX.Element => {
             </a>
           </Link>
         </div>
+        <button className={styles.login_with_google} onClick={processPayment}>
+          Support 1$
+        </button>
       </div>
     </>
   );

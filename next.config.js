@@ -51,6 +51,10 @@ module.exports = {
       {
         source: '/google',
         destination: process.env.GOOGLE_SIGNUP_URL
+      },
+      {
+        source: '/payment',
+        destination: process.env.PAYMENT_URL
       }
     ];
   }
