@@ -3,12 +3,13 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 
 import CheckoutForm from './CheckoutForm';
-import './styles.module.scss';
 
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
 // loadStripe is initialized with a fake API key.
-const stripePromise = loadStripe(process.env.stripePublishableKey);
+const stripePromise = loadStripe(
+  'pk_test_51JgPipJA2tKIeHBifp4L6arw2jm3zZPbIgQhjxVWINKkDpGNg40mfjigPImGz3wiA5Gv1IzwVQCtpLlLUaDbGRk4002o5H3LbX'
+);
 
 export default function Payment() {
   const [clientSecret, setClientSecret] = useState('');

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 import { GoogleIcon, Logo } from 'components/_icons';
 
+import Payment from 'components/widgets/payment';
+
 export interface Props {}
 
 const Login: FC<Props> = (): JSX.Element => {
@@ -113,6 +115,7 @@ const Login: FC<Props> = (): JSX.Element => {
         <button className={styles.login_with_google} onClick={processPayment}>
           Support 1$
         </button>
+        <Payment />
       </div>
     </>
   );

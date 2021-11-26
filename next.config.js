@@ -55,6 +55,10 @@ module.exports = {
       {
         source: '/payment',
         destination: process.env.PAYMENT_URL
+      },
+      {
+        source: '/create-payment-intent',
+        destination: process.env.STRIPE_PAYMENT_URL
       }
     ];
   }
