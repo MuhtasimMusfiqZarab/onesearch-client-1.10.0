@@ -81,6 +81,11 @@
       padding: 0.85rem 1rem;
       border-radius: 0.2rem;
       resize: none;
+      transition: all 0.25s;
+
+      &:focus {
+        border-color: $os-primary;
+      }
     }
   }
 }
