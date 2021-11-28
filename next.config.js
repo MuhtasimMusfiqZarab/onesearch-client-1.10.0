@@ -58,7 +58,11 @@ module.exports = {
       },
       {
         source: '/create-payment-intent',
-        destination: process.env.STRIPE_PAYMENT_URL
+        destination: process.env.CREATE_PAYMENT_INTENT
+      },
+      {
+        source: '/confirm-payment-intent',
+        destination: process.env.CONFIRM_PAYMENT_INTENT
       }
     ];
   }
