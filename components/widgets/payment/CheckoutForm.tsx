@@ -19,6 +19,7 @@ export default function CheckoutForm() {
       return;
     }
 
+    //payment method creation result his created for generating payment method with it using types
     const result = await stripe.createPaymentMethod({
       type: 'card',
       card: elements.getElement(CardElement),
@@ -28,6 +29,8 @@ export default function CheckoutForm() {
       }
     });
 
+    //payment method is passed here with result
+    //calling two endpoints for getting the payment intent id & with that finalizing the charge
     stripePaymentMethodHandler(result);
   };
 
