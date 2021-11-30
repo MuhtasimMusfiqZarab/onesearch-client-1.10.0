@@ -31,3 +31,5 @@ export { External } from "./external";
 export { ArrowLeft } from "./arrowLeft";
 export { ArrowRight } from "./arrowRight";
 export { LoginLogo } from "./loginLogo";
+export { Locator } from "./locator";
+export { Warning } from "./warning";
