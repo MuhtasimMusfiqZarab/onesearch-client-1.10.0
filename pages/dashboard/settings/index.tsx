@@ -1,6 +1,6 @@
-import Head from "next/head";
-import BaseLayout from "components/layouts/dashboard";
-import Profile from "components/pages/profile";
+import Head from 'next/head';
+import BaseLayout from 'components/layouts/dashboard';
+import Settings from 'components/pages/dashboard/settings';
 
 export default function Index() {
   return (
@@ -11,7 +11,7 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <BaseLayout>
-        <Profile />
+        <Settings />
       </BaseLayout>
     </>
   );

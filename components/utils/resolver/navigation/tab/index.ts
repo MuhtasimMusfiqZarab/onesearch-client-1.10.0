@@ -1,4 +1,4 @@
-import * as icons from "components/_icons";
+import * as icons from 'components/_icons';
 
 interface navElement {
   title: string;
@@ -7,33 +7,39 @@ interface navElement {
 }
 
 const iconProps = {
-  width: "25px",
-  height: "25px",
-  color: "8F8F8F",
+  width: '25px',
+  height: '25px',
+  color: '8F8F8F'
 };
 
-const filterNavElements: navElement[] = [
+export const searchNavElements: navElement[] = [
   {
-    title: "Youtube",
+    title: 'Youtube',
     icon: icons.YoutubeIcon({}),
-    route: "/dashboard/search/youtube",
+    route: '/dashboard/search/youtube'
   },
   {
-    title: "Facebook",
+    title: 'Facebook',
     icon: icons.FacebookIcon({}),
-    route: "/dashboard/search/facebook",
+    route: '/dashboard/search/facebook'
   },
   {
-    title: "Linkedin",
+    title: 'Linkedin',
     icon: icons.LinkedinIcon({}),
-    route: "/dashboard/search/linkedin",
+    route: '/dashboard/search/linkedin'
   },
 
   {
-    title: "Google",
+    title: 'Google',
     icon: icons.GoogleIcon({}),
-    route: "/dashboard/search/google",
-  },
+    route: '/dashboard/search/google'
+  }
 ];
 
-export default filterNavElements;
+export const settingsNavElements: navElement[] = [
+  {
+    title: 'Profile',
+    icon: icons.YoutubeIcon({}),
+    route: '/dashboard/settings/profile'
+  }
+];

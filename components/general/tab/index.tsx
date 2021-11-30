@@ -1,12 +1,13 @@
 import React, { FC, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import filterNavElements from 'components/utils/resolver/navigation/tab';
 import styles from './style.module.scss';
 
-interface Props {}
+interface Props {
+  items: any[];
+}
 
-export const Tab: FC<Props> = ({}: Props): JSX.Element => {
+export const Tab: FC<Props> = ({ items }: Props): JSX.Element => {
   const router = useRouter();
   const [currentRoute, setCurrentRoute] = useState<string>(router.pathname);
 
@@ -22,7 +23,7 @@ export const Tab: FC<Props> = ({}: Props): JSX.Element => {
           </svg>
         </a> */}
         <ul className={styles.list}>
-          {filterNavElements.map(
+          {items.map(
             (element, index): JSX.Element => {
               return (
                 <li

@@ -7,6 +7,8 @@ import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
+import { searchNavElements } from 'components/utils/resolver/navigation/tab';
+
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const {
@@ -27,7 +29,7 @@ export default function Index() {
   return (
     <>
       <div className={styles.container__element_inner}>
-        <Tab />
+        <Tab items={searchNavElements} />
         {currentUser ? (
           <div className={styles.filterContainer}>
             <div className={styles.filterContainer_inner}>
@@ -78,11 +80,9 @@ export default function Index() {
               </div>
             </div>
           </div>
-        ):
-        <div>
-          Please Login to get access
-        </div>
-        }
+        ) : (
+          <div>Please Login to get access</div>
+        )}
       </div>
 
       {/* filter modal */}
