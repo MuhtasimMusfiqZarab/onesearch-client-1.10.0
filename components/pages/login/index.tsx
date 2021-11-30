@@ -104,18 +104,20 @@ const Login: FC<Props> = (): JSX.Element => {
             </form>
           </div>
 
-          <Link href="/google">
-            <a className={styles.google_button_link}>
-              <button className={styles.login_with_google} disabled={!agree}>
-                <GoogleIcon /> Continue with Google
-              </button>
-            </a>
-          </Link>
+          <button className={styles.login_with_google} disabled={!agree}>
+            <Link href="/google ">
+              <a className={styles.google_button_link}>
+                <GoogleIcon /> <p className={styles.text}>Continue with Google</p>
+              </a>
+            </Link>
+          </button>
+
+          <button className={styles.login_with_google} onClick={processPayment}>
+            Support 1$
+          </button>
         </div>
-        <button className={styles.login_with_google} onClick={processPayment}>
-          Support 1$
-        </button>
-        <Payment />
+
+        {/* <Payment /> */}
       </div>
     </>
   );
