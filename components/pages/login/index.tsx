@@ -112,7 +112,7 @@ const Login: FC<Props> = (): JSX.Element => {
             </Link>
           </button>
 
-          <button className={styles.login_with_google} onClick={processPayment}>
+          <button className="btn btn_fill_primary" onClick={processPayment}>
             Support 1$
           </button>
         </div>
