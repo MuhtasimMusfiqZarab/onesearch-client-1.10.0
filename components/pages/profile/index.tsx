@@ -1,7 +1,7 @@
 import { Tab } from 'components/general';
-import AutofillInput from "components/general/autofill-input";
+import AutofillInput from 'components/general/autofill-input';
 import { Locator, Warning } from 'components/_icons';
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 export default function Profile() {
   return (
@@ -12,17 +12,17 @@ export default function Profile() {
         <div className={styles.profile__details}>
           <div>
             <span>First Name</span>
-            <span>Nafiz</span>
+            <span>Abc</span>
           </div>
 
           <div>
             <span>Email: </span>
-            <span>nafizimtiaz29@gmail.com</span>
+            <span>abc@gmail.com</span>
           </div>
 
           <div>
             <span>Last Name</span>
-            <span>Imtiaz</span>
+            <span>Xyz</span>
           </div>
         </div>
 
