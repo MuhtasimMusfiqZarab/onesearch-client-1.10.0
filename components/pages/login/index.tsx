@@ -54,7 +54,7 @@ const Login: FC<Props> = (): JSX.Element => {
       <div className={styles.login}>
         <div className={styles.login__intro}>
           <Logo width="336" height="60" />
-          <p>Join us and grow your business like never before!</p>
+          <p className={styles.joinUsText}>Join us and grow your business like never before!</p>
         </div>
         <div className={styles.login__welcome}>
           <Link href="/">
