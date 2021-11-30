@@ -1,0 +1,76 @@
+.file {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 475px;
+  padding: 25px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 10px #c4c4c4;
+  margin-bottom: 25px;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    content: '';
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    border: 1px dashed #ddd;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &__uploadText {
+    color: #49789b;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+  }
+
+  &__uploadWrap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 24px 0 8px;
+
+    input[type='file'] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__uploadBtn {
+    color: #fff;
+    background-color: #49789b;
+    padding: 8px 34px;
+    height: 43px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  small {
+    color: #505050;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 8px;
+  }
+
+  &__dropText {
+    color: #505050;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
