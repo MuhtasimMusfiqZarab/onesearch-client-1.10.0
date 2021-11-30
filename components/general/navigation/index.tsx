@@ -19,7 +19,7 @@ const Navigation = ({ humberger }) => {
     <nav className={`primary__navigation ${humberger ? 'nav-open' : ''}`}>
       <ul>
         {topNavElements.map((menu) => (
-          <li key={menu.title} className={IsCurrentRoute(menu) && 'active'}>
+          <li key={menu.title} className={IsCurrentRoute(menu) ? 'active' : ''}>
             <Link href={menu.route}>
               <a onClick={handleActive}>{menu.title}</a>
             </Link>

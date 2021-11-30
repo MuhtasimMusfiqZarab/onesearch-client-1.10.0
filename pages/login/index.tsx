@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Login from 'components/pages/login/index2';
+import Login from 'components/pages/login';
 
 import { CurrentUserProvider } from 'components/_context/user/current-user';
 
