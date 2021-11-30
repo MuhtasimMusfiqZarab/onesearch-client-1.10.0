@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Text } from '../text';
 import { Heading } from '../heading';
 import { Tabs } from '../tabs';
-import FeatureImage from '../../../../public/search-for-your-lead.png';
+import DashboardImage from '../../../../public/dashboard.png';
 import styles from './styles.module.scss';
 
 export default function Services() {
@@ -22,7 +22,7 @@ export default function Services() {
       <div className={styles.services_wrap__inner}>
         <Heading title="Our Services" isUnderline={true} isDark={true} />
 
-        <Tabs items={[]} defaultActive="search" />
+        {/* <Tabs items={[]} defaultActive="search" /> */}
 
         <div className={styles.services_items}>
           <Text
@@ -36,7 +36,7 @@ export default function Services() {
           />
 
           <div id="features" className={`${styles.features_wrap__thumbnail}`}>
-            <Image src={FeatureImage} alt="Search for your lead" width="441" height="312" />
+            <Image src={DashboardImage} alt="Search for your lead" width="441" height="312" />
           </div>
         </div>
       </div>

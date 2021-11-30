@@ -33,9 +33,24 @@ export const Text: FC<Props> = ({
       )}
       {typedText && (
         <h2 className={styles.text__title}>
-          <Typed strings={['Search for you lead']} typeSpeed={100} />
+          <Typed
+            strings={['Search for leads.', 'Request and we’ll deliver.', 'Download leads anytime.']}
+            typeSpeed={100}
+            loop
+          />
         </h2>
       )}
+      {/* {!subtitle && (
+        <Typed
+          strings={[
+            'Our dashboard is simple and easy-to-use with fast searching and filtering',
+            'Request leads from us and we will deliver',
+            'Keep your data in your store and download whenever you need'
+          ]}
+          typeSpeed={20}
+          loop
+        />
+      )} */}
       {subtitle && (
         <h3 className={styles.text__subtitle} dangerouslySetInnerHTML={{ __html: subtitle }}></h3>
       )}
