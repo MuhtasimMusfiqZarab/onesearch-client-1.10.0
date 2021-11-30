@@ -34,7 +34,11 @@ export const Text: FC<Props> = ({
       {typedText && (
         <h2 className={styles.text__title}>
           <Typed
-            strings={['Search for leads.', 'Request and we’ll deliver.', 'Download leads anytime.']}
+            strings={[
+              'Search for leads you want.',
+              'Request and we’ll deliver.',
+              'Download leads anytime.'
+            ]}
             typeSpeed={100}
             loop
           />
