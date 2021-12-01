@@ -37,6 +37,16 @@ module.exports = {
         source: '/dashboard/search',
         destination: '/dashboard/search/youtube',
         permanent: true
+      },
+      {
+        source: '/dashboard/request',
+        destination: '/dashboard/request/new',
+        permanent: true
+      },
+      {
+        source: '/dashboard/settings',
+        destination: '/dashboard/settings/profile',
+        permanent: true
       }
     ];
   },

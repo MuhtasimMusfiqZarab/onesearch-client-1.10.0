@@ -43,3 +43,11 @@ export const settingsNavElements: navElement[] = [
     route: '/dashboard/settings/profile'
   }
 ];
+
+export const requestNavElements: navElement[] = [
+  {
+    title: 'New Request',
+    icon: icons.YoutubeIcon({}),
+    route: '/dashboard/request/new'
+  }
+];

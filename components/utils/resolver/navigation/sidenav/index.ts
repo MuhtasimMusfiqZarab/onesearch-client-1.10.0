@@ -19,8 +19,9 @@ const sideNavElements: Props[] = [
   {
     title: 'Request',
     icon: icons.RequestIcon({}),
-    route: '/dashboard/request',
-    hasChild: false
+    route: '/dashboard/request/new',
+    hasChild: true,
+    children: ['new']
   },
   {
     title: 'Subscribe',

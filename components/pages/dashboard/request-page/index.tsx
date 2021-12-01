@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, Reset } from 'components/_icons';
 import { Dropdown, Tab, SearchBox } from 'components/general';
-import { searchNavElements } from 'components/utils/resolver/navigation/tab';
+import { requestNavElements } from 'components/utils/resolver/navigation/tab';
 import AutofillInput from 'components/general/autofill-input';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
@@ -28,7 +28,7 @@ export default function Index() {
   return (
     <>
       <div className={styles.request_container}>
-        <Tab items={searchNavElements} />
+        <Tab items={requestNavElements} />
         {currentUser ? (
           <>
             <div className={styles.request_container__inner}>
