@@ -52,37 +52,19 @@
     }
   }
 
-  &__lacation,
-  &__phone {
+  &__locators {
     display: flex;
     align-items: flex-end;
-    gap: 15px;
-    max-width: 567px;
-    margin-bottom: 20px;
-  }
-
-  &__phone {
-    input[type='text'] {
-      border: 1px solid #e1e5ee;
-      font-family: inherit;
-      font-size: 0.875rem;
-      color: #000;
-      outline: none;
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border-radius: 0.2rem;
-      transition: all 0.25s;
-
-      &:focus {
-        border-color: $os-primary;
-      }
-    }
+    gap: 1rem;
+    max-width: 30rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   &__warning {
-    color: #8f8f8f;
+    color: '#8f8f8f';
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1.214em;
+    line-height: 1.214rem;
   }
 }

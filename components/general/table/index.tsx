@@ -1,5 +1,4 @@
 import React, { FC, useState } from 'react';
-import Link from 'next/link';
 import { Lock, DownArrow } from 'components/_icons';
 import { IYoutubeChannel } from 'components/utils/interfaces';
 import { Controller } from './table-controller';
