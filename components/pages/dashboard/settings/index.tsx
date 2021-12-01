@@ -4,7 +4,7 @@ import AutofillInput from 'components/general/autofill-input';
 import { Locator, Warning } from 'components/_icons';
 import styles from './styles.module.scss';
 
-import { searchNavElements } from 'components/utils/resolver/navigation/tab';
+import { settingsNavElements } from 'components/utils/resolver/navigation/tab';
 
 import { useCurrentUser } from 'components/_context/user/current-user';
 
@@ -13,7 +13,7 @@ export default function Settings() {
 
   return (
     <div className={styles.container}>
-      <Tab items={searchNavElements} />
+      <Tab items={settingsNavElements} />
       <div className={styles.profile}>
         <h4>Basic Information</h4>
         <div className={styles.profile__details}>

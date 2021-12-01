@@ -1,4 +1,4 @@
-import * as icons from "components/_icons";
+import * as icons from 'components/_icons';
 
 interface Props {
   title: string;
@@ -10,42 +10,43 @@ interface Props {
 
 const sideNavElements: Props[] = [
   {
-    title: "Search",
+    title: 'Search',
     icon: icons.BinocularIcon({}),
-    route: "/dashboard/search/youtube",
+    route: '/dashboard/search/youtube',
     hasChild: true,
-    children: ["youtube", "facebook", "linkedin", "google"],
+    children: ['youtube', 'facebook', 'linkedin', 'google']
   },
   {
-    title: "Request",
+    title: 'Request',
     icon: icons.RequestIcon({}),
-    route: "/dashboard/request",
-    hasChild: false,
+    route: '/dashboard/request',
+    hasChild: false
   },
   {
-    title: "Subscribe",
+    title: 'Subscribe',
     icon: icons.SubscriptionIcon({}),
-    route: "/dashboard/subscribe",
-    hasChild: false,
+    route: '/dashboard/subscribe',
+    hasChild: false
   },
   {
-    title: "Credit",
+    title: 'Credit',
     icon: icons.CreditIcon({}),
-    route: "/dashboard/credit",
-    hasChild: false,
+    route: '/dashboard/credit',
+    hasChild: false
   },
   {
-    title: "Download",
+    title: 'Download',
     icon: icons.DownloadsIcon({}),
-    route: "/dashboard/download",
-    hasChild: false,
+    route: '/dashboard/download',
+    hasChild: false
   },
   {
-    title: "Settings",
+    title: 'Settings',
     icon: icons.SettingsIcon({}),
-    route: "/dashboard/settings",
-    hasChild: false,
-  },
+    route: '/dashboard/settings/profile',
+    hasChild: true,
+    children: ['profile']
+  }
 ];
 
 export default sideNavElements;
