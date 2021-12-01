@@ -8,6 +8,16 @@ interface Props {
   children?: string[];
 }
 
+export const adminNavElement: Props[] = [
+  {
+    title: 'Admin',
+    icon: icons.AdminIcon({}),
+    route: '/dashboard/admin',
+    hasChild: true,
+    children: ['users']
+  }
+];
+
 const sideNavElements: Props[] = [
   {
     title: 'Search',
@@ -23,12 +33,12 @@ const sideNavElements: Props[] = [
     hasChild: true,
     children: ['new']
   },
-  {
-    title: 'Subscribe',
-    icon: icons.SubscriptionIcon({}),
-    route: '/dashboard/subscribe',
-    hasChild: false
-  },
+  // {
+  //   title: 'Subscribe',
+  //   icon: icons.SubscriptionIcon({}),
+  //   route: '/dashboard/subscribe',
+  //   hasChild: false
+  // },
   {
     title: 'Credit',
     icon: icons.CreditIcon({}),

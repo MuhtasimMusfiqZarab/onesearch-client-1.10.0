@@ -34,3 +34,4 @@ export { LoginLogo } from './loginLogo';
 export { Locator } from './locator';
 export { Warning } from './warning';
 export { Csv } from './csv';
+export { AdminIcon } from './admin';
