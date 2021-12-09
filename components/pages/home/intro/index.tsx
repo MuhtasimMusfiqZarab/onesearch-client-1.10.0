@@ -1,11 +1,13 @@
 import { WebIcon } from '../../../_icons';
 import { Text } from '../text';
+import { CountdownTimer } from 'components/general';
 import styles from './styles.module.scss';
 
 export default function Index() {
   return (
     <div className={styles.body}>
       <div className={styles.wrapper}>
+        <CountdownTimer />
         <div className={styles.content}>
           <div className={styles.text}>
             <Text
