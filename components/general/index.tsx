@@ -7,3 +7,4 @@ export { SearchBox } from './searchbox';
 export { Tab } from './tab';
 export { Table } from './table';
 export { Slider } from './slider';
+export { CountdownTimer } from './coundown-timer';
