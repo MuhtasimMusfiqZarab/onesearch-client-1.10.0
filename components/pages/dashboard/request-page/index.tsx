@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Modal from 'components/general/modal';
-import { Filter, Reset } from 'components/_icons';
-import { Dropdown, Tab, SearchBox } from 'components/general';
+import { Reset } from 'components/_icons';
+import { Tab, CsvDrop } from 'components/general';
 import { requestNavElements } from 'components/utils/resolver/navigation/tab';
 import AutofillInput from 'components/general/autofill-input';
 import styles from './styles.module.scss';
