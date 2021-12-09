@@ -1,12 +1,15 @@
-import TopNav from "../../shared/topnav/version2";
-import Header from "components/shared/header";
-import Intro from "./intro";
-import Services from "./services";
-import Pricing from "./pricing";
-import Reviews from "./reviews";
-import Footer from "components/shared/footer";
-import BackToTop from "components/general/back-to-top";
-import styles from "./styles.module.scss";
+import TopNav from '../../shared/topnav/version2';
+import Header from 'components/shared/header';
+import Intro from './intro';
+import Services from './services';
+import Pricing from './pricing';
+import Reviews from './reviews';
+import Footer from 'components/shared/footer';
+import BackToTop from 'components/general/back-to-top';
+
+import { CurrentUserProvider } from 'components/_context/user/current-user';
+
+import styles from './styles.module.scss';
 
 export default function Home() {
   return (
@@ -14,7 +17,9 @@ export default function Home() {
       <Header />
       <Intro />
       <Services />
-      <Reviews />
+      <CurrentUserProvider>
+        <Reviews />
+      </CurrentUserProvider>
       <Pricing />
       <Footer />
       <BackToTop />
