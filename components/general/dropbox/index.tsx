@@ -1,5 +1,7 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import styles from './styles.module.scss';
 
 import { useRouter } from 'next/router';
@@ -41,7 +43,11 @@ export const Dropbox: FC<Props> = ({ currentUser }: Props): JSX.Element => {
 
         <ul className={styles.nav__listitemdrop}>
           <li onClick={logout}>Logout</li>
-          <li>View Profile</li>
+          <li>
+            <Link href="/dashboard/settings/profile">
+              <p>View Profile</p>
+            </Link>
+          </li>
         </ul>
       </li>
     </ul>
