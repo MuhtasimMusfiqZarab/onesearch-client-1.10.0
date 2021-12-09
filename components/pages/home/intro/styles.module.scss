@@ -4,16 +4,15 @@
 
 .wrapper {
   position: relative;
-  padding: 6.875rem 0;
-  // margin-top: 4.2rem;
+  padding: 10rem 0 4rem 0rem;
   overflow: hidden;
 
-  @media (max-width: 1024px) {
-    padding: 2rem 15px 6.875rem;
+  @media (min-width: 1024px) {
+    padding: 10rem 0 6rem 0rem;
   }
 
   @media (max-width: 767px) {
-    padding: 1.75rem 0 0;
+    padding: 10rem 0rem 0rem 0rem;
   }
 
   .content {

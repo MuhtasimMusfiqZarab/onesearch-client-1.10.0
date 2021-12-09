@@ -44,23 +44,23 @@ export const CountdownTimer: FC<Props> = ({}: Props): any => {
 
   return (
     <div className={styles.coming_soon}>
-      <h2 className={styles.text}>We are launching soon!</h2>
+      <h2 className={styles.text}>We are coming soon! Are you ready?</h2>
       <div className={styles.container}>
         <div className={styles.container_day}>
-          <h3 className={styles.day}>Days</h3>
-          <h3>{days}</h3>
+          <h3 className={styles.day}>{days}</h3>
+          <div>Days</div>
         </div>
         <div className={styles.container_hour}>
-          <h3 className={styles.hour}>Hours</h3>
-          <h3>{hours}</h3>
+          <h3 className={styles.hour}>{hours}</h3>
+          <div>Hours</div>
         </div>
         <div className={styles.container_minute}>
-          <h3 className={styles.minute}>Minutes</h3>
-          <h3>{minutes}</h3>
+          <h3 className={styles.minute}>{minutes}</h3>
+          <div>Minutes</div>
         </div>
         <div className={styles.container_second}>
-          <h3 className={styles.second}>Seconds</h3>
-          <h3>{seconds}</h3>
+          <h3 className={styles.second}>{seconds}</h3>
+          <div>Seconds</div>
         </div>
       </div>
     </div>
