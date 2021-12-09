@@ -45,6 +45,7 @@ export const CountdownTimer: FC<Props> = ({}: Props): any => {
   return (
     <div className={styles.coming_soon}>
       <h2 className={styles.text}>We are coming soon! Are you ready?</h2>
+      {/* <h2 className={styles.text}>Coming soon!</h2> */}
       <div className={styles.container}>
         <div className={styles.container_day}>
           <h3 className={styles.day}>{days}</h3>
