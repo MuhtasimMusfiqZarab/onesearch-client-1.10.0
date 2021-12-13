@@ -51,3 +51,11 @@ export const requestNavElements: navElement[] = [
     route: '/dashboard/request/new'
   }
 ];
+
+export const adminNavElements: navElement[] = [
+  {
+    title: 'Users',
+    icon: icons.YoutubeIcon({}),
+    route: '/dashboard/admin/users'
+  }
+];

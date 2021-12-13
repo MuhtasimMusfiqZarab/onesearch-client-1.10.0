@@ -5,5 +5,6 @@ query GET_CURRENT_USER {
     lastName
     avatarLink
     email
+    accessRole
   }
 }
