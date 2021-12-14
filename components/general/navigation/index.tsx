@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Dropbox } from 'components/general/dropbox';
 import { IsCurrentRoute } from 'components/services/route';
-import topNavElements, { topNavElementsBasic } from 'components/utils/resolver/navigation/topnav';
+import topNavElements from 'components/utils/resolver/navigation/topnav';
 import { Loader } from 'components/general';
 import Link from 'next/link';
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
+import { IYoutubeChannel } from 'components/utils/interfaces';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
 import { YoutubeTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';

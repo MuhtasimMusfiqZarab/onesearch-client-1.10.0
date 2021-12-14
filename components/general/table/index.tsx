@@ -1,12 +1,11 @@
 import React, { FC, useState } from 'react';
 import { Lock, DownArrow } from 'components/_icons';
-import { IYoutubeChannel } from 'components/utils/interfaces';
 import { Controller } from './table-controller';
 import { Loader } from 'components/general';
 import styles from './styles.module.scss';
 
 interface Props {
-  items: IYoutubeChannel[];
+  items: any[];
   headersEnums: object;
   hasController?: boolean;
   hasCheckbox?: boolean;
@@ -59,11 +58,11 @@ export const Table: FC<Props> = ({
             </td>
           )}
           {Object.keys(headersEnums).map((key) => (
-            <td key={key} className={styles.td} data-label="Joined">
+            <td key={key} className={styles.td}>
               <Loader isTextBox />
             </td>
           ))}
-          <td className={styles.td} data-label="Views">
+          <td className={styles.td}>
             <span className={styles.save_btn}>
               <Loader isActionButton />
             </span>
@@ -120,7 +119,7 @@ export const Table: FC<Props> = ({
                     <td className={styles.td}>
                       <input
                         type="checkbox"
-                        name={item.channel_name}
+                        // name={item.channel_name}
                         id={item.id}
                         onChange={handleClick}
                         checked={isCheck.includes(item.id)}
@@ -128,11 +127,11 @@ export const Table: FC<Props> = ({
                     </td>
                   )}
                   {Object.keys(headersEnums).map((key) => (
-                    <td key={key} className={styles.td} data-label="Joined">
+                    <td key={key} className={styles.td}>
                       {item[key]}
                     </td>
                   ))}
-                  <td className={styles.td} data-label="Views">
+                  <td className={styles.td}>
                     <span className={styles.save_btn}>
                       <Lock />
                     </span>

@@ -13,8 +13,6 @@ export default function SideNav() {
 
   const [currentActive, setCurrentActive] = useState<number>(0);
 
-  const [userType, setUserType] = useState<string>(null);
-
   const { currentUser, loading: loadingUser } = useCurrentUser();
 
   useEffect(() => {
@@ -32,12 +30,6 @@ export default function SideNav() {
       listScrollLeft += 50;
     });
   }, []);
-
-  useEffect(() => {
-    if (currentUser) {
-      setUserType(currentUser?.accessRole);
-    }
-  }, [currentUser]);
 
   return (
     <div>

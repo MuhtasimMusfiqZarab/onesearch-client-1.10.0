@@ -13,6 +13,7 @@ interface Props {
 export const Dropbox: FC<Props> = ({ currentUser }: Props): JSX.Element => {
   let [userName, setUserName] = useState(null);
   let [userAvatar, setUserAvatar] = useState(null);
+  let [userAccessRole, setUserAccessRole] = useState(null);
 
   const router = useRouter();
 
@@ -20,6 +21,7 @@ export const Dropbox: FC<Props> = ({ currentUser }: Props): JSX.Element => {
     if (currentUser) {
       setUserName(currentUser.firstName);
       setUserAvatar(currentUser.avatarLink);
+      setUserAccessRole(currentUser.accessRole);
     }
   }, [currentUser]);
 
@@ -37,7 +39,7 @@ export const Dropbox: FC<Props> = ({ currentUser }: Props): JSX.Element => {
           </div>
           <div className={styles.logged__details}>
             <span className={styles.logged__user}>{userName}</span>
-            <span className={styles.logged__plan}>Demo</span>
+            <span className={styles.logged__plan}>{userAccessRole}</span>
           </div>
         </div>
 
