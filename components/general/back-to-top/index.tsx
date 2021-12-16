@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import MessengerChat from '../custom-chat';
+import { useRouter } from 'next/router';
 import styles from './styles.module.scss';
 
 export default function BackToTop() {
+  const router = useRouter();
+  const [currentRoute, setCurrentRoute] = useState<string>(router.pathname);
+
   let [isShowBtn, setShowBtn] = useState(false);
   const backToTop = useRef(null);
   const chatBtn = useRef(null);
@@ -53,7 +57,7 @@ export default function BackToTop() {
           />
         </svg>
       </a> */}
-      <MessengerChat />
+      {currentRoute === '/' && <MessengerChat />}
     </div>
   );
 }
