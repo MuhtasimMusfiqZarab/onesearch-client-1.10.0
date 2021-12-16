@@ -1,6 +1,6 @@
-import Head from "next/head";
-import BaseLayout from "components/layouts/dashboard";
-import RequestPage from 'components/pages/dashboard/request-page'
+import Head from 'next/head';
+import BaseLayout from 'components/layouts/dashboard';
+import RequestPage from 'components/pages/dashboard/request';
 
 export default function Index() {
   return (

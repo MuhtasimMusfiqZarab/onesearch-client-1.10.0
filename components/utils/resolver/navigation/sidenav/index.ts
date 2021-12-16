@@ -57,6 +57,13 @@ const sideNavElements: Props[] = [
     route: '/dashboard/settings/profile',
     hasChild: true,
     children: ['profile']
+  },
+  {
+    title: 'Admin',
+    icon: icons.AdminIcon({}),
+    route: '/dashboard/admin/users',
+    hasChild: true,
+    children: ['users']
   }
 ];
 

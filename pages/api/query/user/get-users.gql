@@ -1,0 +1,13 @@
+query GET_USERS($data: GetUsersInput!) {
+  getAllUsers(data: $data) {
+    users {
+      id
+      firstName
+      lastName
+      avatarLink
+      email
+      accessRole
+    }
+    totalCount
+  }
+}

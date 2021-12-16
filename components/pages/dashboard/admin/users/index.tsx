@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
-import { IYoutubeChannel } from 'components/utils/interfaces';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
 import { YoutubeTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
+import { useAllUsers } from 'components/_context/user/all-users';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
-import { searchNavElements } from 'components/utils/resolver/navigation/tab';
+import { adminNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
+  const { getAllUsers, loading: loadingAllUsers } = useAllUsers();
   const {
     channels,
     setOffset,
@@ -27,62 +28,72 @@ export default function Index() {
   const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (getAllUsers) {
+      console.log('Here are all the users', getAllUsers);
+    }
+  }, [getAllUsers]);
+
   return (
     <>
       <div className={styles.container__element_inner}>
-        <Tab items={searchNavElements} />
-        {currentUser ? (
-          <div className={styles.filterContainer}>
-            <div className={styles.filterContainer_inner}>
-              <div className={styles.search_wrap}>
-                <SearchBox searchText={searchText} setSearchText={setSearchText} />
+        {currentUser?.accessRole === 'Admin' ? (
+          <>
+            <Tab items={adminNavElements} />
+            <div className={styles.filterContainer}>
+              <div className={styles.filterContainer_inner}>
+                <div className={styles.search_wrap}>
+                  <SearchBox searchText={searchText} setSearchText={setSearchText} />
 
-                <button className={styles.reset_form}>
-                  <Reset />
-                  Reset
-                </button>
+                  <button className={styles.reset_form}>
+                    <Reset />
+                    Reset
+                  </button>
 
-                <button onClick={() => setIsOpen(true)} className={styles.filtersToggle}>
-                  <Filter />
-                </button>
-              </div>
+                  <button onClick={() => setIsOpen(true)} className={styles.filtersToggle}>
+                    <Filter />
+                  </button>
+                </div>
 
-              <div className={styles.filterItems}>
-                <Dropdown
-                  title="Category"
-                  setItem={setCategory}
-                  setOffset={setOffset}
-                  items={categories}
-                  isSearch={true}
-                />
+                <div className={styles.filterItems}>
+                  <Dropdown
+                    title="Category"
+                    setItem={setCategory}
+                    setOffset={setOffset}
+                    items={categories}
+                    isSearch={true}
+                  />
 
-                <Dropdown
-                  title="Countries"
-                  setItem={setLocation}
-                  setOffset={setOffset}
-                  items={countries}
-                  isSearch={true}
-                />
-              </div>
-              {/* <div className={styles.filterItems}>
+                  <Dropdown
+                    title="Countries"
+                    setItem={setLocation}
+                    setOffset={setOffset}
+                    items={countries}
+                    isSearch={true}
+                  />
+                </div>
+                {/* <div className={styles.filterItems}>
               <Slider />
             </div> */}
-            </div>
-
-            <div className={styles.container}>
-              <div className={styles.container__table}>
-                {channels?.length > 0 && <Table items={channels} headersEnums={YoutubeTableEnum} />}
-                {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}
-                {channels?.length === 0 && <div>No Data Found</div>}
               </div>
 
-              <div className={styles.container__pagination}>
-                <Pagination total={total} setOffset={setOffset} offset={offset} />
+              <div className={styles.container}>
+                <div className={styles.container__table}>
+                  {channels?.length > 0 && (
+                    <Table items={channels} headersEnums={YoutubeTableEnum} />
+                  )}
+                  {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}
+                  {channels?.length === 0 && <div>No Data Found</div>}
+                </div>
+
+                <div className={styles.container__pagination}>
+                  <Pagination total={total} setOffset={setOffset} offset={offset} />
+                </div>
               </div>
             </div>
-          </div>
+          </>
         ) : (
-          <div>Please Login to get access</div>
+          <div>Please contact to get admin access!</div>
         )}
       </div>
 

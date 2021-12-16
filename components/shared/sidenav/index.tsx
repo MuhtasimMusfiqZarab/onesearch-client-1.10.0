@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import sideNavElements, { adminNavElement } from 'components/utils/resolver/navigation/sidenav';
 import { IsCurrentRoute } from 'components/services/route';
+import { useCurrentUser } from 'components/_context/user/current-user';
+
 import styles from './styles.module.scss';
 
 export default function SideNav() {
@@ -10,6 +12,8 @@ export default function SideNav() {
   let navList = useRef(null);
 
   const [currentActive, setCurrentActive] = useState<number>(0);
+
+  const { currentUser, loading: loadingUser } = useCurrentUser();
 
   useEffect(() => {
     let listScrollRight = navList.current.scrollLeft;
@@ -57,26 +61,6 @@ export default function SideNav() {
               );
             }
           )}
-
-          {/* admin navs */}
-          {/* {adminNavElement.map(
-            (element, index): JSX.Element => {
-              return (
-                <li className={`${styles.nav__item} `} key={index}>
-                  <Link href={`${element.route}`} key={index}>
-                    <a
-                      className={`${IsCurrentRoute(element) && styles.nav__itemSelected}`}
-                      onClick={() => {
-                        setCurrentActive(index);
-                      }}>
-                      {element.icon}
-                      <p className={styles.nav__itemlabel}>{element.title}</p>
-                    </a>
-                  </Link>
-                </li>
-              );
-            }
-          )} */}
         </ul>
         <a href="#" className={styles.next__btn} ref={nextBtn}>
           <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
