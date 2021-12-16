@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
 import { YoutubeTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
+import { useAllUsers } from 'components/_context/user/all-users';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
 import { adminNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
+  const { getAllUsers, loading: loadingAllUsers } = useAllUsers();
   const {
     channels,
     setOffset,
@@ -25,6 +27,12 @@ export default function Index() {
   const { countries } = useCountries();
   const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (getAllUsers) {
+      console.log('Here are all the users', getAllUsers);
+    }
+  }, [getAllUsers]);
 
   return (
     <>

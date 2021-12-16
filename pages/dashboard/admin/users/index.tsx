@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
 import Users from 'components/pages/dashboard/admin/users';
+import { GetAllUsersProvider } from 'components/_context/user/all-users';
 
 export default function Index() {
   return (
@@ -11,7 +12,9 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <DashboardLayout>
-        <Users />
+        <GetAllUsersProvider>
+          <Users />
+        </GetAllUsersProvider>
       </DashboardLayout>
     </>
   );

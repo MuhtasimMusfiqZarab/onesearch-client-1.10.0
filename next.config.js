@@ -69,6 +69,10 @@ module.exports = {
       {
         source: '/pay',
         destination: process.env.STRIPE_PAYMENT_URL
+      },
+      {
+        source: '/google/redirect',
+        destination: process.env.GOOGLE_REDIRECT_URL
       }
     ];
   }
