@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import MessengerChat from '../custom-chat';
 import styles from './styles.module.scss';
 
 export default function BackToTop() {
@@ -39,7 +40,7 @@ export default function BackToTop() {
         </svg>
       </a>
 
-      <a href="#" ref={chatBtn} className={styles.chatBtn}>
+      {/* <a href="#" ref={chatBtn} className={styles.chatBtn}>
         <svg
           width="30"
           height="30"
@@ -51,7 +52,8 @@ export default function BackToTop() {
             fill="#49789B"
           />
         </svg>
-      </a>
+      </a> */}
+      <MessengerChat />
     </div>
   );
 }
