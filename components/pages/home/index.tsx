@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from 'react';
 import TopNav from '../../shared/topnav/version2';
 import Header from 'components/shared/header';
 import Intro from './intro';
@@ -7,11 +8,16 @@ import Reviews from './reviews';
 import Footer from 'components/shared/footer';
 import BackToTop from 'components/general/back-to-top';
 
+import { useRouter } from 'next/router';
+
 import { CurrentUserProvider } from 'components/_context/user/current-user';
 
 import styles from './styles.module.scss';
 
 export default function Home() {
+  const router = useRouter();
+  const [currentRoute, setCurrentRoute] = useState<string>(router.pathname);
+
   return (
     <div>
       <Header />
@@ -22,7 +28,7 @@ export default function Home() {
       </CurrentUserProvider>
       <Pricing />
       <Footer />
-      <BackToTop />
+      {currentRoute === '/' && <BackToTop />}
     </div>
   );
 }
