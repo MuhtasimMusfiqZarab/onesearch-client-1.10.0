@@ -2,7 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import MessengerChat from '../custom-chat';
 import styles from './styles.module.scss';
 
-export default function BackToTop() {
+interface Props {
+  support: boolean;
+}
+
+export default function BackToTop({ support }: Props) {
   let [isShowBtn, setShowBtn] = useState(false);
   const backToTop = useRef(null);
   const chatBtn = useRef(null);
@@ -40,7 +44,7 @@ export default function BackToTop() {
         </svg>
       </a>
 
-      <MessengerChat />
+      {support && <MessengerChat />}
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../../shared/header';
 import SideNav from '../../shared/sidenav';
+import BackToTop from 'components/general/back-to-top';
+
 import styles from './styles.module.scss';
 
 import { CurrentUserProvider } from 'components/_context/user/current-user';
@@ -15,6 +17,7 @@ const DashboardLayout = (props) => {
           <div className={styles.container__element}>{props.children}</div>
         </div>
       </CurrentUserProvider>
+      <BackToTop support={false} />
     </React.Fragment>
   );
 };
