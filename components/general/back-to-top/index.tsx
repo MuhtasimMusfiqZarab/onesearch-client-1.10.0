@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import MessengerChat from '../custom-chat';
+import { MessengerChat } from '../custom-chat';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -44,7 +44,7 @@ export default function BackToTop({ support }: Props) {
         </svg>
       </a>
 
-      {support && <MessengerChat />}
+      {support && <MessengerChat chatSupport={true} />}
     </div>
   );
 }
