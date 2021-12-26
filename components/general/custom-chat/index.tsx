@@ -7,7 +7,7 @@ interface Props {
 
 export const MessengerChat = ({ chatSupport }: Props) => {
   return (
-    <FacebookProvider appId="2967314900245282" chatSupport={chatSupport}>
+    <FacebookProvider appId="2967314900245282" chatSupport={false}>
       <CustomChat pageId="109129984703261" minimized={false} />
     </FacebookProvider>
   );
