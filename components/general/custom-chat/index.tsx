@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomChat } from 'react-facebook';
+import { FacebookProvider, CustomChat } from 'react-facebook';
 
 import styles from './styles.module.scss';
 
@@ -10,7 +10,9 @@ interface Props {
 export const MessengerChat = ({ chatSupport }: Props) => {
   return (
     <div className={chatSupport ? styles.hiddenContainer : ''}>
-      <CustomChat pageId="109129984703261" minimized={false} />
+      <FacebookProvider appId="2967314900245282" chatSupport>
+        <CustomChat pageId="109129984703261" minimized={false} />
+      </FacebookProvider>
     </div>
   );
 };

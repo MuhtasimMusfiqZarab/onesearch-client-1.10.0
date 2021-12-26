@@ -12,11 +12,9 @@ export default function Index() {
         <meta property="og:home" content="Home" key="home" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
-      <FacebookProvider appId="2967314900245282" chatSupport>
-        <CurrentUserProvider>
-          <Home />
-        </CurrentUserProvider>
-      </FacebookProvider>
+      <CurrentUserProvider>
+        <Home />
+      </CurrentUserProvider>
     </>
   );
 }
