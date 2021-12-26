@@ -16,8 +16,8 @@ const DashboardLayout = (props) => {
         <div className={styles.container}>
           <div className={styles.container__element}>{props.children}</div>
         </div>
+        <BackToTop support={false} />
       </CurrentUserProvider>
-      {/* <BackToTop support={false} /> */}
     </React.Fragment>
   );
 };
