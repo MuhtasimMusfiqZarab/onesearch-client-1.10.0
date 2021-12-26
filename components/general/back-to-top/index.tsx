@@ -44,7 +44,7 @@ export default function BackToTop({ support }: Props) {
         </svg>
       </a>
 
-      {support && <MessengerChat chatSupport={true} />}
+      <MessengerChat chatSupport={support} />
     </div>
   );
 }
