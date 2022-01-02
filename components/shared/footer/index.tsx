@@ -16,7 +16,7 @@ export default function Footer() {
           <div className={styles.socials}>
             <ul>
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/onesearch-io-ltd">
                   <LinkedinIcon />
                 </a>
               </li>
