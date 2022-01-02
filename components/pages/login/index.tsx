@@ -3,8 +3,6 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 import { GoogleIcon, Logo } from 'components/_icons';
 
-import Payment from 'components/widgets/payment';
-
 export interface Props {}
 
 const Login: FC<Props> = (): JSX.Element => {
@@ -110,12 +108,11 @@ const Login: FC<Props> = (): JSX.Element => {
             </a>
           </button>
 
+          {/* prebuild page */}
           <button className="btn btn_fill_primary" onClick={processPayment}>
             Support 1$
           </button>
         </div>
-
-        {/* <Payment /> */}
       </div>
     </>
   );
