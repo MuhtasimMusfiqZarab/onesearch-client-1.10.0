@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const FacebookIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const FacebookIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="29"
-      height="29"
-      viewBox="0 0 29 29"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="35" height="35" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M14.4999 0C22.5085 0 29 6.49237 29 14.5C29 22.5086 22.5085 29 14.4999 29C6.49138 29 0 22.5085 0 14.5C0 6.49237 6.49147 0 14.4999 0Z"
         fill="#3B5998"

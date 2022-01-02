@@ -17,17 +17,12 @@ export default function Footer() {
             <ul>
               <li>
                 <a href="#">
-                  <FacebookIcon />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <YoutubeIcon />
-                </a>
-              </li>
-              <li>
-                <a href="#">
                   <LinkedinIcon />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/onesearchteam">
+                  <FacebookIcon />
                 </a>
               </li>
             </ul>
@@ -45,11 +40,6 @@ export default function Footer() {
             <li>
               <Link href="/terms-of-service">
                 <a>Terms of Service</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/faq">
-                <a>FAQs</a>
               </Link>
             </li>
           </ul>

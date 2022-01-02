@@ -85,14 +85,14 @@ const Login: FC<Props> = (): JSX.Element => {
                   <input type="checkbox" id="agree" onChange={handleAgree} checked={agree} />
                   <span>
                     I have read and agree to the{' '}
-                    <Link href="/">
+                    <Link href="/terms-of-service">
                       <a>
                         Terms of <br />
                         Service
                       </a>
                     </Link>{' '}
                     and{' '}
-                    <Link href="/">
+                    <Link href="/privacy-policy">
                       <a>Privacy Policy</a>
                     </Link>{' '}
                     of this website.
@@ -109,9 +109,9 @@ const Login: FC<Props> = (): JSX.Element => {
           </button>
 
           {/* prebuild page */}
-          {/* <button className="btn btn_fill_primary" onClick={processPayment}>
+          <button className="btn btn_fill_primary" onClick={processPayment}>
             Support 1$
-          </button> */}
+          </button>
           <Link href="/">
             <a className={styles.go_home}>Go to Home</a>
           </Link>
