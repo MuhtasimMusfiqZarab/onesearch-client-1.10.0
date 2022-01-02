@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const LinkedinIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const LinkedinIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="29"
-      height="29"
-      viewBox="0 0 29 29"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="35" height="35" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0)">
         <path
           d="M14.5 28.999C22.5081 28.999 29 22.5072 29 14.499C29 6.4909 22.5081 -0.000976562 14.5 -0.000976562C6.49187 -0.000976562 0 6.4909 0 14.499C0 22.5072 6.49187 28.999 14.5 28.999Z"

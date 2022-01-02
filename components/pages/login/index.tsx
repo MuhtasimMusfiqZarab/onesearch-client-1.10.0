@@ -3,8 +3,6 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 import { GoogleIcon, Logo } from 'components/_icons';
 
-import Payment from 'components/widgets/payment';
-
 export interface Props {}
 
 const Login: FC<Props> = (): JSX.Element => {
@@ -87,14 +85,14 @@ const Login: FC<Props> = (): JSX.Element => {
                   <input type="checkbox" id="agree" onChange={handleAgree} checked={agree} />
                   <span>
                     I have read and agree to the{' '}
-                    <Link href="/">
+                    <Link href="/terms-of-service">
                       <a>
                         Terms of <br />
                         Service
                       </a>
                     </Link>{' '}
                     and{' '}
-                    <Link href="/">
+                    <Link href="/privacy-policy">
                       <a>Privacy Policy</a>
                     </Link>{' '}
                     of this website.
@@ -110,12 +108,14 @@ const Login: FC<Props> = (): JSX.Element => {
             </a>
           </button>
 
+          {/* prebuild page */}
           <button className="btn btn_fill_primary" onClick={processPayment}>
             Support 1$
           </button>
+          <Link href="/">
+            <a className={styles.go_home}>Go to Home</a>
+          </Link>
         </div>
-
-        {/* <Payment /> */}
       </div>
     </>
   );
