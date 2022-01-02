@@ -109,9 +109,12 @@ const Login: FC<Props> = (): JSX.Element => {
           </button>
 
           {/* prebuild page */}
-          <button className="btn btn_fill_primary" onClick={processPayment}>
+          {/* <button className="btn btn_fill_primary" onClick={processPayment}>
             Support 1$
-          </button>
+          </button> */}
+          <Link href="/">
+            <a className={styles.go_home}>Go to Home</a>
+          </Link>
         </div>
       </div>
     </>

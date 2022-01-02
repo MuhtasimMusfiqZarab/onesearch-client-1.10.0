@@ -259,3 +259,17 @@
     }
   }
 }
+
+.go_home {
+  top: 40px;
+  right: 40px;
+  font-size: 18px;
+  color: #49789b;
+  text-decoration: none;
+  margin-top: 2rem;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: inline;
+  }
+}
