@@ -128,7 +128,7 @@ export const Table: FC<Props> = ({
                   )}
                   {Object.keys(headersEnums).map((key) => (
                     <td key={key} className={styles.td}>
-                      {item[key]}
+                      {item[key] ?? '-'}
                     </td>
                   ))}
                   <td className={styles.td}>
