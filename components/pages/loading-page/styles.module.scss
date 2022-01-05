@@ -2,18 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
-  margin-top: 30vh;
 
   .header {
     font-size: 3rem;
     color: #505050;
-  }
-  .subHeader {
-    margin-top: 2rem;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.82875rem;
+    margin-bottom: 3rem;
   }
 }
