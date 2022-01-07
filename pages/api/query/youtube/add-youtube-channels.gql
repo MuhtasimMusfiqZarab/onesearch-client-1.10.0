@@ -1,0 +1,5 @@
+mutation addYoutubeLeads($input: [BulkYoutubeInput!]!) {
+  addYoutubeLeads(input: $input) {
+    channel_url
+  }
+}
