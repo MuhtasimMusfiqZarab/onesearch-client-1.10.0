@@ -5,7 +5,7 @@ interface Props {}
 
 const countDown = () => {
   //get difference in miliseconds
-  const countDate = new Date('Jan 10, 2022 00:00:00').getTime();
+  const countDate = new Date('Jan 31, 2022 00:00:00').getTime();
   const now = new Date().getTime();
   const gap = countDate - now;
 
