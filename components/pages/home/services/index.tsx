@@ -17,7 +17,7 @@ export default function Services() {
           isDark={true}
           buttonText="Get Started"
           buttonClasses="btn btn_outline_secondary"
-          buttonUrl="/dashboard"
+          buttonUrl="/dashboard/search/youtube"
         />
       </div>
       <div className={styles.services_wrap__inner}>
@@ -34,6 +34,7 @@ export default function Services() {
             isButton={true}
             buttonText="Go to Dashboard"
             buttonClasses="btn btn_outline_secondary"
+            buttonUrl="/dashboard/search/youtube"
           />
 
           <div id="features" className={`${styles.features_wrap__thumbnail}`}>
