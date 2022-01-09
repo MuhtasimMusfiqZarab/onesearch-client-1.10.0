@@ -17,6 +17,7 @@ export default function Index() {
               isButton={true}
               buttonText="Get Started"
               buttonClasses="btn btn_fill_primary"
+              buttonUrl="/dashboard"
             />
           </div>
           <div className={styles.webIcon}>
