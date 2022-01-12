@@ -2,6 +2,9 @@ import React, { Fragment, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
 import { useRouter } from 'next/router';
+import { useQuery } from '@apollo/client';
+
+import GET_CHANNEL from '../../../../../pages/api/query/youtube/get-channel.gql';
 import {
   Copy,
   External,
@@ -17,6 +20,12 @@ export default function Channel() {
   const router = useRouter();
   const channelId: string = router.query['id'] as string;
 
+  const { data, error, loading, refetch } = useQuery(GET_CHANNEL, {
+    variables: {
+      id: channelId
+    }
+  });
+
   return (
     <div>
       <Head>
@@ -27,7 +36,7 @@ export default function Channel() {
       <DashboardLayout>
         <div className={styles.user_infos}>
           <div className={styles.user_infos_header}>
-            <h1>Luzysonido hollander</h1>
+            <h1>{data?.channel?.channel_name}</h1>
 
             <div className={styles.controller_list}>
               <a href="#" className={styles.wishlist}>
