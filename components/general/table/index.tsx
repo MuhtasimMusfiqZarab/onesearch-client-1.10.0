@@ -2,6 +2,8 @@ import React, { FC, useState } from 'react';
 import { Lock, DownArrow } from 'components/_icons';
 import { Controller } from './table-controller';
 import { Loader } from 'components/general';
+import Link from 'next/link';
+
 import styles from './styles.module.scss';
 
 interface Props {
@@ -48,6 +50,7 @@ export const Table: FC<Props> = ({
     setToggleBtn((toggleBtn = !toggleBtn));
   };
 
+  //only while loading
   const renderLoader = (total: number) => {
     return dummyArray.map((item, index) => {
       return (
@@ -128,7 +131,12 @@ export const Table: FC<Props> = ({
                   )}
                   {Object.keys(headersEnums).map((key) => (
                     <td key={key} className={styles.td}>
-                      {item[key] ?? '-'}
+                      {key === 'channel_name' && (
+                        <Link href={`/dashboard/search/youtube/${item.id}`}>
+                          <a>{item[key] ?? '-'}</a>
+                        </Link>
+                      )}
+                      {(key !== 'channel_name' && item[key]) ?? '-'}
                     </td>
                   ))}
                   <td className={styles.td}>
