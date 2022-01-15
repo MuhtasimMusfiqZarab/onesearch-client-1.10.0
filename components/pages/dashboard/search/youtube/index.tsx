@@ -114,30 +114,12 @@ export default function Index() {
               isSearch={true}
               isInline={true}
             />
-
-            <Dropdown
-              title="Year"
-              setItem={setLocation}
-              setOffset={setOffset}
-              items={countries}
-              isSearch={true}
-              isInline={true}
-            />
-
-            <Dropdown
-              title="Subscriber"
-              setItem={setLocation}
-              setOffset={setOffset}
-              items={countries}
-              isSearch={true}
-              isInline={true}
-            />
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <button type="submit" className="btn_fill_secondary">
               Apply Filter
             </button>
-          </div>
+          </div> */}
         </div>
       </Modal>
     </>
