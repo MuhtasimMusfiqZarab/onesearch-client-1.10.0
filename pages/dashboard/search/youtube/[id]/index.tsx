@@ -53,7 +53,7 @@ export default function Channel() {
               </a>
             </div>
           </div>
-          <Channel.BasicInfo />
+          {data?.channel && <Channel.BasicInfo data={data.channel} />}
           <Channel.AnvancedInfo />
 
           <div className={styles.update}>
@@ -77,7 +77,8 @@ export default function Channel() {
   );
 }
 
-Channel.BasicInfo = ({}) => {
+Channel.BasicInfo = (data: any) => {
+  console.log('this is data', data.data);
   return (
     <>
       <div className={styles.basic__info}>
@@ -85,11 +86,11 @@ Channel.BasicInfo = ({}) => {
         <ul>
           <li>
             <span className={styles.info__title}>Channel name:</span>
-            luzysonido hollander
+            {data.data.channel_name}
           </li>
           <li>
             <span className={styles.info__title}>Subscribers:</span>
-            213,568
+            {data.data.subscribers}
           </li>
           <li>
             <span className={styles.info__title}>Category:</span>
@@ -97,7 +98,7 @@ Channel.BasicInfo = ({}) => {
           </li>
           <li>
             <span className={styles.info__title}>Views:</span>
-            1,520,301
+            {data.data.views ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Location:</span>
@@ -124,7 +125,8 @@ Channel.AnvancedInfo = ({}) => {
   return (
     <div className={styles.advanced__info}>
       <h3>Advanced information</h3>
-      <ul>
+      <p>Coming Soon!</p>
+      {/* <ul>
         <li>
           <span className={styles.info__title}>
             Channel link <span>:</span>
@@ -258,7 +260,7 @@ Channel.AnvancedInfo = ({}) => {
             </div>
           </div>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 };

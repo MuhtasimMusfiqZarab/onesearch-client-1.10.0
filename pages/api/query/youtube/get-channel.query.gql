@@ -1,4 +1,4 @@
-query channel($id: String!) {
+query GET_CHANNEL($id: String!) {
   channel(id: $id) {
     id
     channel_name
