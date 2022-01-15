@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Footer from 'components/shared/footer';
 import styles from './styles.module.scss';
-
 import { MessengerChat } from 'components/general/custom-chat';
 
 const Support = () => {
@@ -15,6 +14,9 @@ const Support = () => {
 
       <div className={styles.privacy_policy}>
         <div className={styles.privacy_policy__content}>
+          <a href="/" className={styles.go_to_home}>
+            Go to Home
+          </a>
           <h1>Support</h1>
           <p>
             Please contact us to know all about the Site and all products and services offered by
