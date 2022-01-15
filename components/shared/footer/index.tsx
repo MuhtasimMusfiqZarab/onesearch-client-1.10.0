@@ -42,6 +42,9 @@ export default function Footer() {
                 <a>Terms of Service</a>
               </Link>
             </li>
+            <li>
+              <a href="/support">Support</a>
+            </li>
           </ul>
         </div>
 
