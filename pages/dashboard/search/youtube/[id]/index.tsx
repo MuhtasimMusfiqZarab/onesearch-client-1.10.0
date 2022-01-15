@@ -53,7 +53,7 @@ export default function Channel() {
               </a>
             </div>
           </div>
-          {data?.channel && <Channel.BasicInfo data={data.channel} />}
+          <Channel.BasicInfo data={data?.channel} />
           <Channel.AnvancedInfo />
 
           <div className={styles.update}>
@@ -85,31 +85,31 @@ Channel.BasicInfo = (data: any) => {
         <ul>
           <li>
             <span className={styles.info__title}>Channel name:</span>
-            {data.data.channel_name}
+            {data?.data?.channel_name}
           </li>
           <li>
             <span className={styles.info__title}>Subscribers:</span>
-            {data.data.subscribers ?? 'null'}
+            {data?.data?.subscribers ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Category:</span>
-            {data.data.socialblade_category ?? 'null'}
+            {data?.data?.socialblade_category ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Views:</span>
-            {data.data.views ?? 'null'}
+            {data?.data?.views ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Location:</span>
-            {data.data.location ?? 'null'}
+            {data?.data?.location ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Joining Date:</span>
-            {data.data.joined ?? 'null'}
+            {data?.data?.joined ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Description:</span>
-            {data.data.description ?? 'null'}
+            {data?.data?.description ?? 'null'}
           </li>
         </ul>
       </div>
