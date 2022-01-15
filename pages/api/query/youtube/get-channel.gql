@@ -1,0 +1,5 @@
+query channel($id: String!) {
+  channel(id: $id) {
+    channel_name
+  }
+}
