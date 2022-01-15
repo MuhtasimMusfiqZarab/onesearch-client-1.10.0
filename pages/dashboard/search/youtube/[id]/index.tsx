@@ -78,7 +78,6 @@ export default function Channel() {
 }
 
 Channel.BasicInfo = (data: any) => {
-  console.log('this is data', data.data);
   return (
     <>
       <div className={styles.basic__info}>
@@ -90,11 +89,11 @@ Channel.BasicInfo = (data: any) => {
           </li>
           <li>
             <span className={styles.info__title}>Subscribers:</span>
-            {data.data.subscribers}
+            {data.data.subscribers ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Category:</span>
-            Technology
+            {data.data.socialblade_category ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Views:</span>
@@ -102,18 +101,15 @@ Channel.BasicInfo = (data: any) => {
           </li>
           <li>
             <span className={styles.info__title}>Location:</span>
-            California, USA
+            {data.data.location ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Joining Date:</span>
-            03/09/2015
+            {data.data.joined ?? 'null'}
           </li>
           <li>
             <span className={styles.info__title}>Description:</span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in turpis tempor,
-            bibendum erat vel, dignissim eros. In blandit, arcu in rutrum commodo, mi justo
-            vulputate nulla, vel fringilla augue nulla a lacus. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nulla facilisi. Donec ut libero quis mi tincidunt tempus.
+            {data.data.description ?? 'null'}
           </li>
         </ul>
       </div>
