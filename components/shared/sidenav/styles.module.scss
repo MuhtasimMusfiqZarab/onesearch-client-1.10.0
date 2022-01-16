@@ -158,6 +158,17 @@
     &__list {
       width: calc(100% - 18%);
       overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        height: 6px;
+        // background: $os-primary;
+        border-radius: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $os-primary;
+        border-radius: 0.5rem;
+      }
     }
 
     &__item {
