@@ -11,7 +11,10 @@ export const Slider: FC<Props> = ({ minValue, maxValue, currentValue }: Props): 
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <input type="range" min={minValue} max={maxValue} value={currentValue} id="slider-1" />
+        <div className={styles.title}>Subscribers</div>
+        <div className={styles.slider_track}></div>
+        <input type="range" min={minValue} max={maxValue} value="30" id="slider-1" />
+        <input type="range" min={minValue} max={maxValue} value="70" id="slider-2" />
       </div>
     </div>
   );

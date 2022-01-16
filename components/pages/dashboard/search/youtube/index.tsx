@@ -64,9 +64,7 @@ export default function Index() {
                   isSearch={true}
                 />
               </div>
-              {/* <div className={styles.filterItems}>
-              <Slider />
-            </div> */}
+              <div className={styles.filterItems}>{/* <Slider /> */}</div>
             </div>
 
             <div className={styles.container}>
