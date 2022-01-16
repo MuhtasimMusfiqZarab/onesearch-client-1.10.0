@@ -31,6 +31,7 @@ const Support = () => {
           </p>
 
           <h3> Mailing Address </h3>
+          <div> ONESEARCH.IO LTD </div>
           <div> 63/66 Hatton Garden </div>
           <div> Fifth Floor, Suite 23 </div>
           <div> London </div>
