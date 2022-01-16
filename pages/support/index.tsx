@@ -3,6 +3,9 @@ import Footer from 'components/shared/footer';
 import styles from './styles.module.scss';
 import { MessengerChat } from 'components/general/custom-chat';
 
+import dynamic from 'next/dynamic';
+const Map = dynamic(() => import('./map'), { ssr: false });
+
 const Support = () => {
   return (
     <>
@@ -40,6 +43,7 @@ const Support = () => {
         </div>
       </div>
       <MessengerChat chatSupport={true} />
+
       <Footer />
     </>
   );

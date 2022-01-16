@@ -401,6 +401,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@react-leaflet/core@^1.1.1":
+  "integrity" "sha512-7PGLWa9MZ5x/cWy8EH2VzI4T8q5WpuHbixzCDXqixP/WyqwIrg5NDUPgYuFnB4IEIZF+6nA265mYzswFo/h1Pw=="
+  "resolved" "https://registry.npmjs.org/@react-leaflet/core/-/core-1.1.1.tgz"
+  "version" "1.1.1"
+
 "@rushstack/eslint-patch@^1.0.6":
   "integrity" "sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA=="
   "resolved" "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz"
@@ -439,6 +444,11 @@
   "resolved" "https://registry.npmjs.org/@types/estree/-/estree-0.0.50.tgz"
   "version" "0.0.50"
 
+"@types/geojson@*":
+  "integrity" "sha512-1rkryxURpr6aWP7R786/UQOkJ3PcpQiWkAXBmdWc7ryFWqN6a4xfK7BtjXvFBKO9LjQ+MWQSWxYeZX1OApnArA=="
+  "resolved" "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.8.tgz"
+  "version" "7946.0.8"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8":
   "integrity" "sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ=="
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.9.tgz"
@@ -448,6 +458,13 @@
   "integrity" "sha1-7ihweulOEdK4J7y+UnC86n8+ce4="
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   "version" "0.0.29"
+
+"@types/leaflet@^1.7.8":
+  "integrity" "sha512-prZwhmUznkwTYCTZVGTR4U1GzgPP3PAWYYQ3wDgVkIoiuQTheWoycsXx4Rz9ARYhlDTl0Ycd8lvhH2/rNSkqIg=="
+  "resolved" "https://registry.npmjs.org/@types/leaflet/-/leaflet-1.7.8.tgz"
+  "version" "1.7.8"
+  dependencies:
+    "@types/geojson" "*"
 
 "@types/node@*", "@types/node@^16.7.13":
   "integrity" "sha512-pLUPDn+YG3FYEt/pHI74HmnJOWzeR+tOIQzUx93pi9M7D8OE7PSLr97HboXwk5F+JS+TLtWuzCOW97AHjmOXXA=="
@@ -2334,6 +2351,11 @@
   dependencies:
     "language-subtag-registry" "~0.3.2"
 
+"leaflet@^1.7.1":
+  "integrity" "sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw=="
+  "resolved" "https://registry.npmjs.org/leaflet/-/leaflet-1.7.1.tgz"
+  "version" "1.7.1"
+
 "levn@^0.4.1":
   "integrity" "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ=="
   "resolved" "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz"
@@ -2943,7 +2965,7 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
-"react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^16.3.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0":
+"react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^16.3.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -2970,6 +2992,13 @@
   "integrity" "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
+
+"react-leaflet@^3.2.5":
+  "integrity" "sha512-Z3KZ+4SijsRbbrt2I1a3ZDY6+V6Pm91eYTdxTN18G6IOkFRsJo1BuSPLFnyFrlF3WDjQFPEcTPkEgD1VEeAoBg=="
+  "resolved" "https://registry.npmjs.org/react-leaflet/-/react-leaflet-3.2.5.tgz"
+  "version" "3.2.5"
+  dependencies:
+    "@react-leaflet/core" "^1.1.1"
 
 "react-papaparse@^3.18.1":
   "integrity" "sha512-GvYRoJmlhlK+ZHqCacuKPVw3b26qkUZ6OgQo2iZOWepHpUfw7+cIGY1hxucDGXjMgBa7yly7XTVhX4az/KC2Lw=="
@@ -3011,7 +3040,7 @@
     "prop-types" "^15.6.0"
     "typed.js" "^2.0.6"
 
-"react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.3.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@^17.0.2 || ^18.0.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@15.x || 16.x", "react@17.0.2":
+"react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.3.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.1", "react@^17.0.2", "react@^17.0.2 || ^18.0.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@15.x || 16.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
