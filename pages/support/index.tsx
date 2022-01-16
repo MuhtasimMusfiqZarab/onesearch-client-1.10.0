@@ -4,7 +4,8 @@ import styles from './styles.module.scss';
 import { MessengerChat } from 'components/general/custom-chat';
 
 import dynamic from 'next/dynamic';
-const Map = dynamic(() => import('./map'), { ssr: false });
+// const Map = dynamic(() => import('./map'), { ssr: false });
+import Map from './map';
 
 const Support = () => {
   return (
@@ -40,10 +41,10 @@ const Support = () => {
           <div> London </div>
           <div> EC1N 8LE </div>
           <div> United Kingdom </div>
+          <Map />
         </div>
       </div>
       <MessengerChat chatSupport={true} />
-
       <Footer />
     </>
   );
