@@ -52,6 +52,14 @@ export const requestNavElements: navElement[] = [
   }
 ];
 
+export const creditNavElements: navElement[] = [
+  {
+    title: 'Add',
+    icon: icons.YoutubeIcon({}),
+    route: '/dashboard/credit/add'
+  }
+];
+
 export const adminNavElements: navElement[] = [
   {
     title: 'Users',

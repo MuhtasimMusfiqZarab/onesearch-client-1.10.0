@@ -1,6 +1,6 @@
-import Head from "next/head";
-import BaseLayout from "components/layouts/dashboard";
-import UnderConstruction from "components/pages/under-construction";
+import Head from 'next/head';
+import BaseLayout from 'components/layouts/dashboard';
+import CreditPage from 'components/pages/dashboard/credit';
 
 export default function Index() {
   return (
@@ -11,7 +11,7 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <BaseLayout>
-        <UnderConstruction />
+        <CreditPage />
       </BaseLayout>
     </>
   );

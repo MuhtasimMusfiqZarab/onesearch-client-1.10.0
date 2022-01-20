@@ -44,6 +44,11 @@ module.exports = {
         permanent: true
       },
       {
+        source: '/dashboard/credit',
+        destination: '/dashboard/credit/add',
+        permanent: true
+      },
+      {
         source: '/dashboard/settings',
         destination: '/dashboard/settings/profile',
         permanent: true

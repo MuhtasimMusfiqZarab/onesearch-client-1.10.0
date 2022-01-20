@@ -42,8 +42,9 @@ const sideNavElements: Props[] = [
   {
     title: 'Credit',
     icon: icons.CreditIcon({}),
-    route: '/dashboard/credit',
-    hasChild: false
+    route: '/dashboard/credit/add',
+    hasChild: true,
+    children: ['add']
   },
   {
     title: 'Download',
