@@ -37,7 +37,7 @@ export default function Settings() {
           <div className={styles.profile__additional}>
             <h4>Additional Information</h4>
             <div className={styles.profile__locators}>
-              <AutofillInput label="Country" />
+              <AutofillInput label="Country" items={[]} />
               <div>
                 <Locator />
               </div>
@@ -49,7 +49,7 @@ export default function Settings() {
             </span>
 
             <div className={styles.profile__locators}>
-              <AutofillInput label="Phone Number" />
+              <AutofillInput label="Phone Number" items={[]} />
             </div>
 
             <span className={styles.profile__warning}>
