@@ -1,5 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import styles from './style.module.scss';
+import { ArrowLeft, ArrowRight } from 'components/_icons';
 
 interface Props {
   offset: number;
@@ -41,17 +42,7 @@ export const Pagination: FC<Props> = ({ offset, setOffset, total }): JSX.Element
           <li
             className={`${styles.pagination__btn} ${styles.pagination__prev}`}
             onClick={reduceOffset}>
-            <svg
-              width="8"
-              height="15"
-              viewBox="0 0 8 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M8 13.9203L1.74407 7.49988L8 1.07972L7.30752 0L0 7.49988L7.30752 15L8 13.9203Z"
-                fill="#49789B"
-              />
-            </svg>
+            <ArrowLeft color="#49789b" />
             Prev
           </li>
 
@@ -61,18 +52,8 @@ export const Pagination: FC<Props> = ({ offset, setOffset, total }): JSX.Element
           <li
             className={`${styles.pagination__btn} ${styles.pagination__next}`}
             onClick={increaseoffset}>
-            Next{' '}
-            <svg
-              width="8"
-              height="15"
-              viewBox="0 0 8 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M-1.21695e-06 1.07973L6.25593 7.50012L-9.43925e-08 13.9203L0.692485 15L8 7.50012L0.692484 6.38843e-07L-1.21695e-06 1.07973Z"
-                fill="#49789B"
-              />
-            </svg>
+            Next
+            <ArrowRight color="#49789b" />
           </li>
         </ul>
       )}
