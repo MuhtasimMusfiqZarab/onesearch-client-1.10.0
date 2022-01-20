@@ -38,7 +38,7 @@
 
     &:hover:not(.thead tr),
     &.active_row {
-      background: $clr-gray350;
+      background: $clr-gray350 !important;
       cursor: pointer;
     }
 
