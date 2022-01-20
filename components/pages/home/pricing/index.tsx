@@ -2,7 +2,11 @@ import { Heading } from '../heading';
 import SlickSlider from 'components/general/slick';
 import styles from './styles.module.scss';
 
-export default function Pricing() {
+interface Props {
+  hasHeading?: boolean;
+}
+
+export default function Pricing({ hasHeading }: Props) {
   const slickSettings = {
     infinite: false,
     speed: 500,
@@ -30,7 +34,7 @@ export default function Pricing() {
   return (
     <div className={styles.pricing_wrap}>
       <div className={styles.pricing_wrap__inner}>
-        <Heading title="Pricing" isUnderline={true} />
+        {hasHeading && <Heading title="Pricing" isUnderline={true} />}
 
         {/* all the cards wrapper  */}
         <div className={styles.wrapper}>

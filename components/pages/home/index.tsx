@@ -19,7 +19,7 @@ export default function Home() {
       <CurrentUserProvider>
         <Reviews />
       </CurrentUserProvider>
-      <Pricing />
+      <Pricing hasHeading={true} />
       <Footer />
       <BackToTop support={true} />
     </div>

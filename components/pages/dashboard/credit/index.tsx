@@ -19,7 +19,7 @@ export default function Index() {
     <>
       <div className={styles.request_container}>
         <Tab items={creditNavElements} />
-        {currentUser ? <Pricing /> : <div>Please Login to get access</div>}
+        {currentUser ? <Pricing hasHeading={false} /> : <div>Please Login to get access</div>}
       </div>
     </>
   );
