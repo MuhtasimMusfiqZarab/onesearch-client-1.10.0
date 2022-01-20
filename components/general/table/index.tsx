@@ -131,12 +131,10 @@ export const Table: FC<Props> = ({
                   )}
                   {Object.keys(headersEnums).map((key) => (
                     <td key={key} className={styles.td}>
-                      {key === 'channel_name' && (
-                        <Link href={`/dashboard/search/youtube/${item.id}`}>
-                          <a>{item[key] ?? '-'}</a>
-                        </Link>
-                      )}
-                      {(key !== 'channel_name' && item[key]) ?? '-'}
+                      <div className={styles.tr_info}>{headersEnums[key]}</div>
+                      <Link href={`/dashboard/search/youtube/${item.id}`}>
+                        <a>{item[key] ?? '-'}</a>
+                      </Link>
                     </td>
                   ))}
                   <td className={styles.td}>
