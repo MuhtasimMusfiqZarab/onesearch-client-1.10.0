@@ -9,3 +9,4 @@ export { Table } from './table';
 export { Slider } from './slider';
 export { CountdownTimer } from './coundown-timer';
 export { CsvDrop } from './csv-drop';
+export { Switch } from './switch';
