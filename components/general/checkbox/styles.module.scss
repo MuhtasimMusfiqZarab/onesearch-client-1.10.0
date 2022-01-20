@@ -1,0 +1,32 @@
+.container {
+  padding: 0.5rem;
+
+  input[type='checkbox'] {
+    display: none;
+
+    &:checked {
+      + .lable::before {
+        transform: scale(1) rotateZ(0deg);
+      }
+    }
+  }
+
+  .lable {
+    position: relative;
+
+    &::before {
+      content: '';
+      background: url(../../../public/wave.svg);
+      background-position: center;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: -44px;
+      top: -8px;
+
+      transform: scale(0) rotateZ(180deg);
+      transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+    }
+  }
+}

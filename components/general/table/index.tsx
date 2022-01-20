@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Lock, DownArrow } from 'components/_icons';
 import { Controller } from './table-controller';
-import { Loader } from 'components/general';
+import { Loader, Checkbox } from 'components/general';
 import Link from 'next/link';
 
 import styles from './styles.module.scss';
@@ -96,6 +96,7 @@ export const Table: FC<Props> = ({
                     onChange={handleSelectAll}
                     checked={isCheckAll}
                   />
+                  {/* <Checkbox /> */}
                 </th>
               )}
 
