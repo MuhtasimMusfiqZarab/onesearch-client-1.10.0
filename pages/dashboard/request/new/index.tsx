@@ -2,6 +2,9 @@ import Head from 'next/head';
 import BaseLayout from 'components/layouts/dashboard';
 import RequestPage from 'components/pages/dashboard/request';
 
+import { CountriesProvider } from 'components/_context/youtube/countries';
+import { CategoriesProvider } from 'components/_context/youtube/categories';
+
 export default function Index() {
   return (
     <>
@@ -11,7 +14,11 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <BaseLayout>
-        <RequestPage />
+        <CategoriesProvider>
+          <CountriesProvider>
+            <RequestPage />
+          </CountriesProvider>
+        </CategoriesProvider>
       </BaseLayout>
     </>
   );

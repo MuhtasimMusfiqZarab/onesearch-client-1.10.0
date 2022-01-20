@@ -9,17 +9,6 @@ import { useChannels, useCountries, useCategories } from 'components/_context/yo
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
-  const {
-    channels,
-    setOffset,
-    setCategory,
-    offset,
-    setLocation,
-    loading,
-    total,
-    searchText,
-    setSearchText
-  } = useChannels();
   const { countries } = useCountries();
   const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
@@ -32,7 +21,7 @@ export default function Index() {
           <>
             <div className={styles.request_container__inner}>
               <div className={styles.request_container_channel}>
-                <AutofillInput label="Channel Name" />
+                <AutofillInput label="Channel Name" items={[]} />
 
                 <button className={styles.reset_form}>
                   <Reset />
@@ -41,11 +30,11 @@ export default function Index() {
               </div>
 
               <div className={styles.filterItems}>
-                <AutofillInput label="Category" />
+                <AutofillInput label="Category" items={categories} />
 
-                <AutofillInput label="Country" />
+                <AutofillInput label="Country" items={countries} />
 
-                <AutofillInput label="Year" />
+                {/* <AutofillInput label="Year" /> */}
               </div>
 
               <div className={styles.notes}>
