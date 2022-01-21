@@ -18,7 +18,7 @@ export const SearchBox: FC<Props> = ({ searchText, setSearchText }: Props): JSX.
           type="text"
           className={styles.searchInput}
           placeholder="Channel Name"
-          value={searchText}
+          value={searchText ?? ''}
           onChange={(e) => setSearchText(e.target.value)}
         />
       </div>
