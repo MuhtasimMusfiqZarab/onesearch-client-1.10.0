@@ -5,7 +5,6 @@ query channel($id: String!) {
     joined
     views
     subscribers
-    description
     location
     socialblade_category
   }

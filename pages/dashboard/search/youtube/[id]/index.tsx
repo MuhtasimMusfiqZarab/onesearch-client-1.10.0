@@ -107,10 +107,6 @@ Channel.BasicInfo = (data: any) => {
             <span className={styles.info__title}>Joining Date:</span>
             {data?.data?.joined ?? 'null'}
           </li>
-          <li>
-            <span className={styles.info__title}>Description:</span>
-            {data?.data?.description ?? 'null'}
-          </li>
         </ul>
       </div>
     </>
