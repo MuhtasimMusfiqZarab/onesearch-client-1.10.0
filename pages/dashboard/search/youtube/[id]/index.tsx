@@ -117,7 +117,10 @@ Channel.AnvancedInfo = ({}) => {
   return (
     <div className={styles.advanced__info}>
       <h3>Advanced information</h3>
-      <p>Coming Soon!</p>
+      <p>
+        Coming Soon! .... Contact Email , Channel URL, Description, social media links (facebook,
+        instagram, twitter,pinterest and many more )
+      </p>
       {/* <ul>
         <li>
           <span className={styles.info__title}>
