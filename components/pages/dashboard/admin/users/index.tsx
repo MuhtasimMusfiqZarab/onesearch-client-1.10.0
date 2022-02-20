@@ -66,7 +66,11 @@ export default function Index() {
               <div className={styles.container}>
                 <div className={styles.container__table}>
                   {getAllUsers?.users?.length > 0 && (
-                    <Table items={getAllUsers?.users} headersEnums={UsersTableEnum} />
+                    <Table
+                      items={getAllUsers?.users}
+                      headersEnums={UsersTableEnum}
+                      hasController={false}
+                    />
                   )}
                   {loadingAllUsers && (
                     <Table items={getAllUsers?.users} headersEnums={UsersTableEnum} loading />
