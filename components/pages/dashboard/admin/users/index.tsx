@@ -2,30 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
-import { YoutubeTableEnum } from 'components/utils/enum';
+import { UsersTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useAllUsers } from 'components/_context/user/all-users';
-import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
 import { adminNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const { getAllUsers, loading: loadingAllUsers } = useAllUsers();
-  const {
-    channels,
-    setOffset,
-    setCategory,
-    offset,
-    setLocation,
-    loading,
-    total,
-    searchText,
-    setSearchText
-  } = useChannels();
-  const { countries } = useCountries();
-  const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -43,7 +29,7 @@ export default function Index() {
             <div className={styles.filterContainer}>
               <div className={styles.filterContainer_inner}>
                 <div className={styles.search_wrap}>
-                  <SearchBox searchText={searchText} setSearchText={setSearchText} />
+                  {/* <SearchBox searchText={searchText} setSearchText={setSearchText} /> */}
 
                   <button className={styles.reset_form}>
                     <Reset />
@@ -55,7 +41,7 @@ export default function Index() {
                   </button>
                 </div>
 
-                <div className={styles.filterItems}>
+                {/* <div className={styles.filterItems}>
                   <Dropdown
                     title="Category"
                     setItem={setCategory}
@@ -71,24 +57,26 @@ export default function Index() {
                     items={countries}
                     isSearch={true}
                   />
-                </div>
+                </div> */}
                 {/* <div className={styles.filterItems}>
-              <Slider />
-            </div> */}
+                  <Slider />
+                </div> */}
               </div>
 
               <div className={styles.container}>
                 <div className={styles.container__table}>
-                  {channels?.length > 0 && (
-                    <Table items={channels} headersEnums={YoutubeTableEnum} />
+                  {getAllUsers?.users?.length > 0 && (
+                    <Table items={getAllUsers?.users} headersEnums={UsersTableEnum} />
                   )}
-                  {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}
-                  {channels?.length === 0 && <div>No Data Found</div>}
+                  {loadingAllUsers && (
+                    <Table items={getAllUsers?.users} headersEnums={UsersTableEnum} loading />
+                  )}
+                  {getAllUsers?.users?.length === 0 && <div>No User Data Found</div>}
                 </div>
 
-                <div className={styles.container__pagination}>
+                {/* <div className={styles.container__pagination}>
                   <Pagination total={total} setOffset={setOffset} offset={offset} />
-                </div>
+                </div> */}
               </div>
             </div>
           </>
@@ -101,13 +89,13 @@ export default function Index() {
       <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
         <div className={styles.edit_filters}>
           <div className={styles.search_wrap}>
-            <SearchBox searchText={searchText} setSearchText={setSearchText} />
+            {/* <SearchBox searchText={searchText} setSearchText={setSearchText} /> */}
             <button className={`${styles.reset_form} ${styles.reset_form_modal}`}>
               <Reset />
             </button>
           </div>
           <h3>Edit Filters</h3>
-          <div className={styles.filterItems}>
+          {/* <div className={styles.filterItems}>
             <Dropdown
               title="Category"
               setItem={setCategory}
@@ -143,7 +131,7 @@ export default function Index() {
               isSearch={true}
               isInline={true}
             />
-          </div>
+          </div> */}
           <div className="text-center">
             <button type="submit" className="btn_fill_secondary">
               Apply Filter

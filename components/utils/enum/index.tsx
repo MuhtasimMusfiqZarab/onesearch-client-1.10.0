@@ -4,3 +4,10 @@ export enum YoutubeTableEnum {
   subscribers = 'Subscribers',
   views = 'Views'
 }
+
+export enum UsersTableEnum {
+  full_name = 'Full Name',
+  job_role = 'Job Role',
+  location = 'Location',
+  email = 'Email'
+}
