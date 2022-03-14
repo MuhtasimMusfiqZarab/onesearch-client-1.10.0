@@ -6,8 +6,8 @@ export enum YoutubeTableEnum {
 }
 
 export enum UsersTableEnum {
-  full_name = 'Full Name',
-  job_role = 'Job Role',
-  location = 'Location',
+  firstName = 'First Name',
+  lastName = 'Last Name',
+  accessRole = 'Job Role',
   email = 'Email'
 }
