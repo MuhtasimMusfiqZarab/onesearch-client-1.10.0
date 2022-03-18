@@ -5,6 +5,13 @@ export enum YoutubeTableEnum {
   views = 'Views'
 }
 
+export enum LinkedinTableEnum {
+  fullName = 'Profile Name',
+  title = 'Job Title',
+  company = 'Company',
+  location = 'Location'
+}
+
 export enum UsersTableEnum {
   firstName = 'First Name',
   lastName = 'Last Name',

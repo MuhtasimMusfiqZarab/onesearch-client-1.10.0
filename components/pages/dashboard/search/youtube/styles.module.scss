@@ -54,7 +54,7 @@
     display: flex;
     width: 100%;
     gap: 25px;
-    margin-bottom: 20px;
+    margin: 1rem 0rem;
 
     @media (max-width: 767px) {
       flex-direction: column;

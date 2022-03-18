@@ -1,9 +1,9 @@
-import Head from "next/head";
-import DashboardLayout from "components/layouts/dashboard";
-import YoutubeTable from "components/pages/dashboard/search/youtube";
-import { ChannelsProvider } from "components/_context/youtube/channels";
-import { CountriesProvider } from "components/_context/youtube/countries";
-import { CategoriesProvider } from "components/_context/youtube/categories";
+import Head from 'next/head';
+import DashboardLayout from 'components/layouts/dashboard';
+import YoutubeTab from 'components/pages/dashboard/search/youtube';
+import { ChannelsProvider } from 'components/_context/youtube/channels';
+import { CountriesProvider } from 'components/_context/youtube/countries';
+import { CategoriesProvider } from 'components/_context/youtube/categories';
 
 export default function Index() {
   return (
@@ -17,7 +17,7 @@ export default function Index() {
         <ChannelsProvider>
           <CountriesProvider>
             <CategoriesProvider>
-              <YoutubeTable />
+              <YoutubeTab />
             </CategoriesProvider>
           </CountriesProvider>
         </ChannelsProvider>

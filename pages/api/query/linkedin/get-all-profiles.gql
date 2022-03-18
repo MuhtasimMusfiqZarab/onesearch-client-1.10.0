@@ -5,6 +5,8 @@ query GET_LINKEDIN_PROFILES($data: GetLinkedinProfileInput!) {
       id
       title
       fullName
+      company
+      location
       createdAt
     }
   }
