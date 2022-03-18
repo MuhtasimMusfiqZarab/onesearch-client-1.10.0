@@ -1,0 +1,11 @@
+query GET_LINKEDIN_PROFILES($data: GetLinkedinProfileInput!) {
+  getLinkedinProfiles(data: $data) {
+    totalCount
+    profiles {
+      id
+      title
+      fullName
+      createdAt
+    }
+  }
+}
