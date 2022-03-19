@@ -12,6 +12,7 @@ interface Props {
   hasController?: boolean;
   hasCheckbox?: boolean;
   loading?: boolean;
+  parentRoute?: string;
 }
 
 export const Table: FC<Props> = ({
@@ -19,7 +20,8 @@ export const Table: FC<Props> = ({
   headersEnums,
   hasController = true,
   hasCheckbox = true,
-  loading = false
+  loading = false,
+  parentRoute
 }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
 
@@ -133,7 +135,7 @@ export const Table: FC<Props> = ({
                   {Object.keys(headersEnums).map((key) => (
                     <td key={key} className={styles.td}>
                       <div className={styles.tr_info}>{headersEnums[key]}</div>
-                      <Link href={`/dashboard/search/youtube/${item.id}`}>
+                      <Link href={`${parentRoute}/${item.id}`}>
                         <a>{item[key] ?? '-'}</a>
                       </Link>
                     </td>

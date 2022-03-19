@@ -30,7 +30,7 @@ export default function Channel() {
     <div>
       <Head>
         <title>{channelId}</title>
-        <meta property="og:channelId" content="channelId" key="channelId" />
+        <meta property="og:profileId" content="profileId" key="profileId" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <DashboardLayout>
@@ -57,12 +57,10 @@ export default function Channel() {
           <Channel.AnvancedInfo />
 
           <div className={styles.update}>
-            <span className={styles.update__last}>
-              Last Updated: {new Date(data?.channel?.updatedAt).toDateString()}
-            </span>
-            {/* <a href="#" className="btn">
+            <span className={styles.update__last}>Last Updated on 24th January, 2021</span>
+            <a href="#" className="btn">
               Request for Update
-            </a> */}
+            </a>
           </div>
 
           <div className={styles.paginations}>

@@ -7,5 +7,6 @@ query channel($id: String!) {
     subscribers
     location
     socialblade_category
+    updatedAt
   }
 }

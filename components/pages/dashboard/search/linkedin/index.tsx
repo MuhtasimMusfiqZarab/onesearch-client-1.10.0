@@ -77,7 +77,11 @@ export default function Index() {
             <div className={styles.container}>
               <div className={styles.container__table}>
                 {profiles?.length > 0 && (
-                  <Table items={profiles} headersEnums={LinkedinTableEnum} />
+                  <Table
+                    items={profiles}
+                    headersEnums={LinkedinTableEnum}
+                    parentRoute="/dashboard/search/linkedin"
+                  />
                 )}
                 {loading && <Table items={profiles} headersEnums={LinkedinTableEnum} loading />}
                 {profiles?.length === 0 && <div>No Data Found</div>}

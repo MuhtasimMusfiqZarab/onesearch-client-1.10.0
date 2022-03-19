@@ -69,7 +69,13 @@ export default function Index() {
 
             <div className={styles.container}>
               <div className={styles.container__table}>
-                {channels?.length > 0 && <Table items={channels} headersEnums={YoutubeTableEnum} />}
+                {channels?.length > 0 && (
+                  <Table
+                    items={channels}
+                    headersEnums={YoutubeTableEnum}
+                    parentRoute="/dashboard/search/youtube"
+                  />
+                )}
                 {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}
                 {channels?.length === 0 && <div>No Data Found</div>}
               </div>
