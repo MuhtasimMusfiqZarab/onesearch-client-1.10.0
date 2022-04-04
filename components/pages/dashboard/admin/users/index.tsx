@@ -14,11 +14,11 @@ export default function Index() {
   const { getAllUsers, loading: loadingAllUsers } = useAllUsers();
   let [modalIsOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (getAllUsers) {
-      console.log('Here are all the users', getAllUsers);
-    }
-  }, [getAllUsers]);
+  // useEffect(() => {
+  //   if (getAllUsers) {
+  //     console.log('Here are all the users', getAllUsers);
+  //   }
+  // }, [getAllUsers]);
 
   return (
     <>
