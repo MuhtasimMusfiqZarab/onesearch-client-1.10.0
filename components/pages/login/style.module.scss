@@ -148,7 +148,13 @@
       }
 
       input[type='checkbox'] {
-        margin-top: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+        // top: 0;
+        // left: 0;
+        height: 1rem;
+        width: 1rem;
+        background-color: lightgray;
       }
     }
 
