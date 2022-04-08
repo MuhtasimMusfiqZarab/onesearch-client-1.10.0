@@ -25,8 +25,8 @@ const Login: FC<Props> = (): JSX.Element => {
     fetch(`/payment`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
-        // authorization: 'Bearer ' + window.localStorage.getItem('jwtToken')
+        'Content-Type': 'application/json',
+        authorization: 'Bearer ' + window.localStorage.getItem('jwtToken')
       },
       body: JSON.stringify({
         items: [
