@@ -65,5 +65,10 @@ export const adminNavElements: navElement[] = [
     title: 'Users',
     icon: icons.YoutubeIcon({}),
     route: '/dashboard/admin/users'
+  },
+  {
+    title: 'Upload Youtube',
+    icon: icons.YoutubeIcon({}),
+    route: '/dashboard/admin/upload'
   }
 ];
