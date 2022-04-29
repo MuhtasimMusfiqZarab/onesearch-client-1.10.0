@@ -13,6 +13,7 @@ export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const { getAllUsers, loading: loadingAllUsers } = useAllUsers();
   let [modalIsOpen, setIsOpen] = useState(false);
+  let [searchText, setSearchText] = useState();
 
   return (
     <>
@@ -23,7 +24,7 @@ export default function Index() {
             <div className={styles.filterContainer}>
               <div className={styles.filterContainer_inner}>
                 <div className={styles.search_wrap}>
-                  {/* <SearchBox searchText={searchText} setSearchText={setSearchText} /> */}
+                  <SearchBox searchText={searchText} setSearchText={setSearchText} />
 
                   <button className={styles.reset_form}>
                     <Reset />
