@@ -1,5 +1,5 @@
 //this document was added for tracking google analytics
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   render() {
@@ -12,10 +12,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-4J4WYW0YZ5"
-          ></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J4WYW0YZ5"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -24,7 +21,7 @@ class MyDocument extends Document {
   gtag('js', new Date());
 
   gtag('config', 'G-4J4WYW0YZ5');
-          `,
+          `
             }}
           />
         </Head>
