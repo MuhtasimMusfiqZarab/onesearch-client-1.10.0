@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'components/uicontainers/404/node_modules/react';
-import Link from 'components/uicontainers/home/text/node_modules/next/link';
+import React, { useState, useEffect, useRef } from 'components/uicontainers/404';
+import Link from 'next/link';
 import sideNavElements, { adminNavElement } from 'components/utils/resolver/navigation/sidenav';
 import { IsCurrentRoute } from 'components/services/route';
 import { useCurrentUser } from 'components/_context/user/current-user';

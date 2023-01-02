@@ -1,11 +1,6 @@
-import React, {
-  FC,
-  useState,
-  useRef,
-  useEffect
-} from 'components/uicontainers/404/node_modules/react';
-import Image from 'components/uicontainers/home/services/node_modules/next/image';
-import Link from 'components/uicontainers/home/text/node_modules/next/link';
+import React, { FC, useState, useRef, useEffect } from 'components/uicontainers/404';
+import Image from 'components/uicontainers/home/services';
+import Link from 'next/link';
 
 import styles from './styles.module.scss';
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'components/uicontainers/404/node_modules/react';
+import React, { Component } from 'components/uicontainers/404';
 import GoogleMapReact from 'google-map-react';
 
 const Map = () => {

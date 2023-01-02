@@ -1,4 +1,4 @@
-import React from 'components/uicontainers/404/node_modules/react';
+import React from 'components/uicontainers/404';
 import Header from '../../shared/header';
 import SideNav from '../../shared/sidenav';
 import BackToTop from 'components/general/back-to-top';

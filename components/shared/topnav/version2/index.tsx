@@ -1,5 +1,5 @@
-import React, { useState } from 'components/uicontainers/404/node_modules/react';
-import Link from 'components/uicontainers/home/text/node_modules/next/link';
+import React, { useState } from 'components/uicontainers/404';
+import Link from 'next/link';
 import topNavElements from 'components/utils/resolver/navigation/topnav';
 import { IsCurrentRoute } from 'components/services/route';
 import { BreadIcon, CloseIcon, Logo } from 'components/_icons';

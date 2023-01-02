@@ -1,4 +1,4 @@
-import React from 'components/uicontainers/404/node_modules/react';
+import React from 'components/uicontainers/404';
 import Slider from 'react-slick';
 
 // Import css files

@@ -1,4 +1,4 @@
-import Image from 'components/uicontainers/home/services/node_modules/next/image';
+import Image from 'components/uicontainers/home/services';
 import styles from './styles.module.scss';
 import Rating from 'components/general/rating';
 

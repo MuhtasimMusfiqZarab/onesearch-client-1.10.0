@@ -1,4 +1,4 @@
-import React, { useState } from 'components/uicontainers/404/node_modules/react';
+import React, { useState } from 'components/uicontainers/404';
 import styles from './style.module.scss';
 
 const Modal = ({ isOpen, setIsOpen, children }) => {

@@ -1,9 +1,4 @@
-import React, {
-  Fragment,
-  useEffect,
-  useMemo,
-  useState
-} from 'components/uicontainers/404/node_modules/react';
+import React, { Fragment, useEffect, useMemo, useState } from 'components/uicontainers/404';
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
 import { useRouter } from 'next/router';

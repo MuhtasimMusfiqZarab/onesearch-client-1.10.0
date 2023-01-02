@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'components/uicontainers/404/node_modules/react';
+import React, { useState, useEffect } from 'components/uicontainers/404';
 import { Dropbox } from 'components/general/dropbox';
 import { IsCurrentRoute } from 'components/services/route';
 import topNavElements from 'components/utils/resolver/navigation/topnav';
 import { Loader } from 'components/general';
-import Link from 'components/uicontainers/home/text/node_modules/next/link';
+import Link from 'next/link';
 
 import { useCurrentUser } from 'components/_context/user/current-user';
 
