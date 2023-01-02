@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import styles from "./styles.module.scss";
+import React, { FC } from 'components/uicontainers/404/node_modules/react';
+import styles from './styles.module.scss';
 
 interface Props {
   // title: string;
@@ -12,7 +12,7 @@ interface Props {
   children?: React.ReactNode;
   height: string;
   onClick: () => void;
-  radius: string
+  radius: string;
   width: string;
 }
 
@@ -25,12 +25,8 @@ export const Dropdown: FC<Props> = ({
   radius,
   width
 }: Props): JSX.Element => {
-
   return (
-    <button
-      onClick={onClick}
-      className={`btn`}
-    >
+    <button onClick={onClick} className={`btn`}>
       {children}
     </button>
   );

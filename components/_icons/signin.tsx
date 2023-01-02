@@ -1,11 +1,7 @@
-import React from 'react';
+import React from 'components/uicontainers/404/node_modules/react';
 import { IconProps } from '../utils/interfaces';
 
-export const SigninIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const SigninIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg
       id="b69e4d7e-41e9-4b98-8574-fc2d70ea977b"
@@ -13,8 +9,7 @@ export const SigninIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       width="708"
       height="555.86743"
-      viewBox="0 0 708 555.86743"
-    >
+      viewBox="0 0 708 555.86743">
       <path
         id="b10fb2cf-c586-4c5f-9fbf-e678f5ffa3db"
         data-name="Path 133"
@@ -100,20 +95,8 @@ export const SigninIcon = ({
         transform="translate(-246 -172.06628)"
         fill="#2f2e41"
       />
-      <rect
-        x="166.54982"
-        y="228.55925"
-        width="10.77161"
-        height="2"
-        fill="#2f2e41"
-      />
-      <rect
-        x="132.54982"
-        y="228.55925"
-        width="10.77161"
-        height="2"
-        fill="#2f2e41"
-      />
+      <rect x="166.54982" y="228.55925" width="10.77161" height="2" fill="#2f2e41" />
+      <rect x="132.54982" y="228.55925" width="10.77161" height="2" fill="#2f2e41" />
       <path
         d="M428.36168,628.11938l-18.356-134a6.00013,6.00013,0,0,0-5.94482-5.18566H390.20543a6.02466,6.02466,0,0,0,.08985-1v-5a6.00015,6.00015,0,0,0-6-6h-12a6.00014,6.00014,0,0,0-6,6v5a6.02466,6.02466,0,0,0,.08984,1H352.52965a6.00049,6.00049,0,0,0-5.94482,5.18566l-18.356,134a6,6,0,0,0,5.94434,6.81434h88.24414A6,6,0,0,0,428.36168,628.11938Z"
         transform="translate(-246 -172.06628)"

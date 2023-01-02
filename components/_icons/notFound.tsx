@@ -1,19 +1,14 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'components/uicontainers/404/node_modules/react';
+import { IconProps } from '../utils/interfaces';
 
-export const NotFoundIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const NotFoundIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg
       width="648"
       height="307"
       viewBox="0 0 648 307"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0)">
         <path
           d="M261.963 91.8812C289.471 82.0037 308.187 114.779 277.995 123.889C264.803 127.874 277.916 135.397 260.618 129.031C262.134 122.152 262.153 119.968 264.463 118.208C268.655 115.01 273.75 115.851 278.047 112.256C282.891 108.205 280.93 100.95 272.309 100.501C263.165 100.03 264.793 104.285 261.963 91.8812Z"
@@ -85,10 +80,7 @@ export const NotFoundIcon = ({
           fill="#03396C"
         />
       </g>
-      <path
-        d="M526.88 230.302L647.004 175.595V45.8428L526.88 82.9134V230.302Z"
-        fill="#D3B875"
-      />
+      <path d="M526.88 230.302L647.004 175.595V45.8428L526.88 82.9134V230.302Z" fill="#D3B875" />
       <path
         d="M369.901 165.948L526.88 235.598L527.274 82.9133L369.901 27.7285V165.948Z"
         fill="#B78C58"
@@ -97,18 +89,12 @@ export const NotFoundIcon = ({
         d="M647.004 45.8427L527.274 82.9133L369.901 27.7285L492.848 0L647.004 45.8427Z"
         fill="#F2D08B"
       />
-      <path
-        d="M369.901 165.948L460.543 138.072V59.5138L369.901 27.7285V165.948Z"
-        fill="#B79E67"
-      />
+      <path d="M369.901 165.948L460.543 138.072V59.5138L369.901 27.7285V165.948Z" fill="#B79E67" />
       <path
         d="M460.543 138.072L530.73 165.948L527.274 82.9131L460.543 59.5137V138.072Z"
         fill="#99744B"
       />
-      <path
-        d="M369.901 27.7286L314.004 17.0991V151.604L369.901 165.948V27.7286Z"
-        fill="#F2D08B"
-      />
+      <path d="M369.901 27.7286L314.004 17.0991V151.604L369.901 165.948V27.7286Z" fill="#F2D08B" />
       <path
         d="M527.274 82.9131L602.971 91.5233V248.721L526.88 235.598L527.274 82.9131Z"
         fill="#F2D08B"

@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'components/uicontainers/404/node_modules/react';
 import Head from 'next/head';
-import Login from 'components/pages/login';
-import LoadingPage from 'components/pages/loading-page';
+import Login from 'components/uicontainers/login';
+import LoadingPage from 'components/uicontainers/loading-page';
 import { useRouter } from 'next/router';
 
 export default function Index() {

@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'components/uicontainers/404/node_modules/react';
+import { IconProps } from '../utils/interfaces';
 
-export const DownloadsIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const DownloadsIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="45"
-      height="45"
-      viewBox="0 0 45 45"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M39.5721 42.4949H5.42781C4.73193 42.4949 4.17523 43.0516 4.17523 43.7475C4.17523 44.4433 4.73193 45 5.42781 45H39.5721C40.268 45 40.8247 44.4433 40.8247 43.7475C40.8247 43.0516 40.268 42.4949 39.5721 42.4949Z"
         fill={color ? color : '#7B7777'}

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'components/uicontainers/404/node_modules/react';
 import styles from './styles.module.scss';
 
 interface Props {}

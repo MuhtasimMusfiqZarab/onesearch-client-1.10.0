@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useRouter } from "next/router";
+import { useState } from 'components/uicontainers/404/node_modules/react';
+import { useRouter } from 'next/router';
 
 export const IsCurrentRoute = (element: any) => {
   const router = useRouter();
@@ -13,8 +13,6 @@ export const IsCurrentRoute = (element: any) => {
   }
   //nav items with children
   if (element.hasChild && element.route) {
-    return element?.children?.some((itemName: string) =>
-      currentRoute.includes(itemName)
-    );
+    return element?.children?.some((itemName: string) => currentRoute.includes(itemName));
   }
 };

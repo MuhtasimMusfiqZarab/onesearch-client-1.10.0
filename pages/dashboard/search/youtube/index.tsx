@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
-import YoutubeTab from 'components/pages/dashboard/search/youtube';
+import YoutubeTab from 'components/uicontainers/dashboard/search/youtube';
 import { ChannelsProvider } from 'components/_context/youtube/channels';
 import { CountriesProvider } from 'components/_context/youtube/countries';
 import { CategoriesProvider } from 'components/_context/youtube/categories';

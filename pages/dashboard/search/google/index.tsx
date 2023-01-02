@@ -1,6 +1,6 @@
-import Head from "next/head";
-import BaseLayout from "components/layouts/dashboard";
-import GoogleTable from "components/pages/dashboard/search/google";
+import Head from 'next/head';
+import BaseLayout from 'components/layouts/dashboard';
+import GoogleTable from 'components/uicontainers/dashboard/search/google';
 
 export default function Index() {
   return (

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Login from 'components/pages/login';
+import Login from 'components/uicontainers/login';
 
 import { CurrentUserProvider } from 'components/_context/user/current-user';
 

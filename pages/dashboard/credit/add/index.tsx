@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import BaseLayout from 'components/layouts/dashboard';
-import CreditPage from 'components/pages/dashboard/credit';
+import CreditPage from 'components/uicontainers/dashboard/credit';
 
 export default function Index() {
   return (

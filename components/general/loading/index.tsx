@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import styles from "./styles.module.scss";
+import React, { FC } from 'components/uicontainers/404/node_modules/react';
+import styles from './styles.module.scss';
 
 interface Props {}
 

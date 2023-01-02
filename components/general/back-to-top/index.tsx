@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'components/uicontainers/404/node_modules/react';
 import styles from './styles.module.scss';
 
 interface Props {

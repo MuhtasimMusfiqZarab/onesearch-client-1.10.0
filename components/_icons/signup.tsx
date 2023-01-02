@@ -1,11 +1,7 @@
-import React from 'react';
+import React from 'components/uicontainers/404/node_modules/react';
 import { IconProps } from '../utils/interfaces';
 
-export const SignupIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const SignupIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg
       id="ace05a6f-f1ac-4978-a3bb-3e2345b819e7"
@@ -13,8 +9,7 @@ export const SignupIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       width="767.65456"
       height="595.99576"
-      viewBox="0 0 767.65456 595.99576"
-    >
+      viewBox="0 0 767.65456 595.99576">
       <path
         d="M682.61225,523.03207l-1.25114,14.70664a6.50753,6.50753,0,0,1-7.0276,5.92562l-122.57092-10.4275a6.50753,6.50753,0,0,1-5.92562-7.02759l1.25115-14.70664a6.50751,6.50751,0,0,1,7.02759-5.92562l122.57092,10.4275A6.50753,6.50753,0,0,1,682.61225,523.03207Z"
         transform="translate(-216.17273 -152.0021)"
@@ -89,20 +84,8 @@ export const SignupIcon = ({
         transform="translate(-216.17273 -152.0021)"
         fill="#2f2e41"
       />
-      <rect
-        x="342.04698"
-        y="172.76822"
-        width="10.77148"
-        height="2"
-        fill="#2f2e41"
-      />
-      <rect
-        x="308.04698"
-        y="172.76822"
-        width="10.77148"
-        height="2"
-        fill="#2f2e41"
-      />
+      <rect x="342.04698" y="172.76822" width="10.77148" height="2" fill="#2f2e41" />
+      <rect x="308.04698" y="172.76822" width="10.77148" height="2" fill="#2f2e41" />
       <path
         d="M609.17271,551.4979h-126a4.50492,4.50492,0,0,1-4.5-4.5V445.77719A46.33163,46.33163,0,0,1,524.952,399.4979h41.2207a4.50529,4.50529,0,0,1,4.49951,4.4248l43.00049,143.002v.07325A4.50493,4.50493,0,0,1,609.17271,551.4979Z"
         transform="translate(-216.17273 -152.0021)"

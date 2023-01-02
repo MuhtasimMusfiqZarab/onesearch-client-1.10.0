@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState } from 'components/uicontainers/404/node_modules/react';
 import { Save, Lock, DownloadsIcon } from 'components/_icons';
 import styles from './styles.module.scss';
 

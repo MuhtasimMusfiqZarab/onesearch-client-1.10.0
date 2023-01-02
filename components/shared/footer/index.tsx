@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'components/uicontainers/home/text/node_modules/next/link';
 import { FacebookIcon, Logo, YoutubeIcon, LinkedinIcon } from 'components/_icons';
 import styles from './styles.module.scss';
 

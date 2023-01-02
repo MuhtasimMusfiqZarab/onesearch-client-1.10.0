@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NotFoundPage from 'components/pages/404';
+import NotFoundPage from 'components/uicontainers/404';
 
 export default function Index() {
   return (

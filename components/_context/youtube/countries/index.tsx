@@ -1,10 +1,10 @@
-import React, { createContext, useContext } from "react";
-import { useQuery } from "@apollo/client";
+import React, { createContext, useContext } from 'components/uicontainers/404/node_modules/react';
+import { useQuery } from '@apollo/client';
 
-import GET_CHANNEL_COUNTRIES from "../../../../pages/api/query/youtube/get-channel-countries.query.gql";
+import GET_CHANNEL_COUNTRIES from '../../../../pages/api/query/youtube/get-channel-countries.query.gql';
 
 const CountriesContext = createContext({
-  countries: null,
+  countries: null
 });
 
 function CountriesProvider({ children }) {
@@ -13,9 +13,8 @@ function CountriesProvider({ children }) {
   return (
     <CountriesContext.Provider
       value={{
-        countries: data?.getChannelCountries?.locations,
-      }}
-    >
+        countries: data?.getChannelCountries?.locations
+      }}>
       {children}
     </CountriesContext.Provider>
   );
