@@ -1,4 +1,4 @@
-import React from 'components/uicontainers/404';
+import React from 'react';
 import { IconProps } from '../utils/interfaces';
 
 export const CloseIcon = ({ width, height, color }: IconProps): JSX.Element => {

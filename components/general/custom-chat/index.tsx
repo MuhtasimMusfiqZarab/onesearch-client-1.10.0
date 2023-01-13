@@ -1,4 +1,4 @@
-import React from 'components/uicontainers/404';
+import React from 'react';
 import { FacebookProvider, CustomChat } from 'react-facebook';
 
 import styles from './styles.module.scss';

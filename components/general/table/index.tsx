@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'components/uicontainers/404';
+import React, { FC, useState } from 'react';
 import { Lock, DownArrow } from 'components/_icons';
 import { Controller } from './table-controller';
 import { Loader, Checkbox } from 'components/general';

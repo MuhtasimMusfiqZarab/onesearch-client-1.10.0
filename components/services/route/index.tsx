@@ -1,4 +1,4 @@
-import { useState } from 'components/uicontainers/404';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 export const IsCurrentRoute = (element: any) => {

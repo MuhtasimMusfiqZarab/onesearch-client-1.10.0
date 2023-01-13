@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'components/uicontainers/404';
+import React, { FC, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from './style.module.scss';

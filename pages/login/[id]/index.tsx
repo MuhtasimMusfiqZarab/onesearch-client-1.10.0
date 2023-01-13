@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'components/uicontainers/404';
+import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Login from 'components/uicontainers/login';
 import LoadingPage from 'components/uicontainers/loading-page';

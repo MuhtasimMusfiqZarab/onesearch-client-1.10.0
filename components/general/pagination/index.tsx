@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'components/uicontainers/404';
+import React, { FC, useState, useEffect } from 'react';
 import styles from './style.module.scss';
 import { ArrowLeft, ArrowRight } from 'components/_icons';
 
