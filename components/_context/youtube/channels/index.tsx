@@ -1,8 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useState
-} from 'components/uicontainers/404';
+import React, { createContext, useContext, useState } from 'react';
 import { useQuery } from '@apollo/client';
 
 import GET_ALL_CHANNELS from '../../../../pages/api/query/youtube/get-channels.query.gql';

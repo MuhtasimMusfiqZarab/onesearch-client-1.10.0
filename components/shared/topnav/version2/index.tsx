@@ -1,4 +1,4 @@
-import React, { useState } from 'components/uicontainers/404';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import topNavElements from 'components/utils/resolver/navigation/topnav';
 import { IsCurrentRoute } from 'components/services/route';

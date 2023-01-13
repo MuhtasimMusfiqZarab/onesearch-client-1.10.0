@@ -1,4 +1,4 @@
-import React, { createContext, useContext, FC } from 'components/uicontainers/404';
+import React, { createContext, useContext, FC } from 'react';
 import { useQuery } from '@apollo/client';
 
 import GET_CURRENT_USER from '../../../../pages/api/query/user/get-current-user.gql';

@@ -11,13 +11,13 @@ const AddReview = ({ name, avatar }) => {
       </p>
 
       <div className={styles.add_review__author}>
-        <Image
+        {/* <Image
           src={avatar}
           alt="avatar"
           width={64}
           height={64}
           className={styles.add_review__avatar}
-        />
+        /> */}
         <h4>{name}</h4>
         <Rating rating={0} id="add-review" isEditable={true} />
       </div>

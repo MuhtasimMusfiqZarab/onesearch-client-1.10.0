@@ -1,4 +1,4 @@
-import React, { FC } from 'components/uicontainers/404';
+import React, { FC } from 'react';
 import styles from './styles.module.scss';
 
 interface Props {}

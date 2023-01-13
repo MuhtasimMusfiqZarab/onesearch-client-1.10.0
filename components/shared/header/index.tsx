@@ -1,4 +1,4 @@
-import React, { useState } from 'components/uicontainers/404';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Logo } from 'components/_icons';
 import Navigation from 'components/general/navigation';

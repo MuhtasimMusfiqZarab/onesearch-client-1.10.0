@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'components/uicontainers/404';
+import React, { createContext, useContext, useState } from 'react';
 import { useQuery } from '@apollo/client';
 
 import GET_ALL_PROFILES from '../../../pages/api/query/linkedin/get-all-profiles.gql';
