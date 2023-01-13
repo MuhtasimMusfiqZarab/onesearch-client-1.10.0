@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import BaseLayout from 'components/layouts/dashboard';
 import DashboardLayout from 'components/layouts/dashboard';
-import LinkedinTab from 'components/pages/dashboard/search/linkedin';
+import LinkedinTab from 'components/uicontainers/dashboard/search/linkedin';
 
 import { LinkedinProfilesProvider } from 'components/_context/linkedin/index';
 

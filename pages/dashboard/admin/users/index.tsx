@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
-import Users from 'components/pages/dashboard/admin/users';
+import Users from 'components/uicontainers/dashboard/admin/users';
 import { GetAllUsersProvider } from 'components/_context/user/all-users';
 
 export default function Index() {

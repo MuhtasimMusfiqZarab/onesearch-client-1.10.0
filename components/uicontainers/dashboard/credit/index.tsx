@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
-import Pricing from 'components/pages/home/pricing';
+import Pricing from 'components/uicontainers/home/pricing';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();

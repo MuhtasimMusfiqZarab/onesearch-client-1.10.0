@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import BaseLayout from 'components/layouts/dashboard';
-import Settings from 'components/pages/dashboard/settings';
+import Settings from 'components/uicontainers/dashboard/settings';
 
 export default function Index() {
   return (

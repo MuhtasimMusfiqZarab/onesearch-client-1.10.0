@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const RequestIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const RequestIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="45"
-      height="45"
-      viewBox="0 0 45 45"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M40.8516 22.1132L21.0235 30.5156C19.5118 31.1484 17.8243 31.1132 16.3829 30.4101L6.60944 25.4882L5.34381 27.9843L15.1524 32.9062C16.3126 33.4687 17.5782 33.7499 18.8438 33.7499C19.9688 33.7499 21.0938 33.539 22.1133 33.082L41.9415 24.7148C42.9962 24.2578 43.8048 23.414 44.2266 22.3593C44.6485 21.2695 44.6133 20.1093 44.1212 19.0546C43.1719 17.0156 40.6758 16.0663 38.5313 16.9804L37.3008 17.5077L31.3243 20.039L32.4141 22.6406L38.3907 20.1093L39.6212 19.582C40.3594 19.2656 41.2383 19.5468 41.5547 20.2499C41.7305 20.6015 41.7305 20.9882 41.5899 21.3398C41.4493 21.6913 41.2032 21.9726 40.8516 22.1132Z"
         fill="#8F8F8F"

@@ -1,10 +1,10 @@
-import React, { createContext, useContext } from "react";
-import { useQuery } from "@apollo/client";
+import React, { createContext, useContext } from 'react';
+import { useQuery } from '@apollo/client';
 
-import GET_CHANNEL_CATEGORIES from "../../../../pages/api/query/youtube/get-channel-categories.gql";
+import GET_CHANNEL_CATEGORIES from '../../../../pages/api/query/youtube/get-channel-categories.gql';
 
 const CategoriesContext = createContext({
-  categories: null,
+  categories: null
 });
 
 function CategoriesProvider({ children }) {
@@ -13,9 +13,8 @@ function CategoriesProvider({ children }) {
   return (
     <CategoriesContext.Provider
       value={{
-        categories: data?.getAllCategories?.categories,
-      }}
-    >
+        categories: data?.getAllCategories?.categories
+      }}>
       {children}
     </CategoriesContext.Provider>
   );

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NotFoundPage from 'components/pages/404';
+// import NotFoundPage from 'react';
 
 export default function Index() {
   return (
@@ -7,7 +7,7 @@ export default function Index() {
       <Head>
         <title>404</title>
       </Head>
-      <NotFoundPage />
+      {/* <NotFoundPage /> */}
     </>
   );
 }

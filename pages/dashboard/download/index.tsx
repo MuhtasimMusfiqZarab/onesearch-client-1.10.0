@@ -1,6 +1,6 @@
-import Head from "next/head";
-import BaseLayout from "components/layouts/dashboard";
-import UnderConstruction from "components/pages/under-construction";
+import Head from 'next/head';
+import BaseLayout from 'components/layouts/dashboard';
+import UnderConstruction from 'components/uicontainers/under-construction';
 
 export default function Index() {
   return (

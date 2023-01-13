@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const GoogleIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const GoogleIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="29"
-      height="29"
-      viewBox="0 0 29 29"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M27.905 11.979L16.0762 11.9784C15.5539 11.9784 15.1305 12.4017 15.1305 12.9241V16.7028C15.1305 17.2251 15.5539 17.6485 16.0762 17.6485H22.7374C22.008 19.5415 20.6466 21.1268 18.9097 22.1341L21.75 27.051C26.3063 24.4159 29 19.7924 29 14.6167C29 13.8798 28.9457 13.3529 28.8371 12.7598C28.7545 12.3091 28.3632 11.979 27.905 11.979Z"
         fill="#167EE6"

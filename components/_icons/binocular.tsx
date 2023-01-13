@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const BinocularIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const BinocularIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="45"
-      height="45"
-      viewBox="0 0 45 45"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M34.9774 21.194C32.6148 21.194 30.7044 23.1136 30.7044 25.4669C30.7044 26.0299 31.1658 26.4913 31.7288 26.4913C32.2918 26.4913 32.7532 26.0299 32.7532 25.4669C32.7532 24.2395 33.7592 23.2335 34.9866 23.2335C35.5496 23.2335 36.011 22.7721 36.011 22.2091C36.0018 21.6462 35.5403 21.194 34.9774 21.194Z"
         fill="#7B7777"

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Home from 'components/pages/home';
+import Home from 'components/uicontainers/home';
 import { FacebookProvider, CustomChat } from 'react-facebook';
 
 import { CurrentUserProvider } from 'components/_context/user/current-user';

@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState } from "react";
-import { useQuery } from "@apollo/client";
+import React, { createContext, useContext, useState } from 'react';
+import { useQuery } from '@apollo/client';
 
-import GET_ALL_CHANNELS from "../../../../pages/api/query/youtube/get-channels.query.gql";
+import GET_ALL_CHANNELS from '../../../../pages/api/query/youtube/get-channels.query.gql';
 
 const ChannelsContext = createContext({
   channels: null,
@@ -13,7 +13,7 @@ const ChannelsContext = createContext({
   loading: null,
   total: null,
   searchText: null,
-  setSearchText: null,
+  setSearchText: null
 });
 
 function ChannelsProvider({ children }) {
@@ -31,9 +31,9 @@ function ChannelsProvider({ children }) {
         location: location,
         searchText,
         limit,
-        offset: offset,
-      },
-    },
+        offset: offset
+      }
+    }
   });
 
   return (
@@ -48,9 +48,8 @@ function ChannelsProvider({ children }) {
         loading,
         total: data?.getAllChannels?.totalCount,
         searchText,
-        setSearchText,
-      }}
-    >
+        setSearchText
+      }}>
       {children}
     </ChannelsContext.Provider>
   );

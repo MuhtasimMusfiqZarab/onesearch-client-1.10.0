@@ -1,19 +1,14 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const ServerErrorIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const ServerErrorIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg
       width="672"
       height="340"
       viewBox="0 0 672 340"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <path
         d="M331.159 145.883C331.149 143.555 329.26 141.668 326.928 141.678L295.07 141.778L295.095 150.218L326.953 150.119C329.289 150.114 331.169 148.217 331.159 145.883Z"
         fill="#7B7777"
@@ -42,14 +37,8 @@ export const ServerErrorIcon = ({
         d="M206.807 178.12L206.748 159.14L231.731 157.566L231.805 179.53L206.807 178.12Z"
         fill="#005B96"
       />
-      <path
-        d="M206.757 161.851L206.797 175.41L198.573 175.434L206.757 161.851Z"
-        fill="#03396C"
-      />
-      <path
-        d="M281.42 168.394L281.525 201.296L274.551 201.321L281.42 168.394Z"
-        fill="#03396C"
-      />
+      <path d="M206.757 161.851L206.797 175.41L198.573 175.434L206.757 161.851Z" fill="#03396C" />
+      <path d="M281.42 168.394L281.525 201.296L274.551 201.321L281.42 168.394Z" fill="#03396C" />
       <path
         d="M300.536 292.649L294.991 339.428L318.521 278.221L308.224 277.909L313.77 231.13L290.234 292.336L300.536 292.649Z"
         fill="#FFD500"
@@ -78,10 +67,7 @@ export const ServerErrorIcon = ({
         d="M408.275 138.311L375.539 138.414L375.745 204.223L408.481 204.12L408.275 138.311Z"
         fill="#005B96"
       />
-      <path
-        d="M382.514 171.293L382.41 138.391L389.384 138.366L382.514 171.293Z"
-        fill="#03396C"
-      />
+      <path d="M382.514 171.293L382.41 138.391L389.384 138.366L382.514 171.293Z" fill="#03396C" />
       <path
         d="M382.388 131.791L368.648 131.834L368.897 210.84L382.636 210.797L382.388 131.791Z"
         fill="#005B96"
@@ -90,10 +76,7 @@ export const ServerErrorIcon = ({
         d="M457.123 161.567L457.183 180.547L432.199 182.121L432.13 160.157L457.123 161.567Z"
         fill="#005B96"
       />
-      <path
-        d="M457.172 177.837L457.133 164.278L465.356 164.253L457.172 177.837Z"
-        fill="#03396C"
-      />
+      <path d="M457.172 177.837L457.133 164.278L465.356 164.253L457.172 177.837Z" fill="#03396C" />
     </svg>
   );
 };

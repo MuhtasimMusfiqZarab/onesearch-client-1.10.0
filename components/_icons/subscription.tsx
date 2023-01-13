@@ -1,19 +1,9 @@
-import React from "react";
-import { IconProps } from "../utils/interfaces";
+import React from 'react';
+import { IconProps } from '../utils/interfaces';
 
-export const SubscriptionIcon = ({
-  width,
-  height,
-  color,
-}: IconProps): JSX.Element => {
+export const SubscriptionIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
-    <svg
-      width="45"
-      height="45"
-      viewBox="0 0 45 45"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M42.2862 23.4962C41.5636 23.4096 40.9075 23.926 40.821 24.649C39.7374 33.727 32.0059 40.5731 22.837 40.5731C14.5901 40.5731 7.50783 35.0351 5.37755 27.3166L6.95475 28.1828C7.59297 28.5333 8.39462 28.2999 8.7448 27.662C9.09533 27.0238 8.86222 26.2221 8.22399 25.8716L4.17834 23.6496C3.5408 23.2994 2.73984 23.5319 2.38897 24.1691L0.163927 28.2096C-0.187286 28.8475 0.0451395 29.6491 0.68268 30.0003C1.34116 30.3083 2.09371 30.1569 2.47342 29.4816L2.98909 28.5453C5.60139 37.1145 13.5787 43.2098 22.837 43.2098C33.3404 43.2098 42.1973 35.3646 43.4388 24.9614C43.5253 24.2384 43.0089 23.5823 42.2862 23.4962Z"
         fill="#8F8F8F"

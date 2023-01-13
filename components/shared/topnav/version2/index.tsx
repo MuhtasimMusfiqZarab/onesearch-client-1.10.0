@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import topNavElements from "components/utils/resolver/navigation/topnav";
-import { IsCurrentRoute } from "components/services/route";
-import { BreadIcon, CloseIcon, Logo } from "components/_icons";
-import styles from "./style.module.scss";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import topNavElements from 'components/utils/resolver/navigation/topnav';
+import { IsCurrentRoute } from 'components/services/route';
+import { BreadIcon, CloseIcon, Logo } from 'components/_icons';
+import styles from './style.module.scss';
 
 interface Props {
   isTransperant?: any;
@@ -13,14 +13,8 @@ export default function TopNav({ isTransperant }: Props) {
   const [currentActive, setCurrentActive] = useState<number>(0);
 
   return (
-    <nav
-      className={`${styles.nav} ${isTransperant ? styles.transparent : ""} `}
-    >
-      <input
-        type="checkbox"
-        id="nav__checkbox"
-        className={styles.nav__checkbox}
-      />
+    <nav className={`${styles.nav} ${isTransperant ? styles.transparent : ''} `}>
+      <input type="checkbox" id="nav__checkbox" className={styles.nav__checkbox} />
       <label htmlFor="nav__checkbox" className={styles.nav__toggle}>
         <div className={styles.menu}>
           <BreadIcon />
@@ -43,12 +37,10 @@ export default function TopNav({ isTransperant }: Props) {
               <li key={index}>
                 <Link href={`${element.route}`} key={index}>
                   <a
-                    className={`${IsCurrentRoute(element) && styles.activeNavElement
-                      }`}
+                    className={`${IsCurrentRoute(element) && styles.activeNavElement}`}
                     onClick={() => {
                       setCurrentActive(index);
-                    }}
-                  >
+                    }}>
                     {element.title}
                   </a>
                 </Link>
