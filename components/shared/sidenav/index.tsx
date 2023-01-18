@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { Prev, Next } from '../../_icons';
 import sideNavElements, { adminNavElement } from 'components/utils/resolver/navigation/sidenav';
 import { IsCurrentRoute } from 'components/services/route';
 import { useCurrentUser } from 'components/_context/user/current-user';
@@ -35,12 +36,7 @@ export default function SideNav() {
     <div>
       <nav className={styles.nav}>
         <a href="#" className={styles.prev__btn} ref={prevBtn}>
-          <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15 25.985 3.27 14 15 2.015 13.702 0 0 14l13.702 14L15 25.985Z"
-              fill="#49789B"
-            />
-          </svg>
+          <Prev />
         </a>
         <ul className={styles.nav__list} ref={navList}>
           {sideNavElements.map(
@@ -63,9 +59,7 @@ export default function SideNav() {
           )}
         </ul>
         <a href="#" className={styles.next__btn} ref={nextBtn}>
-          <svg width="15" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 2.015 11.73 14 0 25.985 1.298 28 15 14 1.298 0 0 2.015Z" fill="#49789B" />
-          </svg>
+          <Next />
         </a>
       </nav>
     </div>
