@@ -1,5 +1,6 @@
 import Head from 'next/head';
-// import NotFoundPage from 'react';
+import { NotFoundIcon } from '../../components/_icons';
+import styles from './styles.module.scss';
 
 export default function Index() {
   return (
@@ -7,7 +8,9 @@ export default function Index() {
       <Head>
         <title>404</title>
       </Head>
-      {/* <NotFoundPage /> */}
+      <div className={styles.container}>
+        <NotFoundIcon />
+      </div>
     </>
   );
 }
