@@ -4,9 +4,9 @@ import { IconProps } from '../utils/interfaces';
 export const Logo = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg
-      width={width ? width : '219'}
+      width={width ? width : '50'}
       height={height ? height : '50'}
-      viewBox="0 0 219 50"
+      viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
