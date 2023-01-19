@@ -9,7 +9,9 @@ export default function Index() {
         <title>404</title>
       </Head>
       <div className={styles.container}>
-        <NotFoundIcon />
+        <div className={styles.elements}>
+          <NotFoundIcon />
+        </div>
       </div>
     </>
   );
