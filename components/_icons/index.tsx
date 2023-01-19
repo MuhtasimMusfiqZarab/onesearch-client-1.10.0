@@ -5,6 +5,7 @@ export { GoogleIcon } from './google';
 export { SettingsIcon } from './settings';
 export { ExpandIcon } from './expand';
 export { Logo } from './logo';
+export { Explaination } from './explaination';
 export { Next } from './next';
 export { Prev } from './prev';
 export { SigninIcon } from './signin';

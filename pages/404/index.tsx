@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { NotFoundIcon } from '../../components/_icons';
+import { NotFoundIcon, Explaination } from '../../components/_icons';
 import styles from './styles.module.scss';
 
 export default function Index() {
@@ -11,6 +11,7 @@ export default function Index() {
       <div className={styles.container}>
         <div className={styles.elements}>
           <NotFoundIcon />
+          <Explaination />
         </div>
       </div>
     </>
