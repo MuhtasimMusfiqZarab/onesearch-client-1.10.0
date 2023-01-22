@@ -33,8 +33,6 @@ export default function Index() {
                 <AutofillInput label="Category" items={categories} />
 
                 <AutofillInput label="Country" items={countries} />
-
-                {/* <AutofillInput label="Year" /> */}
               </div>
 
               <div className={styles.notes}>

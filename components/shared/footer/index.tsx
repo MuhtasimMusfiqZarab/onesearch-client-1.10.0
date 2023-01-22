@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.footer_copy}>
-        <p>{new Date().getFullYear()} © OneSearch. All rights reserved</p>
+        <p>{new Date().getFullYear()} © ONESEARCH.IO LTD. All rights reserved</p>
       </div>
     </footer>
   );
