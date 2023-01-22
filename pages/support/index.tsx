@@ -41,7 +41,7 @@ const Support = () => {
           <div> London </div>
           <div> EC1N 8LE </div>
           <div> United Kingdom </div>
-          <Map />
+          <div className={styles.map}>{/* <Map /> */}</div>
         </div>
       </div>
       <MessengerChat chatSupport={true} />
