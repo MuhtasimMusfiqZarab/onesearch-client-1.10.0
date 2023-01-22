@@ -30,20 +30,32 @@ export default function Footer() {
         </div>
 
         <div className={styles.footer_widget}>
-          <h3>Support</h3>
           <ul>
             <li>
               <Link href="/privacy-policy">
-                <a>Privacy Policy</a>
+                <h3 className={styles.link}>
+                  <a>FAQ</a>
+                </h3>
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy-policy">
+                <h3 className={styles.link}>
+                  <a>Privacy Policy</a>
+                </h3>
               </Link>
             </li>
             <li>
               <Link href="/terms-of-service">
-                <a>Terms of Service</a>
+                <h3 className={styles.link}>
+                  <a>Terms of service</a>
+                </h3>
               </Link>
             </li>
             <li>
-              <a href="/support">Support</a>
+              <h3 className={styles.link}>
+                <a href="/support">Support</a>
+              </h3>
             </li>
           </ul>
         </div>
