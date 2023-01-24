@@ -119,6 +119,7 @@ export default function Reviews() {
           <AddReview
             name={currentUser.firstName + ' ' + currentUser.lastName}
             avatar={currentUser.avatarLink}
+            setIsOpen={setIsOpen}
           />
         </Modal>
       )}
