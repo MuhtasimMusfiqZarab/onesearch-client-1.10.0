@@ -40,6 +40,11 @@
     text-align: center;
     position: relative;
 
+    &:hover {
+      box-shadow: 0px 00px 20px #49789b;
+      outline: 2px solid #49789b;
+    }
+
     @media (max-width: 767px) {
       border: 2px solid #49789b;
       box-shadow: 0 0 10px #c4c4c4;
