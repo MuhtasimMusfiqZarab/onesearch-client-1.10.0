@@ -22,12 +22,6 @@
 
   .wrapper {
     counter-reset: number;
-    // display: flex;
-    // justify-content: center;
-
-    // @media (max-width: 767px) {
-    //   flex-direction: column;
-    // }
   }
 
   .container {
@@ -35,7 +29,6 @@
     border-radius: $border-radius-card;
     padding: 2rem;
     width: 100%;
-    // margin: 0 0.5rem 4rem;
     background: white;
     text-align: center;
     position: relative;
@@ -67,7 +60,6 @@
     left: 7.4rem;
     font-size: 3rem;
     color: white;
-    // font-weight: bold;
     line-height: 3rem;
   }
 
