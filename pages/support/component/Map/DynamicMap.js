@@ -7,10 +7,10 @@ import styles from './Map.module.scss';
 
 const { MapContainer } = ReactLeaflet;
 
-const DynamicMap = ({ children, className, width, height, ...rest }) => {
+const Map = ({ children, className, width, height, ...rest }) => {
   let mapClassName = styles.map;
 
-  if (className) {
+  if ( className ) {
     mapClassName = `${mapClassName} ${className}`;
   }
 
@@ -20,7 +20,7 @@ const DynamicMap = ({ children, className, width, height, ...rest }) => {
       Leaflet.Icon.Default.mergeOptions({
         iconRetinaUrl: 'leaflet/images/marker-icon-2x.png',
         iconUrl: 'leaflet/images/marker-icon.png',
-        shadowUrl: 'leaflet/images/marker-shadow.png'
+        shadowUrl: 'leaflet/images/marker-shadow.png',
       });
     })();
   }, []);
@@ -29,7 +29,7 @@ const DynamicMap = ({ children, className, width, height, ...rest }) => {
     <MapContainer className={mapClassName} {...rest}>
       {children(ReactLeaflet, Leaflet)}
     </MapContainer>
-  );
-};
+  )
+}
 
-export default DynamicMap;
+export default Map;
