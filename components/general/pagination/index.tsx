@@ -32,7 +32,9 @@ export const Pagination: FC<Props> = ({ offset, setOffset, total }): JSX.Element
   };
 
   const increaseoffset = () => {
-    setOffset(offset + 10);
+    if (totalPages > offset) {
+      setOffset(offset + 10);
+    }
   };
 
   return (
