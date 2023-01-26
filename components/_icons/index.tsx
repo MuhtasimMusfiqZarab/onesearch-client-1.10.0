@@ -38,3 +38,8 @@ export { Locator } from './locator';
 export { Warning } from './warning';
 export { Csv } from './csv';
 export { AdminIcon } from './admin';
+export { Unauthorized } from './unauthorized';
+export { TickIcon } from './tick';
+export { SilverBadgeIcon } from './silverBadge';
+export { GoldenBadgeIcon } from './goldenBadge';
+export { VipBadgeIcon } from './vipBadge';
