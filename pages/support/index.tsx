@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Footer from 'components/shared/footer';
+import { ForbiddenAccess } from 'components/general';
 import styles from './styles.module.scss';
 import { MessengerChat } from 'components/general/custom-chat';
 

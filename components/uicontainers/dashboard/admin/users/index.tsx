@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'components/general/modal';
+import { ForbiddenAccess } from 'components/general';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
 import { UsersTableEnum } from 'components/utils/enum';
@@ -81,7 +82,7 @@ export default function Index() {
             </div>
           </>
         ) : (
-          <div>Please contact to get admin access!</div>
+          <ForbiddenAccess />
         )}
       </div>
 

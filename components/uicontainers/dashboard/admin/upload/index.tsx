@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, CsvDrop } from 'components/general';
+import { Tab, CsvDrop, ForbiddenAccess } from 'components/general';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 
@@ -21,7 +21,7 @@ export default function Index() {
             </div>
           </>
         ) : (
-          <div>Please contact to get admin access!</div>
+          <ForbiddenAccess />
         )}
       </div>
     </>

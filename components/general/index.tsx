@@ -12,3 +12,4 @@ export { CsvDrop } from './csv-drop';
 export { Switch } from './switch';
 export { Checkbox } from './checkbox';
 export { NotFound } from './notFound';
+export { ForbiddenAccess } from './forbiddenAccess';
