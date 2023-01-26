@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Reset } from 'components/_icons';
-import { Tab, CsvDrop } from 'components/general';
+import { Tab, CsvDrop, NotFound } from 'components/general';
 import { creditNavElements } from 'components/utils/resolver/navigation/tab';
 import AutofillInput from 'components/general/autofill-input';
 import styles from './styles.module.scss';
@@ -19,7 +19,7 @@ export default function Index() {
     <>
       <div className={styles.request_container}>
         <Tab items={creditNavElements} />
-        {currentUser ? <Pricing hasHeading={false} /> : <div>Please Login to get access</div>}
+        {currentUser ? <Pricing hasHeading={false} /> : <NotFound />}
       </div>
     </>
   );

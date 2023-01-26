@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Tab, Loader } from 'components/general';
+import { Tab, Loader, NotFound } from 'components/general';
 import AutofillInput from 'components/general/autofill-input';
 import { Locator, Warning } from 'components/_icons';
 import styles from './styles.module.scss';
@@ -59,7 +59,7 @@ export default function Settings() {
           </div>
         </div>
       ) : (
-        <div>Please login to get access</div>
+        <NotFound />
       )}
     </div>
   );

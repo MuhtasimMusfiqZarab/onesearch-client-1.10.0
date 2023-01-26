@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { IYoutubeChannel } from 'components/utils/interfaces';
-import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
+import { Pagination, Table, Dropdown, Tab, SearchBox, NotFound } from 'components/general';
 import { LinkedinTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
@@ -93,7 +93,7 @@ export default function Index() {
             </div>
           </div>
         ) : (
-          <div>Please Login to get access</div>
+          <NotFound />
         )}
       </div>
 

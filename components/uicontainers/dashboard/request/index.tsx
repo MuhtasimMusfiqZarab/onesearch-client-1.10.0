@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Reset } from 'components/_icons';
-import { Tab, CsvDrop } from 'components/general';
+import { Tab, CsvDrop, NotFound } from 'components/general';
 import { requestNavElements } from 'components/utils/resolver/navigation/tab';
 import AutofillInput from 'components/general/autofill-input';
 import styles from './styles.module.scss';
@@ -47,7 +47,7 @@ export default function Index() {
             </div>
           </>
         ) : (
-          <div>Please Login to get access</div>
+          <NotFound />
         )}
       </div>
     </>

@@ -86,7 +86,7 @@ export default function Index() {
             </div>
           </div>
         ) : (
-          <div>Please Login to get access</div>
+          <NotFound />
         )}
       </div>
 
