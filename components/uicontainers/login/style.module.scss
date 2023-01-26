@@ -21,7 +21,7 @@
   justify-content: center;
   flex-direction: column;
   flex-basis: 588px;
-  background: #49789b;
+  background: $os-primary;
   color: #fff;
 
   svg {
@@ -93,7 +93,7 @@
     top: 40px;
     right: 40px;
     font-size: 18px;
-    color: #49789b;
+    color: $os-primary;
     text-decoration: none;
 
     @media (max-width: 768px) {
@@ -103,7 +103,7 @@
 
   h1 {
     font-size: 48px;
-    color: #49789b;
+    color: $os-primary;
     text-align: center;
     font-weight: 400;
     margin-bottom: 50px;
@@ -159,7 +159,7 @@
     }
 
     a:hover {
-      color: #49789b;
+      color: $os-primary;
     }
   }
 
@@ -250,7 +250,7 @@
 
   .active {
     color: #fff;
-    background-color: #49789b;
+    background-color: $os-primary;
     border-radius: 5px;
     position: absolute;
     left: 0;
@@ -270,7 +270,7 @@
   top: 40px;
   right: 40px;
   font-size: 18px;
-  color: #49789b;
+  color: $os-primary;
   text-decoration: none;
   margin-top: 2rem;
   display: none;

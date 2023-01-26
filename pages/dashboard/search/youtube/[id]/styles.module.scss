@@ -41,7 +41,7 @@
 
   h3 {
     position: relative;
-    color: #49789b;
+    color: $os-primary;
     font-weight: 600;
     font-size: 22px;
     background: #fff;
@@ -56,7 +56,7 @@
       content: '';
       width: 100%;
       height: 7px;
-      background: #49789b;
+      background: $os-primary;
       border-radius: 10px;
     }
   }
@@ -122,7 +122,7 @@
         }
 
         a {
-          color: #49789b;
+          color: $os-primary;
           margin-right: 30px;
           transition: all 0.25s;
 
@@ -131,7 +131,7 @@
           }
 
           &:hover {
-            color: darken(#49789b, 10);
+            color: darken($os-primary, 10);
           }
         }
 

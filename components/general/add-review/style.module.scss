@@ -8,7 +8,7 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 1.219em;
-    color: #49789b;
+    color: $os-primary;
     margin-bottom: 24px;
   }
 
@@ -55,7 +55,7 @@
     align-items: center;
 
     a {
-      color: #49789b;
+      color: $os-primary;
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;

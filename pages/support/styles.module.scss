@@ -24,7 +24,7 @@
 
     h1 {
       position: relative;
-      color: #49789b;
+      color: $os-primary;
       display: inline-block;
       padding-bottom: 12px;
       margin-bottom: 48px;
@@ -46,7 +46,7 @@
       top: 40px;
       right: 40px;
       font-size: 18px;
-      color: #49789b;
+      color: $os-primary;
       text-decoration: none;
     }
   }
