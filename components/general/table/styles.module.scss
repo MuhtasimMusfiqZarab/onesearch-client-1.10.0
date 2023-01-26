@@ -241,12 +241,13 @@
     transition: all 0.25s;
 
     &:hover {
-      color: #1a1a1a;
+      color: $os-primary-dark;
+      font-weight: 600;
 
       svg {
         path,
         rect {
-          stroke: #1a1a1a;
+          stroke: $os-primary;
         }
       }
     }
