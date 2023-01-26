@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Modal from 'components/general/modal';
-import { Filter, CloseLite, Reset } from 'components/_icons';
-import { IYoutubeChannel } from 'components/utils/interfaces';
+import { Filter, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
 import { YoutubeTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
-
 import { searchNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
@@ -119,11 +117,11 @@ export default function Index() {
               isInline={true}
             />
           </div>
-          {/* <div className="text-center">
-            <button type="submit" className="btn_fill_secondary">
+          <div className="text-center">
+            <button type="submit" className="btn_fill_secondary" onClick={() => setIsOpen(false)}>
               Apply Filter
             </button>
-          </div> */}
+          </div>
         </div>
       </Modal>
     </>

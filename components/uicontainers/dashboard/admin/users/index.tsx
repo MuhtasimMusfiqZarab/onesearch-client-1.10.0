@@ -65,6 +65,7 @@ export default function Index() {
                       items={getAllUsers?.users}
                       headersEnums={UsersTableEnum}
                       hasController={false}
+                      hasCheckbox={false}
                     />
                   )}
                   {loadingAllUsers && (
