@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'components/general/modal';
 import { Filter, Reset } from 'components/_icons';
-import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
+import { Pagination, Table, Dropdown, Tab, SearchBox, NotFound } from 'components/general';
 import { YoutubeTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
@@ -75,12 +75,14 @@ export default function Index() {
                   />
                 )}
                 {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}
-                {channels?.length === 0 && <div>No Data Found</div>}
+                {channels?.length === 0 && <NotFound />}
               </div>
 
-              <div className={styles.container__pagination}>
-                <Pagination total={total} setOffset={setOffset} offset={offset} />
-              </div>
+              {channels?.length !== 0 && (
+                <div className={styles.container__pagination}>
+                  <Pagination total={total} setOffset={setOffset} offset={offset} />
+                </div>
+              )}
             </div>
           </div>
         ) : (
