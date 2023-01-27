@@ -16,12 +16,14 @@ export default function Footer() {
           <div className={styles.socials}>
             <ul>
               <li>
-                <a href="https://www.linkedin.com/company/onesearch-io-ltd">
+                <a
+                  className={styles.padding}
+                  href="https://www.linkedin.com/company/onesearch-io-ltd">
                   <LinkedinIcon />
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/onesearchteam">
+                <a className={styles.padding} href="https://www.facebook.com/onesearchteam">
                   <FacebookIcon />
                 </a>
               </li>
