@@ -34,6 +34,33 @@ export default function Pricing({ hasHeading }: Props) {
     ]
   };
 
+  const processPayment = () => {
+    fetch(`/payment`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: 'Bearer ' + window.localStorage.getItem('jwtToken')
+      },
+      body: JSON.stringify({
+        items: [
+          {
+            id: 1,
+            quantity: 1
+          }
+        ]
+      })
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+        console.log(url);
+      })
+      .catch((e) => console.error(e.error));
+  };
+
   return (
     <div className={styles.pricing_wrap}>
       <div className={styles.pricing_wrap__inner}>
@@ -68,7 +95,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
-              <Button onClick={() => console.log('Hello')}>Purchase</Button>
+              <Button onClick={() => processPayment()}>Purchase</Button>
             </div>
 
             <div className={styles.container}>
@@ -97,7 +124,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
-              <Button onClick={() => console.log('Hello')}>Purchase</Button>
+              <Button onClick={() => processPayment()}>Purchase</Button>
             </div>
 
             <div className={styles.container}>
@@ -126,7 +153,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
-              <Button onClick={() => console.log('Hello')}>Purchase</Button>
+              <Button onClick={() => processPayment()}>Purchase</Button>
             </div>
           </SlickSlider>
         </div>
