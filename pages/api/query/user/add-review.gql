@@ -1,0 +1,6 @@
+mutation ADD_USER_REVIEW($input: AddReviewInput!) {
+  addUserReview(input: $input) {
+    rating
+    reviewText
+  }
+}
