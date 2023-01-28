@@ -2,6 +2,8 @@ import { Heading } from '../heading';
 import SlickSlider from 'components/general/slick';
 import { Button } from 'components/general';
 
+import { useCurrentUser } from 'components/_context/user/current-user';
+
 import styles from './styles.module.scss';
 import { TickIcon, SilverBadgeIcon, GoldenBadgeIcon, VipBadgeIcon } from 'components/_icons';
 
@@ -10,6 +12,8 @@ interface Props {
 }
 
 export default function Pricing({ hasHeading }: Props) {
+  const { currentUser, loading } = useCurrentUser();
+
   const slickSettings = {
     infinite: false,
     speed: 500,
@@ -34,7 +38,7 @@ export default function Pricing({ hasHeading }: Props) {
     ]
   };
 
-  const processPayment = () => {
+  const processPayment = (id: number) => {
     fetch(`/payment`, {
       method: 'POST',
       headers: {
@@ -44,7 +48,7 @@ export default function Pricing({ hasHeading }: Props) {
       body: JSON.stringify({
         items: [
           {
-            id: 1,
+            id: id,
             quantity: 1
           }
         ]
@@ -95,7 +99,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
-              <Button onClick={() => processPayment()}>Purchase</Button>
+              {currentUser && <Button onClick={() => processPayment(1)}>Purchase</Button>}
             </div>
 
             <div className={styles.container}>
@@ -124,7 +128,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
-              <Button onClick={() => processPayment()}>Purchase</Button>
+              {currentUser && <Button onClick={() => processPayment(2)}>Purchase</Button>}
             </div>
 
             <div className={styles.container}>
@@ -153,7 +157,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
-              <Button onClick={() => processPayment()}>Purchase</Button>
+              {currentUser && <Button onClick={() => processPayment(3)}>Purchase</Button>}
             </div>
           </SlickSlider>
         </div>

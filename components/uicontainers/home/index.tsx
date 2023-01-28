@@ -18,8 +18,8 @@ export default function Home() {
       <Services />
       <CurrentUserProvider>
         <Reviews />
+        <Pricing hasHeading={true} />
       </CurrentUserProvider>
-      <Pricing hasHeading={true} />
       <Footer />
       <BackToTop support={true} />
     </div>
