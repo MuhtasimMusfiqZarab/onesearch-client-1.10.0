@@ -2,31 +2,28 @@ import React, { FC } from 'react';
 import styles from './styles.module.scss';
 
 interface Props {
-  // title: string;
-  // items: string[];
-  // setItem: any;
-  // setOffset?: any;
-  // isSearch: boolean;
-  border: string;
-  color: string;
+  border?: string;
+  color?: string;
   children?: React.ReactNode;
-  height: string;
+  height?: string;
   onClick: () => void;
-  radius: string;
-  width: string;
+  radius?: string;
+  width?: string;
+  clsName?: string;
 }
 
-export const Dropdown: FC<Props> = ({
+export const Button: FC<Props> = ({
   border,
   color,
   children,
   height,
   onClick,
   radius,
-  width
+  width,
+  clsName
 }: Props): JSX.Element => {
   return (
-    <button onClick={onClick} className={`btn`}>
+    <button onClick={onClick} className={`btn ${clsName}`}>
       {children}
     </button>
   );

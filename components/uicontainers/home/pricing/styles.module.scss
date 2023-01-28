@@ -53,6 +53,10 @@
     li {
       list-style: none;
       padding: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
     }
   }
 

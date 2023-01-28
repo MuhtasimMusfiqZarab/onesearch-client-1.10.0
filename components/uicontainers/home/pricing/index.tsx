@@ -1,5 +1,7 @@
 import { Heading } from '../heading';
 import SlickSlider from 'components/general/slick';
+import { Button } from 'components/general';
+
 import styles from './styles.module.scss';
 import { TickIcon, SilverBadgeIcon, GoldenBadgeIcon, VipBadgeIcon } from 'components/_icons';
 
@@ -66,6 +68,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
+              <Button onClick={() => console.log('Hello')}>Purchase</Button>
             </div>
 
             <div className={styles.container}>
@@ -94,6 +97,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
+              <Button onClick={() => console.log('Hello')}>Purchase</Button>
             </div>
 
             <div className={styles.container}>
@@ -122,6 +126,7 @@ export default function Pricing({ hasHeading }: Props) {
                   <div>Support 24/7</div>
                 </li>
               </ul>
+              <Button onClick={() => console.log('Hello')}>Purchase</Button>
             </div>
           </SlickSlider>
         </div>

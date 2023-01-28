@@ -13,3 +13,4 @@ export { Switch } from './switch';
 export { Checkbox } from './checkbox';
 export { NotFound } from './notFound';
 export { ForbiddenAccess } from './forbiddenAccess';
+export { Button } from './button';
