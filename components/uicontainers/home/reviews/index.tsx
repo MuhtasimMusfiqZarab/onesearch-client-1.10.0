@@ -10,6 +10,9 @@ import { useCurrentUser } from 'components/_context/user/current-user';
 import styles from './styles.module.scss';
 
 import ClientImage from '/public/client.png';
+import ClientImage1 from '/public/client1.png';
+import ClientImage4 from '/public/client4.jpeg';
+import ClientImage3 from '/public/client3.jpeg';
 
 export default function Reviews() {
   const { currentUser, loading } = useCurrentUser();
@@ -65,7 +68,7 @@ export default function Reviews() {
               <Review
                 name="Jhon"
                 quote="Very pleased with their service. Highly recommended!"
-                avatar={ClientImage}
+                avatar={ClientImage1}
                 rating="4.5"
                 ratingId="jhon"
               />
@@ -73,7 +76,7 @@ export default function Reviews() {
               <Review
                 name="Doe"
                 quote="Very pleased with their service. Highly recommended!"
-                avatar={ClientImage}
+                avatar={ClientImage4}
                 rating="4"
                 ratingId="doe"
               />
@@ -81,7 +84,7 @@ export default function Reviews() {
               <Review
                 name="Deniel"
                 quote="Very pleased with their service. Highly recommended!"
-                avatar={ClientImage}
+                avatar={ClientImage3}
                 rating="3.5"
                 ratingId="deniel"
               />
