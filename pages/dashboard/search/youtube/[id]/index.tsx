@@ -3,6 +3,7 @@ import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
+import Link from 'next/link';
 
 import GET_CHANNEL from '../../../../../pages/api/query/youtube/get-channel.gql';
 import {
@@ -35,6 +36,13 @@ export default function Channel() {
       </Head>
       <DashboardLayout>
         <div className={styles.user_infos}>
+          <div className={styles.paginations}>
+            <Link href="/dashboard/search/youtube/">
+              <a href="#" className="btn btn_fill_primary">
+                <ArrowLeft /> Previous
+              </a>
+            </Link>
+          </div>
           <div className={styles.user_infos_header}>
             <h1>{data?.channel?.channel_name}</h1>
 
@@ -53,6 +61,7 @@ export default function Channel() {
               </a>
             </div>
           </div>
+
           <Channel.BasicInfo data={data?.channel} />
           <Channel.AnvancedInfo />
 
@@ -63,15 +72,6 @@ export default function Channel() {
             {/* <a href="#" className="btn">
               Request for Update
             </a> */}
-          </div>
-
-          <div className={styles.paginations}>
-            <a href="#" className="btn btn_fill_primary">
-              <ArrowLeft /> Previous
-            </a>
-            <a href="#" className="btn btn_fill_primary">
-              Next <ArrowRight />
-            </a>
           </div>
         </div>
       </DashboardLayout>
