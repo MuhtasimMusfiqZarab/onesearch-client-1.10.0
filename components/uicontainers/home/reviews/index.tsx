@@ -59,7 +59,7 @@ export default function Reviews() {
             <SlickSlider settings={slickSettings}>
               <Review
                 name="Robert"
-                quote="Very pleased with their service. Highly recommended!"
+                quote="Very pleased with their service."
                 avatar={ClientImage}
                 rating="5"
                 ratingId="Robert"
@@ -67,7 +67,7 @@ export default function Reviews() {
 
               <Review
                 name="Jhon"
-                quote="Very pleased with their service. Highly recommended!"
+                quote="Highly recommended!"
                 avatar={ClientImage1}
                 rating="4.5"
                 ratingId="jhon"
@@ -75,7 +75,7 @@ export default function Reviews() {
 
               <Review
                 name="Doe"
-                quote="Very pleased with their service. Highly recommended!"
+                quote="Need some improvement"
                 avatar={ClientImage4}
                 rating="4"
                 ratingId="doe"
@@ -87,30 +87,6 @@ export default function Reviews() {
                 avatar={ClientImage3}
                 rating="3.5"
                 ratingId="deniel"
-              />
-
-              <Review
-                name="Dwyane"
-                quote="Very pleased with their service. Highly recommended!"
-                avatar={ClientImage}
-                rating="3"
-                ratingId="Dwyane"
-              />
-
-              <Review
-                name="Jonshon"
-                quote="Very pleased with their service. Highly recommended!"
-                avatar={ClientImage}
-                rating="2.5"
-                ratingId="Jonshon"
-              />
-
-              <Review
-                name="Albert"
-                quote="Very pleased with their service. Highly recommended!"
-                avatar={ClientImage}
-                rating="2"
-                ratingId="Albert"
               />
             </SlickSlider>
           </div>
