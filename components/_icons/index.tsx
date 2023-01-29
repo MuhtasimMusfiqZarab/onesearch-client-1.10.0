@@ -44,3 +44,4 @@ export { SilverBadgeIcon } from './silverBadge';
 export { GoldenBadgeIcon } from './goldenBadge';
 export { VipBadgeIcon } from './vipBadge';
 export { ForbiddenIcon } from './forbidden';
+export { ErrorIcon } from './error';
