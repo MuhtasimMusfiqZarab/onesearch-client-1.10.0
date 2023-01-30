@@ -4,7 +4,7 @@ import { IconProps } from '../utils/interfaces';
 export const VipBadgeIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1663_47)">
+      <g clipPath="url(#clip0_1663_47)">
         <path
           d="M47.2634 39.4028H45.6328V42.6638H47.2634C48.1602 42.6638 48.8939 41.9333 48.8939 41.0332C48.8939 40.1332 48.1602 39.4028 47.2634 39.4028Z"
           fill="#FFD500"

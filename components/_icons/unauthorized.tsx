@@ -9,7 +9,7 @@ export const Unauthorized = ({ width, height, color }: IconProps): JSX.Element =
       viewBox="0 0 200 239"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_391_74)">
+      <g clipPath="url(#clip0_391_74)">
         <path
           d="M170.264 134.361H150.842V70.1965C150.842 42.19 128.036 19.4068 100.001 19.4068C71.9667 19.4068 49.1563 42.19 49.1563 70.1965V134.361H29.7344V70.1965C29.7344 31.4915 61.2531 0 99.9969 0C138.741 0 170.264 31.4915 170.264 70.1965V134.361V134.361Z"
           fill="#72716F"

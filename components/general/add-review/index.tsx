@@ -8,8 +8,6 @@ import ADD_USER_REVIEW from '../../../pages/api/query/user/add-review.gql';
 const AddReview = ({ name, avatar, setIsOpen, userId }) => {
   const [addReview, { data, loading, error }] = useMutation(ADD_USER_REVIEW);
 
-  console.log('THisd', userId);
-
   const setReview = () => {
     addReview({
       variables: {

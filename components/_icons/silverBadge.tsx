@@ -4,7 +4,7 @@ import { IconProps } from '../utils/interfaces';
 export const SilverBadgeIcon = ({ width, height, color }: IconProps): JSX.Element => {
   return (
     <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_1663_29)">
+      <g clipPath="url(#clip0_1663_29)">
         <path d="M69.1407 1H48.047L17.5781 45.5311H38.6718L69.1407 1Z" fill="#49789B" />
         <path d="M5.85938 1H26.953L57.4217 45.5311H36.328L5.85938 1Z" fill="#49789B" />
         <path
