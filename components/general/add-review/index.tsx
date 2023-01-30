@@ -5,13 +5,15 @@ import styles from './style.module.scss';
 import { useQuery, useMutation } from '@apollo/client';
 import ADD_USER_REVIEW from '../../../pages/api/query/user/add-review.gql';
 
-const AddReview = ({ name, avatar, setIsOpen }) => {
+const AddReview = ({ name, avatar, setIsOpen, userId }) => {
   const [addReview, { data, loading, error }] = useMutation(ADD_USER_REVIEW);
+
+  console.log('THisd', userId);
 
   const setReview = () => {
     addReview({
       variables: {
-        input: { id: '5b1aaf11-d6d0-46cd-b71d-bae6b7a1103e', reviewText: 'asdf', rating: 5 }
+        input: { id: userId, reviewText: 'asdfasdfasdfasdfasdfasdf', rating: 4 }
       }
     });
     setIsOpen(!setIsOpen);

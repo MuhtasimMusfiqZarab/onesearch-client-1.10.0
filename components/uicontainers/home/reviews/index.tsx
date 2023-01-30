@@ -97,6 +97,7 @@ export default function Reviews() {
         <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
           <AddReview
             name={currentUser.firstName + ' ' + currentUser.lastName}
+            userId={currentUser.id}
             avatar={currentUser.avatarLink}
             setIsOpen={setIsOpen}
           />
