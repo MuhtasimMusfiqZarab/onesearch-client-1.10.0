@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import { Reset } from 'components/_icons';
-import { Tab, CsvDrop, NotFound } from 'components/general';
+import { Tab, CsvDrop, NotFound, Dropdown } from 'components/general';
 import { requestNavElements } from 'components/utils/resolver/navigation/tab';
 import AutofillInput from 'components/general/autofill-input';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
+import { countryList } from 'components/utils/resolver/all-countries';
+
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const { countries } = useCountries();
   const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
+
+  const [title, setCountry] = useState<string>(null);
+  const [offset, setOffset] = useState<number>(0);
 
   return (
     <>
@@ -20,19 +25,27 @@ export default function Index() {
         {currentUser ? (
           <>
             <div className={styles.request_container__inner}>
-              <div className={styles.request_container_channel}>
+              {/* <div className={styles.request_container_channel}>
                 <AutofillInput label="Channel Name" items={[]} />
 
                 <button className={styles.reset_form}>
                   <Reset />
                   Reset
                 </button>
-              </div>
+              </div> */}
 
               <div className={styles.filterItems}>
                 <AutofillInput label="Category" items={categories} />
 
-                <AutofillInput label="Country" items={countries} />
+                {/* <AutofillInput label="Country" items={countries} />
+                 */}
+                <Dropdown
+                  title="Title"
+                  setItem={setCountry}
+                  setOffset={setOffset}
+                  items={countryList}
+                  isSearch={true}
+                />
               </div>
 
               <div className={styles.notes}>
