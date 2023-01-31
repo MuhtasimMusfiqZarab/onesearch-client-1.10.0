@@ -3,6 +3,7 @@ import Home from 'components/uicontainers/home';
 import { FacebookProvider, CustomChat } from 'react-facebook';
 
 import { CurrentUserProvider } from 'components/_context/user/current-user';
+import { GetAllUserReviewsProvider } from 'components/_context/user/all-user-reviews';
 
 export default function Index() {
   return (
@@ -18,7 +19,9 @@ export default function Index() {
         />
       </Head>
       <CurrentUserProvider>
-        <Home />
+        <GetAllUserReviewsProvider>
+          <Home />
+        </GetAllUserReviewsProvider>
       </CurrentUserProvider>
     </>
   );

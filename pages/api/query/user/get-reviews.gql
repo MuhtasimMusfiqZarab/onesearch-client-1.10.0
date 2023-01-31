@@ -1,5 +1,5 @@
 query GET_USER_REVIEWS($data: GetUserReviewInput!) {
-  getAllUsers(data: $data) {
+  getAllUserReviews(data: $data) {
     users {
       id
       firstName

@@ -6,6 +6,7 @@ import AddReview from 'components/general/add-review';
 import Review from 'components/general/review';
 
 import { useCurrentUser } from 'components/_context/user/current-user';
+import { useAllUserReviews } from 'components/_context/user/all-user-reviews';
 
 import styles from './styles.module.scss';
 
@@ -16,6 +17,9 @@ import ClientImage3 from '/public/client3.jpeg';
 
 export default function Reviews() {
   const { currentUser, loading } = useCurrentUser();
+  const { allUserReviews, loading: allUserReviewsLoading } = useAllUserReviews();
+
+  console.log('These are all the reviews', allUserReviews);
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const slickSettings = {
@@ -58,11 +62,11 @@ export default function Reviews() {
           <div className={styles.reviews}>
             <SlickSlider settings={slickSettings}>
               <Review
-                name="Robert"
+                name="clipPath"
                 quote="Very pleased with their service."
                 avatar={ClientImage}
                 rating="5"
-                ratingId="Robert"
+                ratingId="clipPath"
               />
 
               <Review

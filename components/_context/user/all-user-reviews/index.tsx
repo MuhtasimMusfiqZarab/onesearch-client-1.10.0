@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import GET_USER_REVIEWS from '../../../../pages/api/query/user/get-reviews.gql';
 
 const GetAllUserReviewsContext = createContext({
-  getAllUserReviews: null,
+  allUserReviews: null,
   loading: null
 });
 
@@ -16,7 +16,7 @@ function GetAllUserReviewsProvider({ children }) {
     variables: {
       data: {
         limit,
-        offset: offset
+        offset
       }
     }
   });
@@ -24,7 +24,7 @@ function GetAllUserReviewsProvider({ children }) {
   return (
     <GetAllUserReviewsContext.Provider
       value={{
-        getAllUserReviews: data?.getAllUserReviews,
+        allUserReviews: data?.getAllUserReviews,
         loading
       }}>
       {children}
@@ -32,6 +32,6 @@ function GetAllUserReviewsProvider({ children }) {
   );
 }
 
-const useAllUsers = () => useContext(GetAllUserReviewsContext);
+const useAllUserReviews = () => useContext(GetAllUserReviewsContext);
 
-export { GetAllUserReviewsProvider, useAllUsers };
+export { GetAllUserReviewsProvider, useAllUserReviews };
