@@ -6,5 +6,6 @@ query GET_CURRENT_USER {
     avatarLink
     email
     accessRole
+    availableCredits
   }
 }

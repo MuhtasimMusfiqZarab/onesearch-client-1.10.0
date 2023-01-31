@@ -20,7 +20,7 @@ export const Dropdown: FC<Props> = ({
 }: Props): JSX.Element => {
   const dropWrap = useRef(null);
   const [opened, setOpened] = useState<boolean>(false);
-  const [selectedItem, setSelectedItem] = useState<string>('All');
+  const [selectedItem, setSelectedItem] = useState<string>('-');
   const [options, setOptions] = useState([]);
 
   const handleChange = (item) => {
@@ -32,7 +32,7 @@ export const Dropdown: FC<Props> = ({
 
   const resetFilter = () => {
     setOpened(false);
-    setSelectedItem('All');
+    setSelectedItem('-');
     setItem(null);
     setOffset(0);
   };
