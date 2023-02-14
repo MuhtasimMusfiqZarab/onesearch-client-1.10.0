@@ -42,11 +42,12 @@ export default function Settings() {
           if (res.ok) {
             return res.json();
           }
+
           return res.json().then((json) => Promise.reject(json));
         })
         .then(({ url }) => {
-          window.location = url;
-          console.log(url);
+          // window.location = url;
+          window.location.href = '/';
         })
         .catch((e) => console.error(e.error));
     }
