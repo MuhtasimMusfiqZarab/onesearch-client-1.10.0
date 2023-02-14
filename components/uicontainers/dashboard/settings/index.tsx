@@ -10,11 +10,49 @@ import { settingsNavElements } from 'components/utils/resolver/navigation/tab';
 
 import { useCurrentUser } from 'components/_context/user/current-user';
 
+import { useRouter } from 'next/router';
+
 export default function Settings() {
   const { currentUser, loading } = useCurrentUser();
 
   const [title, setCountry] = useState<string>(null);
   const [offset, setOffset] = useState<number>(0);
+
+  const router = useRouter();
+  console.log(router.query.session_id);
+
+  //process the cs token
+  useEffect(() => {
+    if (router.query.session_id) {
+      fetch(`/payment/process`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          authorization: 'Bearer ' + window.localStorage.getItem('jwtToken')
+        },
+        body: JSON.stringify({
+          payments: [
+            {
+              session_Id: router.query.session_id.slice(0, -2)
+            }
+          ]
+        })
+      })
+        .then(async (res) => {
+          if (res.ok) {
+            //call for charge to backend
+            console.log('Time', await res.json());
+            return res.json();
+          }
+          return res.json().then((json) => Promise.reject(json));
+        })
+        .then(({ url }) => {
+          window.location = url;
+          console.log(url);
+        })
+        .catch((e) => console.error(e.error));
+    }
+  }, [router.query.session_id]);
 
   return (
     <div className={styles.container}>
