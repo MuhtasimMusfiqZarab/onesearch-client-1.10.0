@@ -40,8 +40,6 @@ export default function Settings() {
       })
         .then(async (res) => {
           if (res.ok) {
-            //call for charge to backend
-            console.log('Time', await res.json());
             return res.json();
           }
           return res.json().then((json) => Promise.reject(json));
