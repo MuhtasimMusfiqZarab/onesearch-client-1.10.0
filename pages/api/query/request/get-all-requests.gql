@@ -1,0 +1,10 @@
+query GET_ALL_REQUESTS($data: GetRequestInput!!) {
+  getAllRequests(data: $data) {
+    requests{
+      category
+      location
+      description
+    }
+   totalCount
+  }
+}
