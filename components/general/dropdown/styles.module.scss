@@ -18,7 +18,8 @@
   }
 
   .title {
-    margin: 0.5rem;
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
   }
 }
 
@@ -102,8 +103,8 @@
   order: 0;
 
   &::after {
-    content: "";
-    background: url("./arrow-down.svg");
+    content: '';
+    background: url('./arrow-down.svg');
     background-size: contain;
     background-repeat: no-repeat;
     fill: red;
@@ -127,7 +128,7 @@
 .item_search {
   padding: 15px 16px 8px;
 
-  input[type="search"] {
+  input[type='search'] {
     width: 100%;
     height: 35px;
     border: 1px solid #ddd;
