@@ -1,10 +1,10 @@
-query GET_ALL_REQUESTS($data: GetRequestInput!!) {
+query GET_ALL_REQUESTS($data: GetRequestInput!) {
   getAllRequests(data: $data) {
-    requests{
+    requests {
       category
       location
       description
     }
-   totalCount
+    totalCount
   }
 }
