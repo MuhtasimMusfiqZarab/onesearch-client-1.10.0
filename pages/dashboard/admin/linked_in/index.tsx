@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
-import Upload from 'components/uicontainers/dashboard/admin/upload';
+import Upload from 'components/uicontainers/dashboard/admin/requests';
 
 export default function Index() {
   return (

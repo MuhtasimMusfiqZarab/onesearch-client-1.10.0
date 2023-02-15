@@ -1,17 +1,20 @@
 import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
-import Upload from 'components/uicontainers/dashboard/admin/requests';
+import Requests from 'components/uicontainers/dashboard/admin/requests';
+import { GetAllUsersProvider } from 'components/_context/user/all-users';
 
 export default function Index() {
   return (
     <>
       <Head>
         <title>Users</title>
-        <meta property="og:users" content="Users" key="users" />
+        <meta property="og:requests" content="Requests" key="requests" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <DashboardLayout>
-        <Upload />
+        <GetAllUsersProvider>
+          <Requests />
+        </GetAllUsersProvider>
       </DashboardLayout>
     </>
   );

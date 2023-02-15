@@ -46,9 +46,9 @@ export const settingsNavElements: navElement[] = [
 
 export const requestNavElements: navElement[] = [
   {
-    title: 'Youtube',
+    title: 'Request',
     icon: icons.YoutubeIcon({}),
-    route: '/dashboard/request/youtube'
+    route: '/dashboard/request/new'
   }
 ];
 
@@ -67,18 +67,23 @@ export const adminNavElements: navElement[] = [
     route: '/dashboard/admin/users'
   },
   {
+    title: 'Requests',
+    icon: icons.YoutubeIcon({}),
+    route: '/dashboard/admin/requests'
+  },
+  {
     title: 'Youtube',
     icon: icons.YoutubeIcon({}),
-    route: '/dashboard/admin/youtube_upload'
+    route: '/dashboard/admin/you_tube'
   },
   {
     title: 'Linkedin',
     icon: icons.YoutubeIcon({}),
-    route: '/dashboard/admin/linkedin_upload'
+    route: '/dashboard/admin/linked_in'
   },
   {
     title: 'Google',
     icon: icons.YoutubeIcon({}),
-    route: '/dashboard/admin/google_upload'
+    route: '/dashboard/admin/goo_gle'
   }
 ];

@@ -64,7 +64,7 @@ const sideNavElements: Props[] = [
     icon: icons.AdminIcon({}),
     route: '/dashboard/admin/users',
     hasChild: true,
-    children: ['users', 'upload']
+    children: ['users', 'requests', 'you_tube', 'linked_in', 'goo_gle']
   }
 ];
 
