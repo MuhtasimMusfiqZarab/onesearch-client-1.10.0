@@ -36,27 +36,6 @@ export default function Index() {
                     <Filter />
                   </button>
                 </div>
-
-                {/* <div className={styles.filterItems}>
-                  <Dropdown
-                    title="Category"
-                    setItem={setCategory}
-                    setOffset={setOffset}
-                    items={categories}
-                    isSearch={true}
-                  />
-
-                  <Dropdown
-                    title="Countries"
-                    setItem={setLocation}
-                    setOffset={setOffset}
-                    items={countries}
-                    isSearch={true}
-                  />
-                </div> */}
-                {/* <div className={styles.filterItems}>
-                  <Slider />
-                </div> */}
               </div>
 
               <div className={styles.container}>
@@ -96,43 +75,7 @@ export default function Index() {
             </button>
           </div>
           <h3>Edit Filters</h3>
-          {/* <div className={styles.filterItems}>
-            <Dropdown
-              title="Category"
-              setItem={setCategory}
-              setOffset={setOffset}
-              items={categories}
-              isSearch={true}
-              isInline={true}
-            />
 
-            <Dropdown
-              title="Countries"
-              setItem={setLocation}
-              setOffset={setOffset}
-              items={countries}
-              isSearch={true}
-              isInline={true}
-            />
-
-            <Dropdown
-              title="Year"
-              setItem={setLocation}
-              setOffset={setOffset}
-              items={countries}
-              isSearch={true}
-              isInline={true}
-            />
-
-            <Dropdown
-              title="Subscriber"
-              setItem={setLocation}
-              setOffset={setOffset}
-              items={countries}
-              isSearch={true}
-              isInline={true}
-            />
-          </div> */}
           <div className="text-center">
             <button type="submit" className="btn_fill_secondary">
               Apply Filter
