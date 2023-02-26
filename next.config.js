@@ -73,7 +73,7 @@ module.exports = {
       },
       {
         source: '/payment/process',
-        destination: process.env.PAYMENT_PROCESS_URL
+        destination: process.env.PAYMENT_URL
       },
       {
         source: '/google/redirect',
