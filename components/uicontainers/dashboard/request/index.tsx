@@ -25,26 +25,27 @@ export default function Index() {
         {currentUser ? (
           <>
             <div className={styles.request_container__inner}>
-              {/* <div className={styles.request_container_channel}>
-                <AutofillInput label="Channel Name" items={[]} />
-
-                <button className={styles.reset_form}>
-                  <Reset />
-                  Reset
-                </button>
-              </div> */}
-
               <div className={styles.filterItems}>
-                <AutofillInput label="Category" items={categories} />
-
-                {/* <AutofillInput label="Country" items={countries} />
-                 */}
+                <AutofillInput
+                  label="Platform"
+                  items={['Google', 'Linkedin', 'Facebook', 'Youtube']}
+                />
                 <Dropdown
-                  title="Title"
+                  title="Country"
                   setItem={setCountry}
                   setOffset={setOffset}
                   items={countryList}
                   isSearch={true}
+                />
+              </div>
+              <div className={styles.filterItems}>
+                <AutofillInput label="Data Size" items={[]} />
+                <Dropdown
+                  title="Category"
+                  setItem={setCountry}
+                  setOffset={setOffset}
+                  items={['Company', 'Individual']}
+                  isSearch={false}
                 />
               </div>
 
