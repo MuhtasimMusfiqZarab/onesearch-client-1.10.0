@@ -5,9 +5,14 @@ import styles from './styles.module.scss';
 interface Props {
   searchText: string;
   setSearchText: any;
+  placeholder?: string;
 }
 
-export const SearchBox: FC<Props> = ({ searchText, setSearchText }: Props): JSX.Element => {
+export const SearchBox: FC<Props> = ({
+  searchText,
+  setSearchText,
+  placeholder = 'Channel Name'
+}: Props): JSX.Element => {
   return (
     <>
       <div className={styles.search}>
@@ -17,7 +22,7 @@ export const SearchBox: FC<Props> = ({ searchText, setSearchText }: Props): JSX.
         <input
           type="text"
           className={styles.searchInput}
-          placeholder="Channel Name"
+          placeholder={placeholder}
           value={searchText ?? ''}
           onChange={(e) => setSearchText(e.target.value)}
         />

@@ -12,9 +12,18 @@ import { adminNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
-  const { getAllUsers, loading: loadingAllUsers } = useAllUsers();
+  const {
+    getAllUsers,
+    loading: loadingAllUsers,
+    total,
+    setOffset,
+    setSearchText,
+    searchText,
+    offset,
+    setAccessRole,
+    accessRole
+  } = useAllUsers();
   let [modalIsOpen, setIsOpen] = useState(false);
-  let [searchText, setSearchText] = useState();
 
   return (
     <>
@@ -25,16 +34,24 @@ export default function Index() {
             <div className={styles.filterContainer}>
               <div className={styles.filterContainer_inner}>
                 <div className={styles.search_wrap}>
-                  <SearchBox searchText={searchText} setSearchText={setSearchText} />
-
-                  <button className={styles.reset_form}>
-                    <Reset />
-                    Reset
-                  </button>
+                  <SearchBox
+                    placeholder="Search Users"
+                    searchText={searchText}
+                    setSearchText={setSearchText}
+                  />
 
                   <button onClick={() => setIsOpen(true)} className={styles.filtersToggle}>
                     <Filter />
                   </button>
+                </div>
+                <div className={styles.filterItems}>
+                  <Dropdown
+                    title="Access Role"
+                    setItem={setAccessRole}
+                    setOffset={setOffset}
+                    items={['demo', 'admin', 'pro']}
+                    isSearch={true}
+                  />
                 </div>
               </div>
 
@@ -54,9 +71,9 @@ export default function Index() {
                   {getAllUsers?.users?.length === 0 && <div>No User Data Found</div>}
                 </div>
 
-                {/* <div className={styles.container__pagination}>
+                <div className={styles.container__pagination}>
                   <Pagination total={total} setOffset={setOffset} offset={offset} />
-                </div> */}
+                </div>
               </div>
             </div>
           </>

@@ -15,6 +15,6 @@ export enum LinkedinTableEnum {
 export enum UsersTableEnum {
   firstName = 'First Name',
   lastName = 'Last Name',
-  accessRole = 'Job Role',
+  accessRole = 'Access Role',
   email = 'Email'
 }
