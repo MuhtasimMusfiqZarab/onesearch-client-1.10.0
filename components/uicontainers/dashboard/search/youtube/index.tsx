@@ -93,12 +93,6 @@ export default function Index() {
       {/* filter modal */}
       <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
         <div className={styles.edit_filters}>
-          <div className={styles.search_wrap}>
-            <SearchBox searchText={searchText} setSearchText={setSearchText} />
-            <button className={`${styles.reset_form} ${styles.reset_form_modal}`}>
-              <Reset />
-            </button>
-          </div>
           <h3>Edit Filters</h3>
           <div className={styles.filterItems}>
             <Dropdown

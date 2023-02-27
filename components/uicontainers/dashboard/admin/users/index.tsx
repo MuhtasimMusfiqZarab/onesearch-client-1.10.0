@@ -85,13 +85,22 @@ export default function Index() {
       {/* filter modal */}
       <Modal isOpen={modalIsOpen} setIsOpen={setIsOpen}>
         <div className={styles.edit_filters}>
+          <h3>Edit Filters</h3>
           <div className={styles.search_wrap}>
-            {/* <SearchBox searchText={searchText} setSearchText={setSearchText} /> */}
+            <SearchBox searchText={searchText} setSearchText={setSearchText} />
             <button className={`${styles.reset_form} ${styles.reset_form_modal}`}>
               <Reset />
             </button>
           </div>
-          <h3>Edit Filters</h3>
+          <div className={styles.filterItems}>
+            <Dropdown
+              title="Access Role"
+              setItem={setAccessRole}
+              setOffset={setOffset}
+              items={['demo', 'admin', 'pro']}
+              isSearch={true}
+            />
+          </div>
 
           <div className="text-center">
             <button type="submit" className="btn_fill_secondary">
