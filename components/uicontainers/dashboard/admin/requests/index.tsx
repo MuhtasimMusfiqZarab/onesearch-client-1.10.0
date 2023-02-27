@@ -61,7 +61,7 @@ export default function Index() {
 
               <div className={styles.container}>
                 <div className={styles.container__table}>
-                  {getAllRequests?.users?.length > 0 && (
+                  {getAllRequests?.requests?.length > 0 && (
                     <Table
                       items={getAllRequests?.requests}
                       headersEnums={UsersTableEnum}
