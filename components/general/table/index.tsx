@@ -13,6 +13,7 @@ interface Props {
   hasCheckbox?: boolean;
   loading?: boolean;
   parentRoute?: string;
+  isLocked?: boolean;
 }
 
 export const Table: FC<Props> = ({
@@ -21,7 +22,8 @@ export const Table: FC<Props> = ({
   hasController = true,
   hasCheckbox = true,
   loading = false,
-  parentRoute
+  parentRoute,
+  isLocked = true
 }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
 
@@ -108,8 +110,14 @@ export const Table: FC<Props> = ({
                 </th>
               ))}
               <th className={styles.th}>
-                <Lock color="#ffffff" />
-                <span></span>
+                {isLocked ? (
+                  <div>
+                    <Lock color="#ffffff" />
+                    <span></span>
+                  </div>
+                ) : (
+                  <span></span>
+                )}
               </th>
             </tr>
           </thead>
@@ -141,9 +149,7 @@ export const Table: FC<Props> = ({
                     </td>
                   ))}
                   <td className={styles.td}>
-                    <span className={styles.save_btn}>
-                      <Lock />
-                    </span>
+                    <span className={styles.save_btn}>{isLocked && <Lock />}</span>
 
                     <span onClick={handleToggleBtn} className={styles.toggle_btn}>
                       {toggleBtn ? 'Show less' : 'Expand'}

@@ -63,6 +63,7 @@ export default function Index() {
                       headersEnums={UsersTableEnum}
                       hasController={false}
                       hasCheckbox={false}
+                      isLocked={false}
                     />
                   )}
                   {loadingAllUsers && (
