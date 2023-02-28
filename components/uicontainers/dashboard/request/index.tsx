@@ -9,14 +9,40 @@ import { useChannels, useCountries, useCategories } from 'components/_context/yo
 
 import { countryList } from 'components/utils/resolver/all-countries';
 
+import { useQuery, useMutation } from '@apollo/client';
+
+import ADD_REQUEST from '../../../../pages/api/mutation/request/add-request.gql';
+
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
+  const [addRequest, { data, loading, error }] = useMutation(ADD_REQUEST);
   const { countries } = useCountries();
   const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
 
-  const [title, setCountry] = useState<string>(null);
+  const [country, setCountry] = useState<string>(null);
+  const [category, setCategory] = useState<string>(null);
+  const [platform, setPlatform] = useState<string>(null);
+  const [datasize, setDatasize] = useState<number>(null);
+  const [description, setDescription] = useState<number>(null);
+
   const [offset, setOffset] = useState<number>(0);
+
+  const setRequest = () => {
+    addRequest({
+      variables: {
+        input: {
+          userId: currentUser.id,
+          platform,
+          category,
+          location: country,
+          description,
+          datasize
+        }
+      }
+    });
+    setIsOpen(!setIsOpen);
+  };
 
   return (
     <>
@@ -57,7 +83,9 @@ export default function Index() {
               </div>
             </div>
             <div className="text-right">
-              <button className="btn btn_fill_primary">Submit</button>
+              <button className="btn btn_fill_primary" onClick={() => setRequest()}>
+                Submit
+              </button>
             </div>
           </>
         ) : (

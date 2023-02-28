@@ -1,5 +1,6 @@
 mutation ADD_REQUEST($input: [AddRequestInput!]!) {
   addRequest(input: $input) {
+    platform
     description
     category
   }
