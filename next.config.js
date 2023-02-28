@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         source: '/dashboard/request',
-        destination: '/dashboard/request/new',
+        destination: '/dashboard/request/create',
         permanent: true
       },
       {
