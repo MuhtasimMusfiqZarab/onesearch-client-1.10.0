@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
 
-function AutofillInput({ label, items }) {
-  const [searchTerm, setSearchTerm] = useState('');
+function AutofillInput({ label, items, setItem, item }) {
   const [searchItems, setSearchItems] = useState([]);
 
   const handleOnChange = (e) => {
     const searchQuery = e.target.value.toLowerCase();
-    setSearchTerm(e.target.value);
+    setItem(e.target.value);
 
     if (searchQuery !== '') {
       setSearchItems(items.filter((item) => item.toLowerCase().startsWith(searchQuery)));
@@ -25,7 +24,7 @@ function AutofillInput({ label, items }) {
           className={styles.autofill__input}
           placeholder={label}
           id={label.toLowerCase()}
-          value={searchTerm}
+          value={item}
           onChange={handleOnChange}
         />
 
@@ -34,7 +33,7 @@ function AutofillInput({ label, items }) {
             {searchItems.map((item, index) => (
               <li
                 onClick={() => {
-                  setSearchTerm(item);
+                  setItem(item);
                   setSearchItems([]);
                 }}
                 key={index}>

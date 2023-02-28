@@ -55,6 +55,8 @@ export default function Index() {
                 <AutofillInput
                   label="Platform"
                   items={['Google', 'Linkedin', 'Facebook', 'Youtube']}
+                  setItem={setPlatform}
+                  item={platform}
                 />
                 <Dropdown
                   title="Country"
@@ -65,10 +67,10 @@ export default function Index() {
                 />
               </div>
               <div className={styles.filterItems}>
-                <AutofillInput label="Data Size" items={[]} />
+                <AutofillInput label="Data Size" items={[]} setItem={setCategory} item={category} />
                 <Dropdown
                   title="Category"
-                  setItem={setCountry}
+                  setItem={setCategory}
                   setOffset={setOffset}
                   items={['Company', 'Individual']}
                   isSearch={false}
