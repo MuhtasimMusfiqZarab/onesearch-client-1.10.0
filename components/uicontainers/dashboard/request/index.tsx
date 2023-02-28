@@ -20,8 +20,8 @@ export default function Index() {
   const [country, setCountry] = useState<string>(null);
   const [category, setCategory] = useState<string>(null);
   const [platform, setPlatform] = useState<string>(null);
-  const [datasize, setDatasize] = useState<number>(null);
-  const [description, setDescription] = useState<number>(null);
+  const [datasize, setDatasize] = useState<string>(null);
+  const [description, setDescription] = useState<string>(null);
 
   const [offset, setOffset] = useState<number>(0);
 
@@ -64,7 +64,7 @@ export default function Index() {
                 />
               </div>
               <div className={styles.filterItems}>
-                <AutofillInput label="Data Size" items={[]} setItem={setCategory} item={category} />
+                <AutofillInput label="Data Size" items={[]} setItem={setDatasize} item={datasize} />
                 <Dropdown
                   title="Category"
                   setItem={setCategory}
@@ -78,7 +78,8 @@ export default function Index() {
                 <label htmlFor="notes">Additional Notes</label>
                 <textarea
                   placeholder="Additional Notes"
-                  className={styles.notes__textarea}></textarea>
+                  className={styles.notes__textarea}
+                  onChange={(e) => setDescription(e.target.value)}></textarea>
               </div>
             </div>
             <div className="text-right" onClick={() => setRequest()}>
