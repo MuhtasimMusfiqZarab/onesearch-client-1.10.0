@@ -25,6 +25,7 @@
     "react-leaflet": "^4.2.0",
     "react-papaparse": "^3.18.1",
     "react-slick": "^0.28.1",
+    "react-toastify": "^9.1.1",
     "react-typed": "^1.2.0",
     "sass": "^1.39.0",
     "sass-resources-loader": "^2.2.4",

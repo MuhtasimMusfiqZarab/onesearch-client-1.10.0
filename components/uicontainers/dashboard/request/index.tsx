@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Reset } from 'components/_icons';
-import { Tab, CsvDrop, NotFound, Dropdown } from 'components/general';
+import { Tab, CsvDrop, NotFound, Dropdown, Popup } from 'components/general';
 import { requestNavElements } from 'components/utils/resolver/navigation/tab';
 import AutofillInput from 'components/general/autofill-input';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
-import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 
 import { countryList } from 'components/utils/resolver/all-countries';
 
@@ -16,8 +15,6 @@ import ADD_REQUEST from '../../../../pages/api/mutation/request/add-request.gql'
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const [addRequest, { data, loading, error }] = useMutation(ADD_REQUEST);
-  const { countries } = useCountries();
-  const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
 
   const [country, setCountry] = useState<string>(null);
@@ -84,10 +81,10 @@ export default function Index() {
                   className={styles.notes__textarea}></textarea>
               </div>
             </div>
-            <div className="text-right">
-              <button className="btn btn_fill_primary" onClick={() => setRequest()}>
-                Submit
-              </button>
+            <div className="text-right" onClick={() => setRequest()}>
+              <Popup type="success" message="Successfully Requested!">
+                <div>Submit</div>
+              </Popup>
             </div>
           </>
         ) : (
