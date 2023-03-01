@@ -18,3 +18,10 @@ export enum UsersTableEnum {
   email = 'Email',
   accessRole = 'Access Role'
 }
+
+export enum RequestsTableEnum {
+  category = 'Category',
+  location = 'Country',
+  platform = 'Platform',
+  status = 'Status'
+}

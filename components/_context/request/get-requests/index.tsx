@@ -9,7 +9,7 @@ const GetAllRequestsContext = createContext({
 });
 
 function GetAllRequestsProvider({ children }) {
-  const [limit, setLimit] = useState<number>(30);
+  const [limit, setLimit] = useState<number>(10);
   const [offset, setOffset] = useState<number>(0);
 
   const { data, error, loading } = useQuery(GET_ALL_REQUESTS, {

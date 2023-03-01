@@ -3,7 +3,7 @@ import Modal from 'components/general/modal';
 import { ForbiddenAccess } from 'components/general';
 import { Filter, CloseLite, Reset } from 'components/_icons';
 import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'components/general';
-import { UsersTableEnum } from 'components/utils/enum';
+import { RequestsTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useAllRequests } from 'components/_context/request/get-requests';
@@ -15,6 +15,9 @@ export default function Index() {
   const { getAllRequests, loading: loadingAllUsers } = useAllRequests();
   let [modalIsOpen, setIsOpen] = useState(false);
   let [searchText, setSearchText] = useState();
+
+  console.log('This is the current user', currentUser);
+  console.log('This is the requests', getAllRequests);
 
   return (
     <>
@@ -64,13 +67,18 @@ export default function Index() {
                   {getAllRequests?.requests?.length > 0 && (
                     <Table
                       items={getAllRequests?.requests}
-                      headersEnums={UsersTableEnum}
+                      headersEnums={RequestsTableEnum}
                       hasController={false}
-                      hasCheckbox={false}
+                      hasCheckbox={true}
+                      isLocked={false}
                     />
                   )}
                   {loadingAllUsers && (
-                    <Table items={getAllRequests?.requests} headersEnums={UsersTableEnum} loading />
+                    <Table
+                      items={getAllRequests?.requests}
+                      headersEnums={RequestsTableEnum}
+                      loading
+                    />
                   )}
                   {getAllRequests?.requests?.length === 0 && <div>No User Data Found</div>}
                 </div>

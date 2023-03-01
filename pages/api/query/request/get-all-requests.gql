@@ -4,6 +4,9 @@ query GET_ALL_REQUESTS($data: GetRequestInput!) {
       category
       location
       description
+      platform
+      status
+      userId
     }
     totalCount
   }
