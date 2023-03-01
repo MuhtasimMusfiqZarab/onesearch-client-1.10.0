@@ -12,6 +12,8 @@ import { useQuery, useMutation } from '@apollo/client';
 
 import ADD_REQUEST from '../../../../pages/api/mutation/request/add-request.gql';
 
+import GET_ALL_REQUESTS from '../../../../pages/api/query/request/get-all-requests.gql';
+
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const [addRequest, { data, loading, error }] = useMutation(ADD_REQUEST);
@@ -35,7 +37,12 @@ export default function Index() {
           location: country,
           description,
           datasize
-        }
+        },
+        refetchQueries: [
+          {
+            query: GET_ALL_REQUESTS
+          }
+        ]
       }
     });
     setIsOpen(!setIsOpen);
