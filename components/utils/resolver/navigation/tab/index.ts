@@ -18,11 +18,11 @@ export const searchNavElements: navElement[] = [
     icon: icons.YoutubeIcon({}),
     route: '/dashboard/search/youtube'
   },
-  {
-    title: 'Facebook',
-    icon: icons.FacebookIcon({}),
-    route: '/dashboard/search/facebook'
-  },
+  // {
+  //   title: 'Facebook',
+  //   icon: icons.FacebookIcon({}),
+  //   route: '/dashboard/search/facebook'
+  // },
   {
     title: 'Linkedin',
     icon: icons.LinkedinIcon({}),

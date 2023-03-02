@@ -6,5 +6,6 @@ query GET_LINKEDIN_PROFILE($id: String!) {
     location
     title
     createdAt
+    updatedAt
   }
 }

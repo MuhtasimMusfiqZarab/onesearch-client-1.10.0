@@ -65,7 +65,7 @@ export default function Channel() {
           <Channel.AnvancedInfo />
 
           <div className={styles.update}>
-            <span className={styles.update__last}>Last Updated on 24th January, 2021</span>
+            <span className={styles.update__last}>{data?.getLinkedinProfile?.updatedAt}</span>
             <a href="#" className="btn">
               Request for Update
             </a>
@@ -77,36 +77,26 @@ export default function Channel() {
 }
 
 Channel.BasicInfo = ({ data }: any) => {
-  console.log('This is the data', data);
-
   return (
     <>
       <div className={styles.basic__info}>
         <h3>Basic information</h3>
         <ul>
           <li>
-            <span className={styles.info__title}>Channel name:</span>
-            {data?.getLinkedinProfile?.fullName}
-          </li>
-          <li>
-            <span className={styles.info__title}>Subscribers:</span>
-            {data?.getLinkedinProfile?.fullName}
-          </li>
-          <li>
-            <span className={styles.info__title}>Category:</span>
-            {data?.getLinkedinProfile?.fullName}
-          </li>
-          <li>
-            <span className={styles.info__title}>Views:</span>
+            <span className={styles.info__title}>Full Name:</span>
             {data?.getLinkedinProfile?.fullName}
           </li>
           <li>
             <span className={styles.info__title}>Location:</span>
-            {data?.getLinkedinProfile?.fullName}
+            {data?.getLinkedinProfile?.location}
           </li>
           <li>
-            <span className={styles.info__title}>Joining Date:</span>
-            {data?.getLinkedinProfile?.fullName}
+            <span className={styles.info__title}>Company:</span>
+            {data?.getLinkedinProfile?.company}
+          </li>
+          <li>
+            <span className={styles.info__title}>Title:</span>
+            {data?.getLinkedinProfile?.title}
           </li>
         </ul>
       </div>
@@ -118,11 +108,11 @@ Channel.AnvancedInfo = ({}) => {
   return (
     <div className={styles.advanced__info}>
       <h3>Advanced information</h3>
-      <p>
+      {/* <p>
         Coming Soon! .... Contact Email , Channel URL, Description, social media links (facebook,
         instagram, twitter,pinterest and many more )
-      </p>
-      {/* <ul>
+      </p> */}
+      <ul>
         <li>
           <span className={styles.info__title}>
             Channel link <span>:</span>
@@ -256,7 +246,7 @@ Channel.AnvancedInfo = ({}) => {
             </div>
           </div>
         </li>
-      </ul> */}
+      </ul>
     </div>
   );
 };
