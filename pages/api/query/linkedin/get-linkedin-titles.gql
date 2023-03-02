@@ -1,0 +1,6 @@
+query GET_LINKEDIN_TITLES {
+  getLinkedinTitles {
+    titles
+    totalCount
+  }
+}

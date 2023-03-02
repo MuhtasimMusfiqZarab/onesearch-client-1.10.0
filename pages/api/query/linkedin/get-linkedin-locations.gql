@@ -1,0 +1,6 @@
+query GET_LINKEDIN_LOCATIONS {
+  getLinkedinLocations {
+    locations
+    totalCount
+  }
+}

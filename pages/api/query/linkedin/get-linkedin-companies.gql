@@ -1,0 +1,6 @@
+query GET_LINKEDIN_COMPANIES {
+  getLinkedinCompanies {
+    companies
+    totalCount
+  }
+}
