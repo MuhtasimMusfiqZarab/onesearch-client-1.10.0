@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
 import Link from 'next/link';
 
-import GET_CHANNEL from '../../../../../pages/api/query/youtube/get-channel.gql';
+import GET_LINKEDIN_PROFILE from '../../../../../pages/api/query/linkedin/get-linkedin-profile.gql';
 import {
   Copy,
   External,
@@ -19,18 +19,18 @@ import styles from './styles.module.scss';
 
 export default function Channel() {
   const router = useRouter();
-  const channelId: string = router.query['id'] as string;
+  const Id: string = router.query['id'] as string;
 
-  const { data, error, loading, refetch } = useQuery(GET_CHANNEL, {
+  const { data, error, loading, refetch } = useQuery(GET_LINKEDIN_PROFILE, {
     variables: {
-      id: channelId
+      id: Id
     }
   });
 
   return (
     <div>
       <Head>
-        <title>{channelId}</title>
+        <title>{Id}</title>
         <meta property="og:profileId" content="profileId" key="profileId" />
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
@@ -44,7 +44,7 @@ export default function Channel() {
             </Link>
           </div>
           <div className={styles.user_infos_header}>
-            <h1>{data?.channel?.channel_name}</h1>
+            <h1>{data?.getLinkedinProfile?.fullName}</h1>
 
             <div className={styles.controller_list}>
               <a href="#" className={styles.wishlist}>
@@ -61,7 +61,7 @@ export default function Channel() {
               </a>
             </div>
           </div>
-          <Channel.BasicInfo data={data?.channel} />
+          <Channel.BasicInfo data={data} />
           <Channel.AnvancedInfo />
 
           <div className={styles.update}>
@@ -76,7 +76,9 @@ export default function Channel() {
   );
 }
 
-Channel.BasicInfo = (data: any) => {
+Channel.BasicInfo = ({ data }: any) => {
+  console.log('This is the data', data);
+
   return (
     <>
       <div className={styles.basic__info}>
@@ -84,27 +86,27 @@ Channel.BasicInfo = (data: any) => {
         <ul>
           <li>
             <span className={styles.info__title}>Channel name:</span>
-            {data?.data?.channel_name}
+            {data?.getLinkedinProfile?.fullName}
           </li>
           <li>
             <span className={styles.info__title}>Subscribers:</span>
-            {data?.data?.subscribers ?? 'null'}
+            {data?.getLinkedinProfile?.fullName}
           </li>
           <li>
             <span className={styles.info__title}>Category:</span>
-            {data?.data?.socialblade_category ?? 'null'}
+            {data?.getLinkedinProfile?.fullName}
           </li>
           <li>
             <span className={styles.info__title}>Views:</span>
-            {data?.data?.views ?? 'null'}
+            {data?.getLinkedinProfile?.fullName}
           </li>
           <li>
             <span className={styles.info__title}>Location:</span>
-            {data?.data?.location ?? 'null'}
+            {data?.getLinkedinProfile?.fullName}
           </li>
           <li>
             <span className={styles.info__title}>Joining Date:</span>
-            {data?.data?.joined ?? 'null'}
+            {data?.getLinkedinProfile?.fullName}
           </li>
         </ul>
       </div>

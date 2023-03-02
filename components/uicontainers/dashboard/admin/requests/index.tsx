@@ -16,9 +16,6 @@ export default function Index() {
   let [modalIsOpen, setIsOpen] = useState(false);
   let [searchText, setSearchText] = useState();
 
-  console.log('This is the current user', currentUser);
-  console.log('This is the requests', getAllRequests);
-
   return (
     <>
       <div className={styles.container__element_inner}>
@@ -71,6 +68,7 @@ export default function Index() {
                       hasController={false}
                       hasCheckbox={true}
                       isLocked={false}
+                      parentRoute="/dashboard/admin/requests"
                     />
                   )}
                   {loadingAllUsers && (

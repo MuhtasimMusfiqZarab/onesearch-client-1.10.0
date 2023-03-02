@@ -1,0 +1,10 @@
+query GET_LINKEDIN_PROFILE($id: String!) {
+  getLinkedinProfile(id: $id) {
+    id
+    fullName
+    company
+    location
+    title
+    createdAt
+  }
+}
