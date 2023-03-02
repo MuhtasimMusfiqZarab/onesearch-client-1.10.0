@@ -5,6 +5,10 @@ import LinkedinTab from 'components/uicontainers/dashboard/search/linkedin';
 
 import { LinkedinProfilesProvider } from 'components/_context/linkedin/index';
 
+import { LinkedinCompaniesProvider } from 'components/_context/linkedin/companies';
+import { LinkedinLocationsProvider } from 'components/_context/linkedin/locations';
+import { LinkedinTitlesProvider } from 'components/_context/linkedin/titles';
+
 export default function Index() {
   return (
     <>
@@ -15,7 +19,13 @@ export default function Index() {
       </Head>
       <DashboardLayout>
         <LinkedinProfilesProvider>
-          <LinkedinTab />
+          <LinkedinCompaniesProvider>
+            <LinkedinLocationsProvider>
+              <LinkedinTitlesProvider>
+                <LinkedinTab />
+              </LinkedinTitlesProvider>
+            </LinkedinLocationsProvider>
+          </LinkedinCompaniesProvider>
         </LinkedinProfilesProvider>
       </DashboardLayout>
     </>

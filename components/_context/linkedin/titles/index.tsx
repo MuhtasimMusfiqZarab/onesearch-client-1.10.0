@@ -7,7 +7,7 @@ const LinkedinCompaniesContext = createContext({
   titles: null
 });
 
-function TitlesProvider({ children }) {
+function LinkedinTitlesProvider({ children }) {
   const { data, error, loading } = useQuery(GET_CHANNEL_COUNTRIES);
 
   return (
@@ -22,4 +22,4 @@ function TitlesProvider({ children }) {
 
 const useLinkedinTitles = () => useContext(LinkedinCompaniesContext);
 
-export { TitlesProvider, useLinkedinTitles };
+export { LinkedinTitlesProvider, useLinkedinTitles };

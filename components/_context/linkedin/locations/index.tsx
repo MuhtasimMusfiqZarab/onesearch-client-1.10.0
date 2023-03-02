@@ -7,7 +7,7 @@ const LocationsContext = createContext({
   locations: null
 });
 
-function LocationsProvider({ children }) {
+function LinkedinLocationsProvider({ children }) {
   const { data, error, loading } = useQuery(GET_LINKEDIN_LOCATIONS);
 
   return (
@@ -22,4 +22,4 @@ function LocationsProvider({ children }) {
 
 const useLinkedinLocations = () => useContext(LocationsContext);
 
-export { LocationsProvider, useLinkedinLocations };
+export { LinkedinLocationsProvider, useLinkedinLocations };

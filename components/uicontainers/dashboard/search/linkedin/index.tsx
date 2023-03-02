@@ -10,6 +10,10 @@ import { useLinkedinProfiles } from 'components/_context/linkedin';
 
 import { searchNavElements } from 'components/utils/resolver/navigation/tab';
 
+import { useLinkedinCompanies } from 'components/_context/linkedin/companies';
+import { useLinkedinLocations } from 'components/_context/linkedin/locations';
+import { useLinkedinTitles } from 'components/_context/linkedin/titles';
+
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const {
@@ -25,6 +29,9 @@ export default function Index() {
     searchText,
     setSearchText
   } = useLinkedinProfiles();
+  const { companies } = useLinkedinCompanies();
+  const { locations } = useLinkedinLocations();
+  const { titles } = useLinkedinTitles();
   let [modalIsOpen, setIsOpen] = useState(false);
 
   return (
@@ -52,7 +59,7 @@ export default function Index() {
                   title="Title"
                   setItem={setTitle}
                   setOffset={setOffset}
-                  items={[]}
+                  items={titles}
                   isSearch={true}
                 />
 
@@ -60,14 +67,14 @@ export default function Index() {
                   title="Location"
                   setItem={setLocation}
                   setOffset={setOffset}
-                  items={[]}
+                  items={locations}
                   isSearch={true}
                 />
                 <Dropdown
                   title="Company"
                   setItem={setCompany}
                   setOffset={setOffset}
-                  items={[]}
+                  items={companies}
                   isSearch={true}
                 />
               </div>

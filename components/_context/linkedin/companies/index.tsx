@@ -7,7 +7,7 @@ const LinkedinCompaniesContext = createContext({
   companies: null
 });
 
-function CompaniesProvider({ children }) {
+function LinkedinCompaniesProvider({ children }) {
   const { data, error, loading } = useQuery(GET_LINKEDIN_COMPANIES);
 
   return (
@@ -22,4 +22,4 @@ function CompaniesProvider({ children }) {
 
 const useLinkedinCompanies = () => useContext(LinkedinCompaniesContext);
 
-export { CompaniesProvider, useLinkedinCompanies };
+export { LinkedinCompaniesProvider, useLinkedinCompanies };
