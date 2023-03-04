@@ -12,9 +12,21 @@ import { adminNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
-  const { getAllRequests, loading: loadingAllUsers } = useAllRequests();
+  const {
+    requests,
+    loading: loadingAllUsers,
+    setOffset,
+    offset,
+    refetch,
+    setCategory,
+    setLocation,
+    setPlatform,
+    setStatus,
+    total,
+    searchText,
+    setSearchText
+  } = useAllRequests();
   let [modalIsOpen, setIsOpen] = useState(false);
-  let [searchText, setSearchText] = useState();
 
   return (
     <>
@@ -61,9 +73,9 @@ export default function Index() {
 
               <div className={styles.container}>
                 <div className={styles.container__table}>
-                  {getAllRequests?.requests?.length > 0 && (
+                  {requests?.length > 0 && (
                     <Table
-                      items={getAllRequests?.requests}
+                      items={requests}
                       headersEnums={RequestsTableEnum}
                       hasController={false}
                       hasCheckbox={true}
@@ -72,18 +84,14 @@ export default function Index() {
                     />
                   )}
                   {loadingAllUsers && (
-                    <Table
-                      items={getAllRequests?.requests}
-                      headersEnums={RequestsTableEnum}
-                      loading
-                    />
+                    <Table items={requests} headersEnums={RequestsTableEnum} loading />
                   )}
-                  {getAllRequests?.requests?.length === 0 && <div>No User Data Found</div>}
+                  {requests?.length === 0 && <div>No User Data Found</div>}
                 </div>
 
-                {/* <div className={styles.container__pagination}>
+                <div className={styles.container__pagination}>
                   <Pagination total={total} setOffset={setOffset} offset={offset} />
-                </div> */}
+                </div>
               </div>
             </div>
           </>
