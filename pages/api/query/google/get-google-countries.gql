@@ -1,0 +1,6 @@
+query GET_GOOGLE_COUNTRIES {
+  getGoogleCountries {
+    countries
+    totalCount
+  }
+}

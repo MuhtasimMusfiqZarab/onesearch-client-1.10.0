@@ -1,0 +1,6 @@
+query GET_GOOGLE_CATEGORIS {
+  getGoogleCategories {
+    categories
+    totalCount
+  }
+}

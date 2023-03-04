@@ -1,25 +1,25 @@
 import React, { createContext, useContext } from 'react';
 import { useQuery } from '@apollo/client';
 
-import GET_CHANNEL_CATEGORIES from '../../../../pages/api/query/youtube/get-channel-categories.gql';
+import GET_GOOGLE_CATEGORIES from '../../../../pages/api/query/google/get-google-categories.gql';
 
 const GoogleCategoriesContext = createContext({
   categories: null
 });
 
 function GoogleCategoriesProvider({ children }) {
-  const { data, error, loading } = useQuery(GET_CHANNEL_CATEGORIES);
+  const { data, error, loading } = useQuery(GET_GOOGLE_CATEGORIES);
 
   return (
     <GoogleCategoriesContext.Provider
       value={{
-        categories: data?.getAllCategories?.categories
+        categories: data?.getGoogleCategories?.categories
       }}>
       {children}
     </GoogleCategoriesContext.Provider>
   );
 }
 
-const useCategories = () => useContext(GoogleCategoriesContext);
+const useGoogleCategories = () => useContext(GoogleCategoriesContext);
 
-export { GoogleCategoriesProvider, useCategories };
+export { GoogleCategoriesProvider, useGoogleCategories };

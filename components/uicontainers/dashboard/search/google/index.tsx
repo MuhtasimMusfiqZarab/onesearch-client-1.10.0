@@ -9,9 +9,9 @@ import { useGoogleProfiles } from 'components/_context/google/profiles';
 
 import { searchNavElements } from 'components/utils/resolver/navigation/tab';
 
-import { useLinkedinCompanies } from 'components/_context/linkedin/companies';
+import { useGoogleCategories } from 'components/_context/google/categories';
+import { useGoogleCountries } from 'components/_context/google/countries';
 import { useLinkedinLocations } from 'components/_context/linkedin/locations';
-import { useLinkedinTitles } from 'components/_context/linkedin/titles';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
@@ -27,8 +27,8 @@ export default function Index() {
     searchText,
     setSearchText
   } = useGoogleProfiles();
-  const { companies } = useLinkedinCompanies();
-  const { locations } = useLinkedinLocations();
+  const { categories } = useGoogleCategories();
+  const { countries } = useGoogleCountries();
   let [modalIsOpen, setIsOpen] = useState(false);
 
   return (
@@ -56,14 +56,14 @@ export default function Index() {
                   title="Country"
                   setItem={setCountry}
                   setOffset={setOffset}
-                  items={locations}
+                  items={countries}
                   isSearch={true}
                 />
                 <Dropdown
                   title="Category"
                   setItem={setCategory}
                   setOffset={setOffset}
-                  items={companies}
+                  items={categories}
                   isSearch={true}
                 />
               </div>
@@ -108,14 +108,14 @@ export default function Index() {
               title="Country"
               setItem={setCountry}
               setOffset={setOffset}
-              items={[]}
+              items={countries}
               isSearch={true}
             />
             <Dropdown
               title="Category"
               setItem={setCategory}
               setOffset={setOffset}
-              items={[]}
+              items={categories}
               isSearch={true}
             />
           </div>
