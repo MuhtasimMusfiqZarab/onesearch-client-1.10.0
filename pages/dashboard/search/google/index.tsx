@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import BaseLayout from 'components/layouts/dashboard';
 import GoogleTable from 'components/uicontainers/dashboard/search/google';
+import { GoogleProfilesProvider } from 'components/_context/google/profiles';
 
 export default function Index() {
   return (
@@ -11,7 +12,9 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <BaseLayout>
-        <GoogleTable />
+        <GoogleProfilesProvider>
+          <GoogleTable />
+        </GoogleProfilesProvider>
       </BaseLayout>
     </>
   );

@@ -12,6 +12,13 @@ export enum LinkedinTableEnum {
   location = 'Location'
 }
 
+export enum GoogleTableEnum {
+  company = 'Company Name',
+  country = 'Country',
+  city = 'City',
+  state = 'State'
+}
+
 export enum UsersTableEnum {
   firstName = 'First Name',
   lastName = 'Last Name',
