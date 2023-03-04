@@ -1,5 +1,5 @@
 query GET_GOOGLE_PROFILES($data: GetGoogleInput!) {
-  getLinkedinProfiles(data: $data) {
+  getAllGoogleProfiles(data: $data) {
     totalCount
     profiles {
       id
