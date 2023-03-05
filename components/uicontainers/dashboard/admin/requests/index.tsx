@@ -8,10 +8,20 @@ import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
 import { useAllRequests } from 'components/_context/request/get-requests';
 
+import { useRequestCategories } from 'components/_context/request/get-categories';
+import { useRequestCountries } from 'components/_context/request/get-countries';
+import { useRequestPlatforms } from 'components/_context/request/get-platforms';
+import { useRequestStatuses } from 'components/_context/request/get-statuses';
+
 import { adminNavElements } from 'components/utils/resolver/navigation/tab';
 
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
+  const { categories } = useRequestCategories();
+  const { countries } = useRequestCountries();
+  const { platforms } = useRequestPlatforms();
+  const { statuses } = useRequestStatuses();
+
   const {
     requests,
     loading: loadingAllUsers,
@@ -49,7 +59,7 @@ export default function Index() {
                   </button>
                 </div>
 
-                {/* <div className={styles.filterItems}>
+                <div className={styles.filterItems}>
                   <Dropdown
                     title="Category"
                     setItem={setCategory}
@@ -65,7 +75,24 @@ export default function Index() {
                     items={countries}
                     isSearch={true}
                   />
-                </div> */}
+                </div>
+                <div className={styles.filterItems}>
+                  <Dropdown
+                    title="Platform"
+                    setItem={setPlatform}
+                    setOffset={setOffset}
+                    items={platforms}
+                    isSearch={true}
+                  />
+
+                  <Dropdown
+                    title="Status"
+                    setItem={setStatus}
+                    setOffset={setOffset}
+                    items={statuses}
+                    isSearch={true}
+                  />
+                </div>
                 {/* <div className={styles.filterItems}>
                   <Slider />
                 </div> */}

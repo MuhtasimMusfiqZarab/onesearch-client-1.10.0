@@ -20,6 +20,6 @@ function RequestStatusesProvider({ children }) {
   );
 }
 
-const useRequestPlatforms = () => useContext(RequestStatusesContext);
+const useRequestStatuses = () => useContext(RequestStatusesContext);
 
-export { RequestStatusesProvider, useRequestPlatforms };
+export { RequestStatusesProvider, useRequestStatuses };
