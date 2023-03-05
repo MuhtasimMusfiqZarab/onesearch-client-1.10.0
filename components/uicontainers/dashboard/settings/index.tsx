@@ -102,9 +102,9 @@ export default function Settings() {
               &nbsp; *You can set your country just once.
             </span>
 
-            <div className={styles.profile__locators}>
+            {/* <div className={styles.profile__locators}>
               <AutofillInput label="Phone Number" items={[]} />
-            </div>
+            </div> */}
 
             <span className={styles.profile__warning}>
               <Warning />
