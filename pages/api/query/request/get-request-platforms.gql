@@ -1,0 +1,6 @@
+query GET_REQUEST_PLATFORMS {
+  getRequestPlatforms {
+    platforms
+    totalCount
+  }
+}

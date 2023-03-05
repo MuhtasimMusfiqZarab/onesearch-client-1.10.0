@@ -1,0 +1,6 @@
+query GET_REQUEST_CATEGORIES {
+  getRequestCategories {
+    categories
+    totalCount
+  }
+}

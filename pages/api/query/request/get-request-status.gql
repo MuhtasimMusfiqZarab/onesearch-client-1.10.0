@@ -1,0 +1,6 @@
+query GET_REQUEST_STATUSES {
+  getRequestStatuses {
+    statuses
+    totalCount
+  }
+}

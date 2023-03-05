@@ -1,0 +1,6 @@
+query GET_REQUEST_COUNTRIES {
+  getRequestCountries {
+    countries
+    totalCount
+  }
+}
