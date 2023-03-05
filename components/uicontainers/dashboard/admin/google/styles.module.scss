@@ -1,0 +1,158 @@
+.container {
+  // display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  @media (min-width: 767px) {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #c4c4c4;
+    border-radius: 3px;
+  }
+
+  &__table {
+    align-self: center;
+  }
+
+  &__pagination {
+    width: fit-content;
+    margin-left: auto;
+  }
+}
+
+.container__element_inner {
+  width: 100%;
+  padding: 25px;
+
+  @media (max-width: 767px) {
+    padding: 0;
+    background: #fff;
+  }
+}
+
+.filterContainer {
+  width: 100%;
+
+  &_inner {
+    @media (min-width: 767px) {
+      background: #fff;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px #c4c4c4;
+      border-radius: 3px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  .filterItems {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      display: none;
+    }
+  }
+
+  .search_wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @media (max-width: 767px) {
+      gap: 0;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px #c4c4c4;
+      border-radius: 5px;
+
+      input[type='text'] {
+        height: 58px;
+        border: 0;
+        // padding: 0.85rem 2rem;
+      }
+    }
+  }
+}
+
+.filtersToggle[class] {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  padding: 0;
+  background: $os-secondary;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.25s;
+
+  &:hover {
+    background: $os-primary;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    min-width: 58px;
+    height: 59px;
+  }
+}
+
+.reset_form[class] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $os-secondary;
+  border: 0;
+  padding: 0;
+  font-weight: 500;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  &:hover {
+    background: transparent;
+    color: $os-primary;
+
+    svg {
+      path {
+        fill: $os-primary;
+      }
+    }
+  }
+}
+
+.edit_filters {
+  .search_wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .reset_form_modal[class] {
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  h3 {
+    color: #505050;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 22px;
+  }
+}
