@@ -37,12 +37,10 @@ export default function Index() {
           location: country,
           description,
           datasize
-        },
-        refetchQueries: [
-          {
-            query: GET_ALL_REQUESTS
-          }
-        ]
+        }
+      },
+      update(cache) {
+        cache.evict({ id: 'ROOT_QUERY', fieldName: 'getAllRequests' });
       }
     });
     setIsOpen(!setIsOpen);

@@ -23,8 +23,8 @@ function CsvDrop() {
     for (let i = 1; i < totalData.length; i++) {
       for (let j = 0; j < objProps.length; j++) {
         let value = totalData[i].data[j];
-        arrayOfObject[i - 1][objProps[j]] = 'Hello';
-        console.log('This is individual', value);
+        arrayOfObject[i - 1][objProps[j]] = value;
+        // console.log('This is individual', value);
       }
     }
     console.log('This is the obj value', arrayOfObject);
