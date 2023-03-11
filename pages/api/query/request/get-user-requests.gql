@@ -1,0 +1,13 @@
+query GET_ALL_USER_REQUESTS($data: GetRequestInput!) {
+  getAllRequestsOfUser(data: $data) {
+    requests {
+      category
+      location
+      description
+      platform
+      status
+      userId
+    }
+    totalCount
+  }
+}

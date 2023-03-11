@@ -2,7 +2,7 @@ import Head from 'next/head';
 import DashboardLayout from 'components/layouts/dashboard';
 import Requests from 'components/uicontainers/dashboard/request/all';
 
-import { GetAllRequestsProvider } from 'components/_context/request/get-requests';
+import { GetUserRequestsProvider } from 'components/_context/request/get-user-requests';
 import { RequestCategoriesProvider } from 'components/_context/request/get-categories';
 import { RequestCountriesProvider } from 'components/_context/request/get-countries';
 import { RequestPlatformsProvider } from 'components/_context/request/get-platforms';
@@ -17,7 +17,7 @@ export default function Index() {
         <link rel="shortcut icon" href="/search.svg" />
       </Head>
       <DashboardLayout>
-        <GetAllRequestsProvider>
+        <GetUserRequestsProvider>
           <RequestCategoriesProvider>
             <RequestCountriesProvider>
               <RequestPlatformsProvider>
@@ -27,7 +27,7 @@ export default function Index() {
               </RequestPlatformsProvider>
             </RequestCountriesProvider>
           </RequestCategoriesProvider>
-        </GetAllRequestsProvider>
+        </GetUserRequestsProvider>
       </DashboardLayout>
     </>
   );

@@ -6,7 +6,7 @@ import { Pagination, Table, Dropdown, Tab, SearchBox, Loader, Slider } from 'com
 import { RequestsTableEnum } from 'components/utils/enum';
 import styles from './styles.module.scss';
 import { useCurrentUser } from 'components/_context/user/current-user';
-import { useAllRequests } from 'components/_context/request/get-requests';
+import { useUserRequests } from 'components/_context/request/get-user-requests';
 
 import { useRequestCategories } from 'components/_context/request/get-categories';
 import { useRequestCountries } from 'components/_context/request/get-countries';
@@ -35,96 +35,94 @@ export default function Index() {
     total,
     searchText,
     setSearchText
-  } = useAllRequests();
+  } = useUserRequests();
   let [modalIsOpen, setIsOpen] = useState(false);
+
+  console.log('THis is the request', requests);
 
   return (
     <>
       <div className={styles.container__element_inner}>
-        {currentUser?.accessRole === 'Admin' ? (
-          <>
-            <Tab items={requestNavElements} />
-            <div className={styles.filterContainer}>
-              <div className={styles.filterContainer_inner}>
-                <div className={styles.search_wrap}>
-                  <SearchBox searchText={searchText} setSearchText={setSearchText} />
+        <>
+          <Tab items={requestNavElements} />
+          <div className={styles.filterContainer}>
+            <div className={styles.filterContainer_inner}>
+              <div className={styles.search_wrap}>
+                <SearchBox searchText={searchText} setSearchText={setSearchText} />
 
-                  <button className={styles.reset_form}>
-                    <Reset />
-                    Reset
-                  </button>
+                <button className={styles.reset_form}>
+                  <Reset />
+                  Reset
+                </button>
 
-                  <button onClick={() => setIsOpen(true)} className={styles.filtersToggle}>
-                    <Filter />
-                  </button>
-                </div>
+                <button onClick={() => setIsOpen(true)} className={styles.filtersToggle}>
+                  <Filter />
+                </button>
+              </div>
 
-                <div className={styles.filterItems}>
-                  <Dropdown
-                    title="Category"
-                    setItem={setCategory}
-                    setOffset={setOffset}
-                    items={categories}
-                    isSearch={true}
-                  />
+              <div className={styles.filterItems}>
+                <Dropdown
+                  title="Category"
+                  setItem={setCategory}
+                  setOffset={setOffset}
+                  items={categories}
+                  isSearch={true}
+                />
 
-                  <Dropdown
-                    title="Countries"
-                    setItem={setLocation}
-                    setOffset={setOffset}
-                    items={countries}
-                    isSearch={true}
-                  />
-                </div>
-                <div className={styles.filterItems}>
-                  <Dropdown
-                    title="Platform"
-                    setItem={setPlatform}
-                    setOffset={setOffset}
-                    items={platforms}
-                    isSearch={true}
-                  />
+                <Dropdown
+                  title="Countries"
+                  setItem={setLocation}
+                  setOffset={setOffset}
+                  items={countries}
+                  isSearch={true}
+                />
+              </div>
+              <div className={styles.filterItems}>
+                <Dropdown
+                  title="Platform"
+                  setItem={setPlatform}
+                  setOffset={setOffset}
+                  items={platforms}
+                  isSearch={true}
+                />
 
-                  <Dropdown
-                    title="Status"
-                    setItem={setStatus}
-                    setOffset={setOffset}
-                    items={statuses}
-                    isSearch={true}
-                  />
-                </div>
-                {/* <div className={styles.filterItems}>
+                <Dropdown
+                  title="Status"
+                  setItem={setStatus}
+                  setOffset={setOffset}
+                  items={statuses}
+                  isSearch={true}
+                />
+              </div>
+              {/* <div className={styles.filterItems}>
                   <Slider />
                 </div> */}
+            </div>
+
+            <div className={styles.container}>
+              <div className={styles.container__table}>
+                {requests?.length > 0 && (
+                  <Table
+                    items={requests}
+                    headersEnums={RequestsTableEnum}
+                    hasController={false}
+                    hasCheckbox={true}
+                    isLocked={false}
+                    parentRoute="/dashboard/admin/requests"
+                  />
+                )}
+                {loadingAllUsers && (
+                  <Table items={requests} headersEnums={RequestsTableEnum} loading />
+                )}
+                {requests?.length === 0 && <div>No User Data Found</div>}
               </div>
 
-              <div className={styles.container}>
-                <div className={styles.container__table}>
-                  {requests?.length > 0 && (
-                    <Table
-                      items={requests}
-                      headersEnums={RequestsTableEnum}
-                      hasController={false}
-                      hasCheckbox={true}
-                      isLocked={false}
-                      parentRoute="/dashboard/admin/requests"
-                    />
-                  )}
-                  {loadingAllUsers && (
-                    <Table items={requests} headersEnums={RequestsTableEnum} loading />
-                  )}
-                  {requests?.length === 0 && <div>No User Data Found</div>}
-                </div>
-
-                <div className={styles.container__pagination}>
-                  <Pagination total={total} setOffset={setOffset} offset={offset} />
-                </div>
+              <div className={styles.container__pagination}>
+                <Pagination total={total} setOffset={setOffset} offset={offset} />
               </div>
             </div>
-          </>
-        ) : (
-          <ForbiddenAccess />
-        )}
+          </div>
+        </>
       </div>
 
       {/* filter modal */}
