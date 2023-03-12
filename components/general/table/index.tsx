@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Lock, DownArrow } from 'components/_icons';
+import { Lock, DownArrow, UnlockIcon } from 'components/_icons';
 import { Controller } from './table-controller';
 import { Loader, Checkbox } from 'components/general';
 import Link from 'next/link';
@@ -14,6 +14,7 @@ interface Props {
   loading?: boolean;
   parentRoute?: string;
   isLocked?: boolean;
+  unlockedItems?: object[];
 }
 
 export const Table: FC<Props> = ({
@@ -23,7 +24,8 @@ export const Table: FC<Props> = ({
   hasCheckbox = true,
   loading = false,
   parentRoute,
-  isLocked = true
+  isLocked = true,
+  unlockedItems = []
 }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
 
@@ -149,7 +151,15 @@ export const Table: FC<Props> = ({
                     </td>
                   ))}
                   <td className={styles.td}>
-                    <span className={styles.save_btn}>{isLocked && <Lock />}</span>
+                    {isLocked && (
+                      <span className={styles.save_btn}>
+                        {unlockedItems.find((value: any) => value.id === item.id) ? (
+                          <UnlockIcon />
+                        ) : (
+                          <Lock />
+                        )}
+                      </span>
+                    )}
 
                     <span onClick={handleToggleBtn} className={styles.toggle_btn}>
                       {toggleBtn ? 'Show less' : 'Expand'}

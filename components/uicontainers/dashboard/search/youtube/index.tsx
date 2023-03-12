@@ -72,6 +72,7 @@ export default function Index() {
                     items={channels}
                     headersEnums={YoutubeTableEnum}
                     parentRoute="/dashboard/search/youtube"
+                    unlockedItems={currentUser.youtube}
                   />
                 )}
                 {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}

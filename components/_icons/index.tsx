@@ -45,3 +45,4 @@ export { GoldenBadgeIcon } from './goldenBadge';
 export { VipBadgeIcon } from './vipBadge';
 export { ForbiddenIcon } from './forbidden';
 export { ErrorIcon } from './error';
+export { UnlockIcon } from './unlock';
