@@ -1,0 +1,6 @@
+mutation UNLOCK_YOUTUBE_LEAD($input: [UserYoutubeInput!]!) {
+  unlockYoutubeLead(input: $input) {
+    userId
+    youtubeId
+  }
+}

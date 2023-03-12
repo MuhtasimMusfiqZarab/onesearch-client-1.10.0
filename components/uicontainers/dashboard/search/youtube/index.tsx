@@ -8,6 +8,9 @@ import { useCurrentUser } from 'components/_context/user/current-user';
 import { useChannels, useCountries, useCategories } from 'components/_context/youtube';
 import { searchNavElements } from 'components/utils/resolver/navigation/tab';
 
+import { useQuery, useMutation } from '@apollo/client';
+import UNLOCK_YOUTUBE_LEAD from '../../../../../pages/api/mutation/youtube/unlock-youtube-lead.gql';
+
 export default function Index() {
   const { currentUser, loading: loadingUser } = useCurrentUser();
   const {
@@ -24,6 +27,18 @@ export default function Index() {
   const { countries } = useCountries();
   const { categories } = useCategories();
   let [modalIsOpen, setIsOpen] = useState(false);
+
+  const [unlockYoutubeLead, { data, loading: unlockLoading, error }] =
+    useMutation(UNLOCK_YOUTUBE_LEAD);
+
+  const unlockLead = (id: string) => {
+    unlockYoutubeLead({
+      variables: {
+        input: { userId: currentUser.id, youtubeId: id }
+      }
+    });
+    setIsOpen(!setIsOpen);
+  };
 
   return (
     <>
@@ -73,6 +88,7 @@ export default function Index() {
                     headersEnums={YoutubeTableEnum}
                     parentRoute="/dashboard/search/youtube"
                     unlockedItems={currentUser.youtube}
+                    onUnlock={unlockLead}
                   />
                 )}
                 {loading && <Table items={channels} headersEnums={YoutubeTableEnum} loading />}

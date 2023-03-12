@@ -15,6 +15,7 @@ interface Props {
   parentRoute?: string;
   isLocked?: boolean;
   unlockedItems?: object[];
+  onUnlock?: (value: any) => void;
 }
 
 export const Table: FC<Props> = ({
@@ -25,7 +26,8 @@ export const Table: FC<Props> = ({
   loading = false,
   parentRoute,
   isLocked = true,
-  unlockedItems = []
+  unlockedItems = [],
+  onUnlock
 }: Props): JSX.Element => {
   let [toggleBtn, setToggleBtn] = useState(false);
 
@@ -152,7 +154,7 @@ export const Table: FC<Props> = ({
                   ))}
                   <td className={styles.td}>
                     {isLocked && (
-                      <span className={styles.save_btn}>
+                      <span className={styles.save_btn} onClick={() => onUnlock(item.id)}>
                         {unlockedItems.find((value: any) => value.id === item.id) ? (
                           <UnlockIcon />
                         ) : (
