@@ -35,6 +35,9 @@ export default function Index() {
     unlockYoutubeLead({
       variables: {
         input: { userId: currentUser.id, youtubeId: id }
+      },
+      update(cache) {
+        cache.evict({ id: 'ROOT_QUERY', fieldName: 'getAllChannels' });
       }
     });
     setIsOpen(!setIsOpen);
