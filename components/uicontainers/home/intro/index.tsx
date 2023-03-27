@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <div className={styles.body}>
       <div className={styles.wrapper}>
-        <CountdownTimer />
+        {/* <CountdownTimer /> */}
         <div className={styles.content}>
           <div className={styles.text}>
             <Text
